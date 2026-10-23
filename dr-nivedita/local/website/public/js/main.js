@@ -107,6 +107,17 @@
     if (location.hash === '#top') history.replaceState(null, '', location.pathname + location.search);
   });
 
+  // A link to the page you are already on (Home / logo on the homepage) just scrolls to the top.
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || a.target === '_blank' || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    if (a.origin === location.origin && a.pathname === location.pathname && !a.hash && !a.search) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    }
+  });
+
   // Footer columns collapse into an accordion on phones (DMC mobile footer).
   var phoneQuery = window.matchMedia('(max-width:767px)');
   d.querySelectorAll('.footer-col-toggle').forEach(function (button) {
