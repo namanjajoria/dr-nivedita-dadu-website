@@ -1,0 +1,50 @@
+[
+  {
+    "path": "/clinic-gallery/",
+    "view": "gallery-clinic",
+    "title": "Clinic Gallery | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Visit our gallery and get a closer look into our infrastructure.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Clinic Gallery",
+        "path": "/clinic-gallery/"
+      }
+    ]
+  },
+  {
+    "path": "/video/",
+    "view": "gallery-video",
+    "title": "Videos | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Watch our latest videos on various skin and hair treatments and gain insightful information about various procedures.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Video",
+        "path": "/video/"
+      }
+    ]
+  },
+  {
+    "path": "/results/",
+    "view": "gallery-results",
+    "title": "Real Results | Before and After Treatment | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Check out these amazing before and after gallery documenting our patients' skincare success.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      }
+    ]
+  }
+]

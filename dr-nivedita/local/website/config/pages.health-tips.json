@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/health-tips/",
+    "view": "health-tips",
+    "title": "Get Health & Skin Care Tips, Ideas, News From Dr. Nivedita Dadu",
+    "description": "Do you know that skin, the largest organ needs maximum protection against all odds every season? Styling your skin, hair and nails start from basic tips.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Health Tips",
+        "path": "/health-tips/"
+      }
+    ]
+  }
+]

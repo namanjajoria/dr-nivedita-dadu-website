@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/blog/",
+    "view": "blog",
+    "title": "Latest Blogs on Dermatology, Skin & Hair Care Tips",
+    "description": "Read our latest blogs and articles on treatment of skin and Hair problems.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Blogs",
+        "path": "/blog/"
+      }
+    ]
+  }
+]

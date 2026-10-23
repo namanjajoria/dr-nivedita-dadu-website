@@ -1,0 +1,20 @@
+<h2 class="consult-title">Schedule a Consultation</h2>
+<form class="consult-form" action="/api/appointment" method="post" data-form="appointment">
+  <input type="hidden" name="_ft" value="{{formToken}}">
+  <div class="hp-field" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+  <div class="field-row">
+    <div class="field"><input class="field-input" type="text" name="name" placeholder="Your Name" aria-label="Your Name" required></div>
+    <div class="field"><input class="field-input" type="tel" name="phone" placeholder="Mobile Number *" aria-label="Mobile Number" required></div>
+  </div>
+  <div class="field">
+    <select class="field-input" name="location" aria-label="Preferred Location" required>
+      <option value="">Preferred Location *</option>
+      <option>Vasant Vihar</option>
+      <option>Rajouri Garden</option>
+    </select>
+    <svg class="ico field-chev"><use href="#i-chev-d"/></svg>
+  </div>
+  <button class="submit-btn" type="submit">Submit <span class="btn-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></button>
+  <p class="consent">By clicking on "Submit", you agree to our <a href="https://www.drniveditadadu.com/privacy-policy">Privacy Policy</a>, <a href="https://www.drniveditadadu.com/legal-disclaimer">Disclaimer</a> and <a href="https://www.drniveditadadu.com/terms-conditions">Terms &amp; Conditions</a>.</p>
+  <p class="form-status" role="status" aria-live="polite" hidden></p>
+</form>

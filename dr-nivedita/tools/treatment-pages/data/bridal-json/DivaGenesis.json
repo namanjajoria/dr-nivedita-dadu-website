@@ -1,0 +1,593 @@
+[
+    {
+        "k":  "h1",
+        "runs":  [
+                     {
+                         "t":  "DivaGenesis ",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "1. Hero \u0026 Intro ",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "DivaGenesis Skin Lightening",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Some skin problems don\u0027t come one at a time. Dark spots sit next to dullness, a bit of old tan refuses to fade, and fine lines start showing up around the same time. Treating each of these separately can feel like a never-ending schedule of appointments.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "DivaGenesis is a skin lightening treatment in Delhi that tackles several of these concerns in one sitting. It brings together deep exfoliation, laser and a serum infusion, so your skin gets cleared, treated and hydrated in a single session. The result is an instant, fresh glow, with tone and texture getting better the more sessions you take. And since there\u0027s no downtime, you can walk out and head straight back to work.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Available at Dadu Medical Centre Vasant Vihar (South Delhi) \u0026 Rajouri Garden (West Delhi), under Dr. Nivedita Dadu.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "2. What Makes DivaGenesis Different",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Most glow facials stay on the surface. They clean and hydrate, and the effect fades in a few days. DivaGenesis goes further because it combines two of our advanced techniques, laser and micro-channeling, after the skin has been properly prepped.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The laser works on pigment that sits deeper in the skin, which is why dark spots and uneven patches actually start to lighten over time. The micro-channeling step then delivers a serum cocktail into the skin instead of letting it sit on top. Each session is customised at Dadu Medical Centre based on your skin type, your concern and how your skin has responded before.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "3. Concerns DivaGenesis Can Help With",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Dullness and tired-looking skin:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Exfoliation clears away dead cells and old tan that make skin look flat",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Pigmentation and dark spots:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " The laser breaks down the pigment behind spots and patchy tone",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Post-acne marks:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Brown marks left behind by old breakouts fade gradually over sessions",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Sun damage:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Helps with photo-damage from years of Delhi sun and pollution",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Fine lines and early laxity:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Collagen stimulation gives skin a firmer, smoother feel",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Dehydration:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " The serum infusion leaves skin plumper and more supple",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "4. Benefits Section",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "An instant glow after the very first session, which makes it popular before events",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Lighter, more even skin tone with continued sessions",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Deep hydration from serums that reach below the surface",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Smoother texture and softer fine lines as collagen builds up",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Comfortable, with no pain to speak of",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Zero downtime, so no hiding at home afterwards",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Customised for each person, including sensitive and combination skin",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "5. Ideal Candidates",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Anyone with uneven tone, dark spots, melasma or sun damage",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "People in their 30s to 50s noticing fine lines, dullness or early loosening of skin",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Brides, grooms and wedding guests who want to glow through every function",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Working professionals who want visible results without taking time off",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Those with sensitive or combination skin, since settings are adjusted for you",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "6. Process \u0026 Techniques",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "A DivaGenesis session takes about 45 to 60 minutes and runs in three steps.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Deep exfoliation:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " A diamond crystal tip gently buffs away dead cells, dullness and surface tan. This clears the way so the next two steps can work properly.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Laser:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " The laser reaches the deeper layers of skin and breaks down the pigment causing dark spots. It also works on photo-damage, uneven tone, fine lines and laxity.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Micro-channeling with serum infusion:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Fine micro-needles, paired with gentle suction, create tiny channels and lift the skin. A serum cocktail is infused through these channels for better absorption, and the process also nudges the skin\u0027s own healing response, supporting collagen and fibroblast activity.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "How often?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " It depends on why you\u0027re coming in:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Before a party or as a first trial:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " a single session",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Pigmentation correction:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " 4 to 6 sessions, once every 3 weeks",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Anti-ageing and skin renewal:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " once every 3 to 4 weeks",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Bridal prep:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " once a month for 3 months before the wedding",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Maintenance:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " once a month",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Aftercare:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " There\u0027s no downtime, so you can get on with your day. Use sunscreen daily and stick to the home routine your dermatologist suggests, so the results last longer.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "7. Before \u0026 After Results",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Patient results gallery to be placed here)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "8. FAQs",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: What is DivaGenesis treatment?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. It\u0027s a skin lightening and rejuvenation treatment that combines diamond tip exfoliation, laser and micro-channeling with a serum infusion, all in one session.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is DivaGenesis painful?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. No. Most people find it comfortable. You may feel some warmth or a light prickling during the laser and micro-channeling steps.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How long does one session take?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Around 45 to 60 minutes, and you can go back to your routine right after.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Will it reduce my dark spots?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes. The laser breaks down the pigment behind dark spots, and they lighten gradually with each session.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How many sessions will I need?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. You\u0027ll see a glow after the first session. For pigmentation, 4 to 6 sessions spaced 3 weeks apart usually work best.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is it safe for sensitive skin?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. It is. Every session is customised to your skin type, so sensitive and combination skin can be treated safely.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is DivaGenesis good before a wedding?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. It\u0027s one of the more popular bridal choices. Monthly sessions for three months before the wedding give the best build-up of glow.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: What is the cost of DivaGenesis in Delhi?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. The cost depends on your skin concern and how many sessions you need. It\u0027s confirmed after your consultation at Dadu Medical Centre.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "9. Closing CTA",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "If your skin has been looking dull, patchy or just tired lately, DivaGenesis is a good place to start. Book your consultation for skin lightening treatment in Delhi with Dr. Nivedita Dadu at Dadu Medical Centre, Vasant Vihar (South Delhi) or Rajouri Garden (West Delhi).",
+                         "b":  false
+                     }
+                 ]
+    }
+]

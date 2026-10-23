@@ -1,0 +1,339 @@
+# index | treatment (as printed) | case
+0 | - | Hormonal acne (medications + combination treatments)
+1 | Chemical peels & lasers | Acne and Acne marks
+2 | DMC- Instaglam 4D & Hydrafacial ND | Post inflammatory Hyperpigmentation
+3 | Laser Hair Reduction | Excessive hair growth
+4 | Threadlift | Sagging Jowls
+5 | DMC- Instaglam 4D & Hydrafacial ND | Post inflammatory Hyperpigmentation
+6 | Chemical Peels and Lasers | Acne and acne marks
+7 | Magic Blend | Melasma
+8 | DMC- Acne check treatment | Acne and Comedones
+9 | Fillers | Under eye hollowness
+10 | DMC- Acne check treatment | Acne and Comedones
+11 | Lip Fillers | Thin, Inverted and Flat Lips
+12 | Lip Fillers | Thin, Inverted and Flat Lips
+13 | Lip Fillers | Thin, Inverted and Flat Lips
+14 | DMC- Magic Blend 2.0 | Pigmentation
+15 | DMC- Magic Blend 2.0 | Pigmentation
+16 | DMC- Magic Blend 2.0 | Pigmentation
+17 | DMC - ExpressoLift | Hand Rejuvenation
+18 | Laser Hair Reduction | Excessive hair growth
+19 | DMC - ExpressoLift | Skin tightening & glow
+20 | Chemical Peels and Lasers | Acne and acne marks
+21 | DMC - ExpressoLift | Skin tightening & glow
+22 | Magic Blend | Melasma
+23 | - | Underarm pigmentation (combination peels)
+24 | Magic Blend | Melasma
+25 | DMC - ExpressoLift | Skin tightening & glow
+26 | Acne Check and Chemical Peels | Acne and postacne redness
+27 | Acne Check and Chemical Peels | Acne and postacne redness
+28 | Acne Check and Chemical Peels | Acne and postacne redness
+29 | DMC-Fraxogenus | Acne scars
+30 | Microblading | Thin eyebrows
+31 | Mesogrow + Advanced HGP | Hair fall
+32 | DMC - ExpressoLift | Hand Rejuvenation
+33 | 365 Oxyboost | Dullness and sunspots
+34 | Medications | Tinea Capitis
+35 | Microneedling Radiofrequency | Stretch Marks
+36 | Cautery | Skin Tags
+37 | Magic Blend | Melasma
+38 | DMC - Root Restore Therapy | Male Pattern Baldness
+39 | Combination of lasers and chemical peels | Acne & acne marks
+40 | Microneedling Radiofrequency | Stretch Marks
+41 | Magic Blend | Melasma
+42 | DMC - Root Restore Therapy | Male Pattern Baldness
+43 | Combination of lasers and chemical peels | Acne & acne marks
+44 | Microneedling Radiofrequency | Stretch Marks
+45 | DMC - Root Restore Therapy | Male Pattern Baldness
+46 | - | Hormonal acne (medications + combination treatments)
+47 | 365 Oxyboost | Dullness and sunspots
+48 | Laser Hair Reduction (Alexandrite) | Excessive hair growth (Fine Hair)
+49 | Collagen Induction Therapy | Face dullness and Tanning
+50 | - | Acne scars (successive laser treatment)
+51 | Laser Hair Reduction (Alexandrite) | Excessive hair growth (Fine Hair)
+52 | Collagen Induction Therapy | Face dullness and Tanning
+53 | Chemical peels & lasers | Acne and Acne marks
+54 | Collagen Induction Therapy | Face dullness and Tanning
+55 | DMC- Instaglam 4D & Hydrafacial ND | Post inflammatory Hyperpigmentation
+56 | Chemical peels and Laser | Acanthosis Nigricans (Hyperpigmentation)
+57 | Acne check and chemical peel | Acne & Whiteheads
+58 | Acne check peel | Acne
+59 | DMC-Berry Blast Facial | Acne and Acne marks
+60 | Acne Check/Peels/Crystal Glaze | Acne and Acne Marks
+61 | DMC-Berry Blast Facial | Acne and Acne marks
+62 | - | ACNE TREATMENT
+63 | - | Acne (3 Sessions)
+64 | DMC-Berry Blast Facial | Acne and Acne marks
+65 | Acne Check + Modified Photofacial | Acne and Acne Marks
+66 | Acne Check + Modified Photofacial | Acne and Acne Marks
+67 | Acne Check Peel & Modified Photofacial | Acne and Acne Marks
+68 | Acne Check + Modified Photofacial | Acne and Acne Marks
+69 | Acne Check Peel & Modified Photofacial | Acne and Acne Marks
+70 | Acne Check + Modified Photofacial | Acne and Acne Marks
+71 | Acne Check Treatment + Hydrafacial | Acne and Acne marks
+72 | Acne Check + Modified Photofacial | Acne and Acne Marks
+73 | Acne Check Treatment + Hydrafacial | Acne and Acne marks
+74 | Acne Check + Modified Photofacial | Acne and Acne Marks
+75 | Acne Check Peel & Modified Photofacial | Acne and Acne Marks
+76 | Acne Check + Modified Photofacial + Fraxogenus | Acne, Acne marks and scars
+77 | Acne Check + Modified Photofacial + Fraxogenus | Acne, Acne marks and scars
+78 | Acne Check + Modified Photofacial + Fraxogenus | Acne, Acne marks and scars
+79 | Acne check and lasers | Acne & Acne scars
+80 | Acne check and lasers | Acne & Acne scars
+81 | Acne Check + PowerExfo peel | Acne and Acne marks
+82 | Acne Check + PowerExfo peel | Acne and Acne marks
+83 | Acne Check + PowerExfo peel | Acne and Acne marks
+84 | TCA Cross & Collagen Growth Promoters | Acne Scars and Open Pores
+85 | - | Acne due to PCOS (oral medication + skin treatments)
+86 | Acne Check | Acne
+87 | Acne Check | Acne
+88 | Acne Check Treatment (1 Session) | -
+89 | Combination of lasers & chemical peels | Acne & acne marks
+90 | DMC-Fraxogenus + Subcision | Acne Scars
+91 | DMC-Fraxogenus + Subcision | Acne Scars
+92 | DMC-Fraxogenus + Subcision | Acne Scars
+93 | DMC-Fraxogenus + Subcision | Acne Scars
+94 | DMC-Fraxogenus + Subcision | Acne Scars
+95 | Acne Check and Black Peel | Acne
+96 | - | Acne Scar (3 Sessions)
+97 | - | Acne Scar (3 Sessions)
+98 | - | Acne Scar (3 Sessions)
+99 | - | Acne Scar Treatment (4 Sessions)
+100 | Erbium Fiber Laser | Acne Scar Treatment with Erbium Fiber Laser (3 Months)
+101 | Erbium Fiber Laser | Acne Scar Treatment with Erbium Fiber Laser (3 Months)
+102 | Micro Needling Radio Frequency | Acne Scar Treatment with Micro Needling Radio Frequency (4 Months)
+103 | DMC- Pixigenus | Acne Scars and Acne Marks
+104 | DMC-Fraxogenus | Acne scars
+105 | DMC- Pixigenus | Acne Scars and Acne Marks
+106 | DMC-Fraxogenus | Acne scars
+107 | TCA Cross and DMC- Pixigenus | Acne Scars
+108 | Laser treatment | Acne scars
+109 | - | Deep acne scars (laser therapy)
+110 | - | Deep acne scars (laser therapy)
+111 | Acne check peel | Acne
+112 | - | Acne and post-acne pigmentation (skin treatments)
+113 | - | Forehead acne with pigmentation (medical + skin procedures)
+114 | Acne Zap Laser | Acne Zap Laser
+115 | Acne Zap Laser | Acne Zap Laser
+116 | - | Male pattern hair loss (medication + Advanced PRP)
+117 | - | Male pattern hair loss (medication + Advanced PRP)
+118 | Mesogrow + Advanced PRP | Androgenetic Alopecia
+119 | - | Acne, scars, pores, pigmentation (medication + lasers + microneedling)
+120 | - | Male pattern baldness (medications + Advanced PRP)
+121 | - | Tattoo reduction (laser sessions)
+122 | Advanced HGP | Hair Fall
+123 | Chemical Peels | -
+124 | Combination of chemical peels, lasers and microneedling treatments | Acne, Open pores & PIH
+125 | Advanced HGP | -
+126 | Microneedling | Acne Scars
+127 | Microneedling | Acne Scars
+128 | Microneedling | -
+129 | Microneedling | -
+130 | Root Restore Therapy | -
+131 | - | Acne and acne scars (medication + laser treatments)
+132 | InstaGlam | InstaGlam
+133 | Acne check peel | Acne
+134 | Acne check peel | Acne
+135 | Acne Check Peel Treatment (1 Session) | -
+136 | Erbium Fiber Laser | Acne Scar Treatment with Erbium Fiber Laser (1 Session)
+137 | Erbium Fiber Laser | Acne Scar Treatment with Erbium Fiber Laser (1 Session)
+138 | Tixel | Acne Scar Treatment with Tixel (3 Sessions)
+139 | Derma Roller | Acne Scar Treatment with Derma Roller (2 Sessions)
+140 | Tixel | Acne Scar Treatment with Tixel (2 Sessions)
+141 | - | Acne Scar Treatment with Laser (4 Sessions)
+142 | Micro Needling Radio Frequency | Acne Scar Treatment with Micro Needling Radio Frequency (1 Month)
+143 | - | Acne Scar Laser Treatment (2 Months)
+144 | Age less Treatment | Anti Ageing (Age less Treatment) After 1 session result
+145 | - | Anti Aging Treatment (3 Months)
+146 | Laser Beard Shaping | -
+147 | Acne check peel | -
+148 | Magic Blend | -
+149 | - | Acne and post-acne pigmentation (medication + procedures)
+150 | Skin Tag Removal | Skin Tag Removal
+151 | - | Post acne erythema and open pores (skin procedures)
+152 | Root Restore Therapy | Female pattern hair loss (medication + root restore therapy)
+153 | - | Acne Scars Treatment
+154 | Magic Blend | -
+155 | Under Eye PRP Treatment | Under Eye PRP Treatment
+156 | Laser Hair Reduction | Laser Hair Reduction
+157 | Acne check peel | -
+158 | Laser treatment | Freckles
+159 | Laser treatment | Freckles
+160 | Laser treatment | Freckles
+161 | Laser treatment | Freckles
+162 | Laser treatment | Freckles
+163 | Laser treatment | Freckles
+164 | Pixigenous and Platelet Rich Plasma treatment | -
+165 | Laser Hair Reduction | Laser Hair Reduction
+166 | Laser Hair Reduction | Laser Hair Reduction
+167 | Alma Pixel | Lip Lightening with Alma Pixel (3 Sessions)
+168 | Magic Blend | Melasma
+169 | Magic Blend | Melasma
+170 | Magic Blend | Melasma
+171 | MNRF | Acne Scars
+172 | MNRF | Acne Scars
+173 | MNRF | Acne Scars
+174 | MNRF | Acne Scars
+175 | Laser treatment | Mole
+176 | Laser treatment | Post acne hypertrophic scars
+177 | - | Stretch Marks Treatment (3 Sessions)
+178 | Micro Needling Radio Frequency with PRP | Stretch Marks Treatment (1 Session)
+179 | - | Vitiligo Treatment (2 Months)
+180 | Chemical Peels and TCA Cross | Blackheads and Openpores
+181 | - | Burn Scald Treatment (1.5 Months)
+182 | - | Chemical Burn Treatment (4 Sessions)
+183 | Chemical Peels | Dark Elbows
+184 | Chemical Peels | Dark Elbows
+185 | Chemical peels | Acanthosis Nigrican
+186 | Chemical peels & lasers | Acne and Acne marks
+187 | Acne Check | Comedones and Acne
+188 | Medications | Cosmetic product allergy
+189 | Dermal fillers | Dark Circles
+190 | fillers | Under eye hollowness and pigmentation
+191 | Laser Treatment | Dark Lips
+192 | Q switch + Hydrafacial | Dark Underarms
+193 | - | Pigmentation Treatment (1 Session)
+194 | DMC- Root Restore Therapy | Female Pattern Hair Loss
+195 | DMC- Root Restore Therapy | Female Pattern Hair Loss
+196 | DMC- Root Restore Therapy | Female Pattern Hair Loss
+197 | Eyebrow Laser Hair Reduction | Eyebrow Laser Hair Reduction (1 Session)
+198 | Laser Toning | Face Laser Toning Treatment (3 Sessions)
+199 | - | Face Lift Treatment (1 Session)
+200 | - | Facial Hair Treatment (2 Sessions)
+201 | - | Female pattern hair loss due to PCOD (anti-androgen + PRP)
+202 | PowerExfo Peel | Forehead Pigmentation
+203 | 3 Mesotherapy + 3 Advanced HGP | FPHL
+204 | 3 Mesotherapy + 3 Advanced HGP | FPHL
+205 | Q-switch Laser | Freckles
+206 | Q-switch Laser | Freckles
+207 | Q-switch Laser | Freckles
+208 | Laser treatment | Freckles
+209 | - | Freckles removed with laser treatment
+210 | - | Freckles removed with laser treatment
+211 | DMC- Root Restore Therapy | Hair fall
+212 | Hair Growth Promoters | Hair Loss (Male Pattern Hair loss)
+213 | Laser Hair Reduction | Excessive hair growth
+214 | Laser Hair Reduction | Excessive hair growth
+215 | Laser Hair Reduction | Excessive hair growth
+216 | Laser Hair Reduction | Excessive hair growth
+217 | Laser Hair Reduction | Excessive hair growth
+218 | Laser Hair Reduction | Excessive hair growth
+219 | Laser Hair Reduction | Excessive hair growth
+220 | - | HAIR PRP TREATMENT
+221 | Hair Threads | Hair Threads (20 Threads) in 1.5 Months
+222 | Hair Threads | Hair Threads (20 Threads) in 2.5 Months
+223 | Hair Threads | Hair Threads (10 Threads) in 2.5 Months
+224 | Hair Threads | Hair Threads (30 Threads) in 3.5 Months
+225 | Hair Threads | Hair Threads (20 Threads) in 2.5 Months
+226 | HGP | HGP (3 Sessions)
+227 | HGP | HGP Trichotillomania Treatment (2 Months)
+228 | HGP | HGP Treatment for Hair Fall (3 Sessions)
+229 | Hydrafacial | Dullness and tanning
+230 | Hydrafacial | Dullness and tanning
+231 | Hydrafacial | Dullness and tanning
+232 | Hydra Revive | Hydra Revive
+233 | DMC- Pixigenus | Hypertrophic Scar
+234 | Dermal fillers | Dark Circles
+235 | Tattoo removal | Tattoo
+236 | - | Acne Scars Treatment
+237 | Anti-wrinkle injection | Crow's Feet
+238 | - | Acne, scars, pores, pigmentation (medication + lasers + microneedling)
+239 | - | Impetigo with Irritant Dermatitis (Infection) Treatment (15 Days)
+240 | Insta Regen | Insta Regen
+241 | Erbium Fiber Laser | Acne Scar Treatment with Erbium Fiber Laser (6 Months)
+242 | Laser Beard Shaping | Laser Beard Shaping Treatment (1 Session)
+243 | Erbium Fiber Laser (stretch marks) | Stretch Marks Treatment with Erbium Fiber Laser (10 Months)
+244 | Laser Hair Reduction | Facial Hair
+245 | Laser Hair Reduction (Diode) | Laser Hair Reduction with Diode Laser (3 Months)
+246 | Laser Hair Reduction (Diode) | Laser Hair Reduction with Diode Laser (4 Months)
+247 | Laser Hair Removal | Laser Hair Removal (3 Sessions)
+248 | Laser tattoo removal | Unwanted tattoo
+249 | Laser Toning | Dullness
+250 | Laser Hair Reduction | Excessive Hair growth
+251 | Laser Hair Reduction | Excessive Hair growth
+252 | Laser Hair Reduction | Excessive Hair growth
+253 | Lip Fillers | Thin, Inverted and Flat Lips
+254 | Lip Filler | Thin, Inverted and Flat Lips
+255 | Lip Filler | Thin, Inverted and Flat Lips
+256 | Lip Fillers | Thin, Inverted and Flat Lips
+257 | Lip Filler | Thin, Inverted and Flat Lips
+258 | Fillers | Flat Lips
+259 | Fillers | Flat Lips
+260 | Lip Fillers | Thin, Inverted and Flat Lips
+261 | Lip Fillers | Thin, Inverted and Flat Lips
+262 | Lip Fillers | Thin, Inverted and Flat Lips
+263 | Mesotherapy + Advance HGP | Male Pattern Baldness
+264 | Mesotherapy + Advance HGP | Male Pattern Baldness
+265 | Mesotherapy + Advance HGP | Male Pattern Baldness
+266 | Root Restore Therapy | Male Pattern Baldness
+267 | Magic Blend | Melasma
+268 | Magic Blend treatment | Melasma
+269 | Meso Glow | Meso Glow Treatment (3 Months)
+270 | Laser Treatment | Mole Removal
+271 | Fillers | Nasolabial Folds
+272 | Non-surgical nose enhancement | Nose shape
+273 | Non-surgical nose enhancement | Nose shape
+274 | Non-surgical nose enhancement | Nose shape
+275 | Non-surgical nose enhancement | Nose shape
+276 | Photofacial | Photofacial Treatment (6 Months)
+277 | - | Pigmentation Treatment (4 Sessions)
+278 | Acne Check + Chemical Peels | PIH and Acne
+279 | Acne Check + Chemical Peels | PIH and Acne
+280 | Acne Check + Chemical Peels | PIH and Acne
+281 | - | Post Acne Redness (4 Sessions)
+282 | Erbium Fiber Laser | Acne Scar Treatment with Erbium Fiber Laser (6 Months)
+283 | - | Trichotillomania (oral medications + PRP)
+284 | - | Male pattern hair loss (medication + PRP therapy)
+285 | - | Female pattern hair loss (oral medication + PRP)
+286 | Secukinumab Injections | Psoriasis
+287 | NBUVB | Psoriasis
+288 | Lasers and Chemical Peels | Acne & Acne marks
+289 | Root Restore Therapy | Root Restore Therapy (4 Sessions)
+290 | Dermal Fillers | Saggy skin and undereye hollowness
+291 | Dermal Fillers | Saggy skin and undereye hollowness
+292 | Dermal Fillers | Saggy skin and undereye hollowness
+293 | Dermal Fillers | Saggy skin and undereye hollowness
+294 | Dermal Fillers | Saggy skin and undereye hollowness
+295 | Dermal Fillers | Saggy skin and undereye hollowness
+296 | Dermal Fillers | Saggy skin and undereye hollowness
+297 | Dermal Fillers | Saggy skin and undereye hollowness
+298 | Dermal Fillers | Saggy skin and undereye hollowness
+299 | Dermal Fillers | Saggy skin and undereye hollowness
+300 | Medications | Irritant contact Dermatitis (Skin Allergy)
+301 | Medications | Irritant contact Dermatitis (Skin Allergy)
+302 | Skin boosters | Dry and dull skin
+303 | Skin boosters | Dry and dull skin
+304 | Skin boosters | Dry and dull skin
+305 | Threadlift | Sagging Jowls
+306 | Threads | Sagging Jowls
+307 | Threads | Sagging Jowls
+308 | Threads | Sagging Jowls
+309 | Fillers | Under Eye bags and hollowness
+310 | Fillers | Dark Circles, Eyebags
+311 | Dermal fillers | Under eye bags and hollowness
+312 | Fillers | Dark Circles, Eyebags
+313 | Fillers | Under eye hollowness and dark circles
+314 | Fillers | Dark Circles, Eyebags
+315 | Fillers | Dark Circles, Eyebags
+316 | Dermal fillers | Undereye bags, Hollowness
+317 | - | Undereye Treatment (3 Sessions)
+318 | Fillers | Under eye hollowness
+319 | Fillers | Under eye hollowness
+320 | Fillers | Under eye hollowness
+321 | Fillers | Under eye hollowness
+322 | Fillers | Under eye hollowness
+323 | Fillers | Under eye hollowness
+324 | Fillers | Undereye bags, Hollowness
+325 | Upper Lip Laser Hair Reduction | Upper Lip Laser Hair Reduction (1 Session)
+326 | Phototherapy | Vitiligo
+327 | Phototherapy | Vitiligo
+328 | Phototherapy | Vitiligo
+329 | Radiofrequency treatment (RF) | Warts
+330 | Radiofrequency treatment (RF) | Warts
+331 | Wart Removal | Wart Removal
+332 | - | Hirsutism managed with laser treatments
+333 | - | Hirsutism managed with laser treatments
+334 | Magic Blend | -
+335 | Subcision and MNRF | Acne scars
+336 | Anti-aging injections | ANTI-AGING INJECTIONS
+337 | Anti-aging injections | ANTI-AGING INJECTIONS

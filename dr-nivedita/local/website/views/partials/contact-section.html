@@ -1,0 +1,33 @@
+<!-- 6. CONTACT US — DMC request-a-consultation with notched image -------- -->
+<section class="enquiry-section" id="contact">
+  <div class="container">
+    <div class="enq-top">
+      <div class="enq-info">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="enq-sub">For professional consultation and treatments with our team of consultant dermatologists, nurses, and aestheticians.</p>
+        <div class="enq-contacts">
+          <div class="enq-item"><span class="enq-icon"><svg class="ico"><use href="#i-phone"/></svg></span><span><span class="enq-label">Phone Number</span><a class="enq-value" href="tel:+919810939319">+91-981-093-9319</a></span></div>
+          <div class="enq-item"><span class="enq-icon"><svg class="ico"><use href="#i-clock"/></svg></span><span><span class="enq-label">Clinic Timings (Mon to Sat)</span><span class="enq-value">9:30 AM - 7:30 PM</span></span></div>
+          <div class="enq-item"><span class="enq-icon"><svg class="ico"><use href="#i-clock"/></svg></span><span><span class="enq-label">Clinic Timings (Sunday)</span><span class="enq-value">10:00 AM - 7:00 PM</span></span></div>
+        </div>
+        <p class="consent enq-consent">By clicking on "Submit", you agree to our <a href="https://www.drniveditadadu.com/privacy-policy">Privacy Policy</a>, <a href="https://www.drniveditadadu.com/legal-disclaimer">Disclaimer</a> and <a href="https://www.drniveditadadu.com/terms-conditions">Terms &amp; Conditions</a>.</p>
+      </div>
+      <!-- fields as on drniveditadadu.com's homepage contact form -->
+      <form class="enq-form" action="/api/contact" method="post" data-form="contact">
+        <input type="hidden" name="_ft" value="{{formToken}}">
+        <div class="hp-field" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <input class="enq-input" type="text" name="name" placeholder="First Name*" aria-label="First Name" required>
+        <input class="enq-input" type="tel" name="phone" placeholder="Phone*" aria-label="Phone" required>
+        <input class="enq-input" type="email" name="email" placeholder="Enter Email*" aria-label="Email" required>
+        <input class="enq-input" type="text" name="subject" placeholder="Subject*" aria-label="Subject" required>
+        <textarea class="enq-input" name="message" rows="1" placeholder="Message" aria-label="Message" required></textarea>
+        <button class="enq-submit" type="submit">Submit <span class="enq-submit-arrow"><svg class="ico"><use href="#i-right"/></svg></span></button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+    <div class="enq-image">
+      <img src="/images/clinic-building-signage.jpg" alt="Dr. Nivedita Dadu&#x27;s Dermatology Clinic building signage" loading="lazy" width="1366" height="764" decoding="async">
+      <span class="enq-notch" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>

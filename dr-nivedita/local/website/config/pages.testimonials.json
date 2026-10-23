@@ -1,0 +1,34 @@
+[
+  {
+    "path": "/testimonials",
+    "view": "testimonials",
+    "title": "Testimonials | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Read our testimonials and Witness the results yourself, also see what our patients feel about us.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Testimonials",
+        "path": "/testimonials"
+      }
+    ]
+  },
+  {
+    "path": "/video-testimonials/",
+    "view": "video-testimonials",
+    "title": "Video Testimonials | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Watch our video testimonials and see what our patients say about us.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Video Testimonials",
+        "path": "/video-testimonials/"
+      }
+    ]
+  }
+]

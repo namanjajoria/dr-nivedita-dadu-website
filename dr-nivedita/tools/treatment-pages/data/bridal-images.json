@@ -1,0 +1,257 @@
+{
+ "beard-shaping": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/beard-shaping-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 84
+   },
+   {
+    "src": "/images/treatments/bridal/beard-shaping-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 103
+   },
+   {
+    "src": "/images/treatments/bridal/beard-shaping-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 97
+   },
+   {
+    "src": "/images/treatments/bridal/beard-shaping-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 86
+   },
+   {
+    "src": "/images/treatments/bridal/beard-shaping-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 85
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/beard-shaping-how-laser-beard-shaping-works.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 87
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/beard-shaping-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 94
+  },
+  "split": {
+   "src": "/images/treatments/bridal/beard-shaping-areas-we-treat.webp",
+   "w": "718",
+   "h": "583"
+  }
+ },
+ "divagenesis": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/divagenesis-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 89
+   },
+   {
+    "src": "/images/treatments/bridal/divagenesis-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 90
+   },
+   {
+    "src": "/images/treatments/bridal/divagenesis-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 90
+   },
+   {
+    "src": "/images/treatments/bridal/divagenesis-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 96
+   },
+   {
+    "src": "/images/treatments/bridal/divagenesis-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 84
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/divagenesis-what-makes-divagenesis-different.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 27
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/divagenesis-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 25
+  },
+  "split": {
+   "src": "/images/treatments/bridal/divagenesis-concerns-divagenesis-can-help-with.webp",
+   "w": "718",
+   "h": "583"
+  }
+ },
+ "laser-facials": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/laser-facials-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 96
+   },
+   {
+    "src": "/images/treatments/bridal/laser-facials-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 92
+   },
+   {
+    "src": "/images/treatments/bridal/laser-facials-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 71
+   },
+   {
+    "src": "/images/treatments/bridal/laser-facials-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 77
+   },
+   {
+    "src": "/images/treatments/bridal/laser-facials-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 70
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/laser-facials-how-a-laser-facial-works.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 86
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/laser-facials-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 69
+  },
+  "split": {
+   "src": "/images/treatments/bridal/laser-facials-concerns-a-laser-facial-can-help-with.webp",
+   "w": "718",
+   "h": "583"
+  }
+ },
+ "lip-pigmentation": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/lip-pigmentation-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 97
+   },
+   {
+    "src": "/images/treatments/bridal/lip-pigmentation-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 92
+   },
+   {
+    "src": "/images/treatments/bridal/lip-pigmentation-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 96
+   },
+   {
+    "src": "/images/treatments/bridal/lip-pigmentation-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 94
+   },
+   {
+    "src": "/images/treatments/bridal/lip-pigmentation-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 85
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/lip-pigmentation-why-lips-turn-dark.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 104
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/lip-pigmentation-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 98
+  },
+  "split": {
+   "src": "/images/treatments/bridal/lip-pigmentation-how-the-laser-works.webp",
+   "w": "718",
+   "h": "583"
+  }
+ },
+ "power-glow": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/power-glow-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 87
+   },
+   {
+    "src": "/images/treatments/bridal/power-glow-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 85
+   },
+   {
+    "src": "/images/treatments/bridal/power-glow-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 97
+   },
+   {
+    "src": "/images/treatments/bridal/power-glow-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 93
+   },
+   {
+    "src": "/images/treatments/bridal/power-glow-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 86
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/power-glow-why-we-pair-microdermabrasion-with-the-peel.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 82
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/power-glow-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 26
+  },
+  "split": {
+   "src": "/images/treatments/bridal/power-glow-concerns-power-glow-can-help-with.webp",
+   "w": "718",
+   "h": "583"
+  }
+ }
+}

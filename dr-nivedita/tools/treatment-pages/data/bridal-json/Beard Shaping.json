@@ -1,0 +1,512 @@
+[
+    {
+        "k":  "h1",
+        "runs":  [
+                     {
+                         "t":  "Beard Shaping ",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "1. Hero \u0026 Intro ",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Laser Beard Shaping ",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "If you keep a beard, you know the drill. Trim it on Sunday and by Wednesday the neck has filled in again, the cheek line has gone fuzzy, and there\u0027s a razor bump or two you\u0027d rather not talk about. Laser beard shaping treatment in Delhi is for men who are done with that cycle.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "And no, it doesn\u0027t take your beard away. The laser only goes after the hair outside the shape you want to keep, so the stuff on your neck, the strays on your cheeks. The beard itself isn\u0027t touched. Over a few sessions those areas stop growing back properly and the edges stay sharp on their own. Grooms love it, obviously, but plenty of working men book it too, just to save ten minutes in front of the mirror every morning.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Available at Dadu Medical Centre Vasant Vihar (South Delhi) \u0026 Rajouri Garden (West Delhi), under Dr. Nivedita Dadu.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "2. How Laser Beard Shaping Works",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Hair gets its colour from melanin, and that\u0027s what the laser looks for. The light hits the pigment in the hair root, turns into heat, and damages the follicle so it can\u0027t grow hair the way it used to. The treated hairs then shed over the next two or three weeks.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Here\u0027s the catch. Not all hair is in its growing phase at the same time, and the laser only really works on the ones that are. That\u0027s why one sitting isn\u0027t enough, and why sessions are spaced out to catch each new batch as it comes up.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "We use the Soprano ICE system, which has three wavelengths: 755nm Alexandrite, 810nm Diode and 1064nm Nd:YAG. Your specialist picks one depending on your skin tone, hair type and the area being done. For a lot of Indian skin, especially darker tones, Nd:YAG is the safer choice. A small facial tip is used for the fine work along the jaw, chin and neckline, and the built-in cooling keeps things comfortable.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "3. Areas We Treat",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Mostly the neck below the jawline, which is where the mess usually starts. The cheeks above your beard line are next, and then any stray hairs sitting outside the shape you\u0027ve chosen. Some men stick to just the chin and jawline. Others go for the full face. Either way, you decide the shape before anything starts, and the beard zone stays exactly as it is.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "4. Benefits Section",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The obvious one is clean, defined edges that don\u0027t need fixing every couple of days. But there\u0027s more to it:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "far fewer razor burns and ingrown hairs on the neck, since there\u0027s less hair there to cause them",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "the beard shape you picked holds, without daily trimming",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "no downtime, so you can go back to work straight after",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "sessions are quick, around 30 to 45 minutes",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "the right wavelength is chosen for your skin, including darker Indian skin tones",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "results that last, with maybe a touch-up once or twice a year",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "5. Ideal Candidates",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Grooms getting ready for the wedding are the obvious ones, and it\u0027s a good idea to start early since this takes a few months. Professionals who want to look sharp every day without the morning fuss also do well with it.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "It\u0027s especially worth a look if your neck breaks out in razor bumps or ingrown hairs every time you shave. Cutting down the hair there usually helps a lot.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "6. Process \u0026 Techniques",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "First, a quick chat with the specialist. You talk about the shape you want, they look at your skin and hair, and the wavelength gets decided. Then the lines are marked out so everyone\u0027s clear on what stays and what goes.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The session itself takes 30 to 45 minutes. The facial tip is moved along the neck, cheeks and jaw, with cooling built in the whole time. Most men describe it as a warm tingle and not much more. You might look a little red afterwards, but that settles within a few hours.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "How many sessions?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Usually 6 to 8, about 4 to 6 weeks apart. If you\u0027re doing the full face, it can go up to 10. Results come gradually, roughly like this:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "after session 1: about 10 to 20% less hair",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "by sessions 2 to 3: around 30 to 50%",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "by sessions 4 to 5: around 50 to 70%",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "by sessions 6 to 8: around 70 to 90%",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "After that, a touch-up once or twice a year is usually all you need.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Aftercare:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Go ahead and shave between sessions, that\u0027s actually recommended. What you shouldn\u0027t do is wax or thread, because the laser needs the root to still be there. Put on SPF 30 or above on the treated areas after every session.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "7. Before \u0026 After Results",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Patient results gallery to be placed here)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "8. Cost of Laser Beard Shaping in Delhi",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The price depends on how much area you want done. Per session, it roughly works out like this:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "table",
+        "rows":  [
+                     [
+                         "Area",
+                         "Approx. cost per session*"
+                     ],
+                     [
+                         "Chin / jawline only",
+                         "₹1,500 – ₹3,000"
+                     ],
+                     [
+                         "Cheek line definition",
+                         "₹1,500 – ₹3,500"
+                     ],
+                     [
+                         "Neckline cleanup",
+                         "₹1,500 – ₹4,000"
+                     ],
+                     [
+                         "Full beard shaping (neck + cheeks)",
+                         "₹3,000 – ₹6,000"
+                     ],
+                     [
+                         "Beard shaping + full face",
+                         "₹5,000 – ₹10,000"
+                     ]
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "*T\u0026C apply. Prices are approximate, and the final cost is confirmed after your consultation.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "9. FAQs",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Will laser beard shaping remove my whole beard?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. No, and this is the question we get most. Only the hair outside your chosen shape is treated. Your beard stays as it is.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How many sittings will it take?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Usually 6 to 8, spaced 4 to 6 weeks apart. You\u0027ll start noticing less regrowth after the first couple.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Does it hurt?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Not really. Most men feel a warm, tingly sensation, and the cooling in the machine takes the edge off.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Can I keep shaving between sessions?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes, please do. Just stay away from waxing and threading until the course is over.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: I have darker skin. Is it safe for me?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes. The Nd:YAG 1064nm wavelength is made for darker skin, and your specialist will pick the right setting.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Will it help with ingrown hairs on my neck?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. In most cases, yes. Less hair on the neck means fewer bumps and ingrowns after shaving.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How long is each session?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. About 30 to 45 minutes, and you can head back to work after.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: What does laser beard shaping cost in Delhi?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Anywhere from ₹1,500 to ₹10,000 per session, depending on the area. Your exact price is confirmed after the consultation at Dadu Medical Centre.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "10. CTA",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Tired of fixing your beard line every other day? Come in for a laser beard shaping consultation with Dr. Nivedita Dadu\u0027s team at Dadu Medical Centre, Vasant Vihar (South Delhi) or Rajouri Garden (West Delhi). We\u0027ll help you work out the shape first, then take care of the rest.",
+                         "b":  false
+                     }
+                 ]
+    }
+]

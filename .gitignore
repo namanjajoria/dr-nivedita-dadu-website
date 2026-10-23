@@ -1,0 +1,28 @@
+# ---- dependencies ----------------------------------------------------------
+node_modules/
+
+# ---- environment files (SECRETS - never commit) ----------------------------
+# Real .env files hold database passwords, service keys and JWT secrets.
+# Only the .example templates belong in version control.
+.env
+.env.*
+!.env.example
+
+# ---- Dr Nivedita Dadu ------------------------------------------------------
+# Generated from admin-build/ by scripts/build-admin.js local - never edited by hand.
+dr-nivedita/local/admin/
+dr-nivedita/backups/
+dr-nivedita/database/exports/
+dr-nivedita/database/*.dump
+dr-nivedita/database/*.csv
+
+# ---- DMC reference (local study material, not part of the product) --------
+reference-dmc/
+
+# ---- logs, caches, OS noise ------------------------------------------------
+*.log
+npm-debug.log*
+tmp/
+.cache/
+.DS_Store
+Thumbs.db

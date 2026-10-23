@@ -1,0 +1,598 @@
+[
+  {
+    "path": "/faqs/",
+    "view": "faqs",
+    "title": "Skin Treatment: FAQs, Questions and Answers About Skin Care",
+    "description": "Get answers to your frequently asked questions (FAQs) on skin care.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/dmc-fraxogenus/",
+    "view": "faq-dmc-fraxogenus",
+    "title": "DMC-Fraxogenus FAQs | Dr. Nivedita Dadu Dermatology Clinic",
+    "description": "FAQs- Frequently asked questions- answers related to DMC-Fraxogenus are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "DMC-Fraxogenus",
+        "path": "/faqs/dmc-fraxogenus/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/silkpeel/",
+    "view": "faq-silkpeel",
+    "title": "SilkPeel&trade; FAQs | Dr. Nivedita Dadu Dermatology Clinic",
+    "description": "FAQs- Frequently asked questions- answers related to SilkPee™ are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "SilkPeel™",
+        "path": "/faqs/silkpeel/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/microblading/",
+    "view": "faq-microblading",
+    "title": "Microblading FAQs | Dr. Nivedita Dadu Dermatology Clinic",
+    "description": "FAQs- Frequently asked questions- answers related to microblading are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Microblading",
+        "path": "/faqs/microblading/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/profhilo/",
+    "view": "faq-profhilo",
+    "title": "Profhilo FAQs | Dr. Nivedita Dadu Dermatology Clinic",
+    "description": "FAQs- Frequently asked questions- answers related to Profhilo are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Profhilo",
+        "path": "/faqs/profhilo/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/dmc-expressolift/",
+    "view": "faq-dmc-expressolift",
+    "title": "DMC-Expressolift®️ FAQs | Dr. Nivedita Dadu Dermatology Clinic",
+    "description": "FAQs- Frequently asked questions- answers related to DMC-Expressolift®️ are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "DMC-Expressolift®",
+        "path": "/faqs/dmc-expressolift/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/anti-wrinkle-injection/",
+    "view": "faq-anti-wrinkle-injection",
+    "title": "Anti-Wrinkle Injection FAQs | By Dr Nivedita Dadu's  Clinic",
+    "description": "FAQs- Frequently asked questions- answers related to Anti Wrinkle Injection are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Anti Wrinkle Injection",
+        "path": "/faqs/anti-wrinkle-injection/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/martini/",
+    "view": "faq-martini",
+    "title": "FAQs- Questions and Answers about Martini- Dr. Nivedita Dadu",
+    "description": "Get answers of frequently asked questions related to Martini. The question has been answered by expert and may helpful for you.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "MARTINI",
+        "path": "/faqs/martini/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/4D-photofacial/",
+    "view": "faq-4d-photofacial",
+    "title": "4D Photofacial FAQs | Questions & Answers by Dr Dadu's  Clinic",
+    "description": "Common 4D Photofacial questions answered by Dr. Nivedita Dadu. Learn benefits, safety and results in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "4D Photofacial",
+        "path": "/faqs/4D-photofacial/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/divagenesis/",
+    "view": "faq-divagenesis",
+    "title": "FAQs- Questions and Answers about Divagenesis- Dr. Nivedita Dadu",
+    "description": "Answers of frequently asked questions related to Divagenesis are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Divagenesis",
+        "path": "/faqs/divagenesis/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/advanced-HGP/",
+    "view": "faq-advanced-hgp",
+    "title": "Advanced HGP",
+    "description": "Advanced HGP",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Advanced HGP",
+        "path": "/faqs/advanced-HGP/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/keloids/",
+    "view": "faq-keloids",
+    "title": "FAQs- Questions and Answers about Keloids- Dr. Nivedita Dadu",
+    "description": "Answers of frequently asked questions related to Keloids are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Keloids",
+        "path": "/faqs/keloids/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/vitiligo/",
+    "view": "faq-vitiligo",
+    "title": "FAQs- Questions and Answers about Divagenesis- Dr. Nivedita Dadu",
+    "description": "Answers of frequently asked questions related to vitiligo are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Vitiligo",
+        "path": "/faqs/vitiligo/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/chemical-peel/",
+    "view": "faq-chemical-peel",
+    "title": "Chemical Peel FAQs | Dr. Nivedita Dadu Dermatology Clinic",
+    "description": "FAQs- Frequently asked questions- answers related to Chemical Peel are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Chemical Peel",
+        "path": "/faqs/chemical-peel/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/diode-laser/",
+    "view": "faq-diode-laser",
+    "title": "FAQs- Questions and Answers about Diode-Laser- Dr. Nivedita Dadu",
+    "description": "Answers of frequently asked questions related to Diode-Laser are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Diode Laser",
+        "path": "/faqs/diode-laser/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/acne/",
+    "view": "faq-acne",
+    "title": "Acne FAQs- Questions and Answers about Acne- Dr. Nivedita Dadu",
+    "description": "Acne FAQs- Frequently asked questions- answers related to Acne are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Acne",
+        "path": "/faqs/acne/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/mesotherapy/",
+    "view": "faq-mesotherapy",
+    "title": "FAQs- Questions and Answers about mesotherapy- Dr. Nivedita Dadu",
+    "description": "Answers of frequently asked questions related to mesotherapy are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Mesotherapy",
+        "path": "/faqs/mesotherapy/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/spider-veins/",
+    "view": "faq-spider-veins",
+    "title": "FAQs- Questions and Answers about spider-veins- Dr. Nivedita Dadu",
+    "description": "Find answers of frequently asked questions related to spider-veins. The question has been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Spider Veins",
+        "path": "/faqs/spider-veins/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/skin-tightening/",
+    "view": "faq-skin-tightening",
+    "title": "Skin Tightening FAQs | Answers By Dr Nivedita Dadu's  Clinic",
+    "description": "Common skin tightening questions answered by Dr. Nivedita Dadu. Treatments available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book now",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Skin Tightening",
+        "path": "/faqs/skin-tightening/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/acne-scars/",
+    "view": "faq-acne-scars",
+    "title": "FAQs- Questions and Answers about acne-scars- Dr. Nivedita Dadu",
+    "description": "FAQs- Frequently asked questions- answers related to acne-scars are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Acne Scars",
+        "path": "/faqs/acne-scars/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/dermaroller/",
+    "view": "faq-dermaroller",
+    "title": "FAQs- Questions and Answers about dermaroller- Dr. Nivedita Dadu",
+    "description": "FAQs- Frequently asked questions- answers related to dermaroller are available. The questions have been answered by expert based on queries of searchers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Dermaroller",
+        "path": "/faqs/dermaroller/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/thread-lift/",
+    "view": "faq-thread-lift",
+    "title": "Thread Lift FAQs | Answers By Dr Nivedita Dadu's  Clinic",
+    "description": "Common thread lift questions answered by Dr. Nivedita Dadu. Treatments available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book now.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Thread Lift",
+        "path": "/faqs/thread-lift/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/stretch-marks/",
+    "view": "faq-stretch-marks",
+    "title": "Stretch Marks FAQs | Answers By Dr Nivedita Dadu's  Clinic",
+    "description": "Get answers to common stretch mark questions by Dr. Nivedita Dadu. Treatments available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Stretch Marks",
+        "path": "/faqs/stretch-marks/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/photofacials/",
+    "view": "faq-photofacials",
+    "title": "Photo Facials FAQs | Answers By Dr Nivedita Dadu's  Clinic",
+    "description": "Get answers to common photo facial questions by Dr. Nivedita Dadu. Treatments available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).  Book now",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Photofacials",
+        "path": "/faqs/photofacials/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/dermalogica-spa-facials/",
+    "view": "faq-dermalogica-spa-facials",
+    "title": "Dermalogica Spa Facial FAQs | Answers By Dr Dadu's  Clinic",
+    "description": "Common Dermalogica spa facial questions answered by Dr. Nivedita Dadu. Available at Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Learn more",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Dermalogica Spa Facials",
+        "path": "/faqs/dermalogica-spa-facials/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/vampire-facial-facelift/",
+    "view": "faq-vampire-facial-facelift",
+    "title": "Vampire Facial FAQs | Answers By Dr Nivedita Dadu's  Clinic",
+    "description": "Get answers to common vampire facial questions by Dr. Nivedita Dadu. Treatments available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Vampire Facial/FaceLift",
+        "path": "/faqs/vampire-facial-facelift/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/oxyjet-peel-treatment/",
+    "view": "faq-oxyjet-peel-treatment",
+    "title": "OxyJet Peel Treatment FAQs | Answers By Dr Dadu's  Clinic",
+    "description": "Common OxyJet Peel treatment questions answered by Dr. Nivedita Dadu. Available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book now.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Oxyjet Peel Facial",
+        "path": "/faqs/oxyjet-peel-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/body-hair/",
+    "view": "faq-body-hair",
+    "title": "Body Hair FAQs | Expert Answers By Dr Nivedita Dadu's  Clinic",
+    "description": "Common body hair FAQs answered by Dr. Nivedita Dadu. Learn causes, treatments, and solutions in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Body Hair",
+        "path": "/faqs/body-hair/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/dermal-fillers/",
+    "view": "faq-dermal-fillers",
+    "title": "Dermal Fillers FAQs | Expert Answers by Dr. Nivedita Dadu",
+    "description": "Common dermal filler questions answered by Dr. Nivedita Dadu. Treatments available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book now",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Dermal Fillers",
+        "path": "/faqs/dermal-fillers/"
+      }
+    ]
+  },
+  {
+    "path": "/faqs/hair-fall-management/",
+    "view": "faq-hair-fall-management",
+    "title": "Hair Fall Management FAQs | Answers By Dr Dadu's  Clinic",
+    "description": "Get answers to common hair fall management questions by Dr. Nivedita Dadu. Treatments available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "FAQs",
+        "path": "/faqs/"
+      },
+      {
+        "name": "Hair Fall Management",
+        "path": "/faqs/hair-fall-management/"
+      }
+    ]
+  }
+]

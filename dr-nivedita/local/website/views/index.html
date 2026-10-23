@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+{{> head-common}}
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="robots" content="{{robots}}">
+<link rel="canonical" href="{{canonicalUrl}}">
+{{> social-meta}}
+<link rel="preload" as="image" href="/images/clinic-waiting-lounge.webp" fetchpriority="high">
+<link rel="stylesheet" href="{{swiperCssUrl}}">
+<link rel="stylesheet" href="{{cssUrl}}">
+<link rel="stylesheet" href="/css/home.css?v=3">
+<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">
+<script src="{{swiperJsUrl}}" defer></script>
+<script src="{{jsUrl}}" defer></script>
+<script src="/js/home.js?v=2" defer></script>
+<script type="application/ld+json">{{{structuredData}}}</script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+
+{{> site-sprite}}
+
+{{> site-header}}
+
+<main id="main">
+
+<!-- 1. HERO: cross-fading clinic photos, frosted copy box left, form right -->
+<section class="rh-hero">
+  <div class="rh-slider">
+    <div class="rh-slide is-active"><div class="rh-slide-bg rh-slide-bg--1"></div></div>
+    <div class="rh-slide"><div class="rh-slide-bg rh-slide-bg--2"></div></div>
+    <div class="rh-slide"><div class="rh-slide-bg rh-slide-bg--3"></div></div>
+    <div class="rh-slide-content">
+      <p class="rh-hero-eyebrow">India's Most Trusted Skin + Laser Clinic</p>
+      <h2 class="rh-hero-title">Dr. Nivedita Dadu's Dermatology Clinic</h2>
+      <p class="rh-hero-desc">We offer more possibilities to meet your every need<br>Vasant Vihar (South Delhi) and Rajouri Garden (West Delhi).</p>
+    </div>
+    <div class="rh-dots">
+      <button class="rh-dot is-active" type="button" aria-label="Show clinic photo 1" aria-pressed="true"></button>
+      <button class="rh-dot" type="button" aria-label="Show clinic photo 2" aria-pressed="false"></button>
+      <button class="rh-dot" type="button" aria-label="Show clinic photo 3" aria-pressed="false"></button>
+    </div>
+  </div>
+  <div class="rh-hero-right">
+    <div class="rh-form-card">
+      <div class="rh-form-head">
+        <h2 class="rh-form-title">Schedule a Consultation</h2>
+        <div class="rh-patients">
+          <span class="rh-avatars"><img src="/images/patient-geetanjali.jpg" alt="" width="30" height="30"><img src="/images/patient-sana.jpg" alt="" width="30" height="30"><img src="/images/patient-gourav.jpg" alt="" width="30" height="30"></span>
+          <span class="rh-patients-copy">4.9 Average Star Rating<span class="stars" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg></span></span>
+        </div>
+      </div>
+      <form class="rh-form" action="/api/appointment" method="post" data-form="appointment">
+        <input type="hidden" name="_ft" value="{{formToken}}">
+        <div class="hp-field" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="rh-form-row">
+          <div class="rh-field"><input class="rh-input" type="text" name="name" placeholder="Your Name" aria-label="Your Name" required></div>
+          <div class="rh-field"><input class="rh-input" type="tel" name="phone" placeholder="Mobile Number *" aria-label="Mobile Number" required></div>
+        </div>
+        <div class="rh-field">
+          <select class="rh-input" name="location" aria-label="Preferred Location" required>
+            <option value="">Preferred Location *</option>
+            <option>Vasant Vihar</option>
+            <option>Rajouri Garden</option>
+          </select>
+          <svg class="ico field-chev"><use href="#i-chev-d"/></svg>
+        </div>
+        <button class="rh-submit" type="submit">Submit <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></button>
+        <p class="consent">By clicking "Submit", you agree to our <a href="https://www.drniveditadadu.com/privacy-policy">Privacy Policy</a>, <a href="https://www.drniveditadadu.com/legal-disclaimer">Disclaimer</a>, and <a href="https://www.drniveditadadu.com/terms-conditions">Terms &amp; Conditions</a>.</p>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 2. TREATMENTS: tall photo cards slider -->
+<section class="rh-et" id="treatments">
+  <div class="rh-et-inner">
+    <div class="rh-et-head">
+      <div>
+        <span class="rh-eyebrow">Our Specialities</span>
+        <h2 class="rh-h2 rh-et-title">Our Popular Treatments</h2>
+      </div>
+      <div class="rh-et-tools">
+        <a class="rh-et-all" href="/treatments/">View All</a>
+        <button class="rh-et-prev" type="button" aria-label="Previous treatment"><svg class="ico"><use href="#i-chev-l"/></svg></button>
+        <button class="rh-et-next" type="button" aria-label="Next treatment"><svg class="ico"><use href="#i-chev-r"/></svg></button>
+      </div>
+    </div>
+    <div class="swiper rh-et-swiper">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-anti-ageing-therapies.webp" alt="Anti Ageing Therapies" loading="lazy" width="380" height="247" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatments/anti-ageing-therapies/">Anti Ageing Therapies</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatments/anti-ageing-therapies/">View Details</a><a class="rh-et-btn" href="/results/">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-acne.webp" alt="Acne" loading="lazy" width="362" height="230" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatment/acne/">Acne</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatment/acne/">View Details</a><a class="rh-et-btn" href="/results/">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-hair-fall.webp" alt="Hair Fall" loading="lazy" width="375" height="487" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatments/hair-fall/">Hair Fall</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatments/hair-fall/">View Details</a><a class="rh-et-btn" href="/results/">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-acne-scars.webp" alt="Acne Scars" loading="lazy" width="360" height="230" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatments/acne-scars/">Acne Scars</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatments/acne-scars/">View Details</a><a class="rh-et-btn" href="/results/">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-laser-hair-removal.webp" alt="Laser Hair Removal" loading="lazy" width="375" height="241" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatments/laser-hair-removal/">Laser Hair Removal</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatments/laser-hair-removal/">View Details</a><a class="rh-et-btn" href="/results/">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide rh-dup"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-anti-ageing-therapies.webp" alt="" loading="lazy" width="380" height="247" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatments/anti-ageing-therapies/" tabindex="-1" aria-hidden="true">Anti Ageing Therapies</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatments/anti-ageing-therapies/" tabindex="-1">View Details</a><a class="rh-et-btn" href="/results/" tabindex="-1">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide rh-dup"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-acne.webp" alt="" loading="lazy" width="362" height="230" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatment/acne/" tabindex="-1" aria-hidden="true">Acne</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatment/acne/" tabindex="-1">View Details</a><a class="rh-et-btn" href="/results/" tabindex="-1">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide rh-dup"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-hair-fall.webp" alt="" loading="lazy" width="375" height="487" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatments/hair-fall/" tabindex="-1" aria-hidden="true">Hair Fall</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatments/hair-fall/" tabindex="-1">View Details</a><a class="rh-et-btn" href="/results/" tabindex="-1">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide rh-dup"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-acne-scars.webp" alt="" loading="lazy" width="360" height="230" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatments/acne-scars/" tabindex="-1" aria-hidden="true">Acne Scars</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatments/acne-scars/" tabindex="-1">View Details</a><a class="rh-et-btn" href="/results/" tabindex="-1">View Results</a></div></div></div></article></div>
+          <div class="swiper-slide rh-dup"><article class="rh-et-card"><img class="rh-et-img" src="/images/treatment-laser-hair-removal.webp" alt="" loading="lazy" width="375" height="241" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="/treatments/laser-hair-removal/" tabindex="-1" aria-hidden="true">Laser Hair Removal</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="/treatments/laser-hair-removal/" tabindex="-1">View Details</a><a class="rh-et-btn" href="/results/" tabindex="-1">View Results</a></div></div></div></article></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. TESTIMONIALS: brand band, photo + quote cards -->
+<section class="rh-rv" id="testimonials">
+  <div class="rh-rv-inner">
+    <span class="rh-eyebrow">Real Stories</span>
+    <h2 class="rh-h2 rh-rv-heading">Patient Testimonials</h2>
+    <p class="rh-rv-sub">4.9 Average Star Rating <span class="stars" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg></span></p>
+    <div class="swiper rh-rv-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="rh-rv-card">
+            <a class="rh-rv-img" href="https://www.youtube.com/watch?v=lGtBC5h8NA0" target="_blank" rel="noopener" data-rh-video="lGtBC5h8NA0" aria-label="Play video testimonial"><img src="https://i.ytimg.com/vi/lGtBC5h8NA0/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720" decoding="async"><span class="rh-play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></a>
+            <div class="rh-rv-body">
+              <span class="rh-rv-tag">Skin Brightening</span>
+              <p class="rh-rv-text">Hi, I am Geetanjali Bisht. I am from Nanital. I visited Dr. Nivedita Dadu for my skin treatment. I started my treatment in January. I did 6 sessions for my wedding. I am very happy with the results. My skin is improving and glowing day by day. I am felling very confident. The staff is very welcoming and humble. I recommend everyone who is facing any skin issue visit Dr. Nivedita Dadu.</p>
+              <p class="rh-rv-name">- Geetanjali<span class="rh-rv-date">Saturday, 6 June 2020</span></p>
+              <p class="rh-rv-note">✱ Results may vary person to person.</p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="rh-rv-card">
+            <a class="rh-rv-img" href="https://www.youtube.com/watch?v=0JlwPRHyx6Y" target="_blank" rel="noopener" data-rh-video="0JlwPRHyx6Y" aria-label="Play video testimonial"><img src="https://i.ytimg.com/vi/0JlwPRHyx6Y/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720" decoding="async"><span class="rh-play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></a>
+            <div class="rh-rv-body">
+              <span class="rh-rv-tag">Crystal Glaze</span>
+              <p class="rh-rv-text">Hi, My name is Raman Soni. and I live in Noida. One day I was scrolling down my Instagram feed where I saw crystal glaze procedure. I was really impressed with the treatment. I visited the website and read about the treatment and finally, I came to the clinic and got to know more about the treatment. This treatment is mainly for party glow. As I have my cousin’s wedding next week,so I thought it to be the best treatment for that. I went for the treatment which involved 4-5 steps. A couple of creams were applied on my face, serums and after some laser shots, my skin is glowing. It is amazing like never before. Thank you Dr. Nivedita Dadu and her team for this amazing treatment.</p>
+              <p class="rh-rv-name">- Raman Soni<span class="rh-rv-date">Friday, 15 May 2020</span></p>
+              <p class="rh-rv-note">✱ Results may vary person to person.</p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="rh-rv-card">
+            <a class="rh-rv-img" href="https://www.youtube.com/watch?v=BVaKyVfjs9E" target="_blank" rel="noopener" data-rh-video="BVaKyVfjs9E" aria-label="Play video testimonial"><img src="https://i.ytimg.com/vi/BVaKyVfjs9E/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720" decoding="async"><span class="rh-play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></a>
+            <div class="rh-rv-body">
+              <span class="rh-rv-tag">Sandwich Peel</span>
+              <p class="rh-rv-text">Hi, My name is Gunjan. I was really anxious due to my skin problems. I visited Dadu Medical Center on 28th December 2019. Just within the 25 days course I witnessed improvements in my skin. I have been taking my sessions and seen visible changes. I am happy with my skin. The staff is very supporting and helpful. They maintain proper hygiene and follow protocols. I would highly recommend Dr. Nivedita Dadu.</p>
+              <p class="rh-rv-name">- Gunjan<span class="rh-rv-date">Friday, 10 April 2020</span></p>
+              <p class="rh-rv-note">✱ Results may vary person to person.</p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="rh-rv-card">
+            <a class="rh-rv-img" href="https://www.youtube.com/watch?v=OYx1nyyX9Rs" target="_blank" rel="noopener" data-rh-video="OYx1nyyX9Rs" aria-label="Play video testimonial"><img src="https://i.ytimg.com/vi/OYx1nyyX9Rs/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720" decoding="async"><span class="rh-play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></a>
+            <div class="rh-rv-body">
+              <span class="rh-rv-tag">Laser Hair Reduction</span>
+              <p class="rh-rv-text">Hello friends, my name is Sanjana and i am from Panipat. I was facing a lot of problems due to unwanted body hair. People used to tease me. Then I came to Delhi with my parents. Doctors told me that I need a few sessions to get rid of this problem. It just took 2 sessions and I can see good results. I am very happy. The staff here is very polite and friendly. One can visit here for various effective treatments. If you want to know more about them, you can follow them on Instagram, Facebook and Youtube. Thank you.</p>
+              <p class="rh-rv-name">- Sanjana Jaglan<span class="rh-rv-date">Friday, 21 February 2020</span></p>
+              <p class="rh-rv-note">✱ Results may vary person to person.</p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="rh-rv-card">
+            <a class="rh-rv-img" href="https://www.youtube.com/watch?v=Ye3Ml5klyS8" target="_blank" rel="noopener" data-rh-video="Ye3Ml5klyS8" aria-label="Play video testimonial"><img src="https://i.ytimg.com/vi/Ye3Ml5klyS8/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720" decoding="async"><span class="rh-play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></a>
+            <div class="rh-rv-body">
+              <span class="rh-rv-tag">Acne</span>
+              <p class="rh-rv-text">Hi Guys, I am Manisha, and I visited Dr. Nivedita Dadu last year. I was suffering from severe acne, and earlier, no one was able to find out the root cause behind my acne. I would recommended each and everyone to visit Dr. Dadu because she is genuine and friendly. She understands each and every problem and listens to you very carefully. I also recommended both of my sisters to visit her, and they both were very happy with my results and the glow on my face. The staff over here is really friendly and amicable. I would recommend everyone to visit if they are suffering from any kind of acne and hair fall problem. Dr. Nivedita Dadu will listen to all your problems and she will give you the desired results. Thank you!</p>
+              <p class="rh-rv-name">- Manisha<span class="rh-rv-date">Tuesday, 11 February 2020</span></p>
+              <p class="rh-rv-note">✱ Results may vary person to person.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="rh-rv-tabs">
+      <a class="rh-rv-tab rh-rv-tab--solid" href="/testimonials">Patient Testimonials <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+      <a class="rh-rv-tab rh-rv-tab--ghost" href="/video-testimonials/">Video Testimonials <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ABOUT: image left, text + image/points box right -->
+<section class="rh-care" id="intro">
+  <div class="rh-care-layout">
+    <div class="rh-care-media"><img src="/images/dr-nivedita-dadu-profile.webp" alt="Dr. Nivedita Dadu, Founder and Chairman" loading="lazy" width="1440" height="1057" decoding="async"></div>
+    <div class="rh-care-body">
+      <span class="rh-eyebrow">Dr. Nivedita Dadu</span>
+      <h1 class="rh-care-title">Best Aesthetic Dermatologists In Delhi</h1>
+      <p class="rh-care-copy">Dr. Nivedita Dadu has become one of the most trusted dermatologists in Delhi, known for her world-class skin and hair treatments, professional expertise and for leading a team of skilled aestheticians. The clinic located in Vasant Vihar (South Delhi) and Rajouri Garden (West Delhi), Dr. Nivedita Dadu offers a wide range of clinical and cosmetic dermatology services. As a leading dermatologist and the founder of these centers Dr. Nivedita Dadu has a great experience in Dermatology, Venereology, Leprosy, dermato-surgical procedures, and Cosmetic Dermatology. She has many successful stories of people getting treated well with diverse skin disorders and she has been recognized as one of the Best Skin Specialists in Delhi, and not only for skin but also for advanced hair treatments. Due to her great expertise, patients have received advanced treatments for many diverse conditions such as psoriasis, rosacea, eczema, acne, warts, melasma, keloids, skin tags, mole removal and many more.</p>
+      <a class="rh-pill rh-care-btn" href="#contact">Schedule a Consultation <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+      <div class="rh-feature">
+        <div class="rh-feature-media"><img src="/images/home/hpex01.webp" alt="" loading="lazy" width="467" height="560" decoding="async"></div>
+        <div class="rh-points"><div class="rh-point"><span class="rh-point-check"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Golden Technique</span></div><div class="rh-point"><span class="rh-point-check"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Minimal Procedure</span></div><div class="rh-point"><span class="rh-point-check"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Natural Results</span></div><div class="rh-point"><span class="rh-point-check"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Safe Procedure</span></div><div class="rh-point"><span class="rh-point-check"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Expert Team</span></div><div class="rh-point"><span class="rh-point-check"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Affordable Quality</span></div><div class="rh-point"><span class="rh-point-check"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>FUE MesoGrow</span></div><div class="rh-point"><span class="rh-point-check"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Top Trichologist</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FOUNDER + DOCTOR VIDEOS -->
+<section class="rh-drn" id="team">
+  <div class="rh-drn-top">
+    <span class="rh-drn-shape rh-drn-shape--1"></span><span class="rh-drn-shape rh-drn-shape--2"></span>
+    <div class="rh-drn-inner">
+      <div class="rh-drn-founder">
+        <div class="rh-portrait-wrap">
+          <span class="rh-portrait-bg"></span>
+          <div class="rh-portrait"><img src="/images/dr-nivedita-dadu-portrait.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="414" height="395" decoding="async"></div>
+          <div class="rh-badge"><span class="rh-badge-num">20+</span><span class="rh-badge-text">Years of<br>Excellence</span></div>
+        </div>
+        <div class="rh-drn-content">
+          <span class="rh-eyebrow rh-eyebrow--line">Meet our Team</span>
+          <h2 class="rh-drn-name">Dr. Nivedita Dadu</h2>
+          <span class="rh-drn-role">Founder and Chairman, MBBS, Maulana Azad Medical College and Lok Nayak Hospital, New Delhi. PG, (Dermatology, Venerology and Leprosy) Safdarjung Hospital, New Delhi.</span>
+          <div class="rh-stats"><div class="rh-stat"><span class="rh-stat-num">20+</span><span class="rh-stat-label">Years of Experience</span></div><div class="rh-stat"><span class="rh-stat-num">20,000+</span><span class="rh-stat-label">Happy Patients</span></div><div class="rh-stat"><span class="rh-stat-num">9+</span><span class="rh-stat-label">Memberships &amp; Affiliations</span></div></div>
+          <p class="rh-drn-bio">Dr. Nivedita Dadu is a Skin Specialist who has done her MBBS from the prestigious Maulana Azad Medical College &amp; Lok Nayak Hospital, New Delhi. Later she pursued her Post Graduation &amp; Senior Residency in Dermatology, Venereology and Leprosy at Safdarjung Hospital, New Delhi, one of the premier hospitals of the country. During her tenure of 8 years at Safdarjung Hospital, she worked extensively in the out patient and in-patient departments of dermatology for the management of all skin disorders, dermato-surgical procedures, and cosmetic dermatology....</p>
+          <a class="rh-pill" href="#contact">Schedule a Consultation <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+        </div>
+      </div>
+      <div class="rh-marquee">
+        <span class="rh-marquee-label">Memberships &amp; Affiliations</span>
+        <div class="rh-marquee-strip"><div class="rh-track"><div class="rh-logo"><img src="/images/home/membership01.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership02.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership03.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership04.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership05.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership06.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership07.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership08.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership09.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership01.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership02.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership03.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership04.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership05.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership06.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership07.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership08.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div><div class="rh-logo"><img src="/images/home/membership09.webp" alt="" aria-hidden="true" width="170" height="171" loading="lazy" decoding="async"></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="rh-drn-bottom" id="videos">
+    <div class="rh-drn-inner">
+      <div class="rh-vid-head">
+        <div>
+          <span class="rh-eyebrow rh-eyebrow--line">Watch Expert Advice</span>
+          <h2 class="rh-vid-title">Our latest Videos</h2>
+        </div>
+        <a class="rh-pill rh-pill--white" href="/video/">View All <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+      </div>
+      <div class="rh-vid-wrap">
+        <button class="rh-round rh-vid-prev" type="button" aria-label="Previous video"><svg class="ico"><use href="#i-chev-l"/></svg></button>
+        <button class="rh-round rh-vid-next" type="button" aria-label="Next video"><svg class="ico"><use href="#i-chev-r"/></svg></button>
+        <div class="swiper rh-vid-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a class="rh-vid-thumb" href="https://www.youtube.com/watch?v=3E_JL4xvq-c" target="_blank" rel="noopener" data-rh-video="3E_JL4xvq-c" aria-label="Play video: 4 Powerful Ingredients In Skin Care Products"><img src="https://i.ytimg.com/vi/3E_JL4xvq-c/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"><span class="rh-play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></a>
+              <p class="rh-vid-name">4 Powerful Ingredients In Skin Care Products</p>
+            </div>
+            <div class="swiper-slide">
+              <a class="rh-vid-thumb" href="https://www.youtube.com/watch?v=WWm3err6Va4" target="_blank" rel="noopener" data-rh-video="WWm3err6Va4" aria-label="Play video: Common causes of hair fall in women"><img src="https://i.ytimg.com/vi/WWm3err6Va4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"><span class="rh-play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></a>
+              <p class="rh-vid-name">Common causes of hair fall in women</p>
+            </div>
+            <div class="swiper-slide">
+              <a class="rh-vid-thumb" href="https://www.youtube.com/watch?v=uxMifjfjtNo" target="_blank" rel="noopener" data-rh-video="uxMifjfjtNo" aria-label="Play video: Myo Inositol for Hormonal Acne"><img src="https://i.ytimg.com/vi/uxMifjfjtNo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"><span class="rh-play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></a>
+              <p class="rh-vid-name">Myo Inositol for Hormonal Acne</p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PRESS: article covers + logo marquee -->
+<section class="rh-fp" id="featured">
+  <div class="rh-fp-inner">
+    <span class="rh-eyebrow">Media Coverage</span>
+    <h2 class="rh-h2 rh-fp-heading">As Featured In</h2>
+    <p class="rh-fp-desc">Here are some news articles that have been published in some reputed magazines and newspapers with expert inputs from Dr. Nivedita Dadu. These articles will help you understand the right skin and hair care regimens as well as advanced dermatological procedures available today.</p>
+    <div class="rh-fp-wrap">
+      <button class="rh-round rh-fp-prev" type="button" aria-label="Previous article"><svg class="ico"><use href="#i-chev-l"/></svg></button>
+      <button class="rh-round rh-fp-next" type="button" aria-label="Next article"><svg class="ico"><use href="#i-chev-r"/></svg></button>
+      <div class="swiper rh-fp-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="rh-fp-cover"><img src="/images/home/media01.webp" alt="News article featuring Dr. Nivedita Dadu" loading="lazy" width="304" height="424" decoding="async"></div></div>
+          <div class="swiper-slide"><div class="rh-fp-cover"><img src="/images/home/media02.webp" alt="News article featuring Dr. Nivedita Dadu" loading="lazy" width="304" height="424" decoding="async"></div></div>
+          <div class="swiper-slide"><div class="rh-fp-cover"><img src="/images/home/media03.webp" alt="News article featuring Dr. Nivedita Dadu" loading="lazy" width="304" height="424" decoding="async"></div></div>
+          <div class="swiper-slide"><div class="rh-fp-cover"><img src="/images/home/media04.webp" alt="News article featuring Dr. Nivedita Dadu" loading="lazy" width="304" height="424" decoding="async"></div></div>
+          <div class="swiper-slide"><div class="rh-fp-cover"><img src="/images/home/media05.webp" alt="News article featuring Dr. Nivedita Dadu" loading="lazy" width="304" height="424" decoding="async"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="rh-fp-marquee"><div class="rh-track"><span class="rh-fp-logo"><img src="/images/press-ndtv.webp" width="184" height="80" alt="NDTV" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-dainik-bhaskar.webp" width="184" height="80" alt="Dainik Bhaskar Group" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-deccan-chronicle.webp" width="184" height="80" alt="Deccan Chronicle" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-radio-city.webp" width="184" height="80" alt="Radio City" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-india-today.webp" width="184" height="80" alt="India Today" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-mail-today.webp" width="184" height="80" alt="Mail Today" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-womans-era.webp" width="184" height="80" alt="Woman&#39;s Era" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-deccan-herald.webp" width="184" height="80" alt="Deccan Herald" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-stayfit.webp" width="184" height="80" alt="Stayfit" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-practo.webp" width="184" height="80" alt="Practo" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-times-of-india.webp" width="184" height="80" alt="The Times of India" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-hindustan-times.webp" width="184" height="80" alt="Hindustan Times" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-ndtv.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-dainik-bhaskar.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-deccan-chronicle.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-radio-city.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-india-today.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-mail-today.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-womans-era.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-deccan-herald.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-stayfit.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-practo.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-times-of-india.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span><span class="rh-fp-logo"><img src="/images/press-hindustan-times.webp" width="184" height="80" alt="" aria-hidden="true" loading="lazy" decoding="async"></span></div></div>
+    <a class="rh-pill rh-fp-all" href="/press-media/">View All <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+  </div>
+</section>
+
+<!-- 7. RESULTS -->
+<section class="rh-res" id="results">
+  <div class="rh-res-inner">
+    <div class="rh-res-head"><h2 class="rh-h2">Real Results</h2></div>
+    <div class="rh-res-wrap">
+      <button class="rh-round rh-res-prev" type="button" aria-label="Previous result"><svg class="ico"><use href="#i-chev-l"/></svg></button>
+      <button class="rh-round rh-res-next" type="button" aria-label="Next result"><svg class="ico"><use href="#i-chev-r"/></svg></button>
+      <div class="swiper rh-res-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><article class="rh-res-card"><h3>Under Eye Hollowness</h3><div class="rh-res-media"><img src="/images/result-under-eye-hollowness-1.jpg" alt="Under eye hollowness before and after treatment with fillers" loading="lazy" width="750" height="400" decoding="async"></div><p class="rh-res-meta">Treatment: Fillers · No. of Sessions: 1</p></article></div>
+          <div class="swiper-slide"><article class="rh-res-card"><h3>Under Eye Hollowness</h3><div class="rh-res-media"><img src="/images/result-under-eye-hollowness-2.jpg" alt="Under eye hollowness before and after treatment with fillers" loading="lazy" width="750" height="400" decoding="async"></div><p class="rh-res-meta">Treatment: Fillers · No. of Sessions: 1</p></article></div>
+        </div>
+      </div>
+    </div>
+    <div class="rh-res-foot">
+      <p class="disclaimer">* Opinions/Results may vary from person to person.</p>
+      <a class="rh-pill" href="/results/">View All <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. REQUEST A CONSULTATION -->
+{{> contact-section}}
+
+<!-- 9. BLOGS: news & wellness advice cards -->
+<section class="rh-blog" id="blogs">
+  <div class="rh-blog-inner">
+    <div class="rh-blog-head">
+      <h2 class="rh-h2 rh-blog-title">Our latest blogs</h2>
+      <p class="rh-blog-sub">Expert Skin &amp; Hair Care Advice From Dr. Nivedita Dadu And Our Dermatologists</p>
+    </div>
+    <div class="rh-blog-grid">
+      <article class="rh-blog-card">
+        <div class="rh-blog-media"><img src="/images/blog-winter-skincare-routine-dry-skin.jpeg" alt="Winter skincare routine for dry skin" loading="lazy" width="1000" height="667" decoding="async"><span class="rh-blog-date">17, Aug 2026</span></div>
+        <div class="rh-blog-author"><span class="rh-blog-author-icon"><svg class="ico"><use href="#i-user"/></svg></span><span>By Dr. Nivedita Dadu</span></div>
+        <h3 class="rh-blog-card-title"><a href="https://www.drniveditadadu.com/blog/winter-skincare-routine-dry-skin/">Budget-Friendly Winter Skincare Routine for Dry Skin: Morning and Night Essentials</a></h3>
+        <a class="rh-blog-link" href="https://www.drniveditadadu.com/blog/winter-skincare-routine-dry-skin/">Read More</a>
+      </article>
+      <article class="rh-blog-card">
+        <div class="rh-blog-media"><img src="/images/blog-vitamin-c-for-beginners.jpeg" alt="Vitamin C serum for beginners" loading="lazy" width="1000" height="667" decoding="async"><span class="rh-blog-date">17, Aug 2026</span></div>
+        <div class="rh-blog-author"><span class="rh-blog-author-icon"><svg class="ico"><use href="#i-user"/></svg></span><span>By Dr. Nivedita Dadu</span></div>
+        <h3 class="rh-blog-card-title"><a href="https://www.drniveditadadu.com/blog/vitamin-c-for-beginners/">Vitamin C for Beginners: How to Start This Powerful Skincare Ingredient the Right Way</a></h3>
+        <a class="rh-blog-link" href="https://www.drniveditadadu.com/blog/vitamin-c-for-beginners/">Read More</a>
+      </article>
+      <article class="rh-blog-card">
+        <div class="rh-blog-media"><img src="/images/blog-skin-hair-care-during-menopause.jpeg" alt="Skin and hair care routine during menopause" loading="lazy" width="1000" height="667" decoding="async"><span class="rh-blog-date">17, Aug 2026</span></div>
+        <div class="rh-blog-author"><span class="rh-blog-author-icon"><svg class="ico"><use href="#i-user"/></svg></span><span>By Dr. Nivedita Dadu</span></div>
+        <h3 class="rh-blog-card-title"><a href="https://www.drniveditadadu.com/blog/skin-hair-care-during-lactation/">Skin and Hair Care During Menopause: A Complete Morning and Night Routine</a></h3>
+        <a class="rh-blog-link" href="https://www.drniveditadadu.com/blog/skin-hair-care-during-lactation/">Read More</a>
+      </article>
+    </div>
+    <div class="rh-blog-foot"><a class="rh-blog-all" href="/blog/">View All <span class="rh-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a></div>
+  </div>
+</section>
+
+</main>
+
+{{> site-footer}}
+</body>
+</html>

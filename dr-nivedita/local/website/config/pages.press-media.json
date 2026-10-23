@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/press-media/",
+    "view": "press-media",
+    "title": "Press and Media | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Regular news updates and media publications focusing on skin problems and highlighting the latest trends in the field of dermatology.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Press & Media",
+        "path": "/press-media/"
+      }
+    ]
+  }
+]

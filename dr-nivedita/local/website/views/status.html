@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+{{> head-common}}
+<title>{{pageTitle}}</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="{{cssUrl}}">
+</head>
+<body class="status-body">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="status-header">
+  <div class="header-container">
+    <a class="logo" href="/" aria-label="{{siteName}} home">
+      <img src="/images/dr-nivedita-dadu-logo.png" alt="{{siteName}}" width="100" height="100">
+    </a>
+    <a class="btn btn-primary header-cta" href="/#contact">
+      <span class="btn-label">Book an Appointment</span>
+      <span class="btn-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+    </a>
+  </div>
+</header>
+
+<main id="main" class="status-main">
+  <p class="status-code">{{statusLabel}}</p>
+  <h1 class="section-title">{{heading}}</h1>
+  <p class="status-message">{{message}}</p>
+  <div class="status-actions">
+    <a class="btn btn-primary" href="{{primaryHref}}">{{primaryLabel}} <span class="btn-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+    <a class="btn btn-outline" href="tel:{{phoneE164}}">Call {{phoneDisplay}} <span class="btn-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span></a>
+  </div>
+</main>
+
+<footer class="status-footer">
+  <p class="copyright">Copyright &copy; 2014-2026 {{siteName}}. All rights reserved</p>
+</footer>
+</body>
+</html>

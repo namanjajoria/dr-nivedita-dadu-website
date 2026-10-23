@@ -1,0 +1,3690 @@
+[
+  {
+    "path": "/treatment/",
+    "view": "c-index",
+    "title": "Dr. Nivedita Dadu",
+    "description": "",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Conditions",
+        "path": "/treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/acne-scar-removal/",
+    "view": "c-acne-scar-removal",
+    "title": "Acne Scar Removal in Delhi | Best Treatment & Cost Guide",
+    "description": "Acne scar removal treatment in Delhi with Dr. Nivedita Dadu. Cost ranges from Rs. 4,000 to Rs. 20,000 depending on scar type & procedure. Book a consultation.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Scar Treatment In Delhi",
+        "path": "/treatment/acne-scar-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/acne/",
+    "view": "c-acne",
+    "title": "Best Acne Treatment in Delhi | Specialist Care & Clinic Cost",
+    "description": "Best acne treatment in Delhi with Dr. Nivedita Dadu. Acne treatment cost in Delhi ranges between Rs. 4,000\u201316,000. Effective solutions for all skin types.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Treatment in Delhi",
+        "path": "/treatment/acne/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/age-spots/",
+    "view": "c-age-spots",
+    "title": "Best Age Spots Treatment in Delhi | Specialist Care & Cost",
+    "description": "Age spots treatment in Delhi at Dr. Nivedita Dadu\u2019s Clinics in Rajouri Garden & Vasant Vihar, West & South Delhi. Cost depends on spot type.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Age Spots",
+        "path": "/treatment/age-spots/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/alopecia-areata/",
+    "view": "c-alopecia-areata",
+    "title": "Alopecia Treatment in Delhi | Rajouri Garden & Vasant Vihar",
+    "description": "Effective alopecia treatment in Delhi at Dadu Medical Centre, Rajouri Garden & Vasant Vihar, West & South Delhi. Advanced care for autoimmune hair loss.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Alopecia Treatment in Delhi",
+        "path": "/treatment/alopecia-areata/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/atopic-dermatitis/",
+    "view": "c-atopic-dermatitis",
+    "title": "Atopic Dermatitis Treatment Cost in Delhi | Effective Care",
+    "description": "Atopic dermatitis treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West Delhi & South Delhi. Cost depends on severity of dry, itchy skin lesions.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Atopic Dermatitis",
+        "path": "/treatment/atopic-dermatitis/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/contact-dermatitis/",
+    "view": "c-contact-dermatitis",
+    "title": "Contact Dermatitis Treatment in Delhi | Cost & Specialist",
+    "description": "Contact dermatitis treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by severity of rash, irritation and skin sensitivity.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Contact Dermatitis",
+        "path": "/treatment/contact-dermatitis/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/crows-feet/",
+    "view": "c-crows-feet",
+    "title": "Crows Feet Treatment in Delhi | Advanced Anti-Wrinkle Care",
+    "description": "Crows feet treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by depth of lines and treated using anti-wrinkle injections.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Crows Feet",
+        "path": "/treatment/crows-feet/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/dandruff/",
+    "view": "c-dandruff",
+    "title": "Dandruff Treatment in Delhi | Cost & Specialist Care",
+    "description": "Dandruff treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by scalp flakes and severity.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Dandruff Treatment in Delhi",
+        "path": "/treatment/dandruff/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/dark-circles/",
+    "view": "c-dark-circles",
+    "title": "Dark Circles Treatment in Delhi | Specialist Care & Cost",
+    "description": "Dark circles treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by severity; advanced options work better than creams.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Dark Circles Treatment in Delhi",
+        "path": "/treatment/dark-circles/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/deep-folds/",
+    "view": "c-deep-folds",
+    "title": "Deep Folds Treatment in Delhi | Specialist Care & Cost",
+    "description": "Deep folds treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by depth of smile lines for smoother results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Deep Folds",
+        "path": "/treatment/deep-folds/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/eczema/",
+    "view": "c-eczema",
+    "title": "Eczema Treatment in Delhi | Specialist Care & Clinic Cost",
+    "description": "Eczema treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost depends on severity of flare-ups treated by expert specialists.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Eczema Treatment in Delhi",
+        "path": "/treatment/eczema/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/forehead-lines/",
+    "view": "c-forehead-lines",
+    "title": "Forehead Lines Treatment in Delhi | Specialist & Clinic Cost",
+    "description": "Forehead lines treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by wrinkle depth, treated by expert specialists.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Forehead Lines",
+        "path": "/treatment/forehead-lines/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/freckle/",
+    "view": "c-freckle",
+    "title": "Freckles Treatment Clinic in Delhi | Laser Specialist & Cost",
+    "description": "Freckles treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Laser cost varies by spots on face, neck, hands or arms.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Freckles Treatment in Delhi",
+        "path": "/treatment/freckle/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/full-body-hair-removal/",
+    "view": "c-full-body-hair-removal",
+    "title": "Full Body Laser Hair Removal Clinic Delhi |Cost & Specialist",
+    "description": "Full body laser hair removal in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost ranges from ?10,000\u2013?40,000 depending on body area.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Full Body Laser Hair Removal in Delhi",
+        "path": "/treatment/full-body-hair-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/fungal-infection/",
+    "view": "c-fungal-infection",
+    "title": "Fungal Infection Treatment Clinic in Delhi | Cost & Specialist",
+    "description": "Fungal infection treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by severity for effective relief.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Fungal Infection Treatment in Delhi",
+        "path": "/treatment/fungal-infection/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/ingrowing-toe-nails/",
+    "view": "c-ingrowing-toe-nails",
+    "title": "Ingrown Toenail Treatment in Delhi | Specialist Care & Cost",
+    "description": "Ingrown toenail treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost depends on severity for safe and effective relief.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Ingrowing Toe Nails",
+        "path": "/treatment/ingrowing-toe-nails/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/keloid/",
+    "view": "c-keloid",
+    "title": "Best Keloid Treatment in Delhi | Keloid Specialist Doctor",
+    "description": "Keloid treatment in Delhi at Rajouri Garden & Vasant Vihar, West & South Delhi. Cost varies by scar size with options like creams, laser therapy and injections.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Best Keloid Treatment in Delhi",
+        "path": "/treatment/keloid/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/laser-tattoo-removal/",
+    "view": "c-laser-tattoo-removal",
+    "title": "Laser Tattoo Removal in Delhi | Cost, Specialist & Clinic",
+    "description": "Laser tattoo removal in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on tattoo size, colour and sessions required.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Laser Tattoo Removal",
+        "path": "/treatment/laser-tattoo-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/melasma/",
+    "view": "c-melasma",
+    "title": "Melasma Treatment Clinic in Delhi | Specialist Care & Cost",
+    "description": "Melasma treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by severity to reduce dark facial patches effectively.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Melasma Treatment In Delhi",
+        "path": "/treatment/melasma/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/men-hair-loss/",
+    "view": "c-men-hair-loss",
+    "title": "Hair Loss Treatment Clinic for Men in Delhi | Get EMI Cost",
+    "description": "Male hair loss treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by severity for effective, non-surgical results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Loss Treatment for Men in Delhi",
+        "path": "/treatment/men-hair-loss/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/neck-lines/",
+    "view": "c-neck-lines",
+    "title": "Neck Lines Treatment Clinic in Delhi | Specialist & Cost",
+    "description": "Neck lines treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on severity for smoother, younger-looking skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Neck Lines",
+        "path": "/treatment/neck-lines/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/open-pores/",
+    "view": "c-open-pores",
+    "title": "Open Pores Treatment Clinic in Delhi | Specialist & Cost",
+    "description": "Open pores treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on severity to refine skin texture effectively.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Open Pores Treatment in Delhi",
+        "path": "/treatment/open-pores/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/pcod/",
+    "view": "c-pcod",
+    "title": "PCOD Treatment Clinic in Delhi | Specialist Care & Cost",
+    "description": "PCOD treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on condition severity and required medical plan.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "PCOD Treatment in Delhi",
+        "path": "/treatment/pcod/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/pigmentation-removal/",
+    "view": "c-pigmentation-removal",
+    "title": "Pigmentation Treatment Clinic in Delhi | Specialist & Cost",
+    "description": "Pigmentation treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost starts from ?5,000 depending on dark spots and severity.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation Treatment in Delhi",
+        "path": "/treatment/pigmentation-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/premature-greying/",
+    "view": "c-premature-greying",
+    "title": "Premature Greying Treatment in Delhi | Specialist & Cost",
+    "description": "Premature greying treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on severity to restore natural hair colour.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premature Greying",
+        "path": "/treatment/premature-greying/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/pseudo-acanthosis-nigricans/",
+    "view": "c-pseudo-acanthosis-nigricans",
+    "title": "Acanthosis Nigricans Treatment in Delhi | Specialist & Cost",
+    "description": "Acanthosis nigricans treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on severity for effective results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pseudo Acanthosis Nigricans",
+        "path": "/treatment/pseudo-acanthosis-nigricans/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/psoriasis/",
+    "view": "c-psoriasis",
+    "title": "Best Psoriasis Treatment Clinic in Delhi | Specialist Doctor",
+    "description": "Psoriasis treatment in Delhi at Rajouri Garden & Vasant Vihar in West & South Delhi. Cost varies by treatment type like topical care, meds and lasers.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Best Psoriasis Treatment in Delhi",
+        "path": "/treatment/psoriasis/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/rosacea/",
+    "view": "c-rosacea",
+    "title": "Rosacea Treatment Clinic in Delhi | Specialist Care & Cost",
+    "description": "Rosacea treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by type and severity to control redness and flare-ups.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Rosacea Treatment in Delhi",
+        "path": "/treatment/rosacea/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/sagging-skin/",
+    "view": "c-sagging-skin",
+    "title": "Sagging Skin Treatment Clinic in Delhi | Specialist & Cost",
+    "description": "Sagging skin treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost depends on severity to tighten loose skin effectively.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Sagging Skin",
+        "path": "/treatment/sagging-skin/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/scarring-alopecia/",
+    "view": "c-scarring-alopecia",
+    "title": "Scarring Alopecia Treatment Delhi | Hair Loss Specialist",
+    "description": "Scarring alopecia treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by severity to control hair loss effectively.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Scarring Alopecia",
+        "path": "/treatment/scarring-alopecia/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/seborrheic-dermatitis/",
+    "view": "c-seborrheic-dermatitis",
+    "title": "Seborrheic Dermatitis Treatment in Delhi | Specialist & Cost",
+    "description": "Seborrheic dermatitis treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies depending on severity for effective relief.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Seborrheic Dermatitis",
+        "path": "/treatment/seborrheic-dermatitis/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/sensitive-skin/",
+    "view": "c-sensitive-skin",
+    "title": "Sensitive Skin Treatment in Delhi | Specialist Care & Cost",
+    "description": "Sensitive skin treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on condition to reduce irritation and flare-ups.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Sensitive Skin",
+        "path": "/treatment/sensitive-skin/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/skin-growth/",
+    "view": "c-skin-growth",
+    "title": "Warts Removal Treatment in Delhi | Specialist Care & Cost",
+    "description": "Warts removal treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on size and type for safe removal.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Skin Growth",
+        "path": "/treatment/skin-growth/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/spider-veins/",
+    "view": "c-spider-veins",
+    "title": "Spider Veins Treatment in Delhi | Specialist Care & Cost",
+    "description": "Spider veins treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies based on severity using advanced IPL technology.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Spider Veins",
+        "path": "/treatment/spider-veins/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/stretch-marks-removal/",
+    "view": "c-stretch-marks-removal",
+    "title": "Stretch Marks Treatment in Delhi | Laser Specialist & Cost",
+    "description": "Stretch marks treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost starts from ?10,000 depending on depth and severity.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Stretch Marks Removal Treatment in Delhi",
+        "path": "/treatment/stretch-marks-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/urticaria/",
+    "view": "c-urticaria",
+    "title": "Urticaria Treatment Clinic in Delhi | Specialist Care & Cost",
+    "description": "Get the best Urticaria (Hives) treatment clinic in Delhi, Rajouri Garden, West Delhi & South Delhi. Latest IgE monoclonal antibody treatment available. Book now",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Urticaria",
+        "path": "/treatment/urticaria/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/vitiligo/",
+    "view": "c-vitiligo",
+    "title": "Best Vitiligo Treatment in Delhi | Vitiligo Specialist Doctor",
+    "description": "Vitiligo treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by case; options include laser and advanced therapies.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Best Vitiligo Treatment in Delhi",
+        "path": "/treatment/vitiligo/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/women-hair-loss/",
+    "view": "c-women-hair-loss",
+    "title": "Women Hair Loss Treatment Delhi | Female Specialist & Cost",
+    "description": "Female hair loss treatment in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost varies by severity to restore healthy hair growth.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Loss Treatment for Women in Delhi",
+        "path": "/treatment/women-hair-loss/"
+      }
+    ]
+  },
+  {
+    "path": "/treatment/wrinkles/",
+    "view": "c-wrinkles",
+    "title": "Best Wrinkle Removal Treatment in Delhi | Anti-Ageing Clinic",
+    "description": "Get the best wrinkle removal treatment in Delhi, Rajouri Garden, West Delhi & South Delhi. Reduce fine lines with advanced anti-ageing solutions. Book now!",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Wrinkle Removal Treatment In Delhi",
+        "path": "/treatment/wrinkles/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/",
+    "view": "t-index",
+    "title": "Advanced Skin Treatments Clinic in Delhi | Dr. Nivedita Dadu",
+    "description": "Get advanced skin treatments in Delhi at our specialist clinic in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for healthy, glowing, youthful skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Advanced Skin Treatments Clinic in Delhi",
+        "path": "/treatments/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-scars/",
+    "view": "t-acne-scars",
+    "title": "Best Dermatologist for Acne Scar Treatment in Delhi",
+    "description": "Top dermatologist for acne scar treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Effective skin care solutions by Dr. Nivedita Dadu.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Scars",
+        "path": "/treatments/acne-scars/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-scars/dermaroller/",
+    "view": "t-acne-scars-dermaroller",
+    "title": "Dermaroller Treatment for Acne Scars in West and South Delhi",
+    "description": "Get Dermaroller treatment for acne scars by expert dermatologist Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Scars",
+        "path": "/treatments/acne-scars/"
+      },
+      {
+        "name": "Dermaroller",
+        "path": "/treatments/acne-scars/dermaroller/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-scars/erbium-fibre-laser-acne-scars/",
+    "view": "t-acne-scars-erbium-fibre-laser-acne-scars",
+    "title": "Erbium Fibre Laser Acne Scar Treatment in West & South Delhi",
+    "description": "Effective Erbium Fibre Laser treatment for acne scars by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book now.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Scars",
+        "path": "/treatments/acne-scars/"
+      },
+      {
+        "name": "Erbium Fibre Laser",
+        "path": "/treatments/acne-scars/erbium-fibre-laser-acne-scars/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-scars/fractional-co2-laser-acne-scar/",
+    "view": "t-acne-scars-fractional-co2-laser-acne-scar",
+    "title": "Fractional CO2 Laser Acne Scar Treatment in West & South Delhi",
+    "description": "Get Fractional CO2 Laser treatment for acne scars by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book your appointment",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Scars",
+        "path": "/treatments/acne-scars/"
+      },
+      {
+        "name": "Fractional CO2 Laser",
+        "path": "/treatments/acne-scars/fractional-co2-laser-acne-scar/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-scars/micro-needling-radiofrequency/",
+    "view": "t-acne-scars-micro-needling-radiofrequency",
+    "title": "Microneedling Treatment Cost In Delhi | Skin Care Clinic",
+    "description": "Microneedling Treatment In Delhi. Cost In Delhi ranges between Rs. 6,000 - Rs. 10,000. our clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Scars",
+        "path": "/treatments/acne-scars/"
+      },
+      {
+        "name": "Microneedling in Delhi",
+        "path": "/treatments/acne-scars/micro-needling-radiofrequency/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-scars/tixel-acne-scars/",
+    "view": "t-acne-scars-tixel-acne-scars",
+    "title": "Acne Scar Tixel Treatment in West and South Delhi - Book now",
+    "description": "Effective Tixel treatment for acne scars by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book your appointment today.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Scars",
+        "path": "/treatments/acne-scars/"
+      },
+      {
+        "name": "Tixel",
+        "path": "/treatments/acne-scars/tixel-acne-scars/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-treatment/",
+    "view": "t-acne-treatment",
+    "title": "Acne Treatment Clinic in West & South Delhi. Book now",
+    "description": "Get expert acne treatment solutions by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Effective care for clear, healthy skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Treatment",
+        "path": "/treatments/acne-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-treatment/acne-check-peel-treatment/",
+    "view": "t-acne-treatment-acne-check-peel-treatment",
+    "title": "Acne Check Peel Treatment in West and South Delhi - Book now",
+    "description": "Get Acne Check Peel treatment by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for clear, healthy skin. Book your appointment",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Treatment",
+        "path": "/treatments/acne-treatment/"
+      },
+      {
+        "name": "Acne Check Peel",
+        "path": "/treatments/acne-treatment/acne-check-peel-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-treatment/acne-erase/",
+    "view": "t-acne-treatment-acne-erase",
+    "title": "Acne Erase Clinic in West and South Delhi - Book appointment",
+    "description": "Visit Acne Erase Clinic by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for expert acne treatments and clear skin solutions.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Treatment",
+        "path": "/treatments/acne-treatment/"
+      },
+      {
+        "name": "Acne Erase",
+        "path": "/treatments/acne-treatment/acne-erase/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-treatment/acne-zap-laser/",
+    "view": "t-acne-treatment-acne-zap-laser",
+    "title": "Acne Zap Laser Clinic in West & South Delhi - Book now",
+    "description": "Get Acne Zap Laser treatments by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for effective acne and skin care solutions.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Treatment",
+        "path": "/treatments/acne-treatment/"
+      },
+      {
+        "name": "Acne Zap Laser",
+        "path": "/treatments/acne-treatment/acne-zap-laser/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-treatment/carbon-laser-peel/",
+    "view": "t-acne-treatment-carbon-laser-peel",
+    "title": "Carbon Peel Treatment in West & South Delhi | Cost Info",
+    "description": "Get Carbon Peel laser treatment by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Know treatment cost and book now.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Treatment",
+        "path": "/treatments/acne-treatment/"
+      },
+      {
+        "name": "Carbon Peel Treatment in Delhi",
+        "path": "/treatments/acne-treatment/carbon-laser-peel/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-treatment/diamond-polishing/",
+    "view": "t-acne-treatment-diamond-polishing",
+    "title": "Diamond Skin Polishing Treatment Cost in West & South Delhi",
+    "description": "Check the cost of Diamond Skin Polishing by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Safe, effective and expert treatment.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Treatment",
+        "path": "/treatments/acne-treatment/"
+      },
+      {
+        "name": "MDA Lift with Diamond Polishing",
+        "path": "/treatments/acne-treatment/diamond-polishing/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/",
+    "view": "t-anti-ageing-therapies",
+    "title": "Best Anti-Ageing Treatment Cost in West and South Delhi",
+    "description": "Check the cost of best anti-ageing treatments by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book your consultation today.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/age-erase/",
+    "view": "t-anti-ageing-therapies-age-erase",
+    "title": "Age Erase Treatment in Delhi | Cost in West & South Delhi",
+    "description": "Age Erase treatment available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Know Age Erase treatment cost in Delhi for youthful, glowing skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Age Erase",
+        "path": "/treatments/anti-ageing-therapies/age-erase/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/age-reverse/",
+    "view": "t-anti-ageing-therapies-age-reverse",
+    "title": "Age Reverse Treatment in Delhi | Cost in West & South Delhi",
+    "description": "Age Reverse treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Check Age Reverse treatment cost in Delhi for youthful, glowing skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Age Reverse",
+        "path": "/treatments/anti-ageing-therapies/age-reverse/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/anti-ageing-laser/",
+    "view": "t-anti-ageing-therapies-anti-ageing-laser",
+    "title": "Laser Treatment Cost for Anti-Ageing in West & South Delhi",
+    "description": "Check the cost of laser anti-ageing treatments by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book your consultation now.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Laser Treatment for Anti Ageing in Delhi",
+        "path": "/treatments/anti-ageing-therapies/anti-ageing-laser/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/anti-wrinkle-injections/",
+    "view": "t-anti-ageing-therapies-anti-wrinkle-injections",
+    "title": "Anti-Wrinkle Injection Treatment Cost in West & South Delhi",
+    "description": "Get expert anti-wrinkle injection treatment by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Check cost and book today",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Anti Wrinkle Injection Treatment in Delhi",
+        "path": "/treatments/anti-ageing-therapies/anti-wrinkle-injections/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/collagen-induction-therapy/",
+    "view": "t-anti-ageing-therapies-collagen-induction-therapy",
+    "title": "Dermaroller & Collagen Induction Therapy West & South Delhi",
+    "description": "Effective Dermaroller and Collagen Induction Therapy in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for skin rejuvenation and wrinkle care.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Collagen Induction Therapy",
+        "path": "/treatments/anti-ageing-therapies/collagen-induction-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/dart/",
+    "view": "t-anti-ageing-therapies-dart",
+    "title": "DART Treatment Clinic for Skin Rejuvenation in South Delhi",
+    "description": "Advanced DART treatment clinic in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for skin rejuvenation, anti-ageing, and youthful glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "DART (DNA Repair Technique)",
+        "path": "/treatments/anti-ageing-therapies/dart/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/filler/",
+    "view": "t-anti-ageing-therapies-filler",
+    "title": "Best Fillers Treatment in Delhi | Fillers Cost & Specialist",
+    "description": "Get dermal fillers in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Know fillers treatment cost in Delhi for anti-aging, volume loss & contouring.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Best Fillers Treatment in Delhi",
+        "path": "/treatments/anti-ageing-therapies/filler/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/gfr/",
+    "view": "t-anti-ageing-therapies-gfr",
+    "title": "GFR Test Clinic in West and South Delhi | Skin Health Check",
+    "description": "Get accurate GFR tests and skin health check in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Advanced dermatology services for overall wellness.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "GFR",
+        "path": "/treatments/anti-ageing-therapies/gfr/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/high-intensity-focused-ultrasound/",
+    "view": "t-anti-ageing-therapies-high-intensity-focused-ultrasound",
+    "title": "HIFU Treatment for Skin Tightening in West and South Delhi",
+    "description": "HIFU Treatment Cost in Delhi ranges between Rs. 15,000 - Rs. 30,000. Available at our clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "HIFU Treatment in Delhi",
+        "path": "/treatments/anti-ageing-therapies/high-intensity-focused-ultrasound/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/hyaluronic-acid-therapy/",
+    "view": "t-anti-ageing-therapies-hyaluronic-acid-therapy",
+    "title": "Hyaluronic Acid Therapy for Skin in West and South Delhi",
+    "description": "Effective Hyaluronic Acid Therapy in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for hydrated, youthful, and glowing skin. Book your session now",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Hyaluronic Acid Therapy",
+        "path": "/treatments/anti-ageing-therapies/hyaluronic-acid-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/insta-regen/",
+    "view": "t-anti-ageing-therapies-insta-regen",
+    "title": "Best Insta-Regen Treatment Clinic in West and South Delhi",
+    "description": "Get Insta-Regen treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for skin rejuvenation, anti-ageing, and glowing skin results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Insta-Regen",
+        "path": "/treatments/anti-ageing-therapies/insta-regen/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/instaglam-4d/",
+    "view": "t-anti-ageing-therapies-instaglam-4d",
+    "title": "Instaglam 4D Treatment for Skin Pigmentation & Anti-Ageing",
+    "description": "Effective Instaglam 4D treatment for skin pigmentation, anti-ageing, and rosacea in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book now.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Instaglam 4D",
+        "path": "/treatments/anti-ageing-therapies/instaglam-4d/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/ipl-therapy-or-photofacial/",
+    "view": "t-anti-ageing-therapies-ipl-therapy-or-photofacial",
+    "title": "Photofacial IPL Therapy in West & South Delhi By Dr Dadu's",
+    "description": "Advanced Photofacial IPL therapy in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for skin rejuvenation, pigmentation, and anti-ageing results",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "IPL Therapy / Photofacial",
+        "path": "/treatments/anti-ageing-therapies/ipl-therapy-or-photofacial/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/thread-lift/",
+    "view": "t-anti-ageing-therapies-thread-lift",
+    "title": "Best Thread Lift Treatment in Delhi | Non-Surgical Facelift",
+    "description": "Get the best Thread Lift and Non-Surgical Facelift treatment for skin tightening and facial rejuvenation in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Thread Lift in Delhi",
+        "path": "/treatments/anti-ageing-therapies/thread-lift/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/tixel-anti-ageing/",
+    "view": "t-anti-ageing-therapies-tixel-anti-ageing",
+    "title": "Best Anti-Ageing Tixel Treatment Cost in West & South Delhi",
+    "description": "Get advanced Tixel treatment for anti-ageing in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Effective skin rejuvenation and wrinkle reduction.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Tixel",
+        "path": "/treatments/anti-ageing-therapies/tixel-anti-ageing/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/vampire-facial/",
+    "view": "t-anti-ageing-therapies-vampire-facial",
+    "title": "Vampire Facial Cost in Delhi | Best Vampire Facial Treatment",
+    "description": "Vampire Facial cost in Delhi ranges from Rs. 6,000 to Rs. 20,000. Vampire Facial Treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Vampire Facial in Delhi",
+        "path": "/treatments/anti-ageing-therapies/vampire-facial/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/",
+    "view": "t-bridal-dermatology",
+    "title": "Bridal Dermatologist in Delhi | Pre Bridal Treatment Clinic",
+    "description": "Get advanced pre bridal skin and hair treatments from an expert bridal dermatologist in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/beard-shaping/",
+    "view": "t-bridal-dermatology-beard-shaping",
+    "title": "Beard Shaping Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Beard Shaping by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Beard Shaping",
+        "path": "/treatments/bridal-dermatology/beard-shaping/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/divagenesis/",
+    "view": "t-bridal-dermatology-divagenesis",
+    "title": "DivaGenesis Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "DivaGenesis by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "DivaGenesis",
+        "path": "/treatments/bridal-dermatology/divagenesis/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/laser-facials/",
+    "view": "t-bridal-dermatology-laser-facials",
+    "title": "Laser Facials Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Laser Facials by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Laser Facials",
+        "path": "/treatments/bridal-dermatology/laser-facials/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/lip-pigmentation/",
+    "view": "t-bridal-dermatology-lip-pigmentation",
+    "title": "Lip Pigmentation Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Lip Pigmentation by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Lip Pigmentation",
+        "path": "/treatments/bridal-dermatology/lip-pigmentation/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/power-glow/",
+    "view": "t-bridal-dermatology-power-glow",
+    "title": "Power Glow Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Power Glow by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Power Glow",
+        "path": "/treatments/bridal-dermatology/power-glow/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/",
+    "view": "t-hair-fall",
+    "title": "Best Hair Fall & Hair Loss Treatment Clinic in South Delhi",
+    "description": "Effective hair fall and hair loss treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Advanced solutions for healthy, strong hair.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/advanced-hgp-2.0/",
+    "view": "t-hair-fall-advanced-hgp-2.0",
+    "title": "Advanced HGP 2.0 Therapy in West & South Delhi By Clinic",
+    "description": "Advanced HGP 2.0 therapy in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for hair restoration, growth stimulation, and scalp health improvement",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Advanced HGP (Hair Growth Promoters) 2.0",
+        "path": "/treatments/hair-fall/advanced-hgp-2.0/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/advanced-hgp/",
+    "view": "t-hair-fall-advanced-hgp",
+    "title": "Advanced HGP Clinic & Treatment Cost in West & South Delhi",
+    "description": "Check cost of advanced HGP hair restoration treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Solutions for hair growth and scalp health",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Advanced HGP",
+        "path": "/treatments/hair-fall/advanced-hgp/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/hair-growth-promoters-therapy/",
+    "view": "t-hair-fall-hair-growth-promoters-therapy",
+    "title": "HGP Hair Fall Treatment Cost in West & South Delhi By Clinic",
+    "description": "Check HGP hair fall treatment cost in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Effective solutions for hair growth and scalp health.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "HGP (HAIR GROWTH PROMOTERS) HAIR FALL TREATMENT",
+        "path": "/treatments/hair-fall/hair-growth-promoters-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/hair-transplant/",
+    "view": "t-hair-fall-hair-transplant",
+    "title": "Top Hair Transplant Clinic in Delhi | Best Cost & Results",
+    "description": "Hair transplant cost in Delhi ranges ?50,000\u2013?1,80,000. Best hair transplant at Dadu Medical Centre by Dr. Nivedita Dadu for natural and long-lasting results",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Best Hair Transplant in Delhi",
+        "path": "/treatments/hair-fall/hair-transplant/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/mesotherapy-for-hairfall/",
+    "view": "t-hair-fall-mesotherapy-for-hairfall",
+    "title": "Mesotherapy for Hair & Cost in West & South Delhi By Clinic",
+    "description": "Mesotherapy\u00a0Cost in Delhi ranges from Rs. 4,000 - Rs. 10,000. Get advanced treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Mesotherapy for Hair in Delhi",
+        "path": "/treatments/hair-fall/mesotherapy-for-hairfall/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/root-restore-therapy/",
+    "view": "t-hair-fall-root-restore-therapy",
+    "title": "Root Restore Therapy Cost in West & South Delhi By Clinic",
+    "description": "Check cost of Root Restore Therapy in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Effective treatment for hair restoration and scalp health.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "DMC- RRT (R) Root Restore Therapy",
+        "path": "/treatments/hair-fall/root-restore-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/laser-hair-removal/",
+    "view": "t-laser-hair-removal",
+    "title": "Unwanted Hair Removal Treatment in West & South Delhi",
+    "description": "Get unwanted hair removal treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for smooth, hair-free, and radiant skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "path": "/treatments/laser-hair-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/laser-hair-removal/alexandrite-laser/",
+    "view": "t-laser-hair-removal-alexandrite-laser",
+    "title": "Alexandrite Laser Treatment Cost in West & South Delhi",
+    "description": "Check cost of Alexandrite Laser treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Effective solutions for hair removal and skin care",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "path": "/treatments/laser-hair-removal/"
+      },
+      {
+        "name": "Alexandrite Laser",
+        "path": "/treatments/laser-hair-removal/alexandrite-laser/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/laser-hair-removal/beard-shaping/",
+    "view": "t-laser-hair-removal-beard-shaping",
+    "title": "Beard Shaping Clinic & Cost in West & South Delhi By Clinic",
+    "description": "Get professional beard shaping services and check cost in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Grooming for stylish, well-defined beards",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "path": "/treatments/laser-hair-removal/"
+      },
+      {
+        "name": "Beard Shaping",
+        "path": "/treatments/laser-hair-removal/beard-shaping/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/laser-hair-removal/diode-laser/",
+    "view": "t-laser-hair-removal-diode-laser",
+    "title": "Diode Laser Hair Removal in West & South Delhi By Clinic",
+    "description": "Diode Laser hair removal in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for smooth, hair-free skin. Safe and advanced hair reduction treatments.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "path": "/treatments/laser-hair-removal/"
+      },
+      {
+        "name": "Diode Laser Hair Removal in Delhi",
+        "path": "/treatments/laser-hair-removal/diode-laser/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/laser-hair-removal/soprano-ice-laser-hair-reduction/",
+    "view": "t-laser-hair-removal-soprano-ice-laser-hair-reduction",
+    "title": "Soprano Ice Laser Hair Reduction in West & South Delhi",
+    "description": "Soprano Ice Laser hair reduction in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for smooth, long-lasting hair-free skin. Advanced safe treatment",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "path": "/treatments/laser-hair-removal/"
+      },
+      {
+        "name": "Soprano Ice Laser Hair Reduction",
+        "path": "/treatments/laser-hair-removal/soprano-ice-laser-hair-reduction/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/",
+    "view": "t-non-surgical-facial-enhancements",
+    "title": "Non-Surgical Facelift Treatment Cost in West & South Delhi",
+    "description": "Cost of non-surgical facelift treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Safe and effective solutions for youthful, lifted skin",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/cheek-enhancement/",
+    "view": "t-non-surgical-facial-enhancements-cheek-enhancement",
+    "title": "Cheek Enhancement Treatment Clinic in West & South Delhi",
+    "description": "Cheek enhancement treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for facial contouring, volume restoration, and youthful appearance.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "Cheek Enhancement",
+        "path": "/treatments/non-surgical-facial-enhancements/cheek-enhancement/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/chin-enhancement/",
+    "view": "t-non-surgical-facial-enhancements-chin-enhancement",
+    "title": "Chin Enhancement & Augmentation Clinic in West & South Delhi",
+    "description": "Advanced chin enhancement and augmentation treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for facial contour and balanced appearance",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "Chin Enhancement",
+        "path": "/treatments/non-surgical-facial-enhancements/chin-enhancement/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/lip-enhancement/",
+    "view": "t-non-surgical-facial-enhancements-lip-enhancement",
+    "title": "Lip Enhancement Treatment in West & South Delhi By Clinic",
+    "description": "Lip enhancement treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for fuller, well-defined, and youthful lips. Effective procedures.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "Lip Enhancement Treatment in Delhi",
+        "path": "/treatments/non-surgical-facial-enhancements/lip-enhancement/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/nose-enhancement/",
+    "view": "t-non-surgical-facial-enhancements-nose-enhancement",
+    "title": "Nose Enhancement Treatment Clinic in West & South Delhi",
+    "description": "Advanced nose enhancement treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for refined, balanced, and aesthetically pleasing results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "Nose Enhancement",
+        "path": "/treatments/non-surgical-facial-enhancements/nose-enhancement/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/",
+    "view": "t-pigmentation",
+    "title": "Best Pigmentation Treatment Clinic in West & South Delhi",
+    "description": "Pigmentation treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for even-toned, clear, and radiant skin. Advanced solutions available",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/chemical-peels/",
+    "view": "t-pigmentation-chemical-peels",
+    "title": "Chemical Peel Treatment Cost in Delhi | West & South Delhi",
+    "description": "Chemical Peel Cost In Delhi ranges between Rs. 2,000 - Rs. 12,000. Available at our clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Chemical Peel Treatment in Delhi",
+        "path": "/treatments/pigmentation/chemical-peels/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/cosmelan-peel/",
+    "view": "t-pigmentation-cosmelan-peel",
+    "title": "Cosmelan Peel Treatment Clinic in West & South Delhi",
+    "description": "Get Cosmelan Peel treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for pigmentation correction, brightening, and clear skin results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Cosmelan Peel",
+        "path": "/treatments/pigmentation/cosmelan-peel/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/divagenesis/",
+    "view": "t-pigmentation-divagenesis",
+    "title": "DivaGenesis Skin Lightening Laser Treatment Clinic in Delhi",
+    "description": "Advanced DivaGenesis Skin Lightening Laser Treatment for bright, even-toned skin in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Safe, effective results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Skin Lightening Treatment in Delhi",
+        "path": "/treatments/pigmentation/divagenesis/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/insta-glow-peel-facial/",
+    "view": "t-pigmentation-insta-glow-peel-facial",
+    "title": "Insta Glow Peel Facial Treatment Cost in West & South Delhi",
+    "description": "Check cost of Insta Glow Peel Facial treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for bright, glowing, and rejuvenated skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Insta-Glow Peel Facial",
+        "path": "/treatments/pigmentation/insta-glow-peel-facial/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/laser-toning/",
+    "view": "t-pigmentation-laser-toning",
+    "title": "Best Laser Toning & Cost in West & South Delhi By Clinic",
+    "description": "Get advanced laser toning treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Check cost and achieve even-toned, radiant skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Best Laser Toning in Delhi",
+        "path": "/treatments/pigmentation/laser-toning/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/magic-blend-2.0/",
+    "view": "t-pigmentation-magic-blend-2.0",
+    "title": "Magic Blend 2.0 facial skin peel treatment Clinic in Delhi",
+    "description": "Magic BMagic Blend 2.0 facial skin peel treatment Clinic in Delhi. Get advanced treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).lend 2.0 facial skin peel treatment Clinic in Delhi",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Magic Blend 2.0",
+        "path": "/treatments/pigmentation/magic-blend-2.0/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/magic-blend/",
+    "view": "t-pigmentation-magic-blend",
+    "title": "Magic Blend Treatment in Delhi, West Delhi, South Delhi, India",
+    "description": "Magic Blend treatment is an ideal treatment for those who suffer from any kind of pigmentation problem including melasma, post-inflammatory hyperpigmentation, solar & senile lentigo, dull skin, tanning and dark spots from sun exposure.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "DMC- MAGIC BLEND (R)",
+        "path": "/treatments/pigmentation/magic-blend/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/mesotherapy/",
+    "view": "t-pigmentation-mesotherapy",
+    "title": "Mesotherapy for Face & Skin Treatment Cost in South Delhi",
+    "description": "Check cost of mesotherapy for face and skin treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for glowing, rejuvenated, and healthy skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Mesotherapy For Skin in Delhi",
+        "path": "/treatments/pigmentation/mesotherapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/miracle-infusum/",
+    "view": "t-pigmentation-miracle-infusum",
+    "title": "Miracle Infusum Instant Glow Treatment in West & South Delhi",
+    "description": "Miracle Infusum Instant Glow treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) removes tanning, dullness, restores radiant & glowing skin",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Miracle Infusum Treatment",
+        "path": "/treatments/pigmentation/miracle-infusum/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/power-glow/",
+    "view": "t-pigmentation-power-glow",
+    "title": "Power Glow Treatment Clinic in West Delhi & South Delhi",
+    "description": "Power Glow Treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi), Delhi. Get instant radiance, brightness and glowing skin with expert care.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Power Glow",
+        "path": "/treatments/pigmentation/power-glow/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/",
+    "view": "t-plastic-surgery",
+    "title": "Best Cosmetic & Plastic Surgeon Clinic in West & South Delhi",
+    "description": "Cosmetic and plastic surgery clinic in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi), Delhi. Expert surgeon for safe and result-oriented procedures",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/abdominoplasty-tummy-tuck-surgery/",
+    "view": "t-plastic-surgery-abdominoplasty-tummy-tuck-surgery",
+    "title": "Tummy Tuck Surgery | Abdominoplasty in West & South Delhi",
+    "description": "Tummy tuck (abdominoplasty) surgery available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Cost depends on treatment & requirements.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Abdominoplasty / Tummy Tuck",
+        "path": "/treatments/plastic-surgery/abdominoplasty-tummy-tuck-surgery/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/blepharoplasty-eyelid-surgery/",
+    "view": "t-plastic-surgery-blepharoplasty-eyelid-surgery",
+    "title": "Best Blepharoplasty & Eyelid Surgery in West & South Delhi",
+    "description": "Get blepharoplasty (eyelid surgery) by expert surgeons in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Eyelid surgery cost varies by case.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Blepharoplasty",
+        "path": "/treatments/plastic-surgery/blepharoplasty-eyelid-surgery/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/body-sculpting-liposuction-cosmetic-surgery/",
+    "view": "t-plastic-surgery-body-sculpting-liposuction-cosmetic-surgery",
+    "title": "Best Liposuction Surgeon & Clinic in West & South Delhi",
+    "description": "Liposuction treatment available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Surgery cost depends on body area, technique, and fat volume.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Liposuction",
+        "path": "/treatments/plastic-surgery/body-sculpting-liposuction-cosmetic-surgery/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/breas-t-augmentation/",
+    "view": "t-plastic-surgery-breas-t-augmentation",
+    "title": "Best Breast Implant & Augmentation Surgery Clinic in Delhi",
+    "description": "Breast implant and augmentation surgery available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Cost varies by implant type, size & procedure",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Breas-t Augmentation",
+        "path": "/treatments/plastic-surgery/breas-t-augmentation/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/dimple-creation/",
+    "view": "t-plastic-surgery-dimple-creation",
+    "title": "Dimple Creation Surgery Cost in Delhi | Best Clinic Near You",
+    "description": "Dimple creation surgery available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Cost depends on technique, symmetry, and facial structure.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Dimple Creation",
+        "path": "/treatments/plastic-surgery/dimple-creation/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/gynecomastia-male-breas-t-reduction-surgery/",
+    "view": "t-plastic-surgery-gynecomastia-male-breas-t-reduction-surgery",
+    "title": "Gynecomastia Surgery Cost in Delhi | Male Chest Reduction",
+    "description": "Gynecomastia or male breast reduction surgery available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Cost varies by grade & clinic location",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Gynecomastia",
+        "path": "/treatments/plastic-surgery/gynecomastia-male-breas-t-reduction-surgery/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/lip-augmentation-and-reduction-surgery/",
+    "view": "t-plastic-surgery-lip-augmentation-and-reduction-surgery",
+    "title": "Lip Augmentation Surgery in Delhi | Lip Reduction Cost",
+    "description": "Lip augmentation and lip reduction surgery available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Cost depends on technique & treatment plan",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Lip Reduction & Augmentation Surgery",
+        "path": "/treatments/plastic-surgery/lip-augmentation-and-reduction-surgery/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/rhinoplasty-nose-job-surgery/",
+    "view": "t-plastic-surgery-rhinoplasty-nose-job-surgery",
+    "title": "Best Rhinoplasty Surgeon & Nose Surgery Clinic in Delhi",
+    "description": "Get advanced rhinoplasty and nose reshaping treatment with affordable surgery cost in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for natural results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Rhinoplasty",
+        "path": "/treatments/plastic-surgery/rhinoplasty-nose-job-surgery/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/rhytidectomy-facelift-surgery/",
+    "view": "t-plastic-surgery-rhytidectomy-facelift-surgery",
+    "title": "Facelift Surgery Cost in Delhi | Top Facelift Surgeon Clinic",
+    "description": "Get advanced facelift surgery in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Cost depends on technique, surgeon experience, and treatment goals.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Rhytidectomy / FaceLift Surgery",
+        "path": "/treatments/plastic-surgery/rhytidectomy-facelift-surgery/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/",
+    "view": "t-premium-services",
+    "title": "Premium Skin Services in Delhi: Photo Facial, Oxyjet Peel",
+    "description": "Get premium skin services including Photo Facial, Oxyjet Peel, and Dermalogica Spa in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi), Delhi",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/365-oxyboost/",
+    "view": "t-premium-services-365-oxyboost",
+    "title": "Skin Tanning & Premature Ageing Treatment with 365 Oxyboost",
+    "description": "Get 365 Oxyboost treatment for skin tanning, dull skin, and premature ageing in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi), Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "365 Oxyboost",
+        "path": "/treatments/premium-services/365-oxyboost/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/4d-photofacial/",
+    "view": "t-premium-services-4d-photofacial",
+    "title": "Remove Zits & Uneven Skin Tone with 4D Photofacial Treatment",
+    "description": "Get 4D Photofacial treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) to remove zits, improve uneven skin tone, and achieve glowing skin",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "4D PHOTOFACIAL",
+        "path": "/treatments/premium-services/4d-photofacial/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/Instaglam-treatment/",
+    "view": "t-premium-services-Instaglam-treatment",
+    "title": "Instaglam Skin Treatment in Delhi | West & South Delhi",
+    "description": "Instaglam is the new answer to daily skin issues like tanning, dullness, and dark spots. Get advanced treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Instaglam",
+        "path": "/treatments/premium-services/Instaglam-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/bloody-mary-peel/",
+    "view": "t-premium-services-bloody-mary-peel",
+    "title": "Remove Early Ageing Signs with Anti-Ageing Treatment in Delhi",
+    "description": "Advanced anti-ageing treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) to remove early ageing signs and restore youthful, glowing skin",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Bloody Mary Peel",
+        "path": "/treatments/premium-services/bloody-mary-peel/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/body-polishing/",
+    "view": "t-premium-services-body-polishing",
+    "title": "Body Polishing & Dead Skin Removal in West & South Delhi",
+    "description": "Get body polishing treatments in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) to remove dead skin cells and achieve smooth, radiant, glowing skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Body Polishing",
+        "path": "/treatments/premium-services/body-polishing/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/crystal-glaze/",
+    "view": "t-premium-services-crystal-glaze",
+    "title": "Skin Rejuvenation & Hydration with Glass Skin Facial in Delhi",
+    "description": "Get Glass Skin Facial - Crystal Glaze for skin rejuvenation and hydration in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Achieve radiant skin",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "DMC- CRYSTAL GLAZE (R)",
+        "path": "/treatments/premium-services/crystal-glaze/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/dermalogica-peel/",
+    "view": "t-premium-services-dermalogica-peel",
+    "title": "Dermalogica Peel Skin Resurfacing in West & South Delhi",
+    "description": "Dermalogica Peel for skin resurfacing available in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Achieve smooth, clear, radiant skin effectively.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Dermalogica Peel",
+        "path": "/treatments/premium-services/dermalogica-peel/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/dermalogica-spa-facials/",
+    "view": "t-premium-services-dermalogica-spa-facials",
+    "title": "Dermalogica Spa Facials in Delhi | West & South Delhi Clinic",
+    "description": "Experience Dermalogica Spa Facials in Delhi for glowing, refreshed skin. Available at our clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Dermalogica Spa Facials",
+        "path": "/treatments/premium-services/dermalogica-spa-facials/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/dermaplaning/",
+    "view": "t-premium-services-dermaplaning",
+    "title": "Best Dermaplaning Treatment in Delhi | Cost in West & South Delhi",
+    "description": "Get smooth, glowing skin with Dermaplaning at our clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Check Dermaplaning treatment cost in Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Dermaplaning Treatment",
+        "path": "/treatments/premium-services/dermaplaning/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/divagenesis/",
+    "view": "t-premium-services-divagenesis",
+    "title": "DivaGenesis Skin Lightening Laser Treatment Clinic in Delhi",
+    "description": "Advanced DivaGenesis Skin Lightening Laser Treatment for bright, even-toned skin in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Safe, effective results.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Skin Lightening Treatment in Delhi",
+        "path": "/treatments/premium-services/divagenesis/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/glam-resurge/",
+    "view": "t-premium-services-glam-resurge",
+    "title": "Glam Resurge Facial in Delhi | West & South Delhi Clinic",
+    "description": "Revive dull, tired skin with Glam Resurge Facial in Delhi. Achieve instant radiance at our advanced clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Glam resurge",
+        "path": "/treatments/premium-services/glam-resurge/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/hydra-revive/",
+    "view": "t-premium-services-hydra-revive",
+    "title": "Hydra Revive Treatment in Delhi | West & South Delhi",
+    "description": "Refresh and deeply hydrate your skin with Hydra Revive Treatment in Delhi. Available at our clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Hydra Revive",
+        "path": "/treatments/premium-services/hydra-revive/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/hydrafacial/",
+    "view": "t-premium-services-hydrafacial",
+    "title": "Best Hydrafacial Treatment Clinic in Delhi | Skin Care",
+    "description": "Best Hydrafacial Treatment Clinic in Delhi. Cost in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Skin hydration, detanning, cleansing, peeling.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "HydraFacial Treatment in Delhi",
+        "path": "/treatments/premium-services/hydrafacial/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/instaglam-4d/",
+    "view": "t-premium-services-instaglam-4d",
+    "title": "Instaglam 4D Treatment for Skin Pigmentation & Anti-Ageing",
+    "description": "Effective Instaglam 4D treatment for skin pigmentation, anti-ageing, and rosacea in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Book now.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Instaglam 4D",
+        "path": "/treatments/premium-services/instaglam-4d/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/laser-facials/",
+    "view": "t-premium-services-laser-facials",
+    "title": "Skin Tone Treatment & Laser Facials for Youthful Skin Delhi",
+    "description": "Get skin tone treatments and laser facials in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for youthful, even-toned, and radiant glowing skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Laser Facials",
+        "path": "/treatments/premium-services/laser-facials/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/lip-pigmentation/",
+    "view": "t-premium-services-lip-pigmentation",
+    "title": "Dark Lips & Lip Pigmentation Treatment in West & South Delhi",
+    "description": "Get dark lips and lip pigmentation treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for even-toned, healthy, and youthful-looking lips.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Lip Pigmentation",
+        "path": "/treatments/premium-services/lip-pigmentation/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/lv-infusions/",
+    "view": "t-premium-services-lv-infusions",
+    "title": "IV Infusion Therapy in Delhi, Clinic in West & South Delhi",
+    "description": "Get Healthy & glowing Skin with IV Infusions Treatment in Delhi, Get advanced treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "IV Infusion Therapy in Delhi",
+        "path": "/treatments/premium-services/lv-infusions/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/martini/",
+    "view": "t-premium-services-martini",
+    "title": "MARTINI Skin Hydration & Rejuvenation Treatment in Delhi",
+    "description": "Get MARTINI skin hydration and rejuvenation treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for refreshed, youthful, and glowing skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "DMC- MARTINI(R) (Micro Renewal and Tightening Infusion)",
+        "path": "/treatments/premium-services/martini/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/miracle-infusum/",
+    "view": "t-premium-services-miracle-infusum",
+    "title": "Miracle Infusum Instant Glow Treatment in West & South Delhi",
+    "description": "Miracle Infusum Instant Glow treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) removes tanning, dullness, restores radiant & glowing skin",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Miracle Infusum Treatment",
+        "path": "/treatments/premium-services/miracle-infusum/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/oil-cease/",
+    "view": "t-premium-services-oil-cease",
+    "title": "Oil Cease Oily Skin & Large Pores Treatment in South Delhi",
+    "description": "Get Oil Cease treatment for oily skin and large pores in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Achieve clear, smooth, and balanced skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Oil Cease",
+        "path": "/treatments/premium-services/oil-cease/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/oxyjet-peel-facial/",
+    "view": "t-premium-services-oxyjet-peel-facial",
+    "title": "OXYJET Oxygen Peel Facial for Skin Glow & Hydration in Delhi",
+    "description": "Get OXYJET (Oxygen) Peel Facial in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for skin glow, hydration, and refreshed, radiant skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Oxyjet(Oxygen) Peel Facial",
+        "path": "/treatments/premium-services/oxyjet-peel-facial/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/permanent-makeup/",
+    "view": "t-premium-services-permanent-makeup",
+    "title": "Permanent Makeup & Cosmetic Tattooing in West & South Delhi",
+    "description": "Permanent makeup and cosmetic tattooing treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for long-lasting and natural-looking results",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Permanent makeup",
+        "path": "/treatments/premium-services/permanent-makeup/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/photofacials/",
+    "view": "t-premium-services-photofacials",
+    "title": "Photofacial Treatment Clinic & Cost in West & South Delhi",
+    "description": "Get Photofacial treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Check treatment cost and achieve clear, radiant, and glowing skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Photofacial Treatment in Delhi",
+        "path": "/treatments/premium-services/photofacials/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/revivre-plus/",
+    "view": "t-premium-services-revivre-plus",
+    "title": "Revivre Plus: Fine Lines, Open Pores & Dullness Treatment",
+    "description": "Get Revivre Plus treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for fine lines, open pores, dullness, and achieve smooth, radiant skin",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Revivre Plus",
+        "path": "/treatments/premium-services/revivre-plus/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/silk-peel/",
+    "view": "t-premium-services-silk-peel",
+    "title": "Silk Peel Facial Treatment Clinic in Delhi for Glow Skin",
+    "description": "Get brighter, smoother skin with Silk Peel Facial Treatment at leading clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Safe, effective, instant glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Silk Peel Treatment",
+        "path": "/treatments/premium-services/silk-peel/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/stretch-marks/",
+    "view": "t-stretch-marks",
+    "title": "Stretch Marks Treatment Clinic & Cost in West & South Delhi",
+    "description": "Check the cost of stretch marks treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Achieve smooth, even-toned, and rejuvenated skin",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Stretch Marks",
+        "path": "/treatments/stretch-marks/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/stretch-marks/dermaroller-stretch-marks/",
+    "view": "t-stretch-marks-dermaroller-stretch-marks",
+    "title": "Dermaroller Stretch Marks Treatment Clinic in South Delhi",
+    "description": "Get Dermaroller treatment for stretch marks in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Achieve smooth, even-toned, and rejuvenated skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Stretch Marks",
+        "path": "/treatments/stretch-marks/"
+      },
+      {
+        "name": "Dermaroller",
+        "path": "/treatments/stretch-marks/dermaroller-stretch-marks/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/stretch-marks/erbium-fibre-laser-stretch-marks/",
+    "view": "t-stretch-marks-erbium-fibre-laser-stretch-marks",
+    "title": "Erbium Fibre Laser Stretch Marks Treatment in & South Delhi",
+    "description": "Erbium Fibre Laser treatment for stretch marks in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Achieve smooth, even-toned, and rejuvenated skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Stretch Marks",
+        "path": "/treatments/stretch-marks/"
+      },
+      {
+        "name": "Erbium Fibre Laser",
+        "path": "/treatments/stretch-marks/erbium-fibre-laser-stretch-marks/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/stretch-marks/mnrf/",
+    "view": "t-stretch-marks-mnrf",
+    "title": "MNRF Treatment in Delhi: Cost, Best Doctor & Clinics Rajouri",
+    "description": "MNRF Treatment in Delhi Cost ranges from ?10,000 to ?20,000. Consult the Best MNRF Doctor at our Rajouri Garden (West Delhi) or Vasant Vihar (South Delhi) clinic",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Stretch Marks",
+        "path": "/treatments/stretch-marks/"
+      },
+      {
+        "name": "MNRF Treatment in Delhi",
+        "path": "/treatments/stretch-marks/mnrf/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/stretch-marks/pixigenus-stretch-marks/",
+    "view": "t-stretch-marks-pixigenus-stretch-marks",
+    "title": "Pixigenus Treatment Clinic & Cost in West & South Delhi",
+    "description": "Pixigenus treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for skin rejuvenation, hydration, and a youthful, radiant, glowing appearance",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Stretch Marks",
+        "path": "/treatments/stretch-marks/"
+      },
+      {
+        "name": "Pixigenus Stretch Marks",
+        "path": "/treatments/stretch-marks/pixigenus-stretch-marks/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/stretch-marks/tixel-stretch-marks/",
+    "view": "t-stretch-marks-tixel-stretch-marks",
+    "title": "Stretch Marks Tixel Treatment Clinic in West & South Delhi",
+    "description": "Tixel treatment for stretch marks in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Achieve smooth, rejuvenated, and even-toned skin effectively",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Stretch Marks",
+        "path": "/treatments/stretch-marks/"
+      },
+      {
+        "name": "Tixel",
+        "path": "/treatments/stretch-marks/tixel-stretch-marks/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/vitiligo-surgeries/",
+    "view": "t-vitiligo-surgeries",
+    "title": "Vitiligo Specialist & Surgery Cost in West & South Delhi",
+    "description": "Get expert vitiligo treatment and surgery in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Cost varies by procedure and extent of pigmentation",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Vitiligo Surgeries",
+        "path": "/treatments/vitiligo-surgeries/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/vitiligo-surgeries/melanocyte-transfer/",
+    "view": "t-vitiligo-surgeries-melanocyte-transfer",
+    "title": "Melanocyte Transfer Treatment Clinic in West & South Delhi",
+    "description": "Get melanocyte transfer treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for vitiligo and pigmentation correction. Natural skin tone.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Vitiligo Surgeries",
+        "path": "/treatments/vitiligo-surgeries/"
+      },
+      {
+        "name": "Melanocyte Transfer",
+        "path": "/treatments/vitiligo-surgeries/melanocyte-transfer/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/vitiligo-surgeries/split-thickness-skin-grafting/",
+    "view": "t-vitiligo-surgeries-split-thickness-skin-grafting",
+    "title": "Best Split Thickness Skin Grafting Treatment Clinic in Delhi",
+    "description": "Get split thickness skin grafting treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for scar correction, skin repair, and rejuvenation.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Vitiligo Surgeries",
+        "path": "/treatments/vitiligo-surgeries/"
+      },
+      {
+        "name": "Split Thickness Skin Grafting",
+        "path": "/treatments/vitiligo-surgeries/split-thickness-skin-grafting/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/ultherapy/",
+    "view": "t-anti-ageing-therapies-ultherapy",
+    "title": "Ultherapy Treatment & Cost in West & South Delhi By Clinic",
+    "description": "Ultherapy treatment for skin lifting and anti-ageing in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Check cost and book your session now.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Ultherapy Treatment in Delhi",
+        "path": "/treatments/anti-ageing-therapies/ultherapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/dmc-bling-shots/",
+    "view": "t-premium-services-dmc-bling-shots",
+    "title": "Bling Shots Microneedling Treatment in Delhi, Rajouri Garden",
+    "description": "Bling Shots Microneedling Treatment in Delhi, Advanced care available at our clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "DMC- Bling Shots",
+        "path": "/treatments/premium-services/dmc-bling-shots/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/acne-treatment/dmc-black-shots/",
+    "view": "t-acne-treatment-dmc-black-shots",
+    "title": "DMC Black Shots Treatment for Acne & Open Pores",
+    "description": "Carbon laser facial treatment for acne, oily skin, blackheads, whiteheads and open pores with instant skin rejuvenation.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Acne Treatment",
+        "path": "/treatments/acne-treatment/"
+      },
+      {
+        "name": "DMC Black Shots",
+        "path": "/treatments/acne-treatment/dmc-black-shots/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/dmc-divagenx/",
+    "view": "t-anti-ageing-therapies-dmc-divagenx",
+    "title": "DMC DivagenX Treatment for Skin Rejuvenation & Pigmentation",
+    "description": "DMC DivagenX is an advanced skin rejuvenation treatment combining microdermabrasion, laser therapy and exosome infusion to improve pigmentation, firmness and skin glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "DMC DivagenX",
+        "path": "/treatments/anti-ageing-therapies/dmc-divagenx/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/dmc-exo-mist-booster/",
+    "view": "t-anti-ageing-therapies-dmc-exo-mist-booster",
+    "title": "DMC Exo Mist Booster for Skin Hydration & Repair",
+    "description": "Exosome and hyaluronic acid booster treatment for deep hydration, collagen stimulation and youthful skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "DMC Exo Mist Booster",
+        "path": "/treatments/anti-ageing-therapies/dmc-exo-mist-booster/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/dmc-primer-booster/",
+    "view": "t-anti-ageing-therapies-dmc-primer-booster",
+    "title": "DMC Primer Booster for Skin Firmness & Hydration",
+    "description": "PN collagen booster treatment improving skin texture, elasticity and hydration.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "DMC Primer Booster",
+        "path": "/treatments/anti-ageing-therapies/dmc-primer-booster/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/exo-mist-booster-treatment/",
+    "view": "t-anti-ageing-therapies-exo-mist-booster-treatment",
+    "title": "Exo-Mist Booster Treatment for Skin Hydration & Rejuvenation",
+    "description": "Exo-Mist Booster combines hyaluronic acid and exosomes to deeply hydrate skin, stimulate collagen production and improve skin tone and texture.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Exo-Mist Booster Hyaluronic Acid & Exosome Skin Treatment",
+        "path": "/treatments/anti-ageing-therapies/exo-mist-booster-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/heal-n-booster-ha-pdrn-nad-treatment/",
+    "view": "t-anti-ageing-therapies-heal-n-booster-ha-pdrn-nad-treatment",
+    "title": "Heal-N Booster Treatment for Skin Repair & Regeneration",
+    "description": "Heal-N Booster treatment uses HA, PDRN and NAD to repair damaged skin, stimulate collagen production and restore youthful skin quality.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Heal-N Booster HA PDRN NAD Skin Regeneration Treatment",
+        "path": "/treatments/anti-ageing-therapies/heal-n-booster-ha-pdrn-nad-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/nadify-booster-skin-regeneration-treatment/",
+    "view": "t-anti-ageing-therapies-nadify-booster-skin-regeneration-treatment",
+    "title": "Nadify Booster Treatment for Skin Regeneration & Brightening",
+    "description": "Nadify Booster combines NAD+, Glutathione, Hyaluronic Acid and PDRN to repair damaged skin, improve collagen production and restore healthy glowing skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Nadify Booster NAD+ Glutathione HA PDRN Skin Regeneration Treatment",
+        "path": "/treatments/anti-ageing-therapies/nadify-booster-skin-regeneration-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/nexi-slayyy-vitamin-c-collagen-treatment/",
+    "view": "t-anti-ageing-therapies-nexi-slayyy-vitamin-c-collagen-treatment",
+    "title": "Nexi-Slayyy Treatment for Skin Brightening & Collagen Boost",
+    "description": "Nexi-Slayyy is an advanced skin rejuvenation treatment combining Vitamin C and collagen extract to brighten skin tone, improve elasticity and restore natural glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Nexi-Slayyy Vitamin C & Collagen Skin Treatment",
+        "path": "/treatments/anti-ageing-therapies/nexi-slayyy-vitamin-c-collagen-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/anti-ageing-therapies/profhilo-treatment/",
+    "view": "t-anti-ageing-therapies-profhilo-treatment",
+    "title": "Profhilo Treatment in Delhi: Cost, Best Skin Booster & Doctor",
+    "description": "Innovative Profhilo\u00ae Skin Booster treatment in Delhi for clear, hydrated, and youthful skin. Clinics Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Anti Ageing Therapies",
+        "path": "/treatments/anti-ageing-therapies/"
+      },
+      {
+        "name": "Profhilo Treatment In Delhi",
+        "path": "/treatments/anti-ageing-therapies/profhilo-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/dmc-folliq-qr678/",
+    "view": "t-hair-fall-dmc-folliq-qr678",
+    "title": "DMC FOLLI Q QR678 Hair Fall & Hair Regrowth Treatment",
+    "description": "Advanced QR678 hair regrowth therapy designed to reduce hair fall, strengthen follicles and restore natural hair density without surgery.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "DMC FOLLI Q QR678",
+        "path": "/treatments/hair-fall/dmc-folliq-qr678/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/folli-fuel-iv-drip/",
+    "view": "t-hair-fall-folli-fuel-iv-drip",
+    "title": "Folli Fuel IV Drip Therapy for Hair Fall & Hair Growth",
+    "description": "Folli Fuel IV drip therapy delivers essential vitamins, amino acids and minerals directly into the bloodstream to reduce hair fall and support healthy hair growth.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Folli Fuel IV Drip",
+        "path": "/treatments/hair-fall/folli-fuel-iv-drip/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/hair-exosome-therapy/",
+    "view": "t-hair-fall-hair-exosome-therapy",
+    "title": "Hair Exosome Therapy for Hair Loss Treatment",
+    "description": "Hair exosome therapy stimulates dormant follicles and improves scalp health to promote natural hair regrowth.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Hair Exosome Therapy for Hair Growth",
+        "path": "/treatments/hair-fall/hair-exosome-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/hsr-hair-scalp-restoration-therapy/",
+    "view": "t-hair-fall-hsr-hair-scalp-restoration-therapy",
+    "title": "HSR Therapy for Hair Loss & Scalp Restoration",
+    "description": "HSR therapy restores scalp health and stimulates hair follicles using regenerative compounds and microneedling.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "HSR Hair and Scalp Restoration Therapy",
+        "path": "/treatments/hair-fall/hsr-hair-scalp-restoration-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/root-elixir-hair-scalp-treatment/",
+    "view": "t-hair-fall-root-elixir-hair-scalp-treatment",
+    "title": "Root Elixir Hair Treatment for Hair Fall & Scalp Health",
+    "description": "Root Elixir hair treatment restores scalp health, strengthens hair follicles and improves hair quality by delivering nutrients directly to the scalp.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Root Elixir Hair & Scalp Restoration Treatment",
+        "path": "/treatments/hair-fall/root-elixir-hair-scalp-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/root-elixir-seborrheic-dermatitis-treatment/",
+    "view": "t-hair-fall-root-elixir-seborrheic-dermatitis-treatment",
+    "title": "Root Elixir Treatment for Seborrheic Dermatitis & Scalp Health",
+    "description": "Root Elixir scalp therapy treats seborrheic dermatitis by reducing inflammation, controlling yeast growth and restoring scalp health.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Root Elixir Treatment for Seborrheic Dermatitis",
+        "path": "/treatments/hair-fall/root-elixir-seborrheic-dermatitis-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/hair-fall/scalp-micro-pigmentation-treatment/",
+    "view": "t-hair-fall-scalp-micro-pigmentation-treatment",
+    "title": "Scalp Micro Pigmentation Treatment for Baldness",
+    "description": "Scalp micro pigmentation creates the appearance of natural hair follicles to restore hairline and improve hair density without surgery.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Hair Fall",
+        "path": "/treatments/hair-fall/"
+      },
+      {
+        "name": "Scalp Micro Pigmentation Treatment for Hair Loss",
+        "path": "/treatments/hair-fall/scalp-micro-pigmentation-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/laser-hair-removal/titanium-soprano-laser-hair-reduction/",
+    "view": "t-laser-hair-removal-titanium-soprano-laser-hair-reduction",
+    "title": "Titanium Soprano Laser Hair Reduction Treatment Clinic Delhi",
+    "description": "Experience smooth, long-lasting results with Titanium Soprano Laser Hair Reduction at our leading clinic in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "path": "/treatments/laser-hair-removal/"
+      },
+      {
+        "name": "Titanium Soprano Laser Hair Reduction",
+        "path": "/treatments/laser-hair-removal/titanium-soprano-laser-hair-reduction/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/dmc-lumi-eyes/",
+    "view": "t-non-surgical-facial-enhancements-dmc-lumi-eyes",
+    "title": "DMC Lumi Eyes Treatment for Dark Circles",
+    "description": "Advanced PDRN under eye treatment reducing dark circles, puffiness and improving hydration.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "DMC Lumi Eyes",
+        "path": "/treatments/non-surgical-facial-enhancements/dmc-lumi-eyes/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/dmc-lush-lips/",
+    "view": "t-non-surgical-facial-enhancements-dmc-lush-lips",
+    "title": "DMC Lush Lips Treatment for Dark Lips",
+    "description": "Non invasive lip treatment for pigmentation correction, hydration and natural lip enhancement.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "DMC Lush Lips",
+        "path": "/treatments/non-surgical-facial-enhancements/dmc-lush-lips/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/dmc-under-eye-pn-booster/",
+    "view": "t-non-surgical-facial-enhancements-dmc-under-eye-pn-booster",
+    "title": "Under Eye PN Booster for Dark Circles",
+    "description": "Polynucleotide based under eye rejuvenation treatment improving hydration and elasticity.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "DMC Under Eye PN Booster",
+        "path": "/treatments/non-surgical-facial-enhancements/dmc-under-eye-pn-booster/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/dmc-x-eyes/",
+    "view": "t-non-surgical-facial-enhancements-dmc-x-eyes",
+    "title": "DMC X Eyes Treatment for Dark Circles & Puffiness",
+    "description": "Exosome based under eye rejuvenation treatment improving collagen and skin brightness.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "DMC X Eyes",
+        "path": "/treatments/non-surgical-facial-enhancements/dmc-x-eyes/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/lip-lock-hab12-lip-treatment/",
+    "view": "t-non-surgical-facial-enhancements-lip-lock-hab12-lip-treatment",
+    "title": "Lip-Lock HAB12 Treatment for Lip Hydration & Brightening",
+    "description": "Lip-Lock HAB12 restores lip hydration, reduces lip pigmentation and improves lip definition using hyaluronic acid and regenerative peptides.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "Lip-Lock HAB12 Lip Restoration Treatment",
+        "path": "/treatments/non-surgical-facial-enhancements/lip-lock-hab12-lip-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/lip-tinting-microblading-treatment/",
+    "view": "t-non-surgical-facial-enhancements-lip-tinting-microblading-treatment",
+    "title": "Lip Tinting Microblading Treatment for Natural Lip Color",
+    "description": "Lip tinting through microblading enhances natural lip color, improves lip shape and provides long lasting semi permanent lip pigmentation.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "Lip Tinting Through Microblading Treatment",
+        "path": "/treatments/non-surgical-facial-enhancements/lip-tinting-microblading-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/non-surgical-facial-enhancements/microblading-eyebrows-treatment/",
+    "view": "t-non-surgical-facial-enhancements-microblading-eyebrows-treatment",
+    "title": "Microblading Eyebrows Treatment for Natural Brows",
+    "description": "Microblading treatment creates natural looking eyebrow strokes to improve shape, density and symmetry of eyebrows.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Non Surgical Facial Enhancements",
+        "path": "/treatments/non-surgical-facial-enhancements/"
+      },
+      {
+        "name": "Microblading Eyebrows Treatment",
+        "path": "/treatments/non-surgical-facial-enhancements/microblading-eyebrows-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/dmc-bioexfo/",
+    "view": "t-pigmentation-dmc-bioexfo",
+    "title": "DMC Bioexfo Treatment for Body Pigmentation & Dark Skin",
+    "description": "Advanced medium to deep peel treatment for underarms, knees, elbows and body pigmentation to achieve brighter and even toned skin.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "DMC Bioexfo",
+        "path": "/treatments/pigmentation/dmc-bioexfo/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/dmc-c-shine-booster/",
+    "view": "t-pigmentation-dmc-c-shine-booster",
+    "title": "DMC C Shine Booster for Pigmentation & Skin Glow",
+    "description": "Vitamin C skin booster treatment that reduces pigmentation, dullness and improves skin clarity and radiance.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "DMC C Shine Booster",
+        "path": "/treatments/pigmentation/dmc-c-shine-booster/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/pigmentation/photoradiance-tsdf-photofacial-treatment/",
+    "view": "t-pigmentation-photoradiance-tsdf-photofacial-treatment",
+    "title": "Photoradiance TSDF Photofacial for Pigmentation",
+    "description": "Photoradiance TSDF photofacial uses targeted light therapy to treat pigmentation, redness and uneven skin tone.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/treatments/pigmentation/"
+      },
+      {
+        "name": "Photoradiance TSDF Photofacial Skin Treatment",
+        "path": "/treatments/pigmentation/photoradiance-tsdf-photofacial-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/plastic-surgery/aptos-threads-treatment/",
+    "view": "t-plastic-surgery-aptos-threads-treatment",
+    "title": "Aptos Threads Treatment for Non Surgical Face Lift",
+    "description": "Aptos Threads treatment lifts sagging skin, tightens facial contours and stimulates collagen for a natural non surgical facelift.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Plastic Surgery",
+        "path": "/treatments/plastic-surgery/"
+      },
+      {
+        "name": "Aptos Threads Non Surgical Facelift Treatment",
+        "path": "/treatments/plastic-surgery/aptos-threads-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/bff-best-foot-forward-foot-treatment/",
+    "view": "t-premium-services-bff-best-foot-forward-foot-treatment",
+    "title": "BFF Best Foot Forward Treatment for Cracked Heels & Foot Care",
+    "description": "BFF Best Foot Forward is a clinical foot care treatment that removes calluses, repairs cracked heels and restores soft healthy feet.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "BFF Best Foot Forward Foot Care Treatment",
+        "path": "/treatments/premium-services/bff-best-foot-forward-foot-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/dmc-nexi-boost/",
+    "view": "t-premium-services-dmc-nexi-boost",
+    "title": "DMC Nexi Boost IV Therapy for Skin Glow & Wellness",
+    "description": "Advanced IV drip therapy for anti aging, hydration, metabolism boost and skin rejuvenation.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "DMC Nexi Boost",
+        "path": "/treatments/premium-services/dmc-nexi-boost/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/glass-skin-ritual-treatment/",
+    "view": "t-premium-services-glass-skin-ritual-treatment",
+    "title": "Glass Skin Ritual Treatment for Clear & Glowing Skin",
+    "description": "Glass Skin Ritual is a multi step skin treatment designed to improve hydration, texture and skin radiance.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Glass Skin Ritual Facial Treatment",
+        "path": "/treatments/premium-services/glass-skin-ritual-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/gold-facial/",
+    "view": "t-premium-services-gold-facial",
+    "title": "Gold Facial Treatment in Delhi | West & South Delhi",
+    "description": "Get glowing, rejuvenated skin with advanced Gold Facial treatment in Delhi. Available at our clinics in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Gold Facial",
+        "path": "/treatments/premium-services/gold-facial/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/hydra-glass-skin-treatment/",
+    "view": "t-premium-services-hydra-glass-skin-treatment",
+    "title": "Hydra Glass Skin Treatment for Deep Hydration",
+    "description": "Hydra Glass Skin treatment deeply hydrates the skin, improves texture and restores natural glow and smoothness.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Hydra Glass Skin Hydration Treatment",
+        "path": "/treatments/premium-services/hydra-glass-skin-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/limitless-fusion-iv-drip/",
+    "view": "t-premium-services-limitless-fusion-iv-drip",
+    "title": "Limitless Fusion IV Drip for Energy & Performance",
+    "description": "Limitless Fusion IV drip improves mental clarity, energy levels and physical performance.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Limitless Fusion IV Drip Therapy",
+        "path": "/treatments/premium-services/limitless-fusion-iv-drip/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/lit-fusion-iv-drip-therapy/",
+    "view": "t-premium-services-lit-fusion-iv-drip-therapy",
+    "title": "Lit Fusion IV Drip Therapy for Energy, Immunity & Skin Glow",
+    "description": "Lit Fusion IV Drip Therapy delivers vitamins, antioxidants and nutrients directly into the bloodstream to boost immunity, energy, hydration and skin health.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Lit Fusion IV Drip Therapy",
+        "path": "/treatments/premium-services/lit-fusion-iv-drip-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/lumi-fusion-iv-drip-therapy/",
+    "view": "t-premium-services-lumi-fusion-iv-drip-therapy",
+    "title": "Lumi Fusion IV Drip Therapy for Immunity, Energy & Glow",
+    "description": "Lumi Fusion IV drip therapy delivers vitamins, antioxidants and minerals directly into the bloodstream to improve energy, immunity and skin health.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Lumi Fusion IV Drip Therapy",
+        "path": "/treatments/premium-services/lumi-fusion-iv-drip-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/lymphatic-drainage-therapy/",
+    "view": "t-premium-services-lymphatic-drainage-therapy",
+    "title": "Lymphatic Drainage Treatment for Detox & Skin Health",
+    "description": "Lymphatic drainage therapy improves circulation, reduces swelling and supports detoxification for better health and skin clarity.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Lymphatic Drainage Therapy",
+        "path": "/treatments/premium-services/lymphatic-drainage-therapy/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/myers-cocktail-iv-drip/",
+    "view": "t-premium-services-myers-cocktail-iv-drip",
+    "title": "Myers Cocktail IV Drip for Immunity & Energy",
+    "description": "Myers Cocktail IV drip provides essential vitamins and minerals to boost immunity, energy and overall wellness.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Myers Cocktail IV Drip Therapy",
+        "path": "/treatments/premium-services/myers-cocktail-iv-drip/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/nac-plus-iv-drip/",
+    "view": "t-premium-services-nac-plus-iv-drip",
+    "title": "NAC+ IV Drip for Detox & Antioxidant Support",
+    "description": "NAC+ IV drip therapy boosts glutathione levels and protects the body from toxins and oxidative stress.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "NAC+ IV Drip Detox Therapy",
+        "path": "/treatments/premium-services/nac-plus-iv-drip/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/nano-glass-skin-treatment/",
+    "view": "t-premium-services-nano-glass-skin-treatment",
+    "title": "Nano Glass Skin Treatment for Smooth Radiant Skin",
+    "description": "Nano Glass Skin treatment delivers active ingredients deep into the skin for hydration, glow and smooth texture.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Nano Glass Skin Facial Treatment",
+        "path": "/treatments/premium-services/nano-glass-skin-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/nexi-glo-skin-brightening-treatment/",
+    "view": "t-premium-services-nexi-glo-skin-brightening-treatment",
+    "title": "Nexi-Glo Skin Brightening Treatment for Glow & Radiance",
+    "description": "Nexi-Glo treatment combines glutathione, vitamin C, peptides and antioxidants to brighten skin tone, reduce pigmentation and restore youthful glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Nexi-Glo Skin Brightening & Rejuvenation Treatment",
+        "path": "/treatments/premium-services/nexi-glo-skin-brightening-treatment/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/pcos-signature-iv-drip/",
+    "view": "t-premium-services-pcos-signature-iv-drip",
+    "title": "PCOS Signature IV Drip for Hormonal Balance",
+    "description": "PCOS Signature IV drip provides nutrients that support hormonal balance and reduce PCOS symptoms.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "PCOS Signature IV Drip Therapy",
+        "path": "/treatments/premium-services/pcos-signature-iv-drip/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/power-plus-iv-drip/",
+    "view": "t-premium-services-power-plus-iv-drip",
+    "title": "Power Plus IV Drip for Energy & Fatigue",
+    "description": "Power Plus IV drip boosts cellular energy, reduces fatigue and improves physical performance.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Power Plus IV Drip Therapy",
+        "path": "/treatments/premium-services/power-plus-iv-drip/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/premium-services/slim-shots-iv-drip/",
+    "view": "t-premium-services-slim-shots-iv-drip",
+    "title": "Slim Shots IV Drip for Weight Loss & Metabolism Boost",
+    "description": "Slim Shots IV drip therapy supports metabolism, fat burning and energy levels with targeted vitamins and amino acids for effective weight management.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Premium Services",
+        "path": "/treatments/premium-services/"
+      },
+      {
+        "name": "Slim Shots IV Drip",
+        "path": "/treatments/premium-services/slim-shots-iv-drip/"
+      }
+    ]
+  }
+]
