@@ -1418,6 +1418,19 @@ button.filter-item.is-active{background:var(--primary)}
 .sd-thumb img{display:block;width:100%;height:100%;object-fit:cover}
 .sd-intro-body{flex:1;min-width:0;padding-top:8px}
 .sd-intro-title{margin:0 0 14px;font-family:var(--font-display);font-size:30px;font-weight:400;line-height:1.25;color:#333}
+/* rating row under the intro title (reference: details-meta-row) */
+.sd-meta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin:0 0 20px}
+.sd-rating{display:flex;align-items:center;gap:8px;border-radius:6px;color:inherit;text-decoration:none;transition:opacity .2s}
+.sd-rating:hover{opacity:.8}
+.sd-rating:hover .sd-reviews{text-decoration:underline}
+.sd-rating-num{font-family:var(--font-body);font-size:14px;font-weight:700;color:#333}
+.sd-stars{display:flex;align-items:center;gap:4px}
+.sd-star{position:relative;display:inline-flex;flex-shrink:0;width:16px;height:16px}
+.sd-star svg{flex-shrink:0}
+.sd-star-fill{position:absolute;inset:0 auto 0 0;display:inline-flex;overflow:hidden;white-space:nowrap}
+.sd-star-fill--80{width:80%}
+.sd-reviews{font-family:var(--font-body);font-size:14px;color:#6b7280}
+.sd-duration{display:flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;color:#888}
 .sd-intro-text p{margin:0 0 16px;font-family:var(--font-body);font-size:15px;line-height:1.7;color:#333}
 .sd-intro-text p:last-child{margin-bottom:0}
 .sd-intro-text strong{color:#2b2b2b;font-weight:700}

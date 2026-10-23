@@ -136,6 +136,7 @@ function renderPage(m) {
     </div>
     <div class="sd-intro-body">
       <h2 class="sd-intro-title">${m.subtitle}</h2>
+      ${renderMeta(m.time)}
       <div class="sd-intro-text">${m.introHtml || ''}</div>
       <div class="sd-consult">
         <h2 class="sd-consult-title">Book a Consultation</h2>
@@ -199,8 +200,25 @@ function renderResults(results) {
 `;
 }
 
+// Rating row under the intro title (as on the reference treatment pages): Google rating + review
+// count linking to the Vasant Vihar branch on Google Maps, then the session time when it is known.
+const GOOGLE = {
+  rating: 4.8, reviews: '1,067',
+  maps: 'https://www.google.com/maps/place/Dadu+Medical+Centre/@28.5634509,77.1672309,17.5z/data=!4m6!3m5!1s0x390d1db1bd868b1d:0xec48d4de84a8741c!8m2!3d28.5632398!4d77.1661782!16s%2Fg%2F11b6v0wsgt',
+};
+const STAR_PATH = 'M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z';
+function renderMeta(time) {
+  const star = (fill, stroke) => `<svg width="16" height="16" viewBox="0 0 24 24" fill="${fill}" stroke="${stroke}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${STAR_PATH}"/></svg>`;
+  const stars = [1, 2, 3, 4, 5].map(i => {
+    const pct = Math.round(Math.max(0, Math.min(1, GOOGLE.rating - (i - 1))) * 100);
+    return `<span class="sd-star">${star('none', '#D1D5DB')}<span class="sd-star-fill${pct < 100 ? ' sd-star-fill--' + pct : ''}">${star('#F5B301', '#F5B301')}</span></span>`;
+  }).join('');
+  const clock = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>';
+  return `<div class="sd-meta"><a class="sd-rating" href="${GOOGLE.maps}" target="_blank" rel="noopener noreferrer" title="See our Google reviews"><span class="sd-rating-num">${GOOGLE.rating}</span><span class="sd-stars" aria-label="Rated ${GOOGLE.rating} out of 5">${stars}</span><span class="sd-reviews">(${GOOGLE.reviews} Reviews)</span></a>${time ? `<span class="sd-duration">${clock}<span>${time}</span></span>` : ''}</div>`;
+}
+
 const DEFAULT_CTA = {
   title: 'Not sure which treatment is right for YOU?',
   desc: 'We can help with that! Schedule a free online consultation with one of our expert Doctors and we&#x27;ll help you create a customized plan.',
 };
-module.exports = { renderPage, renderResults, DEFAULT_CTA };
+module.exports = { renderPage, renderResults, renderMeta, DEFAULT_CTA };

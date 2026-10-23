@@ -50,3 +50,9 @@ name) with the treatment printed on its info strip. `results-map.js --write` tur
 `data/results-map.json` (page -> images; only clear single-treatment names are mapped), and
 `apply-results.js --write` puts the slider into each page's Before & After section. Run
 `apply-results.js` again after `bridal-build.js` or `clone-template.js`, because those rewrite the pages.
+
+## Rating row
+
+`apply-meta.js --write` puts the Google rating row (4.8, 1,067 reviews, link to the Vasant Vihar
+branch on Google Maps, session time from `data/durations.json`) under each page's intro title.
+Run it after `bridal-build.js` / `clone-template.js`, like `apply-results.js`.
