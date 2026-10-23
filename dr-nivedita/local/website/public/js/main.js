@@ -100,6 +100,13 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // Back-to-top scrolls up without adding "#top" to the URL (the href is only a no-JS fallback).
+  toTop.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    if (location.hash === '#top') history.replaceState(null, '', location.pathname + location.search);
+  });
+
   // Footer columns collapse into an accordion on phones (DMC mobile footer).
   var phoneQuery = window.matchMedia('(max-width:767px)');
   d.querySelectorAll('.footer-col-toggle').forEach(function (button) {
