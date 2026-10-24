@@ -37,11 +37,11 @@ must(cards.length === 5, 'expected 5 treatment cards, got ' + cards.length);
 // New card images ("Homepage Treatment Cards Images"), the treatment category each card opens
 // (View Details) and its Before & After category on /results (View Results).
 const CARD_LINKS = {
-  'Anti Ageing Therapies': { img: 'anti-ageing-therapies.webp', href: '/treatments/anti-ageing-therapies/', results: 'anti-aging' },
-  'Acne': { img: 'acne.webp', href: '/treatments/acne-treatment/', results: 'acne-pimple' },
-  'Hair Fall': { img: 'hair-fall.webp', href: '/treatments/hair-fall/', results: 'hairfall' },
+  'Anti Ageing Therapies': { img: 'anti-ageing-therapies.webp', href: '/treatments/anti-ageing-therapies/', results: 'anti-ageing-therapies' },
+  'Acne': { img: 'acne.webp', href: '/treatments/acne-treatment/', results: 'acne-treatment' },
+  'Hair Fall': { img: 'hair-fall.webp', href: '/treatments/hair-fall/', results: 'hair-fall' },
   'Acne Scars': { img: 'acne-scars.webp', href: '/treatments/acne-scars/', results: 'acne-scars' },
-  'Laser Hair Removal': { img: 'laser-hair-removal.webp', href: '/treatments/laser-hair-removal/', results: 'unwanted-hair' },
+  'Laser Hair Removal': { img: 'laser-hair-removal.webp', href: '/treatments/laser-hair-removal/', results: 'laser-hair-removal' },
 };
 for (const c of cards) {
   const l = CARD_LINKS[c.title];

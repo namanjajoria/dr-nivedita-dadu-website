@@ -10,22 +10,27 @@ const IMG = '/images/gallery/results/';
 const must = (c, m) => { if (!c) throw new Error(m); };
 const esc = s => String(s).replace(/&(?![a-z#0-9]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// Our own treatment categories (same names and order as the /treatments/ sidebar)
 const CATS = [
-  ['acne-pimple', 'Acne/Pimple'], ['acne-scars', 'Acne Scars'], ['pigmentation', 'Pigmentation'],
-  ['hairfall', 'Hairfall/Hair Loss'], ['unwanted-hair', 'Unwanted Hair'], ['anti-aging', 'Anti-Aging'],
-  ['non-surgical-facial-enhancement', 'Non-Surgical Facial Enhancement'], ['dark-lips', 'Dark Lips'], ['skin-conditions', 'Skin Conditions'],
+  ['acne-treatment', 'Acne Treatment'], ['acne-scars', 'Acne Scars'], ['pigmentation', 'Pigmentation'], ['hair-fall', 'Hairfall'],
+  ['laser-hair-removal', 'Unwanted Hair'], ['anti-ageing-therapies', 'Anti Ageing Therapies'], ['premium-services', 'Premium Services'],
+  ['stretch-marks', 'Stretch Marks'], ['non-surgical-facial-enhancements', 'Non Surgical Facial Enhancements'],
+  ['vitiligo-surgeries', 'Vitiligo Surgeries'], ['plastic-surgery', 'Plastic Surgery'], ['bridal-dermatology', 'Bridal Dermatology'],
 ];
-// first match wins
+// An image goes into the category of every treatment page it is shown on (treatment-pages/data/results-map.json);
+// images on no treatment page are placed by the treatment / case printed on them (first match wins).
+const PAGE_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, '../treatment-pages/data/results-map.json'), 'utf8'));
 const RULES = [
-  ['skin-conditions', /psoriasis|vitiligo|wart|\bmole\b|skin tag|allergy|dermatitis|impetigo|burn|scald|tattoo|tinea|hypertrophic|stretch|keloid|cautery|sweat/],
-  ['dark-lips', /dark lips|lip lightening|alma pixel/],
-  ['unwanted-hair', /laser hair|hair reduction|hair removal|beard|hirsutism|facial hair|excessive hair/],
-  ['hairfall', /hair|bald|alopecia|fphl|trich|hgp|root restore|mesogrow/],
-  ['non-surgical-facial-enhancement', /lip filler|\blips\b|nose|nasolabial|\bchin\b|cheek|jowl|thread|eyebrow/],
-  ['anti-aging', /under ?eye|dark circles|eye ?bags|hollowness|wrinkle|crow|anti[- ]?ag|age ?less|ageing|aging|face lift|expressolift|skin tightening|rejuvenation|collagen induction|skin booster|insta ?regen|sagg|filler/],
-  ['acne-scars', /scar|fraxogenus|pixigen|tixel|erbium|mnrf|micro ?needling|subcision|tca cross|derma ?roller|open pores/],
-  ['acne-pimple', /acne|pimple|comedone|whitehead|blackhead|\bpih\b/],
-  ['pigmentation', /./],
+  ['stretch-marks', /stretch/],
+  ['vitiligo-surgeries', /vitiligo/],
+  ['laser-hair-removal', /laser hair|hair reduction|hair removal|beard|hirsutism|facial hair|excessive hair/],
+  ['hair-fall', /hair|bald|alopecia|fphl|trich|hgp|root restore|mesogrow/],
+  ['premium-services', /dark lips|lip lightening|alma pixel/],
+  ['non-surgical-facial-enhancements', /lip filler|\blips\b|nose|nasolabial|\bchin\b|cheek|eyebrow/],
+  ['anti-ageing-therapies', /thread|jowl|under ?eye|dark circles|eye ?bags|hollowness|wrinkle|crow|anti[- ]?ag|age ?less|ageing|aging|face lift|expressolift|skin tightening|rejuvenation|collagen|skin booster|insta ?regen|sagg|filler/],
+  ['acne-scars', /acne scar|scars|fraxogenus|pixigen|tixel|erbium|mnrf|micro ?needling|subcision|tca cross|derma ?roller|open pores/],
+  ['acne-treatment', /acne|pimple|comedone|whitehead|blackhead|\bpih\b/],
+  ['pigmentation', /pigment|melasma|freckle|\btan|dull|elbow|underarm|acanthosis|sunspot|magic blend|q[- ]?switch|toning|peel|meso ?glow|photofacial|hydrafacial|oxyboost|instaglam|hydra|glow/],
 ];
 
 const files = fs.readdirSync(W + '/public' + IMG).filter(f => f.endsWith('.webp')).sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
@@ -43,14 +48,19 @@ const title = r => {
   const t = r.treatment !== '-' ? r.treatment : r.caseText;
   return t.replace(/^DMC\s*-\s*/i, 'DMC-').replace(/\s+/g, ' ').trim();
 };
-const byCat = Object.fromEntries(CATS.map(([s]) => [s, []]));
-const fileCat = {};
+const byCat = Object.fromEntries(CATS.map(([c]) => [c, []]));
+const fileCat = {}; const unplaced = [];
+const pagesOf = {};
+for (const [page, list] of Object.entries(PAGE_MAP)) for (const r of list) (pagesOf[r.file] = pagesOf[r.file] || new Set()).add(page.split('/')[0]);
 for (const r of rows) {
-  const text = `${r.treatment} ${r.caseText}`.toLowerCase();
-  const cat = RULES.find(([, re]) => re.test(text))[0];
-  byCat[cat].push({ ...r, title: title(r) });
-  fileCat[r.file] = cat;
+  let cats = [...(pagesOf[r.file] || [])];
+  if (!cats.length) { const rule = RULES.find(([, re]) => re.test((r.treatment + ' ' + r.caseText).toLowerCase())); if (rule) cats = [rule[0]]; }
+  if (!cats.length) { unplaced.push(r); continue; }
+  cats = CATS.map(([c]) => c).filter(c => cats.includes(c));
+  for (const c of cats) byCat[c].push({ ...r, title: title(r) });
+  fileCat[r.file] = cats;
 }
+const SHOWN = CATS.filter(([c]) => byCat[c].length);
 
 // before (left half) / after (right half) of a combined 750x400 result image, info strip cropped off
 const halves = (r, cls) => `<span class="${cls}-half"><img class="is-before" src="${IMG}${r.file}" alt="${esc(r.title)} - before" loading="lazy" width="750" height="400" decoding="async"><span class="${cls}-half-label">Before</span></span><span class="${cls}-half"><img class="is-after" src="${IMG}${r.file}" alt="${esc(r.title)} - after" loading="lazy" width="750" height="400" decoding="async"><span class="${cls}-half-label ${cls}-half-label-after">After</span></span>`;
@@ -70,7 +80,7 @@ ${banner('Real Results', '<li><a href="/">Home</a></li><li><span aria-current="p
 <section class="res-grid-section">
   <span class="res-glow" aria-hidden="true"></span>
   <div class="res-shell">
-    <div class="res-grid">${CATS.map(([slug, name]) => {
+    <div class="res-grid">${SHOWN.map(([slug, name]) => {
       const r = byCat[slug][0];
       return `
       <a class="res-card" href="/results/${slug}/">
@@ -112,15 +122,16 @@ ${dialog}
 `;
 
 for (const [slug, name] of CATS) console.log(`${name.padEnd(34)} ${String(byCat[slug].length).padStart(3)}  e.g. ${[...new Set(byCat[slug].map(r => r.title))].slice(0, 4).join(' / ')}`);
-console.log('total', Object.values(byCat).reduce((n, l) => n + l.length, 0));
+console.log('images placed', Object.keys(fileCat).length, '| not in any category', unplaced.length + ':', [...new Set(unplaced.map(r => title(r)))].join(' / '));
 
 if (WRITE) {
   fs.writeFileSync(W + '/views/gallery-results.html', overview);
-  for (const [slug, name] of CATS) fs.writeFileSync(`${W}/views/results-${slug}.html`, catPage(slug, name));
+  for (const f of fs.readdirSync(W + '/views').filter(f => /^results-.*.html$/.test(f))) fs.unlinkSync(W + '/views/' + f);
+  for (const [slug, name] of SHOWN) fs.writeFileSync(`${W}/views/results-${slug}.html`, catPage(slug, name));
   const cf = W + '/config/pages.gallery.json';
   const list = JSON.parse(fs.readFileSync(cf, 'utf8')).filter(e => !/^\/results\/[^/]+\/$/.test(e.path));
   const at = list.findIndex(e => e.path === '/results/') + 1;
-  list.splice(at, 0, ...CATS.map(([slug, name]) => ({
+  list.splice(at, 0, ...SHOWN.map(([slug, name]) => ({
     path: `/results/${slug}/`, view: `results-${slug}`,
     title: `${name} Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic`,
     description: `Real before and after results of ${name.toLowerCase()} treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.`,
@@ -128,5 +139,5 @@ if (WRITE) {
   })));
   fs.writeFileSync(cf, JSON.stringify(list, null, 2) + '\n');
   fs.writeFileSync(path.join(__dirname, 'data/results-categories.json'), JSON.stringify(fileCat, null, 1));
-  console.log('WROTE overview + 9 category pages');
+  console.log('WROTE overview + ' + SHOWN.length + ' category pages');
 }

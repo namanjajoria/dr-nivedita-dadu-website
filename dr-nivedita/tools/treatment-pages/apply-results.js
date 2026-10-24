@@ -10,7 +10,7 @@ const map = JSON.parse(fs.readFileSync(__dirname + '/data/results-map.json', 'ut
 const esc = s => String(s).replace(/&(?![a-z#0-9]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // category of each image on /results (written by tools/results/build-results.js)
 const cats = JSON.parse(fs.readFileSync(__dirname + '/../results/data/results-categories.json', 'utf8'));
-const groupOf = file => cats[file] || null;
+const groupOf = file => (cats[file] || [])[0] || null;
 const RE = /\n<section class="sd-results">[\s\S]*?<\/section>\n/;
 let withResults = 0, cards = 0;
 for (const p of pages) {

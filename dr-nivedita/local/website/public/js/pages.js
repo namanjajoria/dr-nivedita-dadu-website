@@ -246,7 +246,7 @@
 
   // Old links like /results/#acne open the matching category page.
   if (/\/results\/?$/.test(location.pathname) && location.hash) {
-    var oldGroups = { acne: 'acne-pimple', 'acne-scar': 'acne-scars', 'anti-ageing': 'anti-aging', haircare: 'hairfall', laser: 'unwanted-hair', skin: 'pigmentation', mesotherapy: 'pigmentation', photofacial: 'pigmentation' };
+    var oldGroups = { acne: 'acne-treatment', 'acne-scar': 'acne-scars', 'anti-ageing': 'anti-ageing-therapies', haircare: 'hair-fall', laser: 'laser-hair-removal', skin: 'pigmentation', mesotherapy: 'pigmentation', photofacial: 'premium-services' };
     var target = oldGroups[location.hash.slice(1)];
     if (target) location.replace(location.pathname.replace(/\/?$/, '/') + target + '/');
   }
