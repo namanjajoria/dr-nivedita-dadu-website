@@ -14,5 +14,83 @@
         "path": "/blog/"
       }
     ]
+  },
+  {
+    "path": "/blog/best-treatment-for-acne-and-pimples/",
+    "view": "blog-best-treatment-for-acne-and-pimples",
+    "title": "Best Treatment for Acne and Pimples: Causes & Results",
+    "description": "Discover the best treatments for acne and pimples, including common causes, skincare options, and effective solutions for clearer, healthier-looking skin.",
+    "image": {
+      "path": "/images/blog/best-treatment-for-acne-and-pimples.jpeg",
+      "width": 1200,
+      "height": 630,
+      "alt": "dadu"
+    },
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Blogs",
+        "path": "/blog/"
+      },
+      {
+        "name": "Best Treatment for Acne and Pimples: Causes, Options and Results",
+        "path": "/blog/best-treatment-for-acne-and-pimples/"
+      }
+    ]
+  },
+  {
+    "path": "/blog/winter-skincare-routine-dry-skin/",
+    "view": "blog-winter-skincare-routine-dry-skin",
+    "title": "Winter Skincare for Dry Skin: Budget-Friendly Routine",
+    "description": "Follow a budget-friendly winter skincare routine for dry skin with gentle cleansing, hydration, sunscreen, night care, and simple lifestyle tips.",
+    "image": {
+      "path": "/images/blog/winter-skincare-routine-dry-skin.jpeg",
+      "width": 1200,
+      "height": 630,
+      "alt": "dadu"
+    },
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Blogs",
+        "path": "/blog/"
+      },
+      {
+        "name": "Budget-Friendly Winter Skincare Routine for Dry Skin: Morning and Night Essentials",
+        "path": "/blog/winter-skincare-routine-dry-skin/"
+      }
+    ]
+  },
+  {
+    "path": "/blog/vitamin-c-for-beginners/",
+    "view": "blog-vitamin-c-for-beginners",
+    "title": "Vitamin C for Beginners: Benefits, Uses & How to Apply",
+    "description": "Learn how to start Vitamin C serum, the right 10% concentration for beginners, application order, skin benefits, and tips to avoid irritation.",
+    "image": {
+      "path": "/images/blog/vitamin-c-for-beginners.jpeg",
+      "width": 1200,
+      "height": 630,
+      "alt": "dadu"
+    },
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Blogs",
+        "path": "/blog/"
+      },
+      {
+        "name": "Vitamin C for Beginners: How to Start This Powerful Skincare Ingredient the Right Way",
+        "path": "/blog/vitamin-c-for-beginners/"
+      }
+    ]
   }
 ]

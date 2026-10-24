@@ -112,13 +112,14 @@ const blogTitle = one(/<h2 class="section-title">([\s\S]*?)<\/h2>/, blogSec)[1];
 const blogs = [...blogSec.matchAll(/<a class="blog-card" href="([^"]+)">\s*<div class="blog-media">\s*<img src="([^"]+)" alt="([^"]*)"[^>]*?width="(\d+)" height="(\d+)"[^>]*>\s*<span class="date-pill">([^<]*)<\/span>\s*<\/div>\s*<div class="blog-author">[\s\S]*?<\/span>([^<]*)<\/div>\s*<h3>([\s\S]*?)<\/h3>\s*<span class="blog-link">([^<]*)<\/span>/g)]
   .map(m => ({ href: m[1], img: m[2], alt: m[3], w: m[4], h: m[5], date: m[6], author: m[7].trim(), title: m[8], link: m[9] }));
 must(blogs.length === 3, 'expected 3 blogs, got ' + blogs.length);
-const blogPage = fs.readFileSync(W + '/views/blog.html', 'utf8');
-for (const bl of blogs) {
-  const slug = bl.href.replace(/\/$/, '').split('/').pop();
-  const i = blogPage.indexOf(slug + '/');
-  const m = i >= 0 && blogPage.slice(i, i + 3000).match(/<p class="blog-card-text">([^<]*)<\/p>/);
-  must(m, 'no description on /blog/ for ' + slug);
-  bl.desc = m[1];
+// The 3 latest posts (same as drniveditadadu.com's homepage), each opening its own page on this site.
+// Built by tools/blog/build-posts.js, which writes latest.json (newest first).
+const latest = JSON.parse(fs.readFileSync(__dirname + '/../blog/latest.json', 'utf8'));
+must(latest.length === 3, 'expected 3 latest posts');
+blogs.length = 0;
+for (const p of latest) {
+  must(fs.existsSync(W + '/views/blog-' + p.slug + '.html') && fs.existsSync(W + '/public' + p.cover), 'post page/cover missing for ' + p.slug);
+  blogs.push({ href: '/blog/' + p.slug + '/', img: p.cover, alt: p.coverAlt, w: '1200', h: '630', date: p.date, author: 'By Dr. Nivedita Dadu', title: p.title, link: 'Explore More', desc: p.desc });
 }
 const blogAll = one(/<div class="center-action">\s*<a class="btn btn-outline" href="([^"]+)">([^<]*)</, blogSec);
 
