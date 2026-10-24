@@ -34,6 +34,21 @@ const trtAll = one(/<a class="svc-view-all" href="([^"]+)">([^<]*)</, trt);
 const cards = [...trt.matchAll(/<div class="swiper-slide"><a class="svc-card" href="([^"]+)"><div class="svc-media"><img src="([^"]+)" alt="([^"]*)"[^>]*?width="(\d+)" height="(\d+)"[^>]*><\/div><h3>([^<]*)<\/h3><\/a><\/div>/g)]
   .map(m => ({ href: m[1], img: m[2], alt: m[3], w: m[4], h: m[5], title: m[6] }));
 must(cards.length === 5, 'expected 5 treatment cards, got ' + cards.length);
+// New card images ("Homepage Treatment Cards Images"), the treatment category each card opens
+// (View Details) and its Before & After category on /results (View Results).
+const CARD_LINKS = {
+  'Anti Ageing Therapies': { img: 'anti-ageing-therapies.webp', href: '/treatments/anti-ageing-therapies/', results: 'anti-ageing' },
+  'Acne': { img: 'acne.webp', href: '/treatments/acne-treatment/', results: 'acne' },
+  'Hair Fall': { img: 'hair-fall.webp', href: '/treatments/hair-fall/', results: 'haircare' },
+  'Acne Scars': { img: 'acne-scars.webp', href: '/treatments/acne-scars/', results: 'acne-scar' },
+  'Laser Hair Removal': { img: 'laser-hair-removal.webp', href: '/treatments/laser-hair-removal/', results: 'laser' },
+};
+for (const c of cards) {
+  const l = CARD_LINKS[c.title];
+  must(l, 'no link set for card ' + c.title);
+  Object.assign(c, { img: '/images/home/treatments/' + l.img, w: '718', h: '583', href: l.href, results: '/results/#' + l.results });
+  must(fs.existsSync(W + '/public' + c.img), 'missing card image ' + c.img);
+}
 
 const intro = sec('intro');
 const about = {
@@ -111,7 +126,7 @@ const ico = id => `<svg class="ico"><use href="#${id}"/></svg>`;
 const arrow = `<span class="rh-arrow">${ico('i-arrow')}</span>`;
 const stars5 = `<span class="stars" aria-hidden="true">${ico('i-star').replace('class="ico"', 'class="ico ico-fill"').repeat(5)}</span>`;
 const etCard = (c, dup) => `
-          <div class="swiper-slide${dup ? ' rh-dup' : ''}"><article class="rh-et-card"><img class="rh-et-img" src="${c.img}" alt="${dup ? '' : c.alt}" loading="lazy" width="${c.w}" height="${c.h}" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="${c.href}"${dup ? ' tabindex="-1" aria-hidden="true"' : ''}>${c.title}</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="${c.href}"${dup ? ' tabindex="-1"' : ''}>View Details</a><a class="rh-et-btn" href="/results/"${dup ? ' tabindex="-1"' : ''}>View Results</a></div></div></div></article></div>`;
+          <div class="swiper-slide${dup ? ' rh-dup' : ''}"><article class="rh-et-card"><img class="rh-et-img" src="${c.img}" alt="${dup ? '' : c.alt}" loading="lazy" width="${c.w}" height="${c.h}" decoding="async"><div class="rh-et-shade"></div><div class="rh-et-content"><span class="rh-et-accent"></span><h3 class="rh-et-card-title"><a href="${c.href}"${dup ? ' tabindex="-1" aria-hidden="true"' : ''}>${c.title}</a></h3><div class="rh-et-reveal"><div class="rh-et-btns"><a class="rh-et-btn" href="${c.href}"${dup ? ' tabindex="-1"' : ''}>View Details</a><a class="rh-et-btn" href="${c.results}"${dup ? ' tabindex="-1"' : ''}>View Results</a></div></div></div></article></div>`;
 const membership = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => `<div class="rh-logo"><img src="/images/home/membership0${i}.webp" alt="" width="170" height="171" loading="lazy" decoding="async"></div>`).join('');
 const press = logos.map(l => `<span class="rh-fp-logo"><img src="${l.src}" width="${l.w}" height="${l.h}" alt="${l.alt}" loading="lazy" decoding="async"></span>`).join('');
 
