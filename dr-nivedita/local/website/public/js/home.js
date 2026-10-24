@@ -31,9 +31,9 @@
       navigation: { prevEl: '.rh-et-prev', nextEl: '.rh-et-next' }
     });
     make('.rh-rv-swiper', {
-      slidesPerView: 1, spaceBetween: 30, loop: true, centeredSlides: true,
+      slidesPerView: 1, spaceBetween: 30, loop: true,
       autoplay: reduceMotion ? false : { delay: 6000, disableOnInteraction: true },
-      breakpoints: { 1024: { slidesPerView: 2.35, spaceBetween: 40 } },
+      breakpoints: { 1024: { slidesPerView: 2, spaceBetween: 30 } },
       pagination: { el: '.rh-rv .swiper-pagination', clickable: true }
     });
     make('.rh-vid-swiper', {
