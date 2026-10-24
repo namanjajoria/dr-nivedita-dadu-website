@@ -471,7 +471,8 @@ for (const p of PAGES) {
   const file = `${V}/t-bridal-dermatology-${p.slug}.html`;
   const m = model(p);
   let imgs;
-  if (p.isNew) imgs = photoSet(p.photos);
+  const mf = fs.existsSync(`${S}/bridal-images.json`) ? JSON.parse(fs.readFileSync(`${S}/bridal-images.json`, 'utf8')) : {};
+  if (p.isNew) imgs = mf[p.slug] || photoSet(p.photos);   // the image folder when it exists, else the old-site photos
   else {
     imgs = currentAssets(file).imgs;
     const manifestFile = `${S}/bridal-images.json`;     // real images from "D:\Nivedita Dadu Website Images\Bridal Dermatology"

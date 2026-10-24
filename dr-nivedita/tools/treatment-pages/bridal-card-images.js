@@ -18,4 +18,4 @@ for (const f of ['t-bridal-dermatology.html', 't-index.html']) {
   console.log(f, n, 'cards');
   total += n;
 }
-if (total !== 10) throw new Error('expected 10 bridal cards, got ' + total);
+if (total !== Object.keys(m).length * 2) throw new Error(`expected ${Object.keys(m).length * 2} bridal cards, got ` + total);

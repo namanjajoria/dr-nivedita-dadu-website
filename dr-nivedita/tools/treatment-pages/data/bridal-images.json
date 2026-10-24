@@ -38,16 +38,17 @@
    "h": "583",
    "kb": 87
   },
+  "split": {
+   "src": "/images/treatments/bridal/beard-shaping-areas-we-treat.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 77
+  },
   "tech": {
    "src": "/images/treatments/bridal/beard-shaping-process-and-techniques.webp",
    "w": "718",
    "h": "583",
    "kb": 94
-  },
-  "split": {
-   "src": "/images/treatments/bridal/beard-shaping-areas-we-treat.webp",
-   "w": "718",
-   "h": "583"
   }
  },
  "divagenesis": {
@@ -89,16 +90,17 @@
    "h": "583",
    "kb": 27
   },
+  "split": {
+   "src": "/images/treatments/bridal/divagenesis-concerns-divagenesis-can-help-with.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 67
+  },
   "tech": {
    "src": "/images/treatments/bridal/divagenesis-process-and-techniques.webp",
    "w": "718",
    "h": "583",
    "kb": 25
-  },
-  "split": {
-   "src": "/images/treatments/bridal/divagenesis-concerns-divagenesis-can-help-with.webp",
-   "w": "718",
-   "h": "583"
   }
  },
  "laser-facials": {
@@ -140,16 +142,17 @@
    "h": "583",
    "kb": 86
   },
+  "split": {
+   "src": "/images/treatments/bridal/laser-facials-concerns-a-laser-facial-can-help-with.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 84
+  },
   "tech": {
    "src": "/images/treatments/bridal/laser-facials-process-and-techniques.webp",
    "w": "718",
    "h": "583",
    "kb": 69
-  },
-  "split": {
-   "src": "/images/treatments/bridal/laser-facials-concerns-a-laser-facial-can-help-with.webp",
-   "w": "718",
-   "h": "583"
   }
  },
  "lip-pigmentation": {
@@ -191,16 +194,17 @@
    "h": "583",
    "kb": 104
   },
+  "split": {
+   "src": "/images/treatments/bridal/lip-pigmentation-how-the-laser-works.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 61
+  },
   "tech": {
    "src": "/images/treatments/bridal/lip-pigmentation-process-and-techniques.webp",
    "w": "718",
    "h": "583",
    "kb": 98
-  },
-  "split": {
-   "src": "/images/treatments/bridal/lip-pigmentation-how-the-laser-works.webp",
-   "w": "718",
-   "h": "583"
   }
  },
  "power-glow": {
@@ -242,16 +246,225 @@
    "h": "583",
    "kb": 82
   },
+  "split": {
+   "src": "/images/treatments/bridal/power-glow-concerns-power-glow-can-help-with.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 81
+  },
   "tech": {
    "src": "/images/treatments/bridal/power-glow-process-and-techniques.webp",
    "w": "718",
    "h": "583",
    "kb": 26
+  }
+ },
+ "acne-check-peel": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/acne-check-peel-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 102
+   },
+   {
+    "src": "/images/treatments/bridal/acne-check-peel-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 90
+   },
+   {
+    "src": "/images/treatments/bridal/acne-check-peel-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 96
+   },
+   {
+    "src": "/images/treatments/bridal/acne-check-peel-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 98
+   },
+   {
+    "src": "/images/treatments/bridal/acne-check-peel-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 87
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/acne-check-peel-how-the-acne-check-peel-works.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 85
   },
   "split": {
-   "src": "/images/treatments/bridal/power-glow-concerns-power-glow-can-help-with.webp",
+   "src": "/images/treatments/bridal/acne-check-peel-benefits.webp",
    "w": "718",
-   "h": "583"
+   "h": "583",
+   "kb": 85
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/acne-check-peel-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 87
+  }
+ },
+ "alexandrite-laser-hair-removal": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 91
+   },
+   {
+    "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 98
+   },
+   {
+    "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 96
+   },
+   {
+    "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 91
+   },
+   {
+    "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 87
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-how-the-alexandrite-laser-works.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 84
+  },
+  "split": {
+   "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-areas-that-can-be-treated.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 92
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 82
+  }
+ },
+ "carbon-laser-peel": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/carbon-laser-peel-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 98
+   },
+   {
+    "src": "/images/treatments/bridal/carbon-laser-peel-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 95
+   },
+   {
+    "src": "/images/treatments/bridal/carbon-laser-peel-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 88
+   },
+   {
+    "src": "/images/treatments/bridal/carbon-laser-peel-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 94
+   },
+   {
+    "src": "/images/treatments/bridal/carbon-laser-peel-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 59
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/carbon-laser-peel-how-a-carbon-laser-peel-works.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 106
+  },
+  "split": {
+   "src": "/images/treatments/bridal/carbon-laser-peel-what-it-helps-with.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 91
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/carbon-laser-peel-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 89
+  }
+ },
+ "dark-circles": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/dark-circles-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 108
+   },
+   {
+    "src": "/images/treatments/bridal/dark-circles-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 93
+   },
+   {
+    "src": "/images/treatments/bridal/dark-circles-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 107
+   },
+   {
+    "src": "/images/treatments/bridal/dark-circles-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 88
+   },
+   {
+    "src": "/images/treatments/bridal/dark-circles-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 88
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/dark-circles-what-are-dark-circles.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 88
+  },
+  "split": {
+   "src": "/images/treatments/bridal/dark-circles-causes-of-dark-circles.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 81
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/dark-circles-why-choose-dr-nivedita-dadu.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 88
   }
  }
 }

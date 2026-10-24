@@ -65,9 +65,10 @@
   "name": "Acne Check Peel",
   "intro": "Oily skin, a few pimples, blackheads across the nose. Most people with acne-prone skin have dealt with all three at the same time, and usually tried a scrub that made things worse. If you're searching for an acne peel treatment in Delhi, there's a good chance you're done experimenting.",
   "cover": {
-   "src": "/images/treatments/acne-check-peel-hero.webp",
+   "src": "/images/treatments/bridal/acne-check-peel-slider-image-1.webp",
    "w": "718",
-   "h": "583"
+   "h": "583",
+   "kb": 102
   }
  },
  {
@@ -76,9 +77,10 @@
   "name": "Alexandrite Laser Hair Removal",
   "intro": "Not all unwanted hair is thick and dark. A lot of women deal with fine hair on the upper lip, chin or along the jaw, the kind that's soft but still shows up in photos and needs threading every couple of weeks. That sort of hair can be harder for some lasers to pick up, which is where Alexandrite laser hair removal in Delhi comes in.",
   "cover": {
-   "src": "/images/treatments/alexandrite-laser.jpg",
-   "w": "1600",
-   "h": "400"
+   "src": "/images/treatments/bridal/alexandrite-laser-hair-removal-slider-image-1.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 91
   }
  },
  {
@@ -87,9 +89,10 @@
   "name": "Carbon Laser Peel",
   "intro": "Oily by noon, blackheads that come back a week after every clean-up, pores you can see from across the room. If that's your skin, you've probably tried every face wash on the shelf already. A carbon laser peel treatment in Delhi takes a different route, working on the oil and grime sitting inside the pores rather than just the surface.",
   "cover": {
-   "src": "/images/treatments/carbon-peel-hero.webp",
+   "src": "/images/treatments/bridal/carbon-laser-peel-slider-image-1.webp",
    "w": "718",
-   "h": "583"
+   "h": "583",
+   "kb": 98
   }
  },
  {
@@ -98,9 +101,10 @@
   "name": "Dark Circles",
   "intro": "You slept eight hours and people still ask if you're tired. Concealer helps till lunch, and the eye cream on your shelf hasn't done much. Thing is, dark circles come in a few different kinds, and our dark circles treatment in Delhi begins by figuring out which kind is yours.",
   "cover": {
-   "src": "/images/treatments/dark-circles.jpeg",
-   "w": "500",
-   "h": "300"
+   "src": "/images/treatments/bridal/dark-circles-slider-image-1.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 108
   }
  },
  {
