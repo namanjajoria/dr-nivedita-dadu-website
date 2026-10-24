@@ -112,6 +112,14 @@ const blogTitle = one(/<h2 class="section-title">([\s\S]*?)<\/h2>/, blogSec)[1];
 const blogs = [...blogSec.matchAll(/<a class="blog-card" href="([^"]+)">\s*<div class="blog-media">\s*<img src="([^"]+)" alt="([^"]*)"[^>]*?width="(\d+)" height="(\d+)"[^>]*>\s*<span class="date-pill">([^<]*)<\/span>\s*<\/div>\s*<div class="blog-author">[\s\S]*?<\/span>([^<]*)<\/div>\s*<h3>([\s\S]*?)<\/h3>\s*<span class="blog-link">([^<]*)<\/span>/g)]
   .map(m => ({ href: m[1], img: m[2], alt: m[3], w: m[4], h: m[5], date: m[6], author: m[7].trim(), title: m[8], link: m[9] }));
 must(blogs.length === 3, 'expected 3 blogs, got ' + blogs.length);
+const blogPage = fs.readFileSync(W + '/views/blog.html', 'utf8');
+for (const bl of blogs) {
+  const slug = bl.href.replace(/\/$/, '').split('/').pop();
+  const i = blogPage.indexOf(slug + '/');
+  const m = i >= 0 && blogPage.slice(i, i + 3000).match(/<p class="blog-card-text">([^<]*)<\/p>/);
+  must(m, 'no description on /blog/ for ' + slug);
+  bl.desc = m[1];
+}
 const blogAll = one(/<div class="center-action">\s*<a class="btn btn-outline" href="([^"]+)">([^<]*)</, blogSec);
 
 // ---------- reference-only content (we had nothing for these) ----------
@@ -235,7 +243,7 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
 <!-- 4. ABOUT: image left, text + image/points box right -->
 <section class="rh-care" id="intro">
   <div class="rh-care-layout">
-    <div class="rh-care-media"><img src="${doc.img[1]}" alt="${doc.img[2]}" loading="lazy" width="${doc.img[3]}" height="${doc.img[4]}" decoding="async"></div>
+    <div class="rh-care-media"><img src="/images/home/dr-nivedita-dadu-about.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1160" height="942" decoding="async"></div>
     <div class="rh-care-body">
       <span class="rh-eyebrow">${about.kicker}</span>
       <h1 class="rh-care-title">${about.title}</h1>
@@ -256,7 +264,7 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
       <div class="rh-drn-founder">
         <div class="rh-portrait-wrap">
           <span class="rh-portrait-bg"></span>
-          <div class="rh-portrait"><img src="${about.img[1]}" alt="${about.img[2]}" loading="lazy" width="${about.img[3]}" height="${about.img[4]}" decoding="async"></div>
+          <div class="rh-portrait"><img src="/images/home/dr-nivedita-dadu-founder.webp" alt="Dr. Nivedita Dadu, Founder" loading="lazy" width="680" height="907" decoding="async"></div>
           <div class="rh-badge"><span class="rh-badge-num">${REF.founderBadge[0]}</span><span class="rh-badge-text">${REF.founderBadge[1]}<br>${REF.founderBadge[2]}</span></div>
         </div>
         <div class="rh-drn-content">
@@ -354,7 +362,8 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
         <div class="rh-blog-media"><img src="${b.img}" alt="${b.alt}" loading="lazy" width="${b.w}" height="${b.h}" decoding="async"><span class="rh-blog-date">${b.date}</span></div>
         <div class="rh-blog-author"><span class="rh-blog-author-icon">${ico('i-user')}</span><span>${b.author}</span></div>
         <h3 class="rh-blog-card-title"><a href="${b.href}">${b.title}</a></h3>
-        <a class="rh-blog-link" href="${b.href}">${b.link}</a>
+        <p class="rh-blog-desc">${b.desc}</p>
+        <a class="rh-blog-link" href="${b.href}">Explore More</a>
       </article>`).join('')}
     </div>
     <div class="rh-blog-foot"><a class="rh-blog-all" href="${blogAll[1]}">${blogAll[2].trim()} ${arrow}</a></div>
@@ -366,7 +375,7 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
 let page = head + main + tail;
 // hero photos: inline styles are blocked by the CSP (style-src 'self'), so they go in their own stylesheet
 const bgCss = heroBgs.map((b, i) => `.rh-slide-bg--${i + 1}{background-image:url("${b}")}`).join('\n') + '\n';
-page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=7">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
+page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=8">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
   .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=5" defer></script>');
 must(page.includes('/css/home.css') && page.includes('/js/home.js'), 'css/js links');
 
