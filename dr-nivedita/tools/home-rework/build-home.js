@@ -380,7 +380,7 @@ let page = head + main + tail;
 // hero photos: inline styles are blocked by the CSP (style-src 'self'), so they go in their own stylesheet
 const bgCss = heroBgs.map((b, i) => `.rh-slide-bg--${i + 1}{background-image:url("${b}")}`).join('\n') + '\n';
 page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=9">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
-  .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=5" defer></script>');
+  .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=6" defer></script>');
 must(page.includes('/css/home.css') && page.includes('/js/home.js'), 'css/js links');
 
 // every bit of our text that the new page keeps must still be there

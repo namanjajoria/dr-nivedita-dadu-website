@@ -256,7 +256,8 @@
   // simply opens the photo.
   var viewer = d.querySelector('.image-dialog');
   if (viewer && typeof viewer.showModal === 'function') {
-    var photo = viewer.querySelector('.image-dialog-frame img');
+    // one photo, or (results viewer) the same combined photo cropped to its before and after halves
+    var photos = viewer.querySelectorAll('.image-dialog-frame img, .rcd-viewer-half img');
     var caption = viewer.querySelector('.video-dialog-title');
     var list = [];
     var index = 0;
@@ -264,9 +265,12 @@
     function show(i) {
       index = (i + list.length) % list.length;
       var link = list[index];
-      var thumb = link.querySelector('img');
-      photo.src = link.getAttribute('href');
-      photo.alt = thumb ? thumb.alt : '';
+      var thumbs = link.querySelectorAll('img');
+      photos.forEach(function (p, i) {
+        var thumb = thumbs[i] || thumbs[0];
+        p.src = link.getAttribute('href');
+        p.alt = thumb ? thumb.alt : '';
+      });
       caption.textContent = link.getAttribute('data-caption') || '';
     }
     d.addEventListener('click', function (e) {
@@ -289,7 +293,7 @@
       if (e.key === 'ArrowLeft') show(index - 1);
     });
     viewer.addEventListener('close', function () {
-      photo.src = 'data:,';
+      photos.forEach(function (p) { p.src = 'data:,'; });
       if (from) from.focus();
     });
   }

@@ -1804,3 +1804,23 @@ select.sd-input:valid{color:#333}
   .rcd-grid-section{padding:56px 5% 70px}
   .rcd-grid{grid-template-columns:1fr;gap:32px;max-width:400px;margin:0 auto}
 }
+
+/* results photo viewer (dadumedicalcentre.com/results/<category>): before | after side by side, each with
+   its pill label, title bar below, all in one dark rounded box. The combined 750x400 photo is cropped to
+   x 2-370 / 380-748, y 0-300 (no middle line, no orange info strip). */
+.rcd-viewer{width:min(1150px,92vw);border-radius:16px;background:#1a1a1a}
+.rcd-viewer-pair{display:flex;overflow:hidden;border-radius:16px 16px 0 0}
+.rcd-viewer-half{position:relative;flex:1;overflow:hidden;aspect-ratio:368/300;max-height:72vh;background:#000}
+.rcd-viewer-half img{position:absolute;top:0;width:203.8%;max-width:none;height:auto}
+.rcd-viewer-half img.is-before{left:-.54%}
+.rcd-viewer-half img.is-after{left:-103.26%}
+.rcd-viewer-label{position:absolute;z-index:1;bottom:18px;left:14px;padding:6px 16px;border-radius:999px;background:#000000b3;color:#fff;font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.rcd-viewer-label-after{background:var(--primary-deep)}
+.rcd-viewer .rcd-viewer-title{position:static;margin:0;padding:20px 25px;color:#fff;text-align:left;font-size:17px}
+.rcd-viewer .video-dialog-close{top:16px;right:16px;width:44px;height:44px;background:#00000080;color:#fff;box-shadow:none}
+.rcd-viewer .video-dialog-close:hover{background:#000000b3}
+@media (max-width:767px){
+  .rcd-viewer-label{bottom:10px;left:8px;padding:4px 10px;font-size:10px}
+  .rcd-viewer .rcd-viewer-title{padding:14px 16px;font-size:15px}
+  .rcd-viewer .video-dialog-close{top:8px;right:8px;width:36px;height:36px}
+}

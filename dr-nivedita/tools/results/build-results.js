@@ -72,8 +72,15 @@ const banner = (h1, crumbs) => `<section class="page-banner page-banner--brand">
     <nav aria-label="Breadcrumb"><ol class="breadcrumb">${crumbs}</ol></nav>
   </div>
 </section>`;
-const dialog = orig.slice(orig.indexOf('<dialog class="video-dialog image-dialog"'), orig.indexOf('</dialog>') + 9);
-must(dialog.startsWith('<dialog'), 'photo viewer markup');
+// photo viewer like the reference: before and after side by side with their labels, title bar below
+// (pages.js fills both images from the clicked card)
+const dialog = `<dialog class="video-dialog image-dialog rcd-viewer" aria-label="Photo viewer">
+  <button class="video-dialog-close" type="button" aria-label="Close photo">✕</button>
+  <button class="image-dialog-nav image-dialog-prev" type="button" aria-label="Previous photo"><svg class="ico"><use href="#i-chev-l"/></svg></button>
+  <button class="image-dialog-nav image-dialog-next" type="button" aria-label="Next photo"><svg class="ico"><use href="#i-chev-r"/></svg></button>
+  <div class="rcd-viewer-pair">${['before', 'after'].map(k => `<span class="rcd-viewer-half"><img class="is-${k}" src="data:," alt=""><span class="rcd-viewer-label rcd-viewer-label-${k}">${k}</span></span>`).join('')}</div>
+  <p class="video-dialog-title rcd-viewer-title"></p>
+</dialog>`;
 const arrow = '<span class="res-card-cta-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span>';
 
 const overview = `{{> inner-page-start}}
@@ -107,7 +114,7 @@ ${banner(esc(name), `<li><a href="/">Home</a></li><li><a href="/results/">Real R
   <div class="rcd-shell">
     <div class="rcd-grid" data-rcd-grid data-lightbox-group>${byCat[slug].map(r => `
       <article class="rcd-card">
-        <a class="rcd-card-media" href="${IMG}${r.file}" data-lightbox data-caption="${esc(r.title)} · Results may vary person to person.">${halves(r, 'rcd')}</a>
+        <a class="rcd-card-media" href="${IMG}${r.file}" data-lightbox data-caption="${esc(r.title)}">${halves(r, 'rcd')}</a>
         <h3 class="rcd-card-title">${esc(r.title)}</h3>
       </article>`).join('')}
     </div>

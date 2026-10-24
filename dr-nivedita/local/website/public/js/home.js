@@ -46,9 +46,11 @@
       breakpoints: { 640: { slidesPerView: 3 }, 1024: { slidesPerView: 4, spaceBetween: 28 } },
       navigation: { prevEl: '.rh-fp-prev', nextEl: '.rh-fp-next' }
     });
+    // same as the reference: loops, moves on its own every 6s and keeps going after a click
     make('.rh-res-swiper', {
-      slidesPerView: 1, spaceBetween: 20, watchOverflow: true,
-      breakpoints: { 768: { slidesPerView: 2, spaceBetween: 30 }, 1024: { slidesPerView: 3 }, 1200: { slidesPerView: 4 } },
+      loop: true, slidesPerView: 1, spaceBetween: 30,
+      autoplay: reduceMotion ? false : { delay: 6000, disableOnInteraction: false },
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1300: { slidesPerView: 4 } },
       navigation: { prevEl: '.rh-res-prev', nextEl: '.rh-res-next' }
     });
   }
