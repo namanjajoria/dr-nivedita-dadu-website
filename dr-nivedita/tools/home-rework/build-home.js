@@ -91,8 +91,11 @@ const testiAll = one(/<div class="testi-action">\s*<a class="btn btn-outline" hr
 
 const res = sec('results');
 const resTitle = one(/<h2 class="section-title">([\s\S]*?)<\/h2>/, res)[1];
-const results = [...res.matchAll(/<article class="result-card">\s*<h3>([\s\S]*?)<\/h3>\s*<div class="result-media"><img ([^>]*)><\/div>\s*<p class="result-meta">([\s\S]*?)<\/p>/g)].map(m => ({ title: m[1], img: m[2], meta: m[3] }));
-must(results.length, 'results');
+// one card per /results category (its first image), same order as /results; 'Other Treatments' left out
+const resOverview = fs.readFileSync(W + '/views/gallery-results.html', 'utf8');
+const results = [...resOverview.matchAll(/<a class="res-card" href="\/results\/([^"\/]+)\/">\s*<div class="res-card-info"><h3>([^<]*)<\/h3><\/div>\s*<div class="res-card-media res-card-pair"><span class="res-half"><img class="is-before" src="([^"]+)" alt="([^"]*) - before"/g)]
+  .map(m => ({ slug: m[1], cat: m[2], src: m[3], title: m[4] })).filter(r => r.slug !== 'other-treatments');
+must(results.length >= 10, 'results categories from gallery-results.html: ' + results.length);
 const resDisc = one(/<p class="disclaimer">([\s\S]*?)<\/p>/, res)[1];
 const resAll = one(/<div class="center-action">\s*<a class="btn btn-outline" href="([^"]+)">([^<]*)</, res);
 
@@ -337,7 +340,7 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
       <button class="rh-round rh-res-next" type="button" aria-label="Next result">${ico('i-chev-r')}</button>
       <div class="swiper rh-res-swiper">
         <div class="swiper-wrapper">${results.map(r => `
-          <div class="swiper-slide"><article class="rh-res-card"><h3>${r.title}</h3><div class="rh-res-media"><img ${r.img}></div><p class="rh-res-meta">${r.meta}</p></article></div>`).join('')}
+          <div class="swiper-slide"><a class="rh-res-link" href="/results/${r.slug}/"><article class="rh-res-card"><h3>${r.title}</h3><div class="rh-res-pair">${['before', 'after'].map(k => `<div class="rh-res-half"><img class="is-${k}" src="${r.src}" alt="${r.title} ${k === 'before' ? 'Before' : 'After'}" loading="lazy" width="750" height="400" decoding="async"><span>${k === 'before' ? 'Before' : 'After'}</span></div>`).join('')}</div><p class="rh-res-meta">${r.cat}</p></article></a></div>`).join('')}
         </div>
       </div>
     </div>
@@ -376,7 +379,7 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
 let page = head + main + tail;
 // hero photos: inline styles are blocked by the CSP (style-src 'self'), so they go in their own stylesheet
 const bgCss = heroBgs.map((b, i) => `.rh-slide-bg--${i + 1}{background-image:url("${b}")}`).join('\n') + '\n';
-page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=8">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
+page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=9">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
   .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=5" defer></script>');
 must(page.includes('/css/home.css') && page.includes('/js/home.js'), 'css/js links');
 
@@ -384,7 +387,7 @@ must(page.includes('/css/home.css') && page.includes('/js/home.js'), 'css/js lin
 const txt = h => h.replace(/<[^>]+>/g, ' ').replace(/&#39;/g, "'").replace(/\s+/g, ' ').trim();
 const out = txt(page);
 const keep = [hero.eyebrow, hero.title, hero.sub, hero.desc, hero.formTitle, trtTitle, ...cards.map(c => c.title), about.kicker, about.title, about.copy.slice(0, 300),
-  doc.heading, doc.name, doc.cred, doc.bio, pressTitle, testiTitle, ...reviews.flatMap(r => [r.tag, r.text, r.name, r.date]), resTitle, ...results.flatMap(r => [r.title, r.meta]), resDisc, vidTitle, ...vids.map(v => v.title),
+  doc.heading, doc.name, doc.cred, doc.bio, pressTitle, testiTitle, ...reviews.flatMap(r => [r.tag, r.text, r.name, r.date]), resTitle, ...results.flatMap(r => [r.title, r.cat]), resDisc, vidTitle, ...vids.map(v => v.title),
   blogTitle, ...blogs.flatMap(b => [b.date, b.title, b.author.replace(/^By\s+/, '')])];
 const missing = keep.filter(k => !out.includes(txt(k)));
 must(!missing.length, 'content lost: ' + missing.map(m => txt(m).slice(0, 50)).join(' | '));
