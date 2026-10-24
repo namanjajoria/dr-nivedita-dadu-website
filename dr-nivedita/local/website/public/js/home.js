@@ -26,7 +26,7 @@
   if (window.Swiper) {
     var make = function (sel, opts) { var el = d.querySelector(sel); if (el) new Swiper(el, opts); };
     make('.rh-et-swiper', {
-      loop: true, speed: 400, slidesPerView: 1, spaceBetween: 24,
+      loop: true, speed: 400, slidesPerView: 1, spaceBetween: 26,
       breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1280: { slidesPerView: 4 } },
       navigation: { prevEl: '.rh-et-prev', nextEl: '.rh-et-next' }
     });

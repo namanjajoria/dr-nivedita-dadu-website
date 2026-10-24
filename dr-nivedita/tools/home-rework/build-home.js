@@ -171,7 +171,6 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
         <h2 class="rh-h2 rh-et-title">${trtTitle}</h2>
       </div>
       <div class="rh-et-tools">
-        <a class="rh-et-all" href="${trtAll[1]}">${trtAll[2].trim()}</a>
         <button class="rh-et-prev" type="button" aria-label="Previous treatment">${ico('i-chev-l')}</button>
         <button class="rh-et-next" type="button" aria-label="Next treatment">${ico('i-chev-r')}</button>
       </div>
@@ -348,8 +347,8 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
 let page = head + main + tail;
 // hero photos: inline styles are blocked by the CSP (style-src 'self'), so they go in their own stylesheet
 const bgCss = heroBgs.map((b, i) => `.rh-slide-bg--${i + 1}{background-image:url("${b}")}`).join('\n') + '\n';
-page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=3">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
-  .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=2" defer></script>');
+page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=4">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
+  .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=3" defer></script>');
 must(page.includes('/css/home.css') && page.includes('/js/home.js'), 'css/js links');
 
 // every bit of our text that the new page keeps must still be there
