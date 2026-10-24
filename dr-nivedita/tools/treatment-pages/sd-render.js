@@ -148,7 +148,7 @@ function renderPage(m) {
   </div>
 </section>
 
-${band}${split}${ideal}${process}${results}${cost}
+${band}${split}${ideal}${process}${m.resultsAfterFaq ? '' : results}${cost}
 <section class="sd-fe${faqs ? '' : ' sd-fe--solo'}" id="contact">
   <div class="sd-fe-wrap">${faqs}
     <div class="sd-fe-right">
@@ -160,7 +160,7 @@ ${band}${split}${ideal}${process}${results}${cost}
     </div>
   </div>
 </section>
-${m.videos ? renderVideos(m.videos) : ''}${m.clinics ? renderClinics() : ''}${m.awards ? renderAwards() : ''}
+${m.resultsAfterFaq ? results : ''}${m.videos ? renderVideos(m.videos) : ''}${m.clinics ? renderClinics() : ''}${m.awards ? renderAwards() : ''}
 {{> inner-page-end}}
 `;
 }
