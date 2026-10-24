@@ -102,7 +102,6 @@ ${banner('Real Results', '<li><a href="/">Home</a></li><li><span aria-current="p
   </div>
 </section>
 
-{{> contact-section}}
 
 {{> inner-page-end}}
 `;
@@ -125,7 +124,6 @@ ${banner(esc(name), `<li><a href="/">Home</a></li><li><a href="/results/">Real R
 </section>
 ${dialog}
 
-{{> contact-section}}
 
 {{> inner-page-end}}
 `;
