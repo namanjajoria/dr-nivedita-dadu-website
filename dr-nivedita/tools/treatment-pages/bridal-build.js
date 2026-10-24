@@ -33,6 +33,8 @@ const NEW_PAGES = [
   ['photofacial', 'Photofacial', 'photofacials.jpeg photofacials.jpg ipl-therapy-or-photofacial.jpg'],
   ['soprano-ice-laser-hair-reduction', 'Soprano ICE Laser Hair Reduction', 'soprano-ice-laser-hair-reduction.jpg'],
 ].map(([slug, doc, photos]) => ({ slug, doc, photos: photos.split(' '), isNew: true }));
+// "Alexandrite or Diode?" sits in the band under the first topic (user, 24 Oct 2026)
+NEW_PAGES.find(p => p.slug === 'alexandrite-laser-hair-removal').bandTopics = 2;
 PAGES.push(...NEW_PAGES);
 const ALL = process.argv.includes('--all');
 const COST_LEFT = ['laser-facials', 'lip-pigmentation', 'power-glow'];   // cost sections shown left-aligned
@@ -398,14 +400,18 @@ function normalize(m, imgs) {
   return {
     name: esc(m.name), crumb: { name: 'Bridal Dermatology', path: CAT }, subtitle: esc(m.subtitle),
     introHtml: blocksHtml(m.intro),
-    band: { title: esc(m.info[0].title), html: bandBlocks(m.info[0].blocks) },
-    split: [...m.info.slice(1).map(sec => ({ title: esc(sec.title), html: blocksHtml(sec.blocks) })),
+    // bandTopics: how many topics go in the brand-colour band (default 1; the rest go in the image-left section)
+    band: { title: esc(m.info[0].title), html: [bandBlocks(m.info[0].blocks),
+      ...m.info.slice(1, m.bandTopics || 1).map(sec => `<h2 class="sd-band-title">${esc(sec.title)}</h2>\n      ${bandBlocks(sec.blocks)}`)].join('\n      ') },
+    split: [...m.info.slice(m.bandTopics || 1).map(sec => ({ title: esc(sec.title), html: blocksHtml(sec.blocks) })),
       ...(m.benefits ? [{ title: 'Benefits', html: blocksHtml(m.isNew ? m.benefits.blocks : [...m.benefits.desc, ...m.benefits.list]) }] : [])],
     ideal: blocksHtml(m.ideal), cta: { title: esc(m.cta.title), desc: esc(m.cta.desc) },
     idealTitle: m.idealTitle ? esc(m.idealTitle) : undefined,
     process: blocksHtml(m.processBlocks), processTitle: m.processTitle ? esc(m.processTitle) : undefined,
     processMore: (m.processMore || []).map(sec => ({ title: esc(sec.title), html: blocksHtml(sec.blocks) })),
-    cost: m.cost && m.isNew ? { title: esc(m.cost.title), html: blocksHtml(m.cost.blocks), table: null, notes: m.cost.note.map(n => html(n.runs)), left: false }
+    // cost with no table: heading + text left-aligned (as on the first 5 pages)
+    cost: m.cost && m.isNew ? { title: esc(m.cost.title), html: blocksHtml(m.cost.blocks), table: null, notes: m.cost.note.map(n => html(n.runs)),
+      left: !m.cost.blocks.some(b => b.k === 'table') }
       : m.cost ? { title: esc(m.cost.title), html: blocksHtml(m.cost.paras), table: m.cost.table ? m.cost.table.map(r => r.map(esc)) : null,
       notes: m.cost.note.map(n => html(n.runs)), left: COST_LEFT.includes(m.slug) } : null,
     faq: m.faq.map(f => ({ q: esc(f.q), a: f.a })),
