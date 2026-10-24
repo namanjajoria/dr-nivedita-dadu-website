@@ -394,6 +394,28 @@
     });
   });
 
+  // Videos slider (reference settings): 1 / 2 / 3 per view, 24px apart, arrows + dots.
+  // A click plays the video in place; without JavaScript the link opens YouTube.
+  d.querySelectorAll('[data-exv]').forEach(function (box) {
+    if (window.Swiper) new Swiper(box.querySelector('.exv-swiper'), {
+      slidesPerView: 1, spaceBetween: 24,
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
+      navigation: { prevEl: box.querySelector('.exv-prev'), nextEl: box.querySelector('.exv-next') },
+      pagination: { el: box.querySelector('.swiper-pagination'), clickable: true }
+    });
+    box.addEventListener('click', function (e) {
+      var link = e.target.closest('[data-exv-video]');
+      if (!link) return;
+      e.preventDefault();
+      var frame = d.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + link.getAttribute('data-exv-video') + '?autoplay=1&rel=0';
+      frame.title = link.querySelector('img').alt;
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      frame.allowFullscreen = true;
+      link.replaceWith(frame);
+    });
+  });
+
   d.querySelectorAll('[data-sd-gallery]').forEach(function (gallery) {
     var main = gallery.querySelector('.sd-gallery-main img');
     var thumbs = Array.prototype.slice.call(gallery.querySelectorAll('.sd-thumb'));

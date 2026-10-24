@@ -117,6 +117,14 @@ const faqOf = (faqs, doc) => faqs.blocks.map(b => {       // "**Q: question** An
 // What Are -> band, Causes -> image-left section, Prevention Tips -> Ideal Candidates card,
 // Treatments + Why Choose -> Process section, FAQs, Consultation CTA. Sections 9-14 (Before & After,
 // YouTube, clinic finder, awards, newsletter, footer) are notes for shared site modules, not page text.
+// Dark-circle videos from our /video/ page (Dr. Nivedita Dadu's YouTube channel)
+const DARK_CIRCLE_VIDEOS = [
+  { id: '1m7AohFKcNs', title: 'Dark Circles Treatment, Dark Circles Tips, Under Eye Dark Circles, Home Remedies' },
+  { id: 'Qi7203Ga_5k', title: 'Dark circles under eyes home remedy' },
+  { id: 'fm45xMEm5uI', title: 'Best UNDER EYE CREAMS for dark circles, pigmentation and wrinkles easily available in India' },
+  { id: 'K3Ku6Fwc8vw', title: 'Dermal Fillers Treatment for Saggy Skin and Undereye Hollowness' },
+  { id: 'OYx1nyyX9Rs', title: '#HappyPatient-Got rid of hairfall, unwanted hair and Dark circles' },
+];
 function modelCondition(p, h1, sections) {
   const take = re => { const i = sections.findIndex(s => re.test(s.title)); must(i >= 0, p.doc + ': no section ' + re); return sections.splice(i, 1)[0]; };
   const hero = take(/^Hero$/i), what = take(/^What Are/i), causes = take(/^Causes/i), prevention = take(/^Prevention/i),
@@ -127,7 +135,9 @@ function modelCondition(p, h1, sections) {
   return {
     ...p, name: h1, subtitle: h1, intro, info: [what, causes], benefits: null,
     ideal: prevention.blocks, idealTitle: prevention.title,
-    processBlocks: treatments.blocks, processTitle: treatments.title, processMore: [why],
+    processBlocks: treatments.blocks, processTitle: treatments.title, processMore: [{ ...why, cls: 'sd-heading--one-line' }],
+    // after the FAQs, as on dadumedicalcentre.com condition pages (user, 24 Oct 2026): videos, clinics, awards
+    videos: { title: 'Dark Circles Videos', allHref: '/video/', items: DARK_CIRCLE_VIDEOS }, clinics: true, awards: true,
     cost: null, faq: faqOf(faqs, p.doc), cta: ctaOf(cta), steps: [], care: [], factors: causes, tech: what,
   };
 }
@@ -408,7 +418,8 @@ function normalize(m, imgs) {
     ideal: blocksHtml(m.ideal), cta: { title: esc(m.cta.title), desc: esc(m.cta.desc) },
     idealTitle: m.idealTitle ? esc(m.idealTitle) : undefined,
     process: blocksHtml(m.processBlocks), processTitle: m.processTitle ? esc(m.processTitle) : undefined,
-    processMore: (m.processMore || []).map(sec => ({ title: esc(sec.title), html: blocksHtml(sec.blocks) })),
+    processMore: (m.processMore || []).map(sec => ({ title: esc(sec.title), html: blocksHtml(sec.blocks), cls: sec.cls })),
+    videos: m.videos, clinics: m.clinics, awards: m.awards,
     // cost with no table: heading + text left-aligned (as on the first 5 pages)
     cost: m.cost && m.isNew ? { title: esc(m.cost.title), html: blocksHtml(m.cost.blocks), table: null, notes: m.cost.note.map(n => html(n.runs)),
       left: !m.cost.blocks.some(b => b.k === 'table') }

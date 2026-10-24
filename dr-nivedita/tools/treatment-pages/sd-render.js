@@ -86,7 +86,7 @@ function renderPage(m) {
     <div>
       <h2 class="sd-heading">${m.processTitle || "Process &amp; Techniques"}</h2>
       <div class="sd-tech-text">${m.process}</div>${(m.processMore || []).map(sec => `
-      <h2 class="sd-heading">${sec.title}</h2>
+      <h2 class="sd-heading${sec.cls ? ' ' + sec.cls : ''}">${sec.title}</h2>
       <div class="sd-tech-text">${sec.html}</div>`).join("")}
     </div>
   </div>
@@ -160,8 +160,94 @@ ${band}${split}${ideal}${process}${results}${cost}
     </div>
   </div>
 </section>
-
+${m.videos ? renderVideos(m.videos) : ''}${m.clinics ? renderClinics() : ''}${m.awards ? renderAwards() : ''}
 {{> inner-page-end}}
+`;
+}
+
+// Videos slider, in the dadumedicalcentre.com/<treatment> "exv" layout: eyebrow + title + View all videos,
+// 1 / 2 / 3 videos per view, arrows and dots; a click plays the video in place (pages.js).
+// v = { title, items: [{ id, title }], allHref }
+const lucide = (paths, cls = '', size = 24) => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"${cls ? ` class="${cls}"` : ''} aria-hidden="true">${paths}</svg>`;
+const ARROW_UR = '<path d="M7 7h10v10"/><path d="M7 17 17 7"/>';
+function renderVideos(v) {
+  const slides = v.items.map(x => `
+          <div class="swiper-slide"><div class="exv-video-thumb"><a class="exv-thumb-btn" href="https://www.youtube.com/watch?v=${x.id}" target="_blank" rel="noopener noreferrer" data-exv-video="${x.id}" aria-label="Play video: ${attr(x.title)}"><img src="https://i.ytimg.com/vi/${x.id}/hqdefault.jpg" alt="${attr(x.title)}" loading="lazy" width="480" height="360" decoding="async"><span class="exv-play"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span></a></div></div>`).join('');
+  return `
+<section class="exv-section" data-exv>
+  <div class="exv-inner">
+    <div class="exv-head">
+      <div>
+        <span class="exv-eyebrow">Watch</span>
+        <h2 class="exv-title">${v.title}</h2>
+      </div>
+      <a class="exv-viewall" href="${v.allHref}">View all videos<span class="exv-btn-arrow">${lucide(ARROW_UR, '', 16)}</span></a>
+    </div>
+    <div class="exv-slider-wrap">
+      <button class="exv-nav exv-prev" type="button" aria-label="Previous video">${lucide('<path d="m15 18-6-6 6-6"/>', '', 18)}</button>
+      <button class="exv-nav exv-next" type="button" aria-label="Next video">${lucide('<path d="m9 18 6-6-6-6"/>', '', 18)}</button>
+      <div class="swiper exv-swiper">
+        <div class="swiper-wrapper">${slides}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+}
+
+// "Find a Clinic Near You" + "Awards & Recognition", as on dadumedicalcentre.com condition pages (cd-* layout).
+const PIN = '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>';
+const PHONE = '<path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>';
+const CLINICS = [
+  { title: 'Vasant Vihar Clinic (South Delhi)', img: '/images/clinics/vasant-vihar-clinic.webp', alt: 'Dr. Nivedita Dadu Vasant Vihar Clinic',
+    address: 'A2/6 Vasant Vihar, New Delhi - 110057',
+    map: 'https://www.google.com/maps/place/Dadu+Medical+Centre/@28.5634509,77.1672309,17.5z/data=!4m6!3m5!1s0x390d1db1bd868b1d:0xec48d4de84a8741c!8m2!3d28.5632398!4d77.1661782!16s%2Fg%2F11b6v0wsgt' },
+  { title: 'Rajouri Garden Clinic (West Delhi)', img: '/images/clinics/rajouri-garden-clinic.webp', alt: 'Dr. Nivedita Dadu Rajouri Garden Clinic',
+    address: 'J-12/25, First Floor, Rajouri Garden, New Delhi - 110027',
+    map: 'https://maps.google.com/?q=Dadu+Medical+Centre+Rajouri+Garden' },
+];
+function renderClinics() {
+  return `
+<section class="cd-section cd-section-peach">
+  <div class="cd-container">
+    <div class="cd-section-header"><h2 class="cd-section-title">Find a Clinic Near You</h2></div>
+    <div class="cd-locations-grid">${CLINICS.map(c => `
+      <div class="cd-location-card">
+        <div class="cd-location-img-wrap"><img class="cd-location-img" src="${c.img}" alt="${c.alt}" loading="lazy" width="718" height="583" decoding="async"></div>
+        <div class="cd-location-info">
+          <div class="cd-loc-details">
+            <h3 class="cd-loc-title">${c.title}</h3>
+            <p class="cd-loc-row">${lucide(PIN, 'cd-loc-icon')}<span>${c.address}</span></p>
+            <p class="cd-loc-row">${lucide(PHONE, 'cd-loc-icon')}<a href="tel:+919810939319">+91-981-093-9319</a></p>
+          </div>
+          <div><a class="cd-loc-map-btn" href="${c.map}" target="_blank" rel="noopener noreferrer"><span>View on Map</span>${lucide('<path d="m9 18 6-6-6-6"/>', 'cd-loc-chev')}</a></div>
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+`;
+}
+const AWARDS = [
+  ['<path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/>',
+    'Award-Winning Clinic', 'Recognised for excellence in dermatology and skin care.'],
+  ['<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+    'Advanced Dermatology Care', 'Safe clinical protocols and technology-led treatment planning.'],
+  ['<path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/>',
+    'Patient-First Approach', 'Personalised care delivered by experienced dermatology professionals.'],
+];
+function renderAwards() {
+  return `
+<section class="cd-section">
+  <div class="cd-container">
+    <div class="cd-section-header"><h2 class="cd-section-title">Awards &amp; Recognition</h2></div>
+    <div class="cd-recognition-grid">${AWARDS.map(([icon, h, p]) => `
+      <div class="cd-recognition-card">${lucide(icon)}<h3>${h}</h3><p>${p}</p></div>`).join('')}
+    </div>
+  </div>
+</section>
 `;
 }
 
