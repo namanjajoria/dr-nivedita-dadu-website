@@ -98,7 +98,13 @@ const resAll = one(/<div class="center-action">\s*<a class="btn btn-outline" hre
 
 const vidTitle = one(/<h2 class="section-title">([\s\S]*?)<\/h2>/, videosPartial)[1];
 const vids = [...videosPartial.matchAll(/<a class="vcard" href="([^"]+)"[^>]*data-video="([^"]+)"[^>]*>[\s\S]*?<span class="vcard-title">([^<]*)<\/span>/g)].map(m => ({ url: m[1], id: m[2], title: m[3] }));
-must(vids.length, 'videos');
+const gallery = fs.readFileSync(W + '/views/gallery-video.html', 'utf8');
+for (const id of ['tVKVDObyCu4', 'DAeONLtwJRA', 'Ag_vEdv_dts']) {           // What is Purging? / double cleansing / Melasma
+  const m = gallery.match(new RegExp('<a class="vcard" href="([^"]+)"[^>]*data-video="' + id + '"[^>]*>[\\s\\S]*?<span class="vcard-title">([^<]*)</span>'));
+  must(m, 'video ' + id + ' not on /video/');
+  if (!vids.some(v => v.id === id)) vids.push({ url: m[1], id, title: m[2] });
+}
+must(vids.length >= 6, 'videos');
 const vidAll = one(/<a[^>]*href="(\/video\/)"[^>]*>([\s\S]*?)<\/a>/, videosPartial);
 
 const blogSec = sec('blogs');
@@ -113,7 +119,7 @@ const REF = {
   etEyebrow: 'Our Specialities', rvEyebrow: 'Real Stories',
   points: ['Golden Technique', 'Minimal Procedure', 'Natural Results', 'Safe Procedure', 'Expert Team', 'Affordable Quality', 'FUE MesoGrow', 'Top Trichologist'],
   founderBadge: ['20+', 'Years of', 'Excellence'],
-  stats: [['20+', 'Years of Experience'], ['20,000+', 'Happy Patients'], ['9+', 'Memberships &amp; Affiliations']],
+  stats: [['20+', 'Years of<br>Experience'], ['20,000+', 'Happy<br>Patients'], ['9+', 'Memberships &amp;<br>Affiliations']],
   memberships: 'Memberships &amp; Affiliations',
   vidEyebrow: 'Watch Expert Advice', fpEyebrow: 'Media Coverage',
   blogSub: 'Expert Skin &amp; Hair Care Advice From Dr. Nivedita Dadu And Our Dermatologists',
@@ -121,6 +127,7 @@ const REF = {
 };
 
 // ---------- markup ----------
+const excerpt = (h, n) => { if (h.length <= n) return h; const c = h.slice(0, n); return c.slice(0, c.lastIndexOf(' ')).replace(/[,;:.]$/, '') + '...'; };
 const TICK = '<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 const ico = id => `<svg class="ico"><use href="#${id}"/></svg>`;
 const arrow = `<span class="rh-arrow">${ico('i-arrow')}</span>`;
@@ -232,8 +239,7 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
     <div class="rh-care-body">
       <span class="rh-eyebrow">${about.kicker}</span>
       <h1 class="rh-care-title">${about.title}</h1>
-      <p class="rh-care-copy">${about.copy}</p>
-      <a class="rh-pill rh-care-btn" href="${about.btn[1]}">${about.btn[2].trim()} ${arrow}</a>
+      <p class="rh-care-copy">${excerpt(about.copy, 470)} <a class="rh-readmore" href="/about-clinic">read more</a></p>
       <div class="rh-feature">
         <div class="rh-feature-media"><img src="/images/home/hpex01.webp" alt="" loading="lazy" width="467" height="560" decoding="async"></div>
         <div class="rh-points">${REF.points.map(p => `<div class="rh-point"><span class="rh-point-check">${TICK}</span><span>${p}</span></div>`).join('')}</div>
@@ -361,14 +367,14 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
 let page = head + main + tail;
 // hero photos: inline styles are blocked by the CSP (style-src 'self'), so they go in their own stylesheet
 const bgCss = heroBgs.map((b, i) => `.rh-slide-bg--${i + 1}{background-image:url("${b}")}`).join('\n') + '\n';
-page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=6">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
+page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=7">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
   .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=4" defer></script>');
 must(page.includes('/css/home.css') && page.includes('/js/home.js'), 'css/js links');
 
 // every bit of our text that the new page keeps must still be there
 const txt = h => h.replace(/<[^>]+>/g, ' ').replace(/&#39;/g, "'").replace(/\s+/g, ' ').trim();
 const out = txt(page);
-const keep = [hero.eyebrow, hero.title, hero.sub, hero.desc, hero.formTitle, trtTitle, ...cards.map(c => c.title), about.kicker, about.title, about.copy,
+const keep = [hero.eyebrow, hero.title, hero.sub, hero.desc, hero.formTitle, trtTitle, ...cards.map(c => c.title), about.kicker, about.title, about.copy.slice(0, 300),
   doc.heading, doc.name, doc.cred, doc.bio, pressTitle, testiTitle, ...reviews.flatMap(r => [r.tag, r.text, r.name, r.date]), resTitle, ...results.flatMap(r => [r.title, r.meta]), resDisc, vidTitle, ...vids.map(v => v.title),
   blogTitle, ...blogs.flatMap(b => [b.date, b.title, b.author.replace(/^By\s+/, '')])];
 const missing = keep.filter(k => !out.includes(txt(k)));
