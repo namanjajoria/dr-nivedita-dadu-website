@@ -11,12 +11,14 @@ const must = (c, m) => { if (!c) throw new Error(m); };
 const esc = s => String(s).replace(/&(?![a-z#0-9]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 // Our own treatment categories (same names and order as the /treatments/ sidebar)
-const CATS = [
-  ['acne-treatment', 'Acne Treatment'], ['acne-scars', 'Acne Scars'], ['pigmentation', 'Pigmentation'], ['hair-fall', 'Hairfall'],
-  ['laser-hair-removal', 'Unwanted Hair'], ['anti-ageing-therapies', 'Anti Ageing Therapies'], ['premium-services', 'Premium Services'],
-  ['stretch-marks', 'Stretch Marks'], ['non-surgical-facial-enhancements', 'Non Surgical Facial Enhancements'],
-  ['vitiligo-surgeries', 'Vitiligo Surgeries'], ['plastic-surgery', 'Plastic Surgery'], ['bridal-dermatology', 'Bridal Dermatology'],
-];
+// Categories = the treatment categories in the /treatments/ sidebar (same names, same order), read live
+// from views/t-index.html so a new treatment category shows up here too; plus 'Other Treatments' last
+// for results that fit none of them.
+const OTHER = ['other-treatments', 'Other Treatments'];
+const CATS = [...fs.readFileSync(W + '/views/t-index.html', 'utf8').replace(/\s+/g, ' ')
+  .matchAll(/<a class="filter-item[^"]*" href="\/treatments\/([^"\/]+)\/"> <span>([^<]+)<\/span>/g)].map(m => [m[1], m[2].trim()]);
+must(CATS.length >= 10, 'treatment categories not found in t-index.html: ' + CATS.length);
+CATS.push(OTHER);
 // An image goes into the category of every treatment page it is shown on (treatment-pages/data/results-map.json);
 // images on no treatment page are placed by the treatment / case printed on them (first match wins).
 const PAGE_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, '../treatment-pages/data/results-map.json'), 'utf8'));
@@ -55,7 +57,7 @@ for (const [page, list] of Object.entries(PAGE_MAP)) for (const r of list) (page
 for (const r of rows) {
   let cats = [...(pagesOf[r.file] || [])];
   if (!cats.length) { const rule = RULES.find(([, re]) => re.test((r.treatment + ' ' + r.caseText).toLowerCase())); if (rule) cats = [rule[0]]; }
-  if (!cats.length) { unplaced.push(r); continue; }
+  if (!cats.length) { unplaced.push(r); cats = [OTHER[0]]; }
   cats = CATS.map(([c]) => c).filter(c => cats.includes(c));
   for (const c of cats) byCat[c].push({ ...r, title: title(r) });
   fileCat[r.file] = cats;
@@ -122,7 +124,8 @@ ${dialog}
 `;
 
 for (const [slug, name] of CATS) console.log(`${name.padEnd(34)} ${String(byCat[slug].length).padStart(3)}  e.g. ${[...new Set(byCat[slug].map(r => r.title))].slice(0, 4).join(' / ')}`);
-console.log('images placed', Object.keys(fileCat).length, '| not in any category', unplaced.length + ':', [...new Set(unplaced.map(r => title(r)))].join(' / '));
+must(Object.keys(fileCat).length === rows.length, 'every image must be in a category');
+console.log('images placed', Object.keys(fileCat).length, 'of', rows.length, '| in Other Treatments', unplaced.length + ':', [...new Set(unplaced.map(r => title(r)))].join(' / '));
 
 if (WRITE) {
   fs.writeFileSync(W + '/views/gallery-results.html', overview);

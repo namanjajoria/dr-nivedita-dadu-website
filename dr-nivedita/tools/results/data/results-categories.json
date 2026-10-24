@@ -149,11 +149,20 @@
  "pih-acne-1.webp": [
   "acne-treatment"
  ],
+ "psoriasis.webp": [
+  "other-treatments"
+ ],
  "fphl-2.webp": [
   "hair-fall"
  ],
  "fphl-1.webp": [
   "hair-fall"
+ ],
+ "skin-allergy-2.webp": [
+  "other-treatments"
+ ],
+ "skin-allergy-1.webp": [
+  "other-treatments"
  ],
  "acne-marks-5.webp": [
   "acne-scars"
@@ -184,6 +193,9 @@
  ],
  "acne-acne-marks-1.webp": [
   "acne-treatment"
+ ],
+ "30-min.webp": [
+  "other-treatments"
  ],
  "28-min.webp": [
   "hair-fall"
@@ -265,6 +277,9 @@
  ],
  "4-min.webp": [
   "stretch-marks"
+ ],
+ "3-min.webp": [
+  "other-treatments"
  ],
  "chemical-peel-1.webp": [
   "pigmentation"
@@ -389,6 +404,9 @@
  "acne-scars-1-b.webp": [
   "acne-scars"
  ],
+ "cosmetic-product-allergy-min.webp": [
+  "other-treatments"
+ ],
  "dark-circles-min.webp": [
   "anti-ageing-therapies"
  ],
@@ -425,6 +443,9 @@
  "lhr.webp": [
   "laser-hair-removal"
  ],
+ "wart1.webp": [
+  "other-treatments"
+ ],
  "undereys-bags.webp": [
   "anti-ageing-therapies"
  ],
@@ -454,6 +475,9 @@
  ],
  "acne-scars-b.webp": [
   "acne-scars"
+ ],
+ "wart.webp": [
+  "other-treatments"
  ],
  "acne.webp": [
   "acne-treatment"
@@ -485,11 +509,20 @@
  "acne-marks.webp": [
   "acne-scars"
  ],
+ "laser-tatto.webp": [
+  "other-treatments"
+ ],
  "lhr-281-29.webp": [
   "laser-hair-removal"
  ],
  "male-pattern-baldness-b.webp": [
   "hair-fall"
+ ],
+ "mole-removal.webp": [
+  "other-treatments"
+ ],
+ "psoriasis-281-29.webp": [
+  "other-treatments"
  ],
  "real.webp": [
   "acne-treatment"
@@ -578,6 +611,9 @@
  "11.webp": [
   "acne-treatment"
  ],
+ "ba-web-10.webp": [
+  "other-treatments"
+ ],
  "ba-web-8-1.webp": [
   "acne-scars"
  ],
@@ -602,6 +638,9 @@
  "ba-web-1.webp": [
   "hair-fall"
  ],
+ "wart-results.webp": [
+  "other-treatments"
+ ],
  "before-after-for-website-10.webp": [
   "acne-treatment"
  ],
@@ -619,6 +658,9 @@
  ],
  "before-after-for-website-51.webp": [
   "acne-scars"
+ ],
+ "before-after-for-website-31.webp": [
+  "other-treatments"
  ],
  "before-after-for-website-2.webp": [
   "pigmentation"
@@ -653,6 +695,9 @@
  "before-after-for-web-stretch-marks.webp": [
   "laser-hair-removal",
   "bridal-dermatology"
+ ],
+ "before-after-nose-scar.webp": [
+  "other-treatments"
  ],
  "before-after-mole-1.webp": [
   "acne-scars"
@@ -704,6 +749,9 @@
  ],
  "imgpsh-fullsize-anim1.webp": [
   "anti-ageing-therapies"
+ ],
+ "imgpsh-fullsize-anim-b.webp": [
+  "other-treatments"
  ],
  "ba-website.webp": [
   "acne-scars"
@@ -849,6 +897,9 @@
  "facial-hair-before-after-img-140818.webp": [
   "laser-hair-removal"
  ],
+ "chemical-burn-before-after-img-140818.webp": [
+  "other-treatments"
+ ],
  "acne-scar-before-after-img-140818.webp": [
   "acne-scars"
  ],
@@ -931,6 +982,9 @@
  "hair-threads2.webp": [
   "hair-fall"
  ],
+ "infection.webp": [
+  "other-treatments"
+ ],
  "laser-hair-removal.webp": [
   "laser-hair-removal"
  ],
@@ -942,6 +996,9 @@
  ],
  "laser-hair-removal-1.webp": [
   "laser-hair-removal"
+ ],
+ "burn-scald-medically-treated.webp": [
+  "other-treatments"
  ],
  "priyanka.webp": [
   "acne-scars"

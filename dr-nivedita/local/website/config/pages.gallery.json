@@ -266,5 +266,25 @@
         "path": "/results/bridal-dermatology/"
       }
     ]
+  },
+  {
+    "path": "/results/other-treatments/",
+    "view": "results-other-treatments",
+    "title": "Other Treatments Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of other treatments treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Other Treatments",
+        "path": "/results/other-treatments/"
+      }
+    ]
   }
 ]
