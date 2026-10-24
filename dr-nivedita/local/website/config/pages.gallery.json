@@ -46,5 +46,185 @@
         "path": "/results/"
       }
     ]
+  },
+  {
+    "path": "/results/acne-pimple/",
+    "view": "results-acne-pimple",
+    "title": "Acne/Pimple Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of acne/pimple treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Acne/Pimple",
+        "path": "/results/acne-pimple/"
+      }
+    ]
+  },
+  {
+    "path": "/results/acne-scars/",
+    "view": "results-acne-scars",
+    "title": "Acne Scars Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of acne scars treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Acne Scars",
+        "path": "/results/acne-scars/"
+      }
+    ]
+  },
+  {
+    "path": "/results/pigmentation/",
+    "view": "results-pigmentation",
+    "title": "Pigmentation Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of pigmentation treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Pigmentation",
+        "path": "/results/pigmentation/"
+      }
+    ]
+  },
+  {
+    "path": "/results/hairfall/",
+    "view": "results-hairfall",
+    "title": "Hairfall/Hair Loss Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of hairfall/hair loss treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Hairfall/Hair Loss",
+        "path": "/results/hairfall/"
+      }
+    ]
+  },
+  {
+    "path": "/results/unwanted-hair/",
+    "view": "results-unwanted-hair",
+    "title": "Unwanted Hair Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of unwanted hair treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Unwanted Hair",
+        "path": "/results/unwanted-hair/"
+      }
+    ]
+  },
+  {
+    "path": "/results/anti-aging/",
+    "view": "results-anti-aging",
+    "title": "Anti-Aging Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of anti-aging treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Anti-Aging",
+        "path": "/results/anti-aging/"
+      }
+    ]
+  },
+  {
+    "path": "/results/non-surgical-facial-enhancement/",
+    "view": "results-non-surgical-facial-enhancement",
+    "title": "Non-Surgical Facial Enhancement Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of non-surgical facial enhancement treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Non-Surgical Facial Enhancement",
+        "path": "/results/non-surgical-facial-enhancement/"
+      }
+    ]
+  },
+  {
+    "path": "/results/dark-lips/",
+    "view": "results-dark-lips",
+    "title": "Dark Lips Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of dark lips treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Dark Lips",
+        "path": "/results/dark-lips/"
+      }
+    ]
+  },
+  {
+    "path": "/results/skin-conditions/",
+    "view": "results-skin-conditions",
+    "title": "Skin Conditions Before and After Results | Dr. Nivedita Dadu's Dermatology Clinic",
+    "description": "Real before and after results of skin conditions treatments at Dr. Nivedita Dadu's Dermatology Clinic, Vasant Vihar and Rajouri Garden, Delhi.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Results",
+        "path": "/results/"
+      },
+      {
+        "name": "Skin Conditions",
+        "path": "/results/skin-conditions/"
+      }
+    ]
   }
 ]

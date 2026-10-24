@@ -8,15 +8,9 @@ const { renderResults } = require('./sd-render.js');
 const pages = require(W + '/config/pages.all.json').filter(p => /^\/treatments\/[^/]+\/[^/]+\/$/.test(p.path));
 const map = JSON.parse(fs.readFileSync(__dirname + '/data/results-map.json', 'utf8'));
 const esc = s => String(s).replace(/&(?![a-z#0-9]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-const gallery = fs.readFileSync(W + '/views/gallery-results.html', 'utf8');
-// category of an image on /results: the data-group of its <a class="rr-card" href="…file">
-const groupOf = file => {
-  const i = gallery.indexOf(`<a class="rr-card" href="/images/gallery/results/${file}"`);
-  if (i < 0) return null;
-  const tag = gallery.slice(i, gallery.indexOf('>', i));
-  const m = tag.match(/data-group="([^"]+)"/);
-  return m ? m[1] : null;
-};
+// category of each image on /results (written by tools/results/build-results.js)
+const cats = JSON.parse(fs.readFileSync(__dirname + '/../results/data/results-categories.json', 'utf8'));
+const groupOf = file => cats[file] || null;
 const RE = /\n<section class="sd-results">[\s\S]*?<\/section>\n/;
 let withResults = 0, cards = 0;
 for (const p of pages) {
@@ -29,7 +23,7 @@ for (const p of pages) {
     if (!fs.existsSync(W + '/public' + src)) throw new Error('missing image ' + src);
     const g = groupOf(r.file);
     if (!g) throw new Error('no /results category for ' + r.file);
-    return { src, href: '/results/#' + g, title: esc(r.title), label: esc(r.label), alt: r.caseText && r.caseText !== '-' ? r.caseText : r.title };
+    return { src, href: '/results/' + g + '/', title: esc(r.title), label: esc(r.label), alt: r.caseText && r.caseText !== '-' ? r.caseText : r.title };
   });
   if (list.length) { withResults++; cards += list.length; }
   const out = s.replace(RE, renderResults(list));

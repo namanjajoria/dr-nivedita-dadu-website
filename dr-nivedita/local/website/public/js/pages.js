@@ -216,6 +216,41 @@
   window.addEventListener('resize', fit);
   if (d.fonts && d.fonts.ready) d.fonts.ready.then(fit);
 
+  // Results category pages: 9 cards per page with Previous / numbers / Next (as on the reference site).
+  d.querySelectorAll('[data-rcd-grid]').forEach(function (grid) {
+    var cards = Array.prototype.slice.call(grid.children);
+    var nav = grid.parentElement.querySelector('.rcd-pagination');
+    var per = 9, pages = Math.ceil(cards.length / per), page = 0;
+    if (!nav || pages < 2) return;
+    function btn(label, cls, go) {
+      var b = d.createElement('button');
+      b.type = 'button'; b.className = 'rcd-page-btn' + (cls ? ' ' + cls : ''); b.textContent = label;
+      b.addEventListener('click', function () { render(go()); grid.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' }); });
+      return b;
+    }
+    function render(p) {
+      page = Math.max(0, Math.min(pages - 1, p));
+      cards.forEach(function (c, i) { c.hidden = Math.floor(i / per) !== page; });
+      nav.textContent = '';
+      var prev = btn('« Previous', 'rcd-page-prev', function () { return page - 1; }); prev.disabled = page === 0; nav.appendChild(prev);
+      for (var i = 0; i < pages; i++) (function (n) {
+        var b = btn(String(n + 1), n === page ? 'is-active' : '', function () { return n; });
+        if (n === page) b.setAttribute('aria-current', 'page');
+        nav.appendChild(b);
+      })(i);
+      var next = btn('Next »', 'rcd-page-next', function () { return page + 1; }); next.disabled = page === pages - 1; nav.appendChild(next);
+    }
+    nav.hidden = false;
+    render(0);
+  });
+
+  // Old links like /results/#acne open the matching category page.
+  if (/\/results\/?$/.test(location.pathname) && location.hash) {
+    var oldGroups = { acne: 'acne-pimple', 'acne-scar': 'acne-scars', 'anti-ageing': 'anti-aging', haircare: 'hairfall', laser: 'unwanted-hair', skin: 'pigmentation', mesotherapy: 'pigmentation', photofacial: 'pigmentation' };
+    var target = oldGroups[location.hash.slice(1)];
+    if (target) location.replace(location.pathname.replace(/\/?$/, '/') + target + '/');
+  }
+
   // Photo viewer for [data-lightbox] links (clinic gallery, results). Prev / next move
   // through the photos currently shown in the same grid; without JavaScript the link
   // simply opens the photo.
@@ -239,8 +274,8 @@
       if (!link) return;
       e.preventDefault();
       from = link;
-      list = Array.prototype.slice.call(link.parentElement.querySelectorAll('[data-lightbox]'))
-        .filter(function (x) { return !x.hidden; });
+      list = Array.prototype.slice.call((link.closest('[data-lightbox-group]') || link.parentElement).querySelectorAll('[data-lightbox]'))
+        .filter(function (x) { return !x.hidden && !x.closest('[hidden]'); });
       viewer.toggleAttribute('data-single', list.length < 2);
       show(list.indexOf(link));
       viewer.showModal();
