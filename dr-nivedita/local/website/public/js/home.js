@@ -39,8 +39,7 @@
     make('.rh-vid-swiper', {
       slidesPerView: 1, spaceBetween: 24, watchOverflow: true,
       breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
-      navigation: { prevEl: '.rh-vid-prev', nextEl: '.rh-vid-next' },
-      pagination: { el: '.rh-drn-bottom .swiper-pagination', clickable: true }
+      navigation: { prevEl: '.rh-vid-prev', nextEl: '.rh-vid-next' }
     });
     make('.rh-fp-swiper', {
       slidesPerView: 2, spaceBetween: 20, watchOverflow: true,

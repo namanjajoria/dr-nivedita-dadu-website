@@ -99,12 +99,12 @@ const resAll = one(/<div class="center-action">\s*<a class="btn btn-outline" hre
 const vidTitle = one(/<h2 class="section-title">([\s\S]*?)<\/h2>/, videosPartial)[1];
 const vids = [...videosPartial.matchAll(/<a class="vcard" href="([^"]+)"[^>]*data-video="([^"]+)"[^>]*>[\s\S]*?<span class="vcard-title">([^<]*)<\/span>/g)].map(m => ({ url: m[1], id: m[2], title: m[3] }));
 const gallery = fs.readFileSync(W + '/views/gallery-video.html', 'utf8');
-for (const id of ['tVKVDObyCu4', 'DAeONLtwJRA', 'Ag_vEdv_dts']) {           // What is Purging? / double cleansing / Melasma
+for (const id of ['tVKVDObyCu4']) {           // What is Purging? (4 videos in the slider)
   const m = gallery.match(new RegExp('<a class="vcard" href="([^"]+)"[^>]*data-video="' + id + '"[^>]*>[\\s\\S]*?<span class="vcard-title">([^<]*)</span>'));
   must(m, 'video ' + id + ' not on /video/');
   if (!vids.some(v => v.id === id)) vids.push({ url: m[1], id, title: m[2] });
 }
-must(vids.length >= 6, 'videos');
+must(vids.length === 4, 'expected 4 videos, got ' + vids.length);
 const vidAll = one(/<a[^>]*href="(\/video\/)"[^>]*>([\s\S]*?)<\/a>/, videosPartial);
 
 const blogSec = sec('blogs');
@@ -293,7 +293,6 @@ ${heroBgs.map((b, i) => `      <button class="rh-dot${i ? '' : ' is-active'}" ty
               <p class="rh-vid-name">${v.title}</p>
             </div>`).join('')}
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -368,7 +367,7 @@ let page = head + main + tail;
 // hero photos: inline styles are blocked by the CSP (style-src 'self'), so they go in their own stylesheet
 const bgCss = heroBgs.map((b, i) => `.rh-slide-bg--${i + 1}{background-image:url("${b}")}`).join('\n') + '\n';
 page = page.replace('<link rel="stylesheet" href="{{cssUrl}}">', '<link rel="stylesheet" href="{{cssUrl}}">\n<link rel="stylesheet" href="/css/home.css?v=7">\n<link rel="stylesheet" href="/css/home-hero-bg.css?v=1">')
-  .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=4" defer></script>');
+  .replace('<script src="{{jsUrl}}" defer></script>', '<script src="{{jsUrl}}" defer></script>\n<script src="/js/home.js?v=5" defer></script>');
 must(page.includes('/css/home.css') && page.includes('/js/home.js'), 'css/js links');
 
 // every bit of our text that the new page keeps must still be there
