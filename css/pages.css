@@ -1,0 +1,1902 @@
+/* ==========================================================================
+   INNER PAGES (About Us: Dr. Nivedita Dadu, About Clinic, General / Cosmetic
+   Dermatology, Technologies)
+
+   The components are the live dmctrichology.com inner pages (about-dr-nivedita-dadu,
+   about-dadu-medical-centre), measured in the browser at 1440px:
+
+     banner        350px tall, heading 48/58, padding 80/60
+     intro         section 100/100, grid 696px + 547px, gap 40, image r24, 696x560
+     brand band    heading 44/49, body 16/28
+     media row     grid 598px + 629px, gap 56, heading 44/51, body 16/27
+     feature panel grid 472px + 708px, gap 40, square image r20 (DMC "Expertise In...")
+     icon rows     grid 150px + 427px + 617px, gap 44, heading 48/57
+     cards         3 x 258px
+     FAQ cards     from the homepage (main.css)
+
+   Colours, fonts, buttons, fields and cards come from main.css, so these pages read
+   as the same site as the homepage.
+   ========================================================================== */
+
+/* page banner ------------------------------------------------------------- */
+.page-banner{padding:200px 0 60px;background:var(--tint);text-align:center}
+.page-banner-title{font-family:var(--font-display);font-size:48px;line-height:1.2;color:var(--heading);text-wrap:balance}
+.breadcrumb{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px;font-size:14px;color:var(--text)}
+.breadcrumb li+li::before{content:"/";margin-right:8px;color:var(--light)}
+.breadcrumb a{transition:color .2s}
+.breadcrumb a:hover{color:var(--primary-deep)}
+.breadcrumb [aria-current]{color:var(--primary-deep)}
+
+/* shared type ------------------------------------------------------------- */
+.pg-kicker{margin-bottom:10px;font-size:13px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--primary-deep)}
+.pg-title{font-size:44px;line-height:1.12;color:var(--heading)}
+/* a sentence-length heading is set smaller so it reads as a lead, not a shout */
+.pg-title--small{font-size:30px;line-height:1.25}
+.pg-sub{margin-top:8px;font-size:15px;line-height:1.6;color:var(--text)}
+.pg-copy>*+*{margin-top:18px}
+.pg-copy p,.pg-copy li{font-size:16px;line-height:1.75;color:var(--text)}
+.pg-copy h2{font-size:32px;line-height:1.2;color:var(--heading);margin-top:34px}
+.pg-copy h3{font-size:23px;line-height:1.25;color:var(--heading);margin-top:28px}
+.pg-copy h2:first-child,.pg-copy h3:first-child{margin-top:0}
+.pg-copy a{color:var(--primary-deep);text-decoration:underline;text-underline-offset:2px}
+.pg-copy strong{font-weight:700}
+/* closing profile (Dr. Nivedita Dadu): the copy runs in two columns that the browser balances
+   (a paragraph may break across them), so neither column ends in an empty strip */
+.pg-copy--2col{columns:2;column-gap:56px}
+.pg-copy--2col>*+*{margin-top:0}
+.pg-copy--2col p{margin-bottom:18px}
+.pg-copy--2col p:last-child{margin-bottom:0}
+.pg-bio-title{margin-top:30px}
+.pg-bio-close{margin-top:26px;max-width:1040px}
+@media (max-width:1024px){.pg-copy--2col{columns:1}}
+.pg-divider{height:1px;margin:28px 0;background:#ddd;border:0}
+.pg-head{margin-bottom:50px}
+.pg-head--center{text-align:center}
+.pg-head--center .pg-lede{margin-inline:auto}
+.pg-lede{max-width:900px;margin-top:16px;font-size:16px;line-height:1.75;color:var(--muted)}
+
+/* check list - DMC tick bullets ------------------------------------------ */
+.check-list{display:grid;gap:12px}
+.check-list li{position:relative;padding-left:32px;font-size:16px;line-height:1.6}
+.check-list li::before{
+  content:"";position:absolute;left:0;top:.2em;width:20px;height:20px;border-radius:50%;
+  background:var(--primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat;
+}
+.check-list--2col{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
+
+/* intro - DMC image + profile + consultation form ------------------------- */
+.pg-intro{padding:100px 0;background:linear-gradient(180deg,var(--mist),var(--white) 55%)}
+.pg-intro-grid{display:grid;grid-template-columns:minmax(0,696fr) minmax(0,547fr);gap:40px;align-items:start}
+/* the photo stays in view while the longer profile + form scrolls past (DMC) */
+.pg-intro-grid>:first-child{position:sticky;top:120px}
+.pg-intro-media{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-card)}
+.pg-intro-media img{width:100%;aspect-ratio:696/560;object-fit:cover;object-position:50% 25%}
+.pg-intro-media--doctor img{object-position:28% 28%}
+.pg-intro-media--square img{aspect-ratio:1/1;object-position:50% 50%}
+/* pages whose live version has no photo of their own: centred opening */
+.pg-intro--plain{padding-bottom:70px}
+.pg-intro-plain{max-width:900px;margin:0 auto;text-align:center}
+.pg-intro-plain .pg-copy p{text-align:left}
+.pg-intro-body .pg-copy{margin-top:22px}
+.consult-title{font-size:30px;line-height:1.2;color:var(--heading);margin-bottom:22px}
+.consult-form .field-row{gap:14px}
+.consult-form .submit-btn{margin-top:8px}
+
+/* clinic gallery - Swiper with arrows and dots ---------------------------- */
+.gallery{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-card);background:#eee}
+.gallery-swiper{overflow:hidden}
+.gallery-swiper .swiper-wrapper{display:flex}
+.gallery-swiper .swiper-slide{flex:none;width:100%}
+.gallery-swiper img{width:100%;aspect-ratio:696/560;object-fit:cover}
+.gallery-prev,.gallery-next{
+  position:absolute;top:50%;z-index:2;width:46px;height:46px;margin-top:-23px;border:0;border-radius:50%;
+  display:grid;place-items:center;background:#ffffffe6;color:var(--text);font-size:20px;cursor:pointer;box-shadow:0 8px 20px #0000001f;
+  transition:background-color .3s,color .3s;
+}
+.gallery-prev{left:16px}
+.gallery-next{right:16px}
+.gallery-prev:hover,.gallery-next:hover{background:var(--primary);color:var(--white)}
+.gallery-pagination{position:absolute;left:0;right:0;bottom:16px;z-index:2;display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:0 60px}
+.gallery-pagination .swiper-pagination-bullet{width:8px;height:8px;margin:0 !important;border-radius:50%;background:#fff;opacity:.6;cursor:pointer}
+.gallery-pagination .swiper-pagination-bullet-active{opacity:1;background:var(--primary)}
+.gallery:not(.is-ready) .gallery-swiper .swiper-slide:not(:first-child),
+.gallery:not(.is-ready) .gallery-prev,.gallery:not(.is-ready) .gallery-next{display:none}
+
+/* brand band - DMC full-width band, here in the logo coral ----------------- */
+.pg-band{padding:92px 0;background:var(--primary);color:var(--white)}
+.pg-band-inner{max-width:1200px;margin:0 auto}
+.pg-band .pg-kicker{color:var(--white);opacity:.9}
+.pg-band .pg-title{font-size:44px;color:var(--white)}
+.pg-band .pg-copy{margin-top:28px}
+.pg-band .pg-copy p,.pg-band .pg-copy li{font-size:16px;line-height:1.8;color:var(--white)}
+.pg-band .pg-copy h2,.pg-band .pg-copy h3{color:var(--white)}
+.pg-band .pg-copy a{color:var(--white)}
+.pg-band .check-list li::before{background-color:var(--white);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c0553f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E")}
+
+/* media row - DMC image + heading + copy (used wherever the copy is long) -- */
+.pg-media{padding:92px 0;background:var(--tint)}
+.pg-media--white{background:var(--white)}
+.pg-media-grid{display:grid;grid-template-columns:minmax(0,598fr) minmax(0,629fr);gap:56px;align-items:start}
+.pg-media-grid--flip .pg-media-img{order:2}
+.pg-media-img{position:sticky;top:120px;border-radius:24px;overflow:hidden;box-shadow:0 20px 40px #c0553f1f}
+.pg-media-img img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.pg-media-img--left img{object-position:12% 50%}
+.pg-media-img--tall img{aspect-ratio:598/720}
+.pg-media-body .pg-kicker+.pg-title{margin-top:0}
+.pg-media-body .pg-title+.pg-copy{margin-top:26px}
+.pg-media-body .pg-title+.pg-divider{margin-top:30px}
+.pg-media-btn{margin-top:30px}
+
+/* feature panel - DMC "Expertise In Skin & Hair Treatment" ----------------- */
+.pg-feature{padding:80px 0}
+.pg-feature-inner{
+  display:grid;grid-template-columns:minmax(0,472fr) minmax(0,708fr);gap:40px;align-items:center;
+  padding:40px;border-radius:32px;background:var(--tint);
+}
+.pg-feature--white .pg-feature-inner{background:var(--white);box-shadow:var(--shadow-card);border:1px solid var(--border)}
+.pg-feature-inner.pg-feature--white{background:var(--white);box-shadow:var(--shadow-card);border:1px solid var(--border)}
+/* a heading strip that introduces the image + text rows below it */
+.pg-band-head{padding:80px 0 0;text-align:center}
+.pg-band-head+.pg-media{padding-top:56px}
+.pg-feature-media{border-radius:20px;overflow:hidden}
+.pg-feature-media img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 42%}
+.pg-feature-body .pg-title{font-size:43px;line-height:1.1}
+.pg-feature-body .pg-copy{margin-top:22px}
+.pg-feature-body .btn{margin-top:28px}
+
+/* icon rows - DMC "Patient-First Approach" (short items) ------------------ */
+.pg-rows{padding:92px 0}
+.pg-rows-head{padding-bottom:26px;border-bottom:1px solid #ddd}
+.pg-rows-head .pg-title{font-size:48px;line-height:1.18}
+.pg-rows-head .pg-lede{margin-top:14px}
+.pg-row{display:grid;grid-template-columns:90px minmax(0,427fr) minmax(0,617fr);gap:24px 44px;align-items:baseline;padding:34px 0;border-bottom:1px solid #ddd}
+.pg-row-num{font-size:34px;line-height:1;color:var(--primary);letter-spacing:1px}
+.pg-row-title{font-size:30px;line-height:1.2;color:var(--heading)}
+.pg-row .pg-copy p{font-size:16px;line-height:1.7}
+.pg-rows-list>.pg-row:first-child{border-top:1px solid #ddd}
+.pg-rows-head+.pg-rows-list>.pg-row:first-child{border-top:0}
+
+/* cards ------------------------------------------------------------------- */
+.pg-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.pg-cards--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pg-cards--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pg-card{
+  display:flex;flex-direction:column;gap:14px;padding:30px;border-radius:var(--r-md);background:var(--white);
+  border:1px solid var(--border);box-shadow:var(--shadow-card);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;
+}
+.pg-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:var(--line)}
+.pg-card-num{font-size:40px;line-height:1;color:var(--primary)}
+.pg-card h3{font-size:22px;line-height:1.3;color:var(--heading)}
+.pg-card p{font-size:15px;line-height:1.7;color:var(--muted)}
+.bg-tint .pg-card{border-color:#fff}
+.pg-list-title{font-size:30px;line-height:1.2;color:var(--heading);margin-bottom:22px}
+
+/* link cards with image - About Clinic "General / Cosmetic / Venerology" -- */
+.link-card{display:flex;flex-direction:column;border-radius:var(--r-md);overflow:hidden;background:var(--white);box-shadow:var(--shadow-card);transition:transform .35s var(--ease),box-shadow .35s}
+.link-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
+.link-card-media{overflow:hidden}
+.link-card-media img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s var(--ease)}
+.link-card:hover .link-card-media img{transform:scale(1.05)}
+.link-card-body{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px}
+.link-card-body h3{font-size:24px;line-height:1.25;color:var(--heading)}
+.link-card-body .btn-arrow{background:var(--primary);color:var(--white)}
+.link-card:hover .link-card-body .btn-arrow{transform:rotate(45deg)}
+
+/* Experience / Education tabs - DMC pill tabs + tick timeline ------------- */
+.pg-tabs-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:60px;align-items:start}
+.tab-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:4px;border:1px solid #ddd;border-radius:var(--r-pill);background:var(--white)}
+.tab-btn{
+  min-height:48px;padding:8px 20px;border:0;border-radius:var(--r-pill);background:transparent;
+  font-size:21px;color:var(--text);cursor:pointer;transition:background-color .3s,color .3s;
+}
+.tab-btn[aria-selected="true"]{background:var(--primary);color:var(--white)}
+.tab-panel{margin-top:30px}
+/* without JavaScript both panels show, one after the other */
+.tab-list:not(.is-ready){display:none}
+.tab-panel+.tab-panel{margin-top:40px}
+.tab-panel-title{font-size:26px;color:var(--heading)}
+.tab-list.is-ready~.tab-panel .tab-panel-title{display:none}
+.timeline li{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:6px 24px;align-items:baseline;padding:26px 0;border-bottom:1px solid #ddd}
+.timeline .ico{grid-row:span 2;align-self:start;margin-top:4px;font-size:20px;color:var(--primary-deep)}
+.timeline-title{font-size:21px;line-height:1.3;text-transform:uppercase;color:var(--heading)}
+.timeline-year{font-size:14px;color:var(--primary-deep);white-space:nowrap}
+.timeline-place{grid-column:2/-1;font-size:14px;line-height:1.7;color:var(--muted)}
+.affiliation-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.affiliation-grid li{display:grid;place-items:center;aspect-ratio:1/1;padding:14px;border-radius:18px;background:var(--white);border:1px solid var(--border)}
+.affiliation-grid img{max-height:90px;width:auto;object-fit:contain}
+
+/* panel card - DMC two-column card, in coral ------------------------------ */
+.panel-card{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-radius:40px;background:var(--primary);color:var(--white);box-shadow:0 30px 60px var(--primary-a30);overflow:hidden}
+.panel-item{padding:56px 60px}
+.panel-item:nth-child(odd){border-right:1px solid #ffffff40}
+.panel-item:nth-child(n+3){border-top:1px solid #ffffff40}
+.panel-item h3{font-size:34px;line-height:1.2;color:var(--white)}
+.panel-item h3::after{content:"";display:block;width:54px;height:3px;margin-top:18px;background:var(--white);opacity:.7}
+.panel-item p{margin-top:24px;font-size:16px;line-height:1.8;color:var(--white)}
+.panel-item p+p{margin-top:14px}
+
+/* long article + tables (General / Cosmetic Dermatology) ------------------- */
+.pg-article{max-width:1000px;margin:0 auto}
+.pg-article-title{font-size:36px;margin-bottom:26px}
+/* a cost or fact line that the live page states up front */
+.pg-fact{
+  display:inline-block;margin-bottom:18px;padding:10px 20px;border-radius:var(--r-pill);
+  background:var(--tint);color:var(--primary-deep);font-size:15px;line-height:1.5;
+}
+.pg-intro-plain .pg-fact{margin-inline:auto}
+.pg-section-head{max-width:1000px;margin:0 auto 34px}
+.pg-lead-copy--single{columns:1;max-width:1000px}
+.pg-lead-copy--single+.check-list,.pg-lead-copy--single+.pg-cards{margin-top:34px}
+.pg-article .check-list{margin-top:8px}
+
+/* the opening passage, set like the homepage's long-form copy section */
+.pg-lead-head{max-width:1000px;margin:0 auto;text-align:center}
+.pg-lead-head .pg-title{font-size:40px;line-height:1.18}
+.pg-lead-copy{max-width:1180px;margin:0 auto;columns:2;column-gap:64px}
+.pg-lead-copy p{font-size:16px;line-height:1.85;color:var(--text)}
+.pg-lead-copy p+p{margin-top:18px}
+.table-block+.table-block{margin-top:60px}
+.table-block h2{font-size:30px;line-height:1.25;color:var(--heading);margin-bottom:22px}
+.table-wrap{overflow-x:auto;border-radius:var(--r-md);background:var(--white);box-shadow:var(--shadow-card);border:1px solid var(--border)}
+.data-table{width:100%;min-width:640px;border-collapse:collapse;font-size:15px;line-height:1.55}
+.data-table th{padding:18px 22px;background:var(--primary);color:var(--white);font-weight:400;font-size:16px;text-align:left}
+.data-table td{padding:16px 22px;border-top:1px solid var(--border);color:var(--text);vertical-align:top}
+.data-table tbody tr:nth-child(even) td{background:var(--mist)}
+.data-table td:first-child{color:var(--heading)}
+.table-note{margin-top:14px;font-size:14px;color:var(--soft)}
+
+/* FAQ answers (the list itself is in main.css) on inner pages -------------- */
+/* answers with lists or links (the FAQ pages): same type as the answer paragraphs */
+.faq-a ul,.faq-a ol{margin:10px 0;padding-left:20px}
+.faq-a ul{list-style:disc}
+.faq-a ol{list-style:decimal}
+.faq-a li{font-size:15px;line-height:1.8;color:var(--text)}
+.faq-a li+li{margin-top:4px}
+.faq-a :is(ul,ol)+p{margin-top:10px}
+.faq-a a{color:var(--primary-deep);text-decoration:underline;text-underline-offset:2px}
+/* press logos reuse the homepage press slider ----------------------------- */
+.pg-press .press-swiper{margin-top:0}
+
+/* technologies - face with hotspots + treatment videos -------------------- */
+.tech-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:center}
+.hotspot-stage{position:relative;max-width:560px;margin:0 auto;border-radius:24px;overflow:hidden;background:var(--white)}
+.hotspot-stage img{width:100%}
+.hotspot{
+  position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;padding:0;border:0;border-radius:50%;
+  display:grid;place-items:center;background:var(--primary-deep);color:var(--white);font-size:18px;line-height:1;cursor:pointer;
+  box-shadow:0 0 0 0 var(--primary-a30);animation:hotspot-pulse 2s infinite;
+}
+.hotspot:hover,.hotspot:focus-visible{background:var(--primary)}
+.hotspot-label{
+  position:absolute;bottom:calc(100% + 10px);left:50%;transform:translate(-50%,6px);padding:6px 12px;border-radius:8px;
+  background:var(--heading);color:var(--white);font-size:13px;white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .2s,transform .2s,visibility .2s;
+}
+.hotspot:hover .hotspot-label,.hotspot:focus-visible .hotspot-label{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@keyframes hotspot-pulse{0%{box-shadow:0 0 0 0 #c0553f80}70%{box-shadow:0 0 0 14px #c0553f00}100%{box-shadow:0 0 0 0 #c0553f00}}
+/* positions from drniveditadadu.com/technology (.fc-dot-pos1-8) */
+.hotspot--1{top:25.86%;left:48.19%}
+.hotspot--2{top:67.86%;left:56.19%}
+.hotspot--3{top:47.86%;left:58.19%}
+.hotspot--4{top:42.86%;left:39.19%}
+.hotspot--5{top:91.86%;left:82.19%}
+.hotspot--6{top:82.86%;left:87.19%}
+.hotspot--7{top:91.86%;left:68.19%}
+.hotspot--8{top:54.86%;left:56.19%}
+.tech-list{display:grid;gap:12px;counter-reset:tech}
+.tech-item{
+  width:100%;display:flex;align-items:center;gap:16px;padding:12px 12px 12px 14px;border:1px solid var(--border);border-radius:var(--r-pill);
+  background:var(--white);font-size:18px;color:var(--heading);text-align:left;cursor:pointer;transition:background-color .3s,color .3s,border-color .3s,box-shadow .3s;
+}
+.tech-item .ico-circle{width:40px;height:40px;font-size:15px}
+.tech-item span:nth-child(2){flex:1}
+.tech-item .tech-play{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--tint);color:var(--primary-deep);font-size:14px;transition:background-color .3s,color .3s}
+.tech-item:hover,.tech-item:focus-visible{background:var(--primary);border-color:var(--primary);color:var(--white);box-shadow:0 12px 24px var(--primary-a20)}
+.tech-item:hover .ico-circle,.tech-item:focus-visible .ico-circle{background:var(--white);color:var(--primary-deep)}
+.tech-item:hover .tech-play{background:var(--white)}
+
+.video-dialog{width:min(900px,92vw);padding:0;border:0;border-radius:24px;background:#000;overflow:visible}
+.video-dialog::backdrop{background:#000000b3}
+.video-dialog-frame{position:relative;aspect-ratio:16/9;border-radius:24px;overflow:hidden}
+.video-dialog-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-dialog-close{
+  position:absolute;top:-18px;right:-18px;z-index:1;width:44px;height:44px;border:0;border-radius:50%;
+  display:grid;place-items:center;background:var(--white);color:var(--heading);font-size:18px;cursor:pointer;box-shadow:0 8px 20px #00000040;
+}
+.video-dialog-title{position:absolute;left:0;right:0;top:calc(100% + 12px);color:var(--white);text-align:center;font-size:18px}
+
+/* responsive -------------------------------------------------------------- */
+@media (max-width:1199px){
+  .page-banner{padding-top:170px}
+  .page-banner-title{font-size:42px}
+  .pg-title,.pg-band .pg-title,.pg-feature-body .pg-title{font-size:38px}
+  .pg-rows-head .pg-title{font-size:40px}
+  .pg-intro{padding:80px 0}
+  .pg-intro-grid,.pg-media-grid{gap:32px}
+  .pg-media,.pg-rows{padding:72px 0}
+  .pg-feature-inner{padding:32px;gap:32px}
+  .pg-row{grid-template-columns:70px minmax(0,1fr);gap:14px 24px;align-items:baseline}
+  .pg-row .pg-copy{grid-column:2}
+  .pg-cards--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .panel-item{padding:44px}
+  .pg-tabs-grid{gap:40px}
+}
+
+@media (max-width:1024px){
+  .pg-intro-grid,.pg-intro-grid--noimage,.pg-media-grid,.pg-feature-inner,.pg-tabs-grid,.tech-grid{grid-template-columns:1fr}
+  .pg-media-grid--flip .pg-media-img{order:0}
+  .pg-media-img,.pg-intro-grid>:first-child{position:relative;top:auto}
+  .pg-feature-media img{aspect-ratio:16/9}
+  .pg-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pg-lead-copy{columns:1}
+  .panel-card{grid-template-columns:1fr}
+  .panel-item:nth-child(odd){border-right:0}
+  .panel-item+.panel-item{border-top:1px solid #ffffff40}
+  .affiliation-grid{grid-template-columns:repeat(7,minmax(0,1fr))}
+}
+
+@media (max-width:767px){
+  .page-banner{padding:112px 0 40px}
+  .page-banner-title{font-size:30px}
+  .breadcrumb{margin-top:14px;font-size:13px}
+  .pg-title,.pg-rows-head .pg-title,.pg-band .pg-title,.pg-feature-body .pg-title{font-size:27px}
+  .pg-title--small{font-size:21px}
+  .pg-copy p,.pg-copy li,.check-list li,.pg-band .pg-copy p,.panel-item p{font-size:15px}
+  .pg-copy h2{font-size:24px}
+  .pg-copy h3{font-size:20px}
+  .pg-head{margin-bottom:34px}
+  .pg-intro,.pg-media,.pg-rows,.pg-feature{padding:52px 0}
+  .pg-band{padding:56px 0}
+  .consult-title{font-size:24px}
+  .consult-form .field-row{flex-direction:column;gap:0}
+  .check-list--2col{grid-template-columns:1fr}
+  .pg-feature-inner{padding:20px;border-radius:24px}
+  .pg-row{grid-template-columns:52px minmax(0,1fr);gap:10px 14px;padding:26px 0}
+  .pg-row-num{font-size:26px}
+  .pg-row-title{font-size:23px}
+  .pg-cards,.pg-cards--2,.pg-cards--4{grid-template-columns:1fr;gap:18px}
+  .pg-card{padding:24px}
+  .panel-card{border-radius:28px}
+  .panel-item{padding:34px 26px}
+  .panel-item h3{font-size:26px}
+  .tab-btn{font-size:18px}
+  .timeline li{grid-template-columns:22px minmax(0,1fr);padding:20px 0}
+  .timeline-title{font-size:18px}
+  .timeline-year{grid-column:2}
+  .affiliation-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+  .table-block h2{font-size:23px}
+  .data-table{font-size:14px}
+  .pg-article-title{font-size:26px}
+  .pg-lead-head .pg-title{font-size:27px}
+  .gallery-prev,.gallery-next{width:38px;height:38px;margin-top:-19px;font-size:16px}
+  /* 19 dots would wrap on a phone; the arrows remain */
+  .gallery-pagination{display:none}
+  .tech-grid{gap:34px}
+  .tech-item{font-size:16px}
+  .video-dialog-close{top:-54px;right:0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hotspot{animation:none}
+}
+
+/* ==========================================================================
+   TREATMENT LISTING - the DMC /service layout: sticky filter sidebar with the
+   result count and category pills, and a two-column grid of treatment cards
+   with the picture set into the top right of each card.
+   ========================================================================== */
+.listing{padding:80px 0}
+.listing-grid{display:grid;grid-template-columns:minmax(0,290px) minmax(0,1fr);gap:70px;align-items:start}
+.listing-side{position:sticky;top:120px}
+.listing-count{font-size:64px;line-height:1;color:var(--heading)}
+.listing-count-label{margin-top:10px;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--soft)}
+.listing-side hr{height:1px;margin:28px 0;background:var(--border);border:0}
+.listing-side h2{font-size:24px;line-height:1.2;color:var(--heading);margin-bottom:20px}
+.filter-list{display:grid;gap:6px}
+.filter-item{
+  display:flex;align-items:center;gap:12px;padding:14px 20px;border-radius:14px;
+  font-size:15px;line-height:1.3;color:var(--text);transition:background-color .25s,color .25s;
+}
+.filter-item::before{
+  content:"";flex:none;width:9px;height:9px;border-radius:50%;
+  border:1px solid var(--line);transition:background-color .25s,border-color .25s,box-shadow .25s;
+}
+.filter-item span:first-of-type{flex:1;min-width:0}
+.filter-count{
+  flex:none;min-width:30px;padding:2px 9px;border-radius:var(--r-pill);background:var(--tint);
+  font-size:13px;text-align:center;color:var(--soft);transition:background-color .25s,color .25s;
+}
+.filter-item:hover{background:var(--mist)}
+.filter-item:hover::before{border-color:var(--primary)}
+.filter-item.is-active{background:var(--primary);color:var(--white);font-weight:700;box-shadow:0 12px 26px var(--primary-a30)}
+.filter-item.is-active::before{background:var(--white);border-color:var(--white)}
+.filter-item.is-active .filter-count{background:#ffffff33;color:var(--white)}
+.promo-card{margin-top:32px;padding:30px;border-radius:var(--r-md);background:var(--tint)}
+.promo-card h3{font-size:21px;line-height:1.25;color:var(--heading);margin-bottom:12px}
+.promo-card p{font-size:14px;line-height:1.7;color:var(--muted)}
+.promo-link{
+  display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding-bottom:4px;
+  border-bottom:1px solid var(--primary-deep);font-size:13px;font-weight:700;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--primary-deep);
+}
+.promo-link .ico{font-size:14px;transition:transform .25s}
+.promo-link:hover .ico{transform:translateX(4px)}
+
+.svc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.svc-item{
+  display:flex;flex-direction:column;padding:26px;border-radius:14px;background:var(--white);
+  border:1px solid var(--border);transition:box-shadow .3s,transform .3s var(--ease),border-color .3s;
+}
+.svc-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:var(--line)}
+.svc-item-head{display:flex;gap:18px;align-items:flex-start}
+.svc-item-title{flex:1;min-width:0;font-size:20px;line-height:1.3;color:var(--heading)}
+.svc-item-media{flex:none;width:180px;border-radius:12px;overflow:hidden;background:var(--mist)}
+.svc-item-media img{width:100%;aspect-ratio:180/135;object-fit:cover}
+.svc-item-text{margin-top:14px;font-size:14px;line-height:1.65;color:var(--muted)}
+.svc-item .btn-view{
+  align-self:flex-start;margin-top:22px;padding:11px 20px;border:1px solid var(--line);border-radius:8px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--heading);
+  transition:background-color .3s,color .3s,border-color .3s;
+}
+.svc-item:hover .btn-view{background:var(--primary);border-color:var(--primary);color:var(--white)}
+
+@media (max-width:1199px){
+  .listing{padding:64px 0}
+  .listing-grid{grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:36px}
+  .listing-count{font-size:52px}
+  .svc-list{gap:22px}
+  .svc-item{padding:22px}
+  .svc-item-title{font-size:20px}
+  .svc-item-media{width:136px}
+}
+
+@media (max-width:1024px){
+  .listing-grid{grid-template-columns:1fr;gap:34px}
+  .listing-side{position:relative;top:auto}
+  .filter-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .promo-card{margin-top:24px}
+}
+
+@media (max-width:767px){
+  .listing{padding:48px 0}
+  .listing-count{font-size:44px}
+  .filter-list{grid-template-columns:1fr}
+  .filter-item{padding:12px 16px;font-size:14px}
+  .svc-list{grid-template-columns:1fr}
+  .svc-item-media{width:112px}
+  .svc-item-title{font-size:19px}
+  .svc-item-text{font-size:14px}
+}
+
+/* ==========================================================================
+   TREATMENT PAGES - DMC treatment page (dmctrichology.com/dmc-mesotherapy),
+   measured at 1440px: brand banner 54/65 white; section headings 30px left;
+   body 15/26; image + text row 598 + 629 gap 56 (image r28); brand band
+   666 + 546 gap 70 (image r28); tinted card box with a brand heading bar;
+   step cards on tint; before/after cards side by side; numbered FAQ
+   accordion (780) beside a brand enquiry card (390), gap 112.
+   ========================================================================== */
+.page-banner--brand{background:var(--primary)}
+.page-banner--brand .page-banner-title{color:var(--white);font-size:54px;line-height:1.2}
+.page-banner--brand .breadcrumb,.page-banner--brand .breadcrumb a{color:#ffffffcc}
+.page-banner--brand .breadcrumb li+li::before{color:#ffffff99}
+.page-banner--brand .breadcrumb [aria-current]{color:var(--white)}
+.page-banner--brand .breadcrumb a:hover{color:var(--white)}
+
+.tp{padding:72px 0}
+.tp--tint{background:var(--tint)}
+.tp--white{background:var(--white)}
+.tp-title{font-size:30px;line-height:1.25;color:var(--heading);margin-bottom:22px}
+.tp-text p{font-size:15px;line-height:1.75;color:var(--text)}
+.tp-text p+p{margin-top:14px}
+.tp-text a{color:var(--primary-deep);text-decoration:underline;text-underline-offset:2px}
+.tp-text strong{font-weight:700}
+.tp-bullets{display:grid;gap:12px;margin-top:6px}
+.tp-bullets li{position:relative;padding-left:22px;font-size:15px;line-height:1.7;color:var(--text)}
+.tp-bullets li::before{content:"";position:absolute;left:4px;top:.72em;width:6px;height:6px;border-radius:50%;background:currentColor}
+.tp-text+.tp-bullets{margin-top:18px}
+.tp-narrow{max-width:1000px}
+
+/* image + text row */
+.tp-media{display:grid;grid-template-columns:minmax(0,598fr) minmax(0,629fr);gap:56px;align-items:center}
+.tp-media--flip .tp-media-img{order:2}
+.tp-media-img{border-radius:28px;overflow:hidden}
+.tp-media-img img{width:100%;aspect-ratio:598/400;object-fit:cover}
+
+/* brand band: heading + bullets on coral, picture on the right */
+.tp-band{padding:48px 0;background:var(--primary);color:var(--white)}
+.tp-band-grid{display:grid;grid-template-columns:minmax(0,666fr) minmax(0,546fr);gap:70px;align-items:center}
+.tp-band .tp-title{color:var(--white)}
+.tp-band .tp-text p,.tp-band .tp-bullets li{color:var(--white)}
+.tp-band .tp-text a{color:var(--white)}
+.tp-band-img{border-radius:28px;overflow:hidden}
+.tp-band-img img{width:100%;aspect-ratio:1/1;object-fit:cover}
+
+/* tinted box with a white card carrying a brand heading bar */
+.tp-box{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px;align-items:center;padding:40px 36px;background:var(--tint)}
+.tp-card{padding:20px 22px 26px;background:var(--white)}
+.tp-card-bar{margin:0 0 22px;padding:12px 20px;background:var(--primary);color:var(--white);font-size:28px;line-height:1.2;text-align:center}
+.tp-box-side{text-align:center}
+.tp-box-side img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px}
+.tp-box-side .btn{margin-top:22px}
+
+/* step cards */
+.tp-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.tp-step{padding:26px 22px;background:var(--white);text-align:center}
+.tp-step h3{font-size:20px;line-height:1.3;color:var(--heading);margin-bottom:10px}
+.tp-step p{font-size:14px;line-height:1.6;color:var(--muted)}
+
+/* two lists side by side (before / after, causes / symptoms) */
+.tp-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:36px 22px;background:var(--tint)}
+.tp-pair-col .tp-title{padding:0 0 0 0}
+.tp-pair-card{height:calc(100% - 52px);padding:28px 36px;background:var(--white)}
+
+/* tables */
+.tp .table-wrap{margin-top:6px}
+.tp .table-note{margin-top:12px}
+
+/* FAQ accordion + enquiry card */
+.tp-faq{display:grid;grid-template-columns:minmax(0,780fr) minmax(0,390fr);gap:112px;align-items:start}
+.tp-faq-intro{margin-bottom:26px}
+.faq-item{border-bottom:1px solid #d9d9d9}
+.faq-item summary{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;cursor:pointer;list-style:none;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary h3{font-size:20px;line-height:1.35;color:var(--heading)}
+.faq-item summary::after{content:"+";flex:none;font-size:22px;line-height:1;color:var(--soft);transition:transform .2s}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item .faq-answer{padding:0 40px 22px 0}
+.faq-item .faq-answer p{font-size:15px;line-height:1.75;color:var(--text)}
+.enquiry-card{position:sticky;top:120px;padding:44px 44px 48px;border-radius:40px;background:var(--primary);color:var(--white)}
+.enquiry-card h2{font-size:22px;line-height:1.3;text-align:center;margin-bottom:24px;color:var(--white)}
+.enquiry-card .field-input{background:var(--white);border-color:var(--white);border-radius:var(--r-pill)}
+.enquiry-card select.field-input{height:50px}
+.enquiry-card .submit-btn{background:transparent;border:1px solid var(--white);height:52px;font-size:16px}
+.enquiry-card .submit-btn:hover{background:var(--white);color:var(--primary-deep)}
+.enquiry-card .consent{color:#ffffffcc}
+.enquiry-card .consent a{color:var(--white)}
+.enquiry-card .form-status{color:var(--white)}
+
+@media (max-width:1199px){
+  .page-banner--brand .page-banner-title{font-size:44px}
+  .tp{padding:60px 0}
+  .tp-media,.tp-band-grid,.tp-box{gap:36px}
+  .tp-faq{gap:48px}
+  .enquiry-card{padding:36px 30px}
+}
+@media (max-width:1024px){
+  .tp-media,.tp-band-grid,.tp-box,.tp-faq,.tp-pair{grid-template-columns:1fr}
+  .tp-media--flip .tp-media-img{order:0}
+  .enquiry-card{position:relative;top:auto}
+  .tp-pair-card{height:auto}
+}
+@media (max-width:767px){
+  .page-banner--brand .page-banner-title{font-size:30px}
+  .tp{padding:44px 0}
+  .tp-title{font-size:24px}
+  .tp-card-bar{font-size:22px}
+  .tp-box{padding:24px 16px}
+  .tp-pair{padding:20px 12px}
+  .tp-pair-card{padding:22px 20px}
+  .faq-item summary h3{font-size:17px}
+  .faq-item .faq-answer{padding-right:0}
+  .enquiry-card{padding:30px 22px;border-radius:28px}
+}
+
+/* treatment-page intro: DMC sets the treatment title at 30px beside the photo */
+.pg-intro--tp{padding:80px 0;background:var(--white)}
+.pg-intro--tp .pg-title{font-size:32px;line-height:1.25}
+.pg-intro--tp .pg-copy p{font-size:15px;line-height:1.75}
+.pg-intro--tp .consult-title{font-size:26px;text-align:center}
+.pg-intro--tp .pg-intro-media img{aspect-ratio:540/405}
+@media (max-width:767px){
+  .pg-intro--tp{padding:44px 0}
+  .pg-intro--tp .pg-title{font-size:25px}
+}
+
+/* long copy beside a picture: the picture stays in view instead of floating mid-column */
+.tp-media,.tp-band-grid{align-items:start}
+.tp-media-img,.tp-band-img{position:sticky;top:120px}
+/* text and tables share one centred reading column */
+.container.tp-narrow{max-width:calc(1000px + 2 * var(--section-px))}
+.tp-more .svc-list{margin-top:6px}
+@media (max-width:1024px){
+  .tp-media-img,.tp-band-img{position:relative;top:auto}
+}
+
+/* ==========================================================================
+   TREATMENT TABLES AS CARDS - the live pages' tables re-presented in the
+   approved About Us card language (pg-card / pg-row): price cards, info
+   cards with labelled lines, and numbered process rows.
+   ========================================================================== */
+.tp-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.tp-cards .pg-card{gap:0;padding:28px}
+.tp-cards .pg-card h3{margin-bottom:16px}
+.kv{padding:12px 0;border-top:1px solid var(--border)}
+.kv:first-of-type{border-top:0;padding-top:0}
+.kv-label{display:block;margin-bottom:4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--primary-deep)}
+.kv-value{display:block;font-size:15px;line-height:1.6;color:var(--text)}
+.kv--price .kv-value{font-size:24px;line-height:1.3;color:var(--primary-deep)}
+.tp-cards-note{margin-top:20px;font-size:14px;color:var(--soft)}
+.tp-intro-text{max-width:900px;margin-bottom:30px}
+.tp .pg-rows-list{margin-top:8px}
+.tp .pg-row .pg-copy .kv{padding:0;border:0}
+.tp .pg-row .pg-copy .kv+.kv{margin-top:12px}
+
+
+
+/* listing: the first cards show, the rest open with "View all" (all are in the HTML) */
+.svc-more-wrap{display:none;justify-content:center;margin-top:40px}
+.js .svc-list.is-collapsed .svc-item.is-more,.js .svc-list.is-collapsed .lst-card.is-more{display:none}
+.js .svc-list.is-collapsed+.svc-more-wrap{display:flex}
+
+/* /treatments/: the live page's range descriptions, as cards */
+.range-head{max-width:1000px;margin-bottom:44px}
+.range-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.range-card{
+  display:flex;flex-direction:column;padding:28px;border-radius:var(--r-md);background:var(--white);
+  border:1px solid var(--border);box-shadow:var(--shadow-card);transition:transform .35s var(--ease),box-shadow .35s;
+}
+.range-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift)}
+.range-card h3{font-size:22px;line-height:1.3;color:var(--heading);margin-bottom:12px}
+.range-card p{flex:1;font-size:14px;line-height:1.7;color:var(--muted)}
+.range-link{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:14px;font-weight:700;color:var(--primary-deep)}
+.range-link .btn-arrow{width:32px;height:32px;background:var(--primary);color:var(--white)}
+.range-card:hover .range-link .btn-arrow{transform:rotate(45deg)}
+@media (max-width:1199px){.range-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:767px){.range-grid{grid-template-columns:1fr}.range-card{padding:22px}}
+
+/* conditions: filter pills are buttons (they filter in place) - same look as the links */
+button.filter-item{width:100%;border:0;background:transparent;font-family:inherit;text-align:left;cursor:pointer}
+button.filter-item.is-active{background:var(--primary)}
+[data-filterable] .svc-list{scroll-margin-top:130px}
+.svc-item[hidden]{display:none}
+
+/* ==========================================================================
+   GALLERY PAGES - DMC Trichology, measured in the browser:
+   /clinic-gallery/ = DMC /virtual-tour: section 78/96, grid 4 cols x 180px rows, gap 18,
+                      tile radius 18, shadow 0 16 34 #11111114, tiles small / wide (2 cols) / tall (2 rows)
+   /video/          = DMC /influencers: 4 cols, gap 42 (rows) 26 (cols), card 350px high, radius 30
+   /results/        = DMC /results card: padding 14 14 16, radius 20, tint, photo radius 12;
+                      inside the /service listing layout (3 cols in the listing column)
+   ========================================================================== */
+.vt-section,.vg-section{padding:78px 0 96px}
+.vt-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:180px;grid-auto-flow:dense;gap:18px}
+.vt-tile{
+  position:relative;display:block;overflow:hidden;border-radius:18px;background:var(--mist);
+  box-shadow:0 16px 34px #11111114;
+}
+.vt-tile--wide{grid-column:span 2}
+.vt-tile--tall{grid-row:span 2}
+.vt-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.vt-tile:hover img{transform:scale(1.05)}
+
+.vg-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:42px 26px}
+.vg-grid .vcard{height:350px;margin:0;box-shadow:0 20px 44px #11111117}
+.vg-grid .vcard.is-playing{height:350px;margin:0}
+/* YouTube's hqdefault.jpg is 4:3 with black bars (12.5% top and bottom) - crop them off */
+.vg-grid .vcard>img{top:-17%;bottom:auto;height:134%}
+.vg-grid .vcard-title{font-size:18px;text-shadow:0 1px 10px #0009}
+/* the gallery cards are smaller than the homepage's and sit over unpredictable video
+   thumbnails, so the title's end of the scrim is deeper - the title has to stay readable */
+.vg-grid .vcard::before{background:linear-gradient(#000000a6 0%,#0000004d 30%,#0000 50%,#00000066 100%)}
+
+.rr-note{margin-bottom:22px;font-size:14px;color:var(--soft)}
+.rr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;scroll-margin-top:130px}
+.rr-card{
+  display:flex;flex-direction:column;padding:14px 14px 16px;border-radius:20px;background:var(--tint);
+  box-shadow:0 16px 34px var(--primary-a15);transition:transform .35s var(--ease),box-shadow .35s;
+}
+.rr-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift)}
+.rr-media{display:block;overflow:hidden;border-radius:12px;background:var(--white)}
+.rr-media img{width:100%;aspect-ratio:1200/638;object-fit:cover;transition:transform .6s var(--ease)}
+.rr-card:hover .rr-media img{transform:scale(1.04)}
+.rr-label{margin-top:12px;padding:0 4px;font-size:14px;font-weight:700;color:var(--heading)}
+
+.vg-grid>[hidden],.rr-grid>[hidden]{display:none}
+.gal-more-wrap{display:flex;justify-content:center;margin-top:48px}
+.gal-more[hidden]{display:none}
+
+/* photo viewer (clinic gallery and results), same frame as the video dialog */
+.image-dialog{width:fit-content;max-width:92vw;background:transparent}
+.image-dialog-frame{overflow:hidden;border-radius:18px;background:#000}
+.image-dialog-frame img{display:block;width:min(1000px,86vw);height:auto;max-height:78vh;object-fit:contain}
+.image-dialog-nav{
+  position:absolute;top:50%;z-index:1;width:48px;height:48px;margin-top:-24px;border:0;border-radius:50%;
+  display:grid;place-items:center;background:var(--white);color:var(--heading);font-size:16px;cursor:pointer;
+  box-shadow:0 8px 20px #00000040;transition:background-color .25s,color .25s;
+}
+.image-dialog-nav:hover{background:var(--primary);color:var(--white)}
+.image-dialog-prev{left:-68px}
+.image-dialog-next{right:-68px}
+.image-dialog[data-single] .image-dialog-nav{display:none}
+
+@media (max-width:1199px){
+  .vg-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 22px}
+  .rr-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+}
+@media (max-width:1024px){
+  .vt-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .image-dialog-prev{left:10px}
+  .image-dialog-next{right:10px}
+  .image-dialog-nav{background:#ffffffd9}
+}
+@media (max-width:767px){
+  .vt-section,.vg-section{padding:48px 0 64px}
+  .vt-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:140px;gap:12px}
+  .vt-tile{border-radius:14px}
+  .vg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
+  .vg-grid .vcard,.vg-grid .vcard.is-playing{height:260px;border-radius:20px}
+  .vg-grid .vcard-title{top:14px;left:12px;right:12px;font-size:14px}
+  .rr-grid{grid-template-columns:1fr;gap:16px}
+  .rr-card{padding:10px 10px 14px;border-radius:16px}
+  .gal-more-wrap{margin-top:32px}
+  .image-dialog-nav{width:40px;height:40px;margin-top:-20px}
+}
+
+/* ==========================================================================
+   BLOG - DMC Trichology /blog, measured in the browser:
+   section 100/100; main 863px (2 cards, gap 30) + sidebar 380px; card padding 25, radius 40,
+   tint; photo 364x280 radius 30 with a date pill (13px, 6/20, radius 30); author 16px;
+   title 22/30.8 (mb 12); excerpt 16/25.6 #666 (mb 20); "Read More" 14px/600 underlined;
+   pagination 44px circles (1px border), active filled; sidebar panel padding 40/30, radius 40,
+   heading 32px (mb 25). Sidebar content = the live /blog/ sidebar.
+   ========================================================================== */
+.blog-listing{padding:100px 0}
+.blog-layout{display:grid;grid-template-columns:minmax(0,863fr) minmax(0,380fr);gap:40px;align-items:start}
+.blog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;scroll-margin-top:130px}
+.blog-grid>[hidden]{display:none}
+.blog-card{
+  display:flex;flex-direction:column;padding:25px;border-radius:40px;background:var(--tint);
+  border:1px solid #0000000d;transition:transform .35s var(--ease),box-shadow .35s;
+}
+.blog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift)}
+.blog-card-media{position:relative;display:block;overflow:hidden;border-radius:30px;background:var(--mist)}
+.blog-card-media img{width:100%;aspect-ratio:364/280;object-fit:cover;transition:transform .6s var(--ease)}
+.blog-card:hover .blog-card-media img{transform:scale(1.04)}
+.blog-card-date{
+  position:absolute;top:20px;left:20px;padding:6px 20px;border-radius:30px;
+  background:var(--primary-deep);color:var(--white);font-family:var(--font-display);font-size:13px;line-height:1.3;
+}
+.blog-card-author{margin-top:22px;font-family:var(--font-display);font-size:16px;color:var(--heading)}
+.blog-card-title{margin:12px 0;font-size:22px;line-height:1.4;color:var(--heading);text-wrap:wrap}
+.blog-card-title a{transition:color .25s}
+.blog-card-title a:hover{color:var(--primary-deep)}
+.blog-card-text{flex:1;margin-bottom:20px;font-size:16px;line-height:1.6;color:var(--soft)}
+.blog-card-more{
+  align-self:flex-start;font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--heading);
+  text-decoration:underline;text-underline-offset:3px;transition:color .25s;
+}
+.blog-card-more:hover{color:var(--primary-deep)}
+
+.blog-pagination{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:50px}
+.blog-pagination[hidden]{display:none}
+.blog-page{
+  min-width:44px;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:var(--r-pill);
+  background:var(--white);color:var(--primary-deep);font-family:var(--font-display);font-size:14px;font-weight:700;
+  cursor:pointer;transition:background-color .25s,color .25s,border-color .25s;
+}
+.blog-page--step{padding:0 20px}
+.blog-page:hover:not(:disabled){border-color:var(--primary);background:var(--tint)}
+.blog-page[aria-current]{background:var(--primary);border-color:var(--primary);color:var(--white)}
+.blog-page:disabled{opacity:.45;cursor:default}
+.blog-page-gap{align-self:center;min-width:20px;text-align:center;color:var(--soft)}
+
+.blog-side{display:grid;gap:30px}
+.blog-enquiry.enquiry-card{position:relative;top:auto}
+.blog-latest{padding:40px 30px;border-radius:40px;background:var(--tint)}
+.blog-side-title{margin-bottom:25px;font-size:32px;line-height:1.2;color:var(--heading)}
+.blog-latest-item{display:grid;grid-template-columns:80px minmax(0,1fr);gap:15px;align-items:start;padding:20px 0;border-top:1px solid var(--line)}
+.blog-latest-item:first-child{padding-top:0;border-top:0}
+.blog-latest-item:last-child{padding-bottom:0}
+.blog-latest-media{display:block;overflow:hidden;border-radius:12px}
+.blog-latest-media img{width:80px;height:80px;object-fit:cover}
+.blog-latest-title{font-family:var(--font-display);font-size:18px;line-height:1.3;color:var(--heading);transition:color .25s}
+.blog-latest-title:hover{color:var(--primary-deep)}
+.blog-latest-date{margin-top:6px;font-size:13px;color:var(--soft)}
+
+@media (max-width:1199px){
+  .blog-listing{padding:80px 0}
+  .blog-layout{grid-template-columns:minmax(0,1fr) minmax(0,320px);gap:30px}
+  .blog-grid{gap:22px}
+  .blog-card{padding:20px;border-radius:30px}
+  .blog-card-media{border-radius:22px}
+  .blog-card-title{font-size:20px}
+  .blog-latest{padding:32px 24px;border-radius:30px}
+  .blog-side-title{font-size:28px}
+}
+@media (max-width:1024px){
+  .blog-layout{grid-template-columns:1fr;gap:50px}
+  .blog-side{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+}
+@media (max-width:767px){
+  .blog-listing{padding:56px 0}
+  .blog-grid{grid-template-columns:1fr;gap:20px}
+  .blog-card{padding:16px 16px 22px;border-radius:28px}
+  .blog-card-media{border-radius:20px}
+  .blog-card-date{top:14px;left:14px;padding:5px 14px}
+  .blog-card-author{margin-top:18px;padding:0 4px}
+  .blog-card-title,.blog-card-text,.blog-card-more{margin-left:4px;margin-right:4px}
+  .blog-card-title{font-size:20px}
+  .blog-card-text{font-size:15px}
+  .blog-pagination{gap:6px;margin-top:36px}
+  .blog-page{min-width:38px;height:38px;padding:0 8px;font-size:13px}
+  .blog-page--step{padding:0 12px}
+  .blog-side{grid-template-columns:1fr;gap:24px}
+  .blog-latest{padding:28px 20px;border-radius:28px}
+  .blog-side-title{font-size:26px}
+}
+
+/* HEALTH TIPS - the blog layout above; each tip is a square infographic shown whole, and the
+   live description opens with "Show More / Show Less" (all of it shows without JavaScript) */
+.tip-media img{aspect-ratio:1/1;object-fit:contain;background:var(--white)}
+.tip-card:hover .tip-media img{transform:none}
+.tip-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.tip-meta span:first-child{padding:4px 14px;border-radius:30px;background:var(--primary-deep);color:var(--white);font-size:13px}
+.tip-card .blog-card-title{margin-bottom:0}
+.tip-text{margin-top:12px;font-size:16px;line-height:1.6;color:var(--soft)}
+.tip-text p+p{margin-top:10px}
+.js .tip-text:not(.is-open){max-height:calc(3 * 1.6em);overflow:hidden;-webkit-mask-image:linear-gradient(#000 55%,#0000);mask-image:linear-gradient(#000 55%,#0000)}
+.tip-more{
+  align-self:flex-start;margin-top:14px;padding:0;border:0;background:none;cursor:pointer;
+  font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--heading);
+  text-decoration:underline;text-underline-offset:3px;transition:color .25s;
+}
+.tip-more:hover{color:var(--primary-deep)}
+.tip-more[hidden]{display:none}
+@media (max-width:767px){.tip-text{margin-inline:4px;font-size:15px}.tip-more{margin-inline:4px}}
+
+/* FAQs - /faqs/: the live topic cards in the blog card style, 3 a row */
+.faq-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.faq-topic .blog-card-title{margin-top:22px;margin-bottom:6px}
+.faq-topic-count{flex:1;margin-bottom:20px;font-size:14px;color:var(--soft)}
+@media (max-width:1024px){.faq-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
+@media (max-width:767px){.faq-topic-grid{grid-template-columns:1fr;gap:20px}.faq-topic-count{margin-inline:4px}}
+
+/* ==========================================================================
+   TESTIMONIALS - DMC Trichology /clients-feedback, measured: section 88/96; 3 cards a row,
+   gap 40; card radius 30, tint, shadow 0 18 38; 58px circle; text 14/20.7 centred; brand bar
+   with the name 22px (mb 8) and the 10px note. Here the circle holds the patient's photo and
+   the bar carries the live date, source and rating.
+   Video testimonials - the /video/ grid with DMC's pill tabs (dmctrichology.com/faqs:
+   a 1px-bordered pill, buttons 38px high, radius 999, active filled, 14px).
+   ========================================================================== */
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.cf-section{padding:88px 0 96px}
+.cf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;scroll-margin-top:130px}
+.cf-grid>[hidden]{display:none}
+.cf-card{
+  display:flex;flex-direction:column;overflow:hidden;border-radius:30px;background:var(--tint);
+  box-shadow:0 18px 38px var(--primary-a15);outline:0;
+}
+.cf-body{flex:1;display:flex;flex-direction:column;align-items:center;padding:32px 28px 26px;text-align:center}
+.cf-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:3px solid var(--white);box-shadow:0 8px 18px var(--primary-a20)}
+.cf-treatment{margin-top:14px;font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--primary-deep)}
+.cf-text{margin-top:12px;font-size:14px;line-height:1.48;color:var(--text)}
+.cf-text p+p{margin-top:8px}
+.js .cf-text:not(.is-open){max-height:calc(9 * 1.48em);overflow:hidden}
+/* the fade only where a review is actually cut short (pages.js marks it) */
+.js .cf-text.is-cut:not(.is-open){-webkit-mask-image:linear-gradient(#000 70%,#0000);mask-image:linear-gradient(#000 70%,#0000)}
+.cf-more{align-self:center}
+/* the doctor page's "Ratings and Reviews": the same card without a patient photo */
+.cf-card--review .cf-treatment{margin-top:0}
+.cf-card--review .cf-body{padding-top:28px}
+.cf-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:22px 24px;background:var(--primary);color:var(--white)}
+.cf-name{font-size:22px;line-height:1.2;color:var(--white);margin-bottom:6px}
+.cf-meta{font-size:13px;color:var(--white)}
+.cf-note{margin-top:2px;font-size:10px;line-height:1.25;color:#ffffffe6}
+.cf-rating{flex:none;font-size:15px;font-weight:700;color:var(--white)}
+.cf-rating span[aria-hidden]{color:#ffd76a}
+
+.pill-tabs-wrap{display:flex;justify-content:center;margin-bottom:22px}
+.pill-tabs{display:flex;max-width:100%;overflow-x:auto;scrollbar-width:none;padding:0;border:1px solid #111111b8;border-radius:var(--r-pill);background:var(--white)}
+.pill-tabs::-webkit-scrollbar{display:none}
+.pill-tab{
+  flex:none;height:38px;padding:0 20px;border:0;border-radius:var(--r-pill);background:transparent;
+  font-family:inherit;font-size:14px;color:var(--heading);cursor:pointer;transition:background-color .25s,color .25s;
+}
+.pill-tab:hover{color:var(--primary-deep)}
+.pill-tab.is-active{background:var(--primary);color:var(--white)}
+.vg-note{margin-bottom:34px;text-align:center;font-size:13px;color:var(--soft)}
+
+@media (max-width:1199px){.cf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}}
+@media (max-width:767px){
+  .cf-section{padding:56px 0 64px}
+  .cf-grid{grid-template-columns:1fr;gap:20px}
+  .cf-body{padding:26px 20px 20px}
+  .cf-bottom{padding:18px 20px}
+  .cf-name{font-size:20px}
+  .pill-tabs-wrap{justify-content:flex-start}
+  .pill-tab{padding:0 16px;font-size:13px}
+}
+
+/* "Celebrity Dermatologist in Delhi" (Dr. Nivedita Dadu page) - the client's design:
+   kicker with a rule, two-tone heading, highlights row, photo with a vertical tag list */
+.pg-feature-row .pg-media-grid{align-items:center}
+.pg-feature-row-kicker{display:flex;align-items:center;gap:18px;margin-bottom:26px;font-size:12px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;color:var(--primary-deep)}
+.pg-feature-row-kicker::after{content:"";flex:0 1 120px;min-width:24px;height:1px;background:var(--primary-deep);opacity:.5}
+.pg-feature-row-title{font-size:56px;line-height:1.1}
+.pg-feature-row-title span{display:block;color:var(--primary-deep)}
+.pg-feature-row .pg-media-body .pg-title+.pg-copy{margin-top:30px}
+.pg-feature-row .pg-copy>*+*{margin-top:16px}
+.pg-feature-row-stats{display:flex;align-items:center;margin-top:36px}
+.pg-feature-row-stats li{padding:0 34px;border-left:1px solid var(--line);font-size:17px;line-height:1.45;color:var(--heading)}
+.pg-feature-row-stats li:first-child{padding-left:36px;border-left-color:var(--primary-deep)}
+.pg-feature-row-stats li:not(:first-child){max-width:210px}
+.pg-feature-row-stats strong{display:block;font-family:var(--font-display);font-size:44px;line-height:1;font-weight:400;color:var(--heading)}
+.pg-feature-row-stats span{display:block;margin-top:6px;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:var(--primary-deep)}
+.pg-feature-row-img img{aspect-ratio:3/2;object-position:30% 50%}
+.pg-feature-row-tags{
+  position:absolute;top:18px;right:24px;display:grid;justify-items:center;gap:3px;padding-bottom:12px;
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#fff7ef;text-shadow:0 1px 8px #0000004d;
+}
+.pg-feature-row-tags::after{content:"";position:absolute;bottom:0;left:50%;width:56px;height:1px;margin-left:-28px;background:#fff7efb3}
+@media (max-width:1439px){.pg-feature-row-title{font-size:48px}}
+@media (max-width:1199px){
+  .pg-feature-row-title{font-size:42px}
+  .pg-feature-row-stats li{padding:0 22px;font-size:15px}
+  .pg-feature-row-stats li:first-child{padding-left:24px}
+  .pg-feature-row-stats strong{font-size:38px}
+}
+@media (max-width:767px){
+  .pg-feature-row-kicker{font-size:11px;letter-spacing:1.4px;gap:12px;white-space:normal}
+  .pg-feature-row-kicker::after{display:none}
+  .pg-feature-row-title{font-size:32px}
+  .pg-feature-row-stats{flex-wrap:wrap;gap:18px 0}
+  .pg-feature-row-stats li{padding:0 16px;font-size:14px}
+  .pg-feature-row-stats li:first-child{flex-basis:100%;padding-left:18px}
+  .pg-feature-row-stats li:nth-child(2){padding-left:0;border-left:0}
+  .pg-feature-row-stats li:not(:first-child){flex:1 1 0;max-width:none}
+  .pg-feature-row-tags{top:10px;right:12px;gap:1px;padding-bottom:8px;font-size:9px;letter-spacing:1.8px}
+  .pg-feature-row-tags::after{width:44px;margin-left:-22px}
+}
+
+/* "Lip Plumping Treatment By A Dermatologist" - the client's "Modern Framed" design: text,
+   the photo in an outlined frame, and a vertical word list with a short rule (shares the
+   kicker / two-tone heading of .pg-feature-row) */
+.pg-framed-row-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr) auto;gap:64px;align-items:center}
+.pg-framed-row .pg-media-body .pg-title+.pg-copy{margin-top:30px}
+.pg-framed-row-img{position:relative;padding:14px}
+.pg-framed-row-img::before{content:"";position:absolute;inset:0;border:1px solid var(--line);border-radius:34px}
+.pg-framed-row-photo{position:relative;overflow:hidden;border-radius:24px;box-shadow:0 20px 40px #c0553f1f}
+.pg-framed-row-photo img{width:100%;aspect-ratio:1.18/1;object-fit:cover;object-position:29% 50%}
+.pg-framed-row-tags{
+  position:relative;display:grid;justify-items:end;gap:12px;padding-bottom:22px;
+  font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--primary-deep);
+}
+.pg-framed-row-tags::after{content:"";position:absolute;bottom:0;right:0;width:56px;height:1px;background:var(--primary-deep);opacity:.5}
+@media (max-width:1199px){
+  .pg-framed-row-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px}
+  .pg-framed-row-tags{grid-column:1/-1;display:flex;justify-content:flex-end;gap:28px;padding-bottom:0}
+  .pg-framed-row-tags::after{display:none}
+}
+@media (max-width:1024px){
+  .pg-framed-row-grid{grid-template-columns:1fr;gap:30px}
+  .pg-framed-row-img{order:-1;max-width:560px;width:100%;margin:0 auto}
+  .pg-framed-row-tags{order:-1;justify-content:center;margin-top:-6px}
+}
+@media (max-width:767px){
+  .pg-framed-row-img{padding:10px}
+  .pg-framed-row-img::before{border-radius:26px}
+  .pg-framed-row-photo{border-radius:18px}
+  .pg-framed-row-tags{gap:18px;font-size:11px;letter-spacing:2px}
+}
+.pg-framed-row-title{font-size:48px}
+@media (max-width:1199px){.pg-framed-row-title{font-size:42px}}
+@media (max-width:767px){.pg-framed-row-title{font-size:32px}}
+
+/* "Best Skin Treatment Clinic in Delhi" (About Clinic) - DMC "Patient Testimonials" panel:
+   rounded brand-colour panel inside the container (radius 40), centred heading and copy */
+.pg-center-panel-wrap{padding:90px 0}
+.pg-center-panel{
+  position:relative;overflow:hidden;padding:80px clamp(24px,8vw,130px);border-radius:40px;
+  background:var(--primary);text-align:center;box-shadow:0 24px 50px var(--primary-a20);
+}
+.pg-center-panel::before{content:"";position:absolute;top:-120px;right:-120px;width:340px;height:340px;border-radius:50%;background:#ffffff14}
+.pg-center-panel::after{content:"";position:absolute;bottom:-150px;left:-100px;width:300px;height:300px;border-radius:50%;background:#ffffff0f}
+.pg-center-panel .pg-title{position:relative;font-size:44px;line-height:1.15;color:var(--white)}
+.pg-center-panel .pg-copy{position:relative;max-width:980px;margin:26px auto 0}
+.pg-center-panel .pg-copy>*+*{margin-top:18px}
+.pg-center-panel .pg-copy p{font-size:16px;line-height:1.85;color:var(--white)}
+@media (max-width:1199px){.pg-center-panel .pg-title{font-size:38px}}
+@media (max-width:767px){
+  .pg-center-panel-wrap{padding:56px 0}
+  .pg-center-panel{padding:48px 20px;border-radius:28px}
+  .pg-center-panel .pg-title{font-size:30px}
+  .pg-center-panel .pg-copy p{font-size:15px}
+}
+
+/* General Dermatology opening - masthead: long heading, copy in three
+   columns (the only three-column text on the site) */
+.pg-mast{padding:84px 0;background:var(--tint)}
+.pg-mast-title{max-width:1080px;font-size:46px;line-height:1.14}
+.pg-mast-copy{columns:3;column-gap:48px;column-rule:1px solid var(--line);margin-top:59px}
+.pg-mast-copy p{font-size:15px;line-height:1.8}
+.pg-mast-copy p+p{margin-top:14px}
+@media (max-width:1199px){
+  .pg-mast-title{font-size:38px}
+  .pg-mast-copy{columns:2;column-gap:40px}
+}
+@media (max-width:767px){
+  .pg-mast{padding:52px 0}
+  .pg-mast-title{font-size:29px}
+  .pg-mast-copy{columns:1;column-rule:0;margin-top:45px}
+}
+
+/* "Inside a consultation" (General Dermatology) - DMC treatment-page box (.tp-box) */
+.pg-consult-box .tp-card{padding:24px 28px 30px;border-radius:24px}
+.pg-consult-box .tp-card-bar{border-radius:14px}
+.pg-consult-box .tp-box{border-radius:32px;align-items:start}
+.pg-consult-box .tp-box-side{position:sticky;top:120px}
+.pg-consult-box .tp-box-side img{object-position:62% 50%}
+.pg-consult-box .pg-copy>*+*{margin-top:16px}
+.pg-consult-box .pg-copy p{font-size:15px;line-height:1.8}
+@media (max-width:1024px){.pg-consult-box .tp-box-side{position:relative;top:auto}}
+@media (max-width:767px){.pg-consult-box .tp-box{padding:14px 10px;border-radius:24px}.pg-consult-box .tp-card{padding:16px 14px 22px;border-radius:18px}}
+
+/* Cosmetic Dermatology opening - heading + sub, a wide photo band at the picture's own 4:1
+   shape, then the copy in two columns (about half the height of the old full-length band) */
+.pg-open{padding:84px 0 52px;background:var(--tint)}
+.pg-open-head{max-width:1000px}
+.pg-open-title{font-size:48px;line-height:1.1}
+.pg-open-sub{margin-top:12px;font-family:var(--font-display);font-size:24px;line-height:1.35;color:var(--primary-deep)}
+.pg-open-photo{margin:34px 0 0;overflow:hidden;border-radius:28px;box-shadow:0 20px 40px #c0553f1f}
+.pg-open-photo img{width:100%;aspect-ratio:1600/400;object-fit:cover;object-position:50% 42%}
+/* the left column is wider by the ratio of the word counts (115 left, 95 right), so the two
+   columns end within half a line of each other at every width from 1024px up (re-measured for
+   the Lato body face: 1.25 is the best fit at 1024, 1100, 1199, 1280 and 1440) */
+.pg-open-body{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:start;margin-top:34px}
+.pg-open-copy p{font-size:16px;line-height:1.85}
+.pg-open-copy p+p{margin-top:16px}
+@media (max-width:1199px){.pg-open-title{font-size:40px}.pg-open-sub{font-size:21px}.pg-open-body{gap:40px}}
+@media (max-width:767px){
+  .pg-open{padding:52px 0}
+  .pg-open-title{font-size:30px}
+  .pg-open-sub{font-size:18px}
+  .pg-open-photo{margin-top:24px;border-radius:20px}
+  .pg-open-photo img{aspect-ratio:16/9;object-position:34% 45%}
+  .pg-open-body{grid-template-columns:1fr;gap:16px;margin-top:24px}
+}
+
+/* "Medically supervised, not a salon" (Cosmetic Dermatology) - DMC "Expertise In Skin & Hair
+   Treatment" panel (.pg-feature) with Dr. Nivedita Dadu's photo; the photo stays in view
+   beside the longer copy */
+.pg-doctor-panel .pg-feature-inner{align-items:start}
+.pg-doctor-panel-media{position:sticky;top:120px}
+.pg-doctor-panel-media img{object-position:27% 40%;transform:scale(1.45);transform-origin:26% 38%}
+.pg-doctor-panel .pg-title span{font-style:italic;color:var(--primary-deep)}
+.pg-doctor-panel .pg-copy>*+*{margin-top:16px}
+.pg-doctor-panel .pg-copy p{font-size:15px;line-height:1.8}
+@media (max-width:1024px){.pg-doctor-panel-media{position:relative;top:auto}}
+
+/* Lip Plumping (Dr. Nivedita Dadu page) - DMC "Expertise In Skin & Hair Treatment" panel
+   (.pg-feature) */
+.pg-panel-row{background:var(--white)}
+.pg-panel-row-media img{object-position:29% 50%}
+.pg-panel-row-ico{display:grid;place-items:center;width:76px;height:76px;margin-bottom:22px;border-radius:50%;background:var(--primary-deep)}
+.pg-panel-row-ico svg{width:34px;height:34px;fill:none;stroke:var(--white);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:767px){
+  .pg-panel-row-ico{width:60px;height:60px;margin-bottom:16px}
+}
+
+/* General Dermatology tables as DMC components: conditions -> cards (4 a row), consultation
+   process -> numbered step cards (DMC treatment-page steps), each with the live note */
+.pg-cards-note{margin-top:22px}
+.pg-cost .data-table{background:var(--white)}
+.pg-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;counter-reset:none}
+.pg-step{
+  display:flex;flex-direction:column;padding:28px 24px;border-radius:var(--r-md);background:var(--white);
+  border:1px solid var(--border);box-shadow:var(--shadow-card);transition:transform .35s var(--ease),box-shadow .35s;
+}
+.pg-step:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift)}
+.pg-step-num{font-family:var(--font-display);font-size:40px;line-height:1;color:var(--primary)}
+.pg-step h3{margin-top:16px;font-size:21px;line-height:1.3;color:var(--heading)}
+.pg-step p{margin-top:10px;font-size:15px;line-height:1.65;color:var(--text)}
+.pg-step .pg-step-why{flex:1;padding-top:12px;border-top:1px solid var(--border);font-size:14px;color:var(--muted)}
+@media (max-width:1199px){.pg-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:1024px){.pg-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:767px){.pg-steps{grid-template-columns:1fr;gap:16px}.pg-step{padding:22px 20px}}
+
+/* "Conditions treated every day" (General Dermatology) - DMC "What Makes DMC Trichology A
+   Trusted Hair Transplant Clinic" list: heading + intro, then points with a round brand
+   chevron and a divider under each (here two columns) */
+.pg-points{padding:92px 0;background:var(--white)}
+.pg-points-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:end;padding-bottom:34px;border-bottom:1px solid var(--border)}
+.pg-points-head .pg-title{font-size:44px;line-height:1.12}
+.pg-points-intro{font-family:var(--font-display);font-size:22px;line-height:1.5;color:var(--primary-deep)}
+.pg-points-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:56px}
+.pg-points-list li{display:flex;gap:18px;align-items:flex-start;padding:28px 0;border-bottom:1px solid var(--border)}
+.pg-points-ico{flex:none;display:grid;place-items:center;width:36px;height:36px;margin-top:2px;border-radius:50%;background:var(--primary);color:var(--white);font-size:20px}
+.pg-points-list p{font-size:15px;line-height:1.8;color:var(--text)}
+@media (max-width:1199px){.pg-points-head .pg-title{font-size:38px}}
+@media (max-width:1024px){
+  .pg-points-head{grid-template-columns:1fr;gap:18px}
+  .pg-points-list{grid-template-columns:1fr}
+}
+@media (max-width:767px){
+  .pg-points{padding:56px 0}
+  .pg-points-head .pg-title{font-size:30px}
+  .pg-points-intro{font-size:19px}
+  .pg-points-list li{gap:14px;padding:22px 0}
+  .pg-points-ico{width:30px;height:30px;font-size:17px}
+}
+
+/* "Best Dermatologist in Delhi" (Dr. Nivedita Dadu page) - the client's profile design on the
+   site's DMC components: photo + kicker, heading and three facts; copy in two columns; a
+   tinted locations bar */
+.pg-profile{padding:92px 0;background:var(--white)}
+.pg-profile-top{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:56px;align-items:center}
+.pg-profile-photo{overflow:hidden;border-radius:24px;background:var(--mist);box-shadow:0 20px 40px #c0553f1f}
+.pg-profile-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%}
+.pg-profile-title{font-size:46px;line-height:1.12;margin-top:4px}
+.pg-profile-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:34px}
+.pg-profile-facts li{display:flex;flex-direction:column;gap:12px;padding-left:22px;border-left:1px solid var(--line);font-size:14px;line-height:1.5;color:var(--muted)}
+.pg-profile-facts li:first-child{padding-left:0;border-left:0}
+.pg-profile-facts strong{display:block;margin-bottom:4px;font-family:var(--font-display);font-size:17px;font-weight:400;color:var(--heading)}
+.pg-profile-ico{width:34px;height:34px;fill:none;stroke:var(--primary-deep);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.pg-profile-copy{columns:2;column-gap:56px;margin-top:52px;padding-top:44px;border-top:1px solid var(--border)}
+.pg-profile-copy p{font-size:15px;line-height:1.8}
+.pg-profile-copy p+p{margin-top:16px}
+.pg-profile-where{
+  display:flex;align-items:center;gap:22px;margin-top:44px;padding:26px 32px;border-radius:20px;background:var(--tint);
+}
+.pg-profile-pin{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--white)}
+.pg-profile-pin svg{width:26px;height:26px;fill:none;stroke:var(--primary-deep);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.pg-profile-where-label{font-size:12px;letter-spacing:2.2px;text-transform:uppercase;color:var(--primary-deep)}
+.pg-profile-where p+p{margin-top:4px;font-size:16px;line-height:1.5;color:var(--heading)}
+.pg-profile-where-link{
+  margin-left:auto;padding-left:26px;border-left:1px solid var(--line);flex:none;
+  font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--primary-deep);
+}
+.pg-profile-where-link span{display:inline-block;margin-left:6px;transition:transform .25s}
+.pg-profile-where-link:hover span{transform:translateX(4px)}
+@media (max-width:1199px){
+  .pg-profile-top{grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:40px}
+  .pg-profile-title{font-size:38px}
+  .pg-profile-facts{gap:18px}
+}
+@media (max-width:1024px){
+  .pg-profile-top{grid-template-columns:1fr;gap:30px}
+  .pg-profile-photo{max-width:420px}
+  .pg-profile-copy{columns:1}
+}
+@media (max-width:767px){
+  .pg-profile{padding:56px 0}
+  .pg-profile-title{font-size:30px}
+  .pg-profile-facts{grid-template-columns:1fr;gap:16px}
+  .pg-profile-facts li{padding-left:0;border-left:0;flex-direction:row;align-items:flex-start;gap:14px}
+  .pg-profile-copy{margin-top:34px;padding-top:28px}
+  .pg-profile-where{flex-wrap:wrap;gap:16px;padding:20px;border-radius:16px}
+  .pg-profile-where-link{margin-left:0;padding-left:0;border-left:0}
+}
+
+/* Philosophy (Dr. Nivedita Dadu page) - DMC "Patient-First Approach": one heading with a rule,
+   then a row per part: round brand icon + sub-heading left, copy right, divided by hairlines */
+.pg-phil{padding:92px 0;background:var(--white)}
+.pg-phil-title{padding-bottom:30px;border-bottom:1px solid var(--line);font-size:48px;line-height:1.12}
+.pg-phil-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start;padding:44px 0;border-bottom:1px solid var(--border)}
+.pg-phil-row:last-child{border-bottom:0;padding-bottom:0}
+.pg-phil-side{display:flex;gap:22px;align-items:flex-start;position:sticky;top:120px}
+.pg-phil-ico{flex:none;display:grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--primary)}
+.pg-phil-ico svg{width:34px;height:34px;fill:none;stroke:var(--white);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.pg-phil-side h3{font-size:28px;line-height:1.25;color:var(--heading)}
+.pg-phil .pg-copy>*+*{margin-top:16px}
+.pg-phil .pg-copy p{font-size:16px;line-height:1.8}
+.pg-phil .check-list{margin-top:18px}
+@media (max-width:1199px){.pg-phil-title{font-size:40px}.pg-phil-side h3{font-size:24px}.pg-phil-row{gap:40px}}
+@media (max-width:1024px){
+  .pg-phil-row{grid-template-columns:1fr;gap:22px;padding:34px 0}
+  .pg-phil-side{position:relative;top:auto}
+}
+@media (max-width:767px){
+  .pg-phil{padding:56px 0}
+  .pg-phil-title{font-size:30px;padding-bottom:22px}
+  .pg-phil-ico{width:56px;height:56px}
+  .pg-phil-ico svg{width:26px;height:26px}
+  .pg-phil-side h3{font-size:21px}
+  .pg-phil .pg-copy p{font-size:15px}
+}
+
+/* Dr. Nivedita Dadu page, 2026-09-24: two more DMC section types so no design repeats.
+   "Why Choose" -> brand band with a tick list (DMC "Best Dermatologist & Hair Specialist");
+   Glass-Like Skin -> rounded brand panel with a photo (DMC team-of-dmc);
+   Bridal -> tinted band, copy + rule left, wide photo right (DMC "Clinical Expertise") */
+.pg-band--list .pg-divider{background:#ffffff59}
+.pg-band-sub{font-size:28px;line-height:1.25;color:var(--white)}
+.pg-band--list .check-list{margin-top:18px}
+
+.pg-brandpanel-wrap{padding:80px 0;background:var(--white)}
+.pg-brandpanel{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:48px;align-items:center;padding:34px;border-radius:40px;background:var(--primary)}
+.pg-brandpanel-img{overflow:hidden;border-radius:26px}
+.pg-brandpanel-img img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:14% 50%}
+.pg-brandpanel-body .pg-title{font-size:40px;line-height:1.15;color:var(--white)}
+.pg-brandpanel-body .pg-copy{margin-top:20px}
+.pg-brandpanel-body .pg-copy p{font-size:16px;line-height:1.8;color:var(--white)}
+
+.pg-tintband{padding:84px 0;background:var(--tint)}
+.pg-tintband-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.pg-tintband-body .pg-title{font-size:42px;line-height:1.15}
+.pg-tintband-body .pg-copy{margin-top:46px}
+.pg-tintband-body .pg-copy p{font-size:16px;line-height:1.8}
+.pg-tintband-img{overflow:hidden;border-radius:26px;box-shadow:0 20px 40px #c0553f1f}
+.pg-tintband-img img{width:100%;aspect-ratio:3/2;object-fit:cover}
+@media (max-width:1199px){
+  .pg-brandpanel{grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:34px}
+  .pg-brandpanel-body .pg-title{font-size:34px}
+  .pg-tintband-body .pg-title{font-size:36px}
+}
+@media (max-width:1024px){
+  .pg-brandpanel{grid-template-columns:1fr;gap:26px;padding:24px}
+  .pg-tintband-grid{grid-template-columns:1fr;gap:30px}
+  .pg-tintband-img{order:-1}
+}
+@media (max-width:767px){
+  .pg-brandpanel-wrap{padding:52px 0}
+  .pg-brandpanel{padding:16px;border-radius:26px}
+  .pg-brandpanel-img{border-radius:18px}
+  .pg-brandpanel-body .pg-title{font-size:28px}
+  .pg-tintband{padding:52px 0}
+  .pg-tintband-body .pg-title{font-size:28px}
+  .pg-band-sub{font-size:22px}
+}
+
+/* Cosmetic Dermatology, 2026-09-24: "Treatments available at the clinic" as DMC's tick list
+   (heading + lead, then one tick per concern), and the popular-treatments table as cards */
+.pg-treatlist{padding:60px 0 92px;background:var(--tint)}
+.pg-treatlist-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:end;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.pg-treatlist-head .pg-title{font-size:44px;line-height:1.12}
+.pg-treatlist-lead{font-family:var(--font-display);font-size:21px;line-height:1.5;color:var(--primary-deep)}
+.pg-treatlist-items{margin-top:34px;row-gap:20px}
+.pg-treatlist-items li{font-size:15px;line-height:1.75}
+.pg-treat-card{gap:0}
+.pg-treat-card h3{font-size:20px;line-height:1.3;color:var(--heading)}
+.pg-treat-card>p{margin-top:10px;font-size:14px;line-height:1.65;color:var(--muted)}
+.pg-treat-meta{margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.pg-treat-meta dt{font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--primary-deep)}
+.pg-treat-meta dd{margin:2px 0 10px;font-size:14px;line-height:1.5;color:var(--text)}
+.pg-treat-meta dd:last-child{margin-bottom:0}
+@media (max-width:1199px){.pg-treatlist-head .pg-title{font-size:38px}}
+@media (max-width:1024px){.pg-treatlist-head{grid-template-columns:1fr;gap:16px}}
+@media (max-width:767px){
+  .pg-treatlist{padding:56px 0}
+  .pg-treatlist-head .pg-title{font-size:30px}
+  .pg-treatlist-lead{font-size:18px}
+  .pg-treatlist-items{margin-top:26px}
+}
+
+/* About Clinic: "Best Skin Treatment Clinic in Delhi" - a wide clinic photo with a white card
+   lifted over its lower edge (this layout is used only here) */
+.pg-overlap{padding:84px 0 92px;background:linear-gradient(180deg,var(--white) 0 55%,var(--tint) 55%)}
+.pg-overlap-photo{overflow:hidden;border-radius:30px;box-shadow:0 22px 44px #c0553f1f}
+.pg-overlap-photo img{width:100%;aspect-ratio:1140/460;object-fit:cover;object-position:50% 46%}
+.pg-overlap-card{
+  position:relative;width:min(1120px,92%);margin:-90px auto 0;padding:46px 56px 50px;
+  border-radius:30px;background:var(--white);box-shadow:0 24px 50px #c0553f1a;
+}
+.pg-overlap-title{font-size:42px;line-height:1.14}
+.pg-overlap-copy{columns:2;column-gap:56px;margin-top:47px}
+.pg-overlap-copy p{font-size:15px;line-height:1.8}
+.pg-overlap-copy p+p{margin-top:14px}
+@media (max-width:1199px){
+  .pg-overlap-card{padding:36px 38px 40px;margin-top:-70px}
+  .pg-overlap-title{font-size:34px}
+}
+@media (max-width:767px){
+  .pg-overlap{padding:52px 0 60px;background:linear-gradient(180deg,var(--white) 0 45%,var(--tint) 45%)}
+  .pg-overlap-photo img{aspect-ratio:16/10}
+  .pg-overlap-card{width:92%;margin-top:-40px;padding:26px 20px 30px;border-radius:22px}
+  .pg-overlap-title{font-size:27px}
+  .pg-overlap-copy{columns:1}
+}
+
+/* About Clinic: the three dermatology services as wide rows - photo, name and the live
+   "View More" - a list layout used nowhere else on the site */
+.pg-svc-section{padding-top:56px}
+.pg-svc-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.pg-svc-tile{position:relative;display:block;overflow:hidden;border-radius:28px;box-shadow:0 18px 44px #c0553f1f}
+.pg-svc-photo{display:block}
+.pg-svc-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 34%;transition:transform .7s var(--ease)}
+.pg-svc-tile::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,#0000 26%,#00000052 52%,#000000ab 78%,#000000c9);
+}
+.pg-svc-cap{position:absolute;z-index:1;left:28px;right:28px;bottom:26px;display:block}
+.pg-svc-name{display:block;font-family:var(--font-display);font-size:28px;line-height:1.2;color:var(--white)}
+.pg-svc-more{
+  display:inline-flex;align-items:center;gap:12px;margin-top:14px;
+  font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--white);
+}
+.pg-svc-more .btn-arrow{width:40px;height:40px;background:#ffffff2e;color:var(--white);transition:background-color .3s,color .3s,transform .3s}
+.pg-svc-tile:hover .pg-svc-photo img{transform:scale(1.06)}
+.pg-svc-tile:hover .pg-svc-more .btn-arrow{background:var(--primary);color:var(--white);transform:rotate(45deg)}
+@media (max-width:1199px){
+  .pg-svc-tiles{gap:22px}
+  .pg-svc-name{font-size:25px}
+}
+/* below this the three tiles would be too narrow to read, so they stack at full width
+   (the photos are 640px square, so they stay sharp at this size) */
+@media (max-width:900px){
+  .pg-svc-tiles{grid-template-columns:1fr;gap:18px}
+  .pg-svc-tile{border-radius:22px}
+  .pg-svc-photo img{aspect-ratio:3/2;object-position:50% 38%}
+  .pg-svc-cap{left:22px;right:22px;bottom:20px}
+  .pg-svc-name{font-size:23px}
+  .pg-svc-more{margin-top:10px;font-size:11px;gap:10px}
+  .pg-svc-more .btn-arrow{width:34px;height:34px}
+}
+
+/* Cosmetic Dermatology closing note - DMC "Advanced Trichology Expertise": tinted band, copy
+   one side, the photo in a rounded card layered over a soft panel on the other */
+.pg-exp{padding:88px 0;background:var(--tint)}
+.pg-exp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:70px;align-items:center}
+.pg-exp-title{font-size:42px;line-height:1.14}
+.pg-exp-body .pg-copy{margin-top:24px}
+.pg-exp-body .pg-copy p{font-size:16px;line-height:1.85}
+.pg-exp-media{position:relative;padding:0 30px 30px 0}
+.pg-exp-media::before{content:"";position:absolute;inset:46px 0 0 46px;border-radius:32px;border:1px solid var(--line)}
+.pg-exp-photo{position:relative;overflow:hidden;border-radius:28px;box-shadow:0 20px 44px #c0553f1f}
+.pg-exp-photo img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:34% 46%}
+@media (max-width:1199px){
+  .pg-exp-grid{gap:48px}
+  .pg-exp-title{font-size:36px}
+}
+@media (max-width:1024px){
+  .pg-exp-grid{grid-template-columns:1fr;gap:36px}
+  .pg-exp-media{max-width:560px;margin:0 auto}
+}
+@media (max-width:767px){
+  .pg-exp{padding:56px 0}
+  .pg-exp-title{font-size:29px}
+  .pg-exp-body .pg-copy p{font-size:15px}
+  .pg-exp-media{padding:0 18px 18px 0}
+  .pg-exp-media::before{inset:28px 0 0 28px;border-radius:24px}
+  .pg-exp-photo{border-radius:22px}
+}
+
+/* "Celebrity Dermatologist in Delhi" (Dr. Nivedita Dadu page) - modern split: copy left,
+   photo running off the right edge of the screen (the only edge-to-edge photo on the site) */
+.pg-bleed{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,47%);gap:clamp(32px,5vw,80px);
+  align-items:center;padding:0 0 0 max(5%,calc((100vw - var(--container)) / 2));background:var(--tint);
+}
+.pg-bleed-body{padding:96px 0}
+.pg-bleed-title{font-size:clamp(34px,3.6vw,54px);line-height:1.06}
+.pg-bleed-title span{display:block;color:var(--primary-deep)}
+.pg-bleed-copy{max-width:560px;margin-top:28px}
+.pg-bleed-copy p{font-size:16px;line-height:1.85}
+.pg-bleed-copy p+p{margin-top:16px}
+/* the photo keeps its own shape and sits centred in the band, so nothing important is cropped */
+.pg-bleed-photo{align-self:center;overflow:hidden;border-radius:40px 0 0 40px;box-shadow:-22px 24px 50px #c0553f1f}
+.pg-bleed-photo img{display:block;width:100%;height:auto;aspect-ratio:1140/705;object-fit:cover;object-position:50% 50%}
+@media (max-width:1024px){
+  .pg-bleed{grid-template-columns:1fr;padding:0;gap:0}
+  .pg-bleed-body{order:2;padding:44px 5% 56px}
+  .pg-bleed-photo{order:1;border-radius:0}
+  .pg-bleed-photo img{aspect-ratio:16/9}
+}
+@media (max-width:767px){
+  .pg-bleed-copy p{font-size:15px}
+  .pg-bleed-photo img{aspect-ratio:4/3}
+}
+
+/* ===== Treatment detail layout (sd-*) =====
+   Same section order and arrangement as the treatment detail pages on dadumedicalcentre.com
+   (hero, gallery + intro + consultation, benefits band, ideal candidates + CTA, process slider,
+   techniques, aftercare cards, cost, FAQs + enquiry), drawn with this site's own colours and fonts.
+   Used by the Bridal Dermatology treatment pages. */
+.sd-arrow{width:32px;height:32px;border-radius:50%;background:#fff;color:var(--primary);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s var(--ease)}
+.sd-arrow .ico{width:12px;height:12px}
+
+/* hero */
+.sd-hero{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:380px;padding:200px 5% 80px;background:var(--panel);text-align:center}
+.sd-hero-title{margin:0 0 16px;font-family:var(--font-display);font-size:54px;font-weight:400;line-height:1.2;letter-spacing:1px;color:#2b2b2b;text-wrap:balance}
+.sd-crumb ol{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin:0;padding:0;list-style:none;font-family:var(--font-display);font-size:14px;color:#6b5a52}
+.sd-crumb li+li::before{content:"/";margin-right:8px;color:#00000059}
+.sd-crumb a{color:var(--primary-deep);text-decoration:none}
+.sd-crumb a:hover{color:var(--primary-hover)}
+.sd-crumb [aria-current]{color:#2b2b2b}
+
+/* gallery + intro + inline consultation */
+.sd-intro{padding:80px 5%;background:#fff}
+.sd-intro-wrap{display:flex;align-items:flex-start;gap:70px;max-width:var(--container);margin:0 auto}
+.sd-gallery{flex:none;align-self:flex-start;width:100%;max-width:540px;position:sticky;top:110px}
+.sd-gallery-frame{position:relative}
+.sd-gallery-main{aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:var(--tint);box-shadow:0 8px 40px #0000001a}
+.sd-gallery-main img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity .25s}
+.sd-gallery-main img.is-fading{opacity:0}
+.sd-gallery-arrow{position:absolute;top:50%;z-index:2;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:0;border-radius:50%;background:#fffffff2;color:#333;cursor:pointer;transform:translateY(-50%);box-shadow:0 2px 16px #00000026;transition:transform .22s,box-shadow .22s}
+.sd-gallery-arrow:hover{transform:translateY(-50%) scale(1.08);box-shadow:0 6px 28px #00000038}
+.sd-gallery-arrow .ico{width:16px;height:16px}
+.sd-gallery-arrow.prev{left:-18px}
+.sd-gallery-arrow.next{right:-18px}
+.sd-thumbs{display:flex;gap:10px;margin-top:16px;padding:4px 2px 8px;overflow-x:auto;scrollbar-width:none}
+.sd-thumbs::-webkit-scrollbar{display:none}
+.sd-thumb{flex:0 0 96px;height:72px;padding:0;border:2.5px solid transparent;border-radius:10px;overflow:hidden;background:var(--tint);cursor:pointer;transition:transform .22s,border-color .22s,box-shadow .22s}
+.sd-thumb:hover{transform:translateY(-2px);box-shadow:0 4px 16px var(--primary-a20)}
+.sd-thumb.is-active{border-color:var(--primary);transform:translateY(-2px)}
+.sd-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.sd-intro-body{flex:1;min-width:0;padding-top:8px}
+.sd-intro-title{margin:0 0 14px;font-family:var(--font-display);font-size:30px;font-weight:400;line-height:1.25;color:#333}
+/* rating row under the intro title (reference: details-meta-row) */
+.sd-meta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin:0 0 20px}
+.sd-rating{display:flex;align-items:center;gap:8px;border-radius:6px;color:inherit;text-decoration:none;transition:opacity .2s}
+.sd-rating:hover{opacity:.8}
+.sd-rating:hover .sd-reviews{text-decoration:underline}
+.sd-rating-num{font-family:var(--font-body);font-size:14px;font-weight:700;color:#333}
+.sd-stars{display:flex;align-items:center;gap:4px}
+.sd-star{position:relative;display:inline-flex;flex-shrink:0;width:16px;height:16px}
+.sd-star svg{flex-shrink:0}
+.sd-star-fill{position:absolute;inset:0 auto 0 0;display:inline-flex;overflow:hidden;white-space:nowrap}
+.sd-star-fill--80{width:80%}
+.sd-reviews{font-family:var(--font-body);font-size:14px;color:#6b7280}
+.sd-duration{display:flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;color:#888}
+.sd-intro-text p{margin:0 0 16px;font-family:var(--font-body);font-size:15px;line-height:1.7;color:#333}
+.sd-intro-text p:last-child{margin-bottom:0}
+.sd-intro-text strong{color:#2b2b2b;font-weight:700}
+.sd-consult{margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}
+.sd-consult-title{margin:0 0 22px;font-family:var(--font-display);font-size:24px;font-weight:400;color:#333;text-align:center}
+.sd-form{display:grid;gap:16px}
+.sd-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
+.sd-field{position:relative}
+.sd-field--wide{grid-column:span 2}
+.sd-input{width:100%;min-height:48px;padding:0 18px;border:1px solid var(--border);border-radius:var(--r-pill);background:#fff;color:#333;font-family:var(--font-body);font-size:14px;outline:none;transition:border-color .22s,box-shadow .22s}
+.sd-input:focus{border-color:var(--primary);box-shadow:0 0 0 4px var(--primary-a15)}
+select.sd-input{appearance:none;padding-right:44px;color:#7d7d7d;font-family:var(--font-display);cursor:pointer}
+select.sd-input:valid{color:#333}
+.sd-field .field-chev{position:absolute;top:50%;right:18px;width:12px;height:12px;color:#7d7d7d;pointer-events:none;transform:translateY(-50%)}
+.sd-submit{position:relative;display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;padding:0 56px 0 24px;border:1px solid #fff;border-radius:var(--r-pill);background:var(--primary);color:#fff;font-family:var(--font-display);font-size:15px;font-weight:700;cursor:pointer;transition:background-color .22s,box-shadow .22s}
+.sd-submit:hover{background:var(--primary-hover);box-shadow:0 10px 24px var(--primary-a30)}
+.sd-submit:disabled{cursor:not-allowed;opacity:.72}
+.sd-submit .sd-arrow{position:absolute;right:8px}
+.sd-submit:hover .sd-arrow{transform:rotate(45deg)}
+.sd-form .consent{margin:0;font-size:12px;line-height:1.5;color:var(--light);text-align:center}
+.sd-form .consent a{color:var(--primary-deep)}
+
+/* benefits band (brand colour, image right) */
+.sd-band{padding:60px 5%;background:var(--primary)}
+.sd-band-inner{display:flex;align-items:flex-start;gap:60px;max-width:var(--container);margin:0 auto}
+.sd-band-text{flex:1 1 55%;min-width:0;color:#fff}
+.sd-band-title{margin:0 0 22px;font-family:var(--font-display);font-size:30px;font-weight:400;line-height:1.25;color:#fff}
+.sd-band-desc{margin:0 0 22px;font-family:var(--font-body);font-size:14px;line-height:1.9;color:#ffffffeb}
+.sd-band-list{max-width:620px;margin:0;padding:0;list-style:none}
+.sd-band-list li{position:relative;margin-bottom:14px;padding-left:20px;font-family:var(--font-body);font-size:14px;line-height:1.7;color:#fffffff2}
+.sd-band-list li:last-child{margin-bottom:0}
+.sd-band-list li::before{content:"";position:absolute;top:8px;left:0;width:7px;height:7px;border-radius:50%;background:#fff}
+.sd-band strong{color:#fff;font-weight:700}
+.sd-band-img{flex:1 1 45%;min-width:0;align-self:flex-start;position:sticky;top:100px}
+.sd-band-img img{display:block;width:100%;height:auto;aspect-ratio:718/583;max-height:320px;object-fit:cover;border-radius:16px;box-shadow:0 18px 40px #0000002e}
+
+/* ideal candidates + CTA */
+.sd-ideal{padding:80px 5%;background:var(--panel)}
+.sd-ideal-wrap{display:flex;align-items:center;gap:60px;max-width:var(--container);margin:0 auto}
+.sd-ideal-left{flex:1.2;min-width:0}
+.sd-ideal-right{flex:.8;display:flex;flex-direction:column;align-items:center;text-align:center}
+.sd-card{margin-bottom:24px;padding:20px;border-radius:8px;background:#fff;box-shadow:0 4px 15px #00000008}
+.sd-card:last-child{margin-bottom:0}
+.sd-card-title{margin:0 0 16px;padding:12px;background:var(--primary);color:#fff;font-family:var(--font-body);font-size:16px;font-weight:400;text-align:center}
+.sd-card p,.sd-card li{font-family:var(--font-body);font-size:14px;line-height:1.65;color:#555}
+.sd-card p{margin:0 0 12px}
+.sd-card p:last-child{margin-bottom:0}
+.sd-card ul{margin:4px 0 12px;padding-left:22px;list-style:disc}
+.sd-card ul:last-child{margin-bottom:0}
+.sd-card li{margin-bottom:12px}
+.sd-card li:last-child{margin-bottom:0}
+.sd-card strong{color:#2b2b2b;font-weight:700}
+.sd-cta-title{margin:0 0 20px;font-family:var(--font-display);font-size:22px;font-weight:400;color:#333}
+.sd-cta-img{width:100%;max-width:300px;height:auto;margin:0 0 20px}
+.sd-cta-desc{max-width:320px;margin:0 0 24px;font-family:var(--font-body);font-size:13px;line-height:1.6;color:#666}
+.sd-cta-btn{display:inline-flex;align-items:center;gap:14px;padding:10px 10px 10px 26px;border-radius:50px;background:var(--primary);color:#fff;font-family:var(--font-display);font-size:14px;text-decoration:none;transition:transform .3s,box-shadow .3s}
+.sd-cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px var(--primary-a30)}
+.sd-cta-btn:hover .sd-arrow{transform:rotate(45deg)}
+
+
+.sd-heading{margin:0 0 26px;font-family:var(--font-display);font-size:clamp(28px,3.2vw,44px);font-weight:400;line-height:1.2;text-transform:uppercase;color:#333}
+
+
+/* cost */
+.sd-cost{padding:80px 5%;background:#f5907c}
+.sd-cost-inner{max-width:960px;margin:0 auto;text-align:center}
+.sd-cost--left .sd-cost-inner{max-width:var(--container);text-align:left}
+.sd-cost-text p{margin:0 0 12px;font-family:var(--font-body);font-size:15px;line-height:1.7;color:#444}
+.sd-cost-text strong{color:#2b2b2b}
+.sd-table-wrap{margin:28px 0 18px;overflow-x:auto;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 2px 6px #8a3a280d,0 8px 24px #8a3a2814}
+.sd-table{width:100%;border-collapse:collapse;font-family:var(--font-body);font-size:15px;text-align:left}
+.sd-table th{padding:16px 22px;background:var(--primary);color:#fff;font-family:var(--font-display);font-size:16px;font-weight:400}
+.sd-table td{padding:14px 22px;border-top:1px solid var(--border);color:#333}
+.sd-table tbody tr:nth-child(even) td{background:var(--mist)}
+.sd-table td:last-child{white-space:nowrap}
+/* cost on the brand colour: light text, table header a shade deeper */
+.sd-cost .sd-heading,.sd-cost .sd-cost-text p,.sd-cost .sd-cost-text li,.sd-cost .sd-cost-text h3,.sd-cost .sd-cost-text strong,.sd-cost .sd-cost-note{color:#fff}
+.sd-cost .sd-cost-text a{color:#fff}
+.sd-cost .sd-table th{background:var(--footer-bg);color:var(--heading);border-bottom:2px solid var(--line)}
+.sd-cost-note{margin:0;font-family:var(--font-body);font-size:13px;font-style:italic;color:#666}
+
+/* FAQs + enquiry */
+.sd-fe{padding:80px 5%;background:#fff;border-top:1px solid var(--border)}
+.sd-fe-wrap{display:flex;align-items:flex-start;gap:60px;max-width:var(--container);margin:0 auto}
+.sd-fe-left{flex:1.2;min-width:0}
+.sd-fe-right{flex:.8;position:sticky;top:100px}
+.sd-fe-title{margin:0 0 16px;font-family:var(--font-display);font-size:28px;font-weight:400;text-transform:uppercase;color:#111}
+.sd-faq{border-top:1px solid #eee}
+.sd-faq details{border-bottom:1px solid #e5e5e5}
+.sd-faq summary{display:flex;justify-content:space-between;align-items:center;padding:24px 0;cursor:pointer;list-style:none;color:#333}
+.sd-faq summary::-webkit-details-marker{display:none}
+.sd-faq summary h3{margin:0;font-family:var(--font-display);font-size:18px;font-weight:400;line-height:1.4}
+.sd-faq summary h3{transition:color .3s}
+.sd-faq summary:hover h3,.sd-faq details.is-active summary h3{color:var(--primary-deep)}
+.sd-faq-a{overflow:hidden;font-family:var(--font-body);font-size:14px;line-height:1.6;color:#666;transition:height .35s cubic-bezier(.4,0,.2,1)}
+.sd-faq-a p{margin:0;padding:0 0 24px}
+.sd-enquiry{padding:40px 30px;border-radius:20px;background:var(--primary);box-shadow:0 10px 40px var(--primary-a30)}
+.sd-enquiry-title{margin:0 0 18px;font-family:var(--font-display);font-size:22px;font-weight:400;color:#fff;text-align:center}
+.sd-enquiry-desc{margin:0 0 18px;font-family:var(--font-body);font-size:14px;font-weight:700;line-height:1.55;color:#fff;text-align:center}
+.sd-enquiry .sd-form{gap:16px}
+.sd-enquiry .sd-input{min-height:0;padding:16px 20px;border:0;border-radius:100px}
+.sd-enquiry select.sd-input{padding-right:44px}
+.sd-enquiry .sd-submit{margin-top:8px;font-family:var(--font-body);font-size:14px}
+.sd-enquiry .sd-submit:hover{background:var(--primary-hover)}
+.sd-enquiry .sd-submit .sd-arrow{border:1px solid #fff;background:var(--primary);color:#fff}
+.sd-enquiry .consent,.sd-enquiry .consent a,.sd-enquiry .form-status{color:#fff}
+
+
+/* band: more than one topic stacked before Benefits */
+.sd-band-text .sd-band-title:not(:first-child){margin-top:40px}
+.sd-band-text .sd-band-desc:last-child{margin-bottom:0}
+.sd-band-text .sd-band-list+.sd-band-desc{margin-top:18px}
+.sd-band-text .sd-band-list{margin-bottom:0}
+.sd-band-text .sd-band-desc+.sd-band-title,.sd-band-text .sd-band-list+.sd-band-title{margin-top:40px}
+
+
+/* process & techniques (image left, text right) */
+.sd-tech{padding:80px 5% 90px;background:#fff}
+.sd-tech-wrap{display:grid;grid-template-columns:1fr 1.3fr;align-items:start;gap:60px;max-width:var(--container);margin:0 auto}
+.sd-tech-img{position:sticky;top:100px;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:var(--tint);box-shadow:0 20px 50px #00000014}
+.sd-tech-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.sd-tech-img img:hover{transform:scale(1.04)}
+.sd-tech-text p,.sd-tech-text li{font-family:var(--font-body);font-size:13.5px;line-height:1.75;color:#555}
+.sd-tech-text p{margin:0 0 12px}
+.sd-tech-text p:last-child{margin-bottom:0}
+.sd-tech-text ul{margin:0 0 12px;padding-left:20px;list-style:disc}
+.sd-tech-text li{margin-bottom:8px}
+.sd-tech-text li::marker{color:var(--primary)}
+.sd-tech-text strong{color:#2b2b2b;font-weight:700}
+.sd-tech-text+.sd-heading{margin-top:44px}
+
+
+/* sd: extra content types (sub-headings, tables, links) carried over from older pages */
+.sd-band-text .sd-band-sub{margin:26px 0 12px;font-family:var(--font-display);font-size:20px;font-weight:400;line-height:1.3;color:#fff}
+.sd-band-text a{color:#fff;text-decoration:underline}
+.sd-tech-text h3,.sd-card h3,.sd-cost-text h3{margin:22px 0 10px;font-family:var(--font-display);font-size:19px;font-weight:400;line-height:1.35;color:#2b2b2b}
+.sd-tech-text h3:first-child,.sd-card h3:first-child,.sd-cost-text h3:first-child{margin-top:0}
+.sd-card .sd-card-title+h3{margin-top:0}
+.sd-tech-text a,.sd-card a,.sd-cost-text a,.sd-intro-text a,.sd-faq-a a{color:var(--primary-deep);text-decoration:underline}
+.sd-cost-text ul{margin:0 0 14px;padding-left:20px;list-style:disc}
+.sd-cost-text li{margin-bottom:6px;font-family:var(--font-body);font-size:15px;line-height:1.7;color:#444}
+.sd-data-table{width:100%;margin:6px 0 18px;border-collapse:collapse;font-family:var(--font-body);font-size:14px;background:#fff}
+.sd-data-table th{padding:12px 14px;background:var(--primary);color:#fff;font-weight:700;text-align:left}
+.sd-data-table td{padding:10px 14px;border-top:1px solid var(--border);color:#444;vertical-align:top}
+.sd-tech-text{overflow-x:auto}
+.sd-faq-a p:not(:last-child){padding-bottom:10px}
+.sd-faq-a ul{margin:0 0 14px;padding-left:20px}
+.sd-fe--solo .sd-fe-wrap{justify-content:center}
+.sd-fe--solo .sd-fe-right{flex:0 1 520px;position:static}
+
+
+/* Before & After results (reference: tint band + heading; cards once images exist) */
+.sd-results{position:relative;overflow:hidden;padding:60px 5% 40px;background:var(--panel)}
+.sd-results-inner{max-width:1400px;margin:0 auto}
+.sd-results-head{margin-bottom:50px}
+.sd-results-title{margin:0;font-family:var(--font-display);font-size:44px;font-weight:400;line-height:1.2;text-transform:uppercase;color:#333}
+.sd-results-slider{position:relative}
+.sd-results-swiper{overflow:hidden;padding:20px 0 60px}
+.sd-results-swiper .swiper-slide{height:auto}
+.sd-result-link{display:block;height:100%;color:inherit;text-decoration:none}
+.sd-result-card{display:flex;flex-direction:column;align-items:center;height:100%;padding:24px;border-radius:16px;background:var(--line);text-align:center;box-shadow:0 2.61px 7.84px #4a46460d;transition:transform .3s ease}
+.sd-result-link:hover .sd-result-card{transform:translateY(-10px)}
+.sd-result-title{display:flex;align-items:center;justify-content:center;min-height:48px;margin:0 0 24px;font-family:var(--font-display);font-size:14px;font-weight:600;line-height:1.4;color:#333}
+.sd-result-pair{display:flex;gap:10px;width:100%;margin-bottom:20px}
+.sd-result-tile{position:relative;flex:1;height:220px;margin:0;overflow:hidden;border-radius:12px;background:#00000014}
+.sd-result-tile img{position:absolute;top:0;width:532px;height:284px;max-width:none}
+.sd-result-tile img.is-before{left:calc(50% - 133px)}
+.sd-result-tile img.is-after{left:calc(50% - 399px)}
+.sd-result-tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 0;background:linear-gradient(transparent,#000000b3);font-size:12px;font-weight:500;color:#fff;text-align:center}
+.sd-result-label{margin:0;font-family:var(--font-display);font-size:15px;font-weight:500;color:#666}
+.sd-results-arrow{position:absolute;z-index:3;top:calc(50% - 20px);display:flex;align-items:center;justify-content:center;width:50px;height:50px;border:0;border-radius:50%;background:#fff;color:#1c1c1c;cursor:pointer;box-shadow:0 8px 24px #0000001f;transform:translateY(-50%);transition:transform .2s,box-shadow .2s}
+.sd-results-arrow:hover{transform:translateY(-50%) scale(1.06);box-shadow:0 12px 30px #0000002e}
+.sd-results-arrow .ico{width:20px;height:20px}
+.sd-results-arrow.prev{left:-25px}
+.sd-results-arrow.next{right:-25px}
+.sd-results-arrow.swiper-button-disabled{opacity:.35;cursor:default}
+.sd-results-arrow.swiper-button-lock{display:none}
+.sd-results-note{margin:10px 0 0;font-family:var(--font-body);font-size:13px;color:#666;text-align:center}
+
+@media (max-width:1199px){
+  .sd-hero{padding-top:170px}
+}
+@media (max-width:992px){
+  .sd-intro-wrap,.sd-ideal-wrap,.sd-fe-wrap{flex-direction:column;gap:40px}
+  .sd-gallery{max-width:100%;position:static}
+  .sd-ideal-left,.sd-ideal-right{width:100%}
+  .sd-fe-left{width:100%}
+  .sd-fe-right{position:static;width:100%;max-width:500px;margin:0 auto}
+  .sd-form-grid{grid-template-columns:1fr}
+  .sd-field--wide{grid-column:auto}
+}
+@media (max-width:900px){
+  .sd-band-inner{flex-direction:column;gap:34px}
+  .sd-band-title{font-size:24px}
+  .sd-band-img{position:static;width:100%}
+  .sd-band-img img{max-height:260px}
+}
+@media (max-width:767px){
+  .sd-hero{min-height:0;padding:112px 5% 48px}
+  .sd-hero-title{font-size:34px;letter-spacing:.5px}
+  .sd-tech,.sd-cost,.sd-fe{padding:50px 5% 60px}
+  .sd-results{padding:48px 16px 36px}
+  .sd-results-arrow{top:auto;bottom:0;width:44px;height:44px;transform:none}
+  .sd-results-arrow:hover{transform:none}
+  .sd-results-arrow.prev{left:calc(50% - 52px)}
+  .sd-results-arrow.next{right:calc(50% - 52px)}
+  .sd-results-head{margin-bottom:28px}
+  .sd-results-title{font-size:26px;line-height:1.12}
+  .sd-tech-img{aspect-ratio:16/10}
+  .sd-table th,.sd-table td{padding:12px 14px;font-size:14px}
+}
+@media (max-width:600px){
+  .sd-intro,.sd-band,.sd-ideal{padding:50px 5%}
+  .sd-intro-title{font-size:24px}
+  .sd-gallery-arrow.prev{left:8px}
+  .sd-gallery-arrow.next{right:8px}
+  .sd-enquiry{padding:32px 20px}
+}
+
+@media (max-width:1024px){
+  .sd-tech-wrap{grid-template-columns:1fr;gap:40px}
+  .sd-tech-img{position:static}
+}
+
+/* ===== Listing cards, premium layout (as on dadumedicalcentre.com/treatments/...) =====
+   Text left (title, description, VIEW DETAILS), tall rounded image right, two per row. */
+/* same box as the reference listing: 1400px including the 5% side padding, 290px sidebar, 70px gap */
+.listing--premium .container{max-width:1400px}
+.listing--premium .listing-grid{grid-template-columns:290px minmax(0,1fr);gap:70px}
+.svc-list--premium{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-content:start}
+.lst-card{display:flex;align-items:stretch;min-width:0;overflow:hidden;background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:0 2px 12px #0000000d;transition:box-shadow .3s,border-color .3s}
+.lst-card:hover{border-color:#e0e0e0;box-shadow:0 8px 28px #00000026,0 2px 8px #00000014}
+.lst-card-body{flex:1;min-width:0;display:flex;flex-direction:column;padding:16px 16px 16px 20px}
+.lst-card-title{display:-webkit-box;text-align:left;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;min-height:52px;margin:0 0 6px;font-family:var(--font-display);font-size:20px;font-weight:400;line-height:1.3;letter-spacing:.1px;color:#333}
+.lst-card-meta{display:flex;align-items:center;flex-wrap:nowrap;gap:8px;height:18px;margin:0 0 12px;overflow:hidden;font-family:var(--font-body);font-size:13px;line-height:18px;color:#6b7280}
+.lst-rating{font-weight:700}
+.lst-stars{display:inline-flex;align-items:center;gap:2px}
+.lst-star{position:relative;display:inline-flex;flex-shrink:0;width:11px;height:11px}
+.lst-star-fill{position:absolute;inset:0 auto 0 0;display:inline-flex;overflow:hidden;white-space:nowrap}
+.lst-star svg{flex-shrink:0}
+.lst-star-fill--80{width:80%}
+.lst-sep{margin:0 2px;color:#d1d5db}
+.lst-time{display:flex;align-items:center;flex-shrink:0;gap:4px;white-space:nowrap;color:#9ca3af}
+.lst-card-text{display:-webkit-box;text-align:left;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;max-height:90px;margin:0 0 18px;font-family:var(--font-body);font-size:14px;line-height:1.6;color:#555}
+.lst-card-cta{display:inline-flex;align-items:center;align-self:flex-start;padding:8px 16px;border:1.5px solid #ccc;border-radius:6px;background:transparent;color:#333;font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .25s}
+.lst-card-cta:hover{border-color:var(--primary-deep);background:var(--primary);color:#fff}
+.lst-card-media{position:relative;flex-shrink:0;align-self:stretch;width:180px;min-height:210px;margin:16px 16px 16px 0;border-radius:14px;overflow:hidden;background:var(--tint)}
+.lst-card-media img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;border-radius:14px;transition:transform .4s cubic-bezier(.25,1,.5,1)}
+.lst-card:hover .lst-card-media img{transform:scale(1.03)}
+@media (max-width:1200px){
+  .svc-list--premium{grid-template-columns:1fr;gap:16px}
+}
+@media (max-width:992px){
+  .listing--premium .listing-grid{grid-template-columns:1fr;gap:50px}
+}
+@media (max-width:992px){
+  .svc-list--premium{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+}
+@media (max-width:700px){
+  .svc-list--premium{grid-template-columns:1fr;gap:16px}
+  .lst-card{flex-direction:column}
+  .lst-card-media{order:-1;width:100%;height:200px;min-height:0;margin:0;border-radius:16px 16px 0 0}
+  .lst-card-media img{border-radius:0}
+  .lst-card-body{padding:20px 20px 24px}
+}
+@media (max-width:480px){
+  .lst-card-meta{gap:6px;font-size:12px}
+  .lst-card-media{height:180px}
+  .lst-card-title{font-size:18px}
+  .lst-card-body{padding:16px 16px 20px}
+}
+
+/* ===== Blog post (bp-*) ===== */
+.bp{padding:70px 0 90px;background:#fff}
+.bp-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:56px;align-items:start}
+.bp-title{margin:0 0 14px;font-family:var(--font-display);font-size:38px;font-weight:400;line-height:1.25;color:var(--heading)}
+.bp-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0 0 26px;font-family:var(--font-body);font-size:14px;color:var(--soft)}
+.bp-meta-item{display:inline-flex;align-items:center;gap:8px}
+.bp-meta-item .ico{width:16px;height:16px;color:var(--primary)}
+.bp-cover{margin:0 0 34px;overflow:hidden;border-radius:var(--r-md);box-shadow:var(--shadow-card)}
+.bp-cover img{display:block;width:100%;height:auto}
+.bp-content{font-family:var(--font-body);font-size:16px;line-height:1.85;color:#444}
+.bp-content p{margin:0 0 18px}
+.bp-content h2,.bp-content h3{margin:34px 0 14px;font-family:var(--font-display);font-size:26px;font-weight:400;line-height:1.3;color:var(--heading)}
+.bp-content p>strong:only-child{display:block;margin-top:10px;font-family:var(--font-display);font-size:21px;font-weight:400;line-height:1.35;color:var(--heading)}
+.bp-content strong{color:#2b2b2b}
+.bp-content ul,.bp-content ol{margin:0 0 18px;padding-left:22px;list-style:disc}
+.bp-content ol{list-style:decimal}
+.bp-content li{margin-bottom:8px}
+.bp-content li::marker{color:var(--primary)}
+.bp-content a{color:var(--primary-deep)}
+.bp-table{margin:6px 0 26px;overflow-x:auto;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-card)}
+.bp-table table{width:100%;border-collapse:collapse;font-size:15px}
+.bp-table td{padding:12px 16px;border-top:1px solid var(--border);vertical-align:top}
+.bp-table tr:first-child td{border-top:0;background:var(--primary);color:#fff;font-family:var(--font-display);font-size:16px}
+.bp-table tr:first-child td strong{color:#fff;font-weight:400}
+.bp-table tr:nth-child(even) td{background:var(--mist)}
+.bp-tags{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:30px;padding-top:24px;border-top:1px solid var(--border);font-family:var(--font-body);font-size:14px;color:var(--soft)}
+.bp-tags a{padding:6px 16px;border-radius:999px;background:var(--tint);color:var(--primary-deep);text-decoration:none}
+.bp-tags a:hover{background:var(--primary);color:#fff}
+.bp-side{display:grid;gap:26px;position:sticky;top:120px}
+.bp-side-card{padding:26px;border-radius:var(--r-md);background:var(--tint)}
+.bp-side-title{margin:0 0 16px;font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--heading)}
+.bp-side-list{display:grid;gap:14px;margin:0 0 16px;padding:0;list-style:none}
+.bp-side-list a{display:flex;gap:12px;align-items:center;color:inherit;text-decoration:none}
+.bp-side-list img{flex:none;width:84px;height:60px;object-fit:cover;border-radius:10px}
+.bp-side-list strong{display:block;font-family:var(--font-display);font-size:15px;font-weight:400;line-height:1.35;color:var(--heading)}
+.bp-side-list a:hover strong{color:var(--primary-deep)}
+.bp-side-list small{display:block;margin-top:4px;font-size:12px;color:var(--soft)}
+.bp-side-all{font-family:var(--font-body);font-size:14px;font-weight:700;color:var(--primary-deep)}
+@media (max-width:1024px){
+  .bp-grid{grid-template-columns:1fr;gap:40px}
+  .bp-side{position:static}
+}
+@media (max-width:767px){
+  .bp{padding:44px 0 60px}
+  .bp-title{font-size:28px}
+  .bp-content{font-size:15px}
+  .bp-content h2,.bp-content h3{font-size:22px}
+}
+
+/* ===== Results: overview (res-*) and category pages (rcd-*), dadumedicalcentre.com/results layout ===== */
+.res-grid-section{position:relative;overflow:hidden;padding:96px 0 110px;background:#fff}
+.res-glow{position:absolute;top:-160px;right:-120px;width:620px;height:520px;border-radius:50%;background:radial-gradient(circle,#fbe6dab3 0%,#fff0 66%);pointer-events:none}
+.res-shell{position:relative;z-index:1;width:min(1240px,92%);margin:0 auto}
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px 40px}
+.res-card{display:flex;flex-direction:column;align-items:center;color:inherit;text-decoration:none}
+.res-card-info{width:100%;margin-bottom:14px;padding:0 4px}
+.res-card-info h3{margin:0;font-family:var(--font-display);font-size:18px;font-weight:400;line-height:1.28;color:#111;text-align:center}
+.res-card-media{position:relative;width:100%;aspect-ratio:4/3.3;overflow:hidden;border-radius:20px;background:#1a1a1a;box-shadow:0 18px 40px #140f0a24;transition:box-shadow .35s,transform .35s}
+.res-card:hover .res-card-media{transform:translateY(-6px);box-shadow:0 26px 52px #140f0a33}
+.res-card-pair{display:grid;grid-template-columns:1fr 1fr}
+.res-half,.rcd-half{position:relative;overflow:hidden;background:#333}
+.res-half img,.rcd-half img{position:absolute;top:0;height:129.03%;width:auto;max-width:none;transition:transform .6s}
+.res-half img.is-before{left:-49.8%}
+.res-half img.is-after{left:-249.4%}
+.res-card:hover .res-half img{transform:scale(1.07)}
+.res-half-label,.rcd-half-label{position:absolute;z-index:1;bottom:8px;left:8px;padding:4px 10px;border-radius:999px;background:#0000008c;color:#fff;font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.res-half-label-after,.rcd-half-label-after{background:var(--primary-deep)}
+.res-card-cta{display:inline-flex;align-items:center;flex-shrink:0;gap:10px;margin-top:20px;padding:8px 8px 8px 18px;border-radius:999px;background:var(--primary);color:#fff;font-family:var(--font-display);font-size:13px;transition:box-shadow .25s}
+.res-card-cta-arrow{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#fff;color:var(--primary)}
+.res-card-cta-arrow .ico{width:12px;height:12px;transition:transform .25s}
+.res-card:hover .res-card-cta{box-shadow:0 10px 24px var(--primary-a30)}
+.res-card:hover .res-card-cta-arrow .ico{transform:rotate(45deg)}
+.rcd-grid-section{padding:90px 5% 100px;background:#fff}
+.rcd-shell{max-width:1200px;margin:0 auto}
+.rcd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 34px}
+.rcd-card{display:flex;flex-direction:column}
+.rcd-card[hidden]{display:none}
+.rcd-card-media{position:relative;display:grid;grid-template-columns:1fr 1fr;width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:18px;background:#1a1a1a;box-shadow:0 16px 34px #140f0a1f;cursor:zoom-in;transition:transform .35s,box-shadow .35s}
+.rcd-card-media:hover{transform:translateY(-6px);box-shadow:0 24px 46px #140f0a2e}
+.rcd-half img.is-before{left:-25.6%}
+.rcd-half img.is-after{left:-176.8%}
+.rcd-card-title{margin:14px 4px 0;font-family:var(--font-display);font-size:15px;font-weight:400;line-height:1.4;color:#222}
+.rcd-pagination{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:56px}
+.rcd-pagination[hidden]{display:none}
+.rcd-page-btn{min-width:40px;height:40px;padding:0 16px;border:1px solid #e2e2e2;border-radius:999px;background:#fff;color:#333;font-family:var(--font-body);font-size:13px;font-weight:700;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.rcd-page-btn:hover:not(:disabled){border-color:var(--primary);color:var(--primary-deep)}
+.rcd-page-btn.is-active{border-color:var(--primary);background:var(--primary);color:#fff}
+.rcd-page-btn:disabled{opacity:.4;cursor:default}
+.rcd-note{margin:28px 0 0;font-family:var(--font-body);font-size:13px;color:#666;text-align:center}
+.rcd-back-row{margin-top:22px;text-align:center}
+.rcd-back-link{font-family:var(--font-body);font-size:13px;font-weight:700;color:var(--primary-deep);text-decoration:none}
+.rcd-back-link:hover{text-decoration:underline}
+@media (max-width:1000px){
+  .res-grid,.rcd-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .res-grid-section{padding:60px 0 76px}
+  .res-grid{grid-template-columns:1fr;gap:46px;max-width:400px;margin:0 auto}
+  .rcd-grid-section{padding:56px 5% 70px}
+  .rcd-grid{grid-template-columns:1fr;gap:32px;max-width:400px;margin:0 auto}
+}
+
+/* results photo viewer (dadumedicalcentre.com/results/<category>): before | after side by side, each with
+   its pill label, title bar below, all in one dark rounded box. The combined 750x400 photo is cropped to
+   x 2-370 / 380-748, y 0-300 (no middle line, no orange info strip). */
+.rcd-viewer{width:min(1150px,92vw);border-radius:16px;background:#1a1a1a}
+.rcd-viewer-pair{display:flex;overflow:hidden;border-radius:16px 16px 0 0}
+.rcd-viewer-half{position:relative;flex:1;overflow:hidden;aspect-ratio:368/300;max-height:72vh;background:#000}
+.rcd-viewer-half img{position:absolute;top:0;width:203.8%;max-width:none;height:auto}
+.rcd-viewer-half img.is-before{left:-.54%}
+.rcd-viewer-half img.is-after{left:-103.26%}
+.rcd-viewer-label{position:absolute;z-index:1;bottom:18px;left:14px;padding:6px 16px;border-radius:999px;background:#000000b3;color:#fff;font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.rcd-viewer-label-after{background:var(--primary-deep)}
+.rcd-viewer .rcd-viewer-title{position:static;margin:0;padding:20px 25px;color:#fff;text-align:left;font-size:17px}
+.rcd-viewer .video-dialog-close{top:16px;right:16px;width:44px;height:44px;background:#00000080;color:#fff;box-shadow:none}
+.rcd-viewer .video-dialog-close:hover{background:#000000b3}
+@media (max-width:767px){
+  .rcd-viewer-label{bottom:10px;left:8px;padding:4px 10px;font-size:10px}
+  .rcd-viewer .rcd-viewer-title{padding:14px 16px;font-size:15px}
+  .rcd-viewer .video-dialog-close{top:8px;right:8px;width:36px;height:36px}
+}
+
+/* ==========================================================================
+   Treatment / condition page extras, layout copied from dadumedicalcentre.com (our colours):
+   exv-* = videos slider (/acne-check-peel), cd-* = "Find a Clinic Near You" + "Awards & Recognition"
+   (/sensitive-skin). Used on /treatments/bridal-dermatology/dark-circles/.
+   ========================================================================== */
+@media (min-width:1025px){.sd-heading--one-line{white-space:nowrap}}
+
+.exv-section{padding:70px 5%;background:var(--primary)}
+.exv-inner{max-width:1300px;margin:0 auto}
+.exv-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px}
+.exv-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:10px;font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#ffffffe6}
+.exv-eyebrow::before{content:"";width:34px;height:2px;background:#fff}
+.exv-title{margin:6px 0 0;font-family:var(--font-display);font-size:40px;font-weight:400;line-height:1.15;text-transform:uppercase;color:#fff}
+.exv-viewall{display:inline-flex;flex-shrink:0;align-items:center;gap:14px;padding:8px 8px 8px 26px;border-radius:999px;background:#fff;color:var(--primary-deep);font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.exv-btn-arrow{display:inline-flex;justify-content:center;align-items:center;width:32px;height:32px;border-radius:50%;background:var(--primary);color:#fff;transition:transform .25s}
+.exv-viewall:hover .exv-btn-arrow{transform:rotate(45deg)}
+.exv-slider-wrap{position:relative}
+.exv-nav{position:absolute;top:38%;z-index:10;display:flex;justify-content:center;align-items:center;width:48px;height:48px;border:0;border-radius:50%;background:#fff;color:var(--primary-deep);cursor:pointer;transform:translateY(-50%);box-shadow:0 8px 22px #0003}
+.exv-prev{left:-22px}
+.exv-next{right:-22px}
+.exv-nav.swiper-button-disabled{opacity:.35;cursor:default}
+.exv-swiper{padding-bottom:46px}
+.exv-section .swiper-pagination-bullet{opacity:.5;background:#fff}
+.exv-section .swiper-pagination-bullet-active{width:22px;border-radius:5px;opacity:1}
+.exv-video-thumb{position:relative;overflow:hidden;aspect-ratio:16/9;border-radius:14px;background:#000;box-shadow:0 16px 36px #00000029}
+.exv-video-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.exv-thumb-btn{display:block;width:100%;height:100%}
+.exv-thumb-btn img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.exv-thumb-btn:hover img{transform:scale(1.06)}
+.exv-play{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;width:58px;height:58px;margin:auto;border-radius:50%;background:var(--primary);box-shadow:0 6px 20px #0000004d;transition:transform .25s}
+.exv-thumb-btn:hover .exv-play{transform:scale(1.12)}
+@media (max-width:640px){
+  .exv-head{flex-direction:column;align-items:flex-start}
+  .exv-title{font-size:30px}
+}
+@media (max-width:767px){.exv-prev{left:-6px}.exv-next{right:-6px}.exv-nav{width:40px;height:40px}}
+
+.cd-section{width:100%;padding:56px 0}
+.cd-section-peach{background:var(--tint);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.cd-container{width:100%;max-width:1220px;margin:0 auto;padding:0 20px}
+.cd-section-header{margin:0 0 44px}
+.cd-section-title{margin:0 0 14px;font-family:var(--font-display);font-size:28px;font-weight:400;line-height:1.25;letter-spacing:-.01em;color:#1c1917}
+.cd-locations-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.cd-location-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--border);border-radius:24px;background:#fff;box-shadow:0 8px 24px #f5907c14;transition:all .3s}
+.cd-location-card:hover{border-color:var(--primary);transform:translateY(-3px);box-shadow:0 16px 36px #f5907c29}
+.cd-location-img-wrap{width:100%;height:200px}
+.cd-location-img{display:block;width:100%;height:100%;object-fit:cover}
+.cd-location-info{display:flex;flex:1;flex-direction:column;justify-content:space-between;gap:16px;padding:24px}
+.cd-loc-details{display:flex;flex-direction:column;gap:10px}
+.cd-loc-title{margin:0;font-family:var(--font-display);font-size:20px;font-weight:400;color:#1c1917}
+.cd-loc-row{display:flex;align-items:flex-start;gap:10px;margin:0;font-family:var(--font-body);font-size:13.5px;line-height:1.5;color:#44403c}
+.cd-loc-row a{color:inherit}
+.cd-loc-icon{flex-shrink:0;width:16px;height:16px;margin-top:3px;color:var(--primary-deep)}
+.cd-loc-map-btn{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-body);font-size:13px;font-weight:700;color:var(--primary-deep);transition:gap .2s}
+.cd-loc-map-btn:hover{gap:8px;color:var(--primary-hover)}
+.cd-loc-chev{width:14px;height:14px}
+.cd-recognition-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.cd-recognition-card{padding:28px 24px;border:1px solid var(--border);border-radius:16px;background:#fff;text-align:center}
+.cd-recognition-card svg{width:28px;height:28px;margin-bottom:12px;color:var(--primary-deep)}
+.cd-recognition-card h3{margin:0 0 8px;font-family:var(--font-display);font-size:21px;font-weight:400;color:#1c1917}
+.cd-recognition-card p{margin:0;font-family:var(--font-body);font-size:14px;line-height:1.6;color:#44403c}
+@media (min-width:640px){
+  .cd-location-card{flex-direction:row}
+  .cd-location-img-wrap{width:42%;height:auto;min-height:200px}
+}
+@media (min-width:768px){
+  .cd-section-title{font-size:34px}
+  .cd-locations-grid{grid-template-columns:repeat(2,1fr);gap:32px}
+  .cd-recognition-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:1024px){
+  .cd-section{padding:72px 0}
+  .cd-section-title{font-size:38px}
+}
+@media (min-width:1200px){.cd-container{padding:0 40px}}
