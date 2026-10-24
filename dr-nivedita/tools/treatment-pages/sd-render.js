@@ -65,7 +65,7 @@ function renderPage(m) {
   <div class="sd-ideal-wrap">
     <div class="sd-ideal-left">
       <div class="sd-card">
-        <h3 class="sd-card-title">Ideal Candidates</h3>
+        <h3 class="sd-card-title">${m.idealTitle || "Ideal Candidates"}</h3>
         ${m.ideal}
       </div>
     </div>
@@ -84,8 +84,10 @@ function renderPage(m) {
   <div class="sd-tech-wrap">
     <div class="sd-tech-img">${img(m.imgs.tech || gal[0], m.name + ' process and techniques')}</div>
     <div>
-      <h2 class="sd-heading">Process &amp; Techniques</h2>
-      <div class="sd-tech-text">${m.process}</div>
+      <h2 class="sd-heading">${m.processTitle || "Process &amp; Techniques"}</h2>
+      <div class="sd-tech-text">${m.process}</div>${(m.processMore || []).map(sec => `
+      <h2 class="sd-heading">${sec.title}</h2>
+      <div class="sd-tech-text">${sec.html}</div>`).join("")}
     </div>
   </div>
 </section>

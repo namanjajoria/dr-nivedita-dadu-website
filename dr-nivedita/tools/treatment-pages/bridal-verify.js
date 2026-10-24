@@ -3,8 +3,12 @@ const fs = require('fs');
 const S = process.argv[2];
 const BASE = 'http://localhost:3000';
 const PAGES = [['beard-shaping', 'Beard Shaping'], ['divagenesis', 'DivaGenesis'], ['laser-facials', 'Laser Facials'], ['lip-pigmentation', 'Lip Pigmentation'], ['power-glow', 'Power Glow']];
+// + the 15 pages added on 24 Oct 2026 (slug + Word file name, written by bridal-build.js)
+for (const p of JSON.parse(fs.readFileSync(S + '/bridal-pages.json', 'utf8'))) if (!PAGES.some(([s]) => s === p.slug)) PAGES.push([p.slug, p.doc]);
 const NOTE = /\s*\([^()]*(?:to be confirmed|before publishing|live page|current page)[^()]*\)/gi;
-const SKIP_H2 = /^(\d+\.\s*)?(Hero & Intro|Benefits Section|Before & After Results|CTA|Closing CTA)$/i;
+const SKIP_H2 = /^(\d+\.\s*)?(Hero & Intro|Hero|Benefits Section|Before & After Results|Before & After|CTA|Closing CTA|Consultation CTA|YouTube Section|Find a Clinic Near You|Awards & Recognition|Newsletter|Footer)$/i;
+// Dark Circles: notes for the shared site modules, the H1 marker and the button label are not page text
+const SKIP_P = /^(H1:|Button:|\((Patient results|Dark circles video|Shared |Email field|Standard site footer)|Subscribe for dermatologist-approved)/;
 const decode = s => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'");
 const norm = s => s.replace(/[\u2018\u2019]/g, "'").replace(/\s+/g, ' ').trim();
 (async () => {
@@ -27,7 +31,7 @@ const norm = s => s.replace(/[\u2018\u2019]/g, "'").replace(/\s+/g, ' ').trim();
       else t = (Array.isArray(b.runs) ? b.runs : [b.runs]).map(r => r.t).join('');
       t = norm(t.replace(NOTE, ''));
       if (!t || (b.k === 'h2' && SKIP_H2.test(t.replace(/\*/g, '')))) continue;
-      if (/^\(Patient results gallery/.test(t)) continue;            // Before & After hidden for now
+      if (/^\(Patient results gallery/.test(t) || SKIP_P.test(t)) continue;            // Before & After hidden for now
       const parts = b.k === 'table' ? b.rows.flat() : t.replace(/^\d+\.\s*/, '').replace(/^Q:\s*/, '').split(/(?<=[.?!:])\s+|\s+Ans\.\s+/);
       for (let p of parts) {
         p = norm(p).replace(/^Ans\.\s*/, '').replace(/:$/, '');

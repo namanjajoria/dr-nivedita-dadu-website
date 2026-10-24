@@ -1,0 +1,494 @@
+[
+    {
+        "k":  "h1",
+        "runs":  [
+                     {
+                         "t":  "Diode Laser Hair Removal ",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "1. Hero \u0026 Intro",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Diode Laser Hair Removal",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Shaving takes care of it for a day or two. Waxing gives you maybe three weeks. Then the stubble is back, sometimes with ingrown hairs and a few dark patches for company. If you\u0027re reading about diode laser hair removal in Delhi, chances are you\u0027ve had enough of that routine.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The diode laser goes after the root rather than the hair you can see. Over a course of sessions the regrowth gets thinner, softer and lighter, and there\u0027s a lot less of it. It\u0027s particularly good for thick, dark hair, which is what most of our patients have, and its longer wavelength is gentler on medium and darker skin tones. Men and women both use it, on the face and pretty much anywhere else.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Available at Dadu Medical Centre Vasant Vihar (South Delhi) \u0026 Rajouri Garden (West Delhi), under Dr. Nivedita Dadu.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "2. How Diode Laser Works",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The laser gives off infrared light at roughly 800 to 810nm. Dark hair contains melanin, and melanin soaks up this light. The energy travels down the hair shaft into the follicle, heats it, and leaves it far less able to produce new hair.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Why does that matter for Indian skin? A longer wavelength like this goes deeper and puts less of its energy into the pigment near the skin\u0027s surface, which lowers the risk for medium to dark complexions. The handpiece has cooling built in as well, so the skin gets chilled every time a pulse goes out.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "What the laser can\u0027t do is treat every hair at once. Only follicles that are actively growing respond, and at any given moment plenty of them are resting. Spacing out the sessions lets us catch them as they wake up.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "3. Diode vs Other Options",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Shaving, threading and waxing are fast and familiar. They\u0027re also short-lived, and years of waxing can leave ingrown hairs and uneven texture behind. Laser works on a different idea altogether: long-term reduction instead of starting over every few weeks.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Among lasers, diode and Alexandrite (755nm) are the two people ask about most. Alexandrite sits shallower and tends to suit finer, lighter hair on fairer skin. Diode is usually the better match for coarse, dark hair. And if you tried laser years ago and didn\u0027t enjoy it, you\u0027re not imagining things. The older machines really were slower and more painful, and mostly only worked on dark hair over pale skin. Current diode systems are far kinder.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "4. Areas That Can Be Treated",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The usual list is legs, arms, underarms and the bikini or Brazilian area. Men tend to ask about the back and chest. Facial hair on the upper lip and chin gets treated too, and a full body session is possible, typically taking a couple of hours.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "5. Benefits Section",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Why people tend to pick diode:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "it handles thick, dark hair well",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "it\u0027s a safer option for medium and darker Indian skin",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "the cooled handpiece keeps sessions comfortable",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "regrowth turns finer, lighter and patchier as the course goes on",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "there\u0027s no downtime to plan around",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "you can say goodbye to waxing rashes and ingrown hairs",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "6. Ideal Candidates",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "You\u0027re likely to see the best results if your hair is dark and coarse and your skin is medium to dark, which describes a lot of people in India. Women often come in for the face, underarms or legs. Men usually want the back, chest or the area around the beard. And if waxing or shaving keeps leaving you with ingrown hairs, it\u0027s worth a conversation.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Things to know:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Light, fine, grey or blonde hair doesn\u0027t pick up the laser well, so diode may not be ideal there, and your doctor might suggest Alexandrite or something else. A little regrowth can show up over the years, and an occasional top-up takes care of it.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "7. Process \u0026 Techniques",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Before anything else, your skin and hair are checked to make sure diode is the right laser for you. During the session, the cooled handpiece moves over the area while short pulses go into the follicles, and most people manage it without much fuss. Afterwards you just carry on with your day.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "How many sessions?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Six to eight is typical. Keep the first few at least a month apart. After that, the gap depends on where you\u0027re being treated:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "table",
+        "rows":  [
+                     [
+                         "Area",
+                         "Usual gap between sessions"
+                     ],
+                     [
+                         "Face",
+                         "4 to 5 weeks"
+                     ],
+                     [
+                         "Underarms, bikini",
+                         "about 6 weeks"
+                     ],
+                     [
+                         "Legs, arms",
+                         "6 to 8 weeks"
+                     ],
+                     [
+                         "Back, chest",
+                         "about 8 weeks"
+                     ]
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "On the legs, density usually drops by about 70 to 90% by the end of the course. Your own result may differ, depending on your hair, your skin and the area.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Aftercare:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Put sunscreen on before you head outside, particularly on areas that have just been treated. ",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "8. Before \u0026 After Results",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Patient results gallery to be placed here)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "9. Cost of Diode Laser Hair Removal in Delhi",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Expect roughly ₹2,500 to ₹10,000 a session, or around ₹15,000 to ₹80,000 for the whole course*. Where you land in that range depends on the area, how dense the hair is and your skin type.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "*T\u0026C apply. Prices are approximate, and the final cost is confirmed after your consultation.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "10. FAQs",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Why does diode suit thick, dark hair?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Dark, coarse hair carries more pigment for the laser to latch onto, and the wavelength reaches deep enough to affect the root.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is it safe on Indian skin?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Generally, yes. The long wavelength puts less energy into surface pigment, so it suits medium and darker skin better than shorter lasers do.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Will it hurt?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. It\u0027s usually comfortable. The tip is cooled, so your skin stays chilled while the pulses go in.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How many sessions should I plan for?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Six to eight. Depending on the area, they\u0027re spaced four to eight weeks apart.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Why can\u0027t it be done in one go?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Only actively growing follicles respond, and they don\u0027t all grow at the same time. Each session catches a fresh set.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Do I need time off afterwards?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. No. You can head back to work or your plans right away.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Does the hair come back?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. What returns is finer, lighter and much sparser. A small amount may reappear over the years, and a top-up session deals with it.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Can I get my face done?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes. The upper lip and chin are common requests, and facial sessions are usually four to five weeks apart.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "11. Closing CTA",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Still booking waxing appointments every few weeks? Come in for a consultation with Dr. Nivedita Dadu at Dadu Medical Centre, Vasant Vihar (South Delhi) or Rajouri Garden (West Delhi). We\u0027ll look at your skin and hair and tell you honestly whether the diode is the right fit.",
+                         "b":  false
+                     }
+                 ]
+    }
+]

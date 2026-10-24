@@ -1465,7 +1465,7 @@ select.sd-input:valid{color:#333}
 .sd-band-list li::before{content:"";position:absolute;top:8px;left:0;width:7px;height:7px;border-radius:50%;background:#fff}
 .sd-band strong{color:#fff;font-weight:700}
 .sd-band-img{flex:1 1 45%;min-width:0;align-self:flex-start;position:sticky;top:100px}
-.sd-band-img img{display:block;width:100%;max-height:320px;object-fit:cover;border-radius:16px;box-shadow:0 18px 40px #0000002e}
+.sd-band-img img{display:block;width:100%;height:auto;aspect-ratio:718/583;max-height:320px;object-fit:cover;border-radius:16px;box-shadow:0 18px 40px #0000002e}
 
 /* ideal candidates + CTA */
 .sd-ideal{padding:80px 5%;background:var(--panel)}

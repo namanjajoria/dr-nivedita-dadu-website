@@ -1,0 +1,660 @@
+[
+    {
+        "k":  "h1",
+        "runs":  [
+                     {
+                         "t":  "Dark Circles ",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "1. Hero",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "H1:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Dark Circles",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "You slept eight hours and people still ask if you\u0027re tired. Concealer helps till lunch, and the eye cream on your shelf hasn\u0027t done much. Thing is, dark circles come in a few different kinds, and our dark circles treatment in Delhi begins by figuring out which kind is yours.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "2. What Are Dark Circles?",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "They\u0027re the darker or shadowy patches under your eyes that make you look worn out, even on a good day. For some people the colour is actual pigment sitting in the skin. For others, the skin there is so thin that the veins underneath show through as a bluish or purplish tinge. And sometimes there\u0027s a small hollow under the eye that simply catches shadow. Plenty of people have two or all three going on. They don\u0027t usually fade on their own, and with age they often get a little deeper.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "So the first visit is mostly about looking closely. The dermatologist checks how thick your under-eye skin is, how deep any pigment goes, whether you\u0027ve lost some fat in that area, and how visible the blood vessels are. Once that\u0027s clear, your dark circles can be put into a type: pigmented, volume-related, vascular, or mixed. The type is what decides the treatment.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "3. Causes of Dark Circles",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Ageing skin:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " the under-eye skin gets thinner and loses support, so veins show through more",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Losing volume:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " less fat under the eyes leaves a hollow, and hollows throw shadows",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Pigment:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " extra melanin collects in the area, and for many people this simply runs in the family",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Sun:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " years without sunscreen darken and weaken skin that\u0027s already delicate",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Sleep and stress:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " irregular nights and a stressful routine show up first around the eyes",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Screens:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " long hours staring at a phone or laptop strain the eyes and can make circles stand out more",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Not drinking enough water:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " dehydrated skin looks duller and hollows look deeper",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "City air:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " pollution keeps the skin mildly irritated, and in Delhi that\u0027s hard to avoid",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "4. Prevention Tips",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Put sunscreen under your eyes too:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " most people stop at the cheeks, so pick a gentle one and take it all the way up",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Try to sleep at the same time each night:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " consistency matters more than the odd long lie-in",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Drink water through the day:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " well-hydrated skin hides shadows better",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Give your eyes screen breaks:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " every so often, look away and rest them for a minute",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Stop rubbing:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " it irritates the thin skin and can make pigment worse",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Keep under-eye skincare simple:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " strong actives meant for the face can sting and inflame this area, so ask your dermatologist what to use",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "See a doctor if nothing\u0027s changing:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " a quick check tells you whether it\u0027s pigment, hollowness or veins, which beats months of trying random creams",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "5. Treatments for Dark Circles at Dadu Medical Centre\u0027s Clinic, Delhi",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Laser Toning:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " slowly lightens under-eye pigment so the area looks brighter and more even",
+                         "b":  false
+                     },
+                     {
+                         "t":  ". ",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Under-Eye Fillers:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " fill in hollows so the shadow softens and you look more rested",
+                         "b":  false
+                     },
+                     {
+                         "t":  ".",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "iPeel (Chemical Peel):",
+                         "b":  true
+                     },
+                     {
+                         "t":  " lifts away tired, sun-damaged surface skin for a fresher look around the eye",
+                         "b":  false
+                     },
+                     {
+                         "t":  ".",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Vampire Facial (PRP):",
+                         "b":  true
+                     },
+                     {
+                         "t":  " your own growth factors help thicken thin skin and reduce hollowness over time",
+                         "b":  false
+                     },
+                     {
+                         "t":  ".",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "6. Why Choose Dr. Nivedita Dadu",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Most people who come to us with dark circles have already spent a fair bit on creams that didn\u0027t work, usually because the real cause was never looked at. At Dr. Nivedita Dadu\u0027s clinics in Vasant Vihar and Rajouri Garden, we start with your under-eyes, not a product. Once we know whether it\u0027s pigment, hollowness, visible veins or a mix, the plan is built around that. Treatments are done under a doctor\u0027s supervision with settings suited to sensitive and Indian skin, and we keep checking in so the plan can shift if your skin responds differently than expected.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "7. FAQs",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Will my dark circles go away for good?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Results can last a long while, but most people need the odd top-up. Your skin keeps ageing and life keeps happening, and both show under the eyes.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How do I know which treatment suits me?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. You don\u0027t have to guess. The dermatologist looks at whether it\u0027s pigment, a hollow, visible veins or a combination, and suggests treatment from there.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Isn\u0027t it just pigmentation?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Often not. Thin skin showing the veins underneath, or a small hollow casting shadow, is just as common, and those need a different approach.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: My skin is sensitive. Is this safe?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes, as long as it\u0027s done under medical supervision with settings chosen for your skin.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How long before I see a difference?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. That depends on the cause and the treatment. Some people notice brighter skin first, others smoother texture or softer hollows. It tends to build slowly.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Can an eye cream fix this?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Usually not on its own. A good cream can support treatment, but for most people it won\u0027t solve the problem.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Do screens make dark circles worse?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. They can. Long screen hours strain the eyes and make existing circles look more obvious.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Do men get this treated too?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. All the time. A lot of our dark circle patients are men.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How much does treatment cost in Delhi?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. It varies with the cause, the treatment and how many sessions you need. We\u0027ll give you the figure after your consultation.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "8. Consultation CTA",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Still have questions?",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Not sure what\u0027s behind your dark circles? Come in, let our dermatologists take a look, and you\u0027ll leave knowing the cause and what can actually help.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Button:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Get in touch",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "9. Before \u0026 After",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Patient results gallery to be placed here)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "10. YouTube Section",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Dark circles video from Dr. Nivedita Dadu\u0027s YouTube channel to be embedded here)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "11. Find a Clinic Near You",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Shared location finder module: Vasant Vihar, South Delhi and Rajouri Garden, West Delhi)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "12. Awards \u0026 Recognition",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Shared awards module, reused as-is)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "13. Newsletter",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Subscribe for dermatologist-approved skin tips straight to your inbox.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Email field)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "14. Footer",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Standard site footer)",
+                         "b":  false
+                     }
+                 ]
+    }
+]

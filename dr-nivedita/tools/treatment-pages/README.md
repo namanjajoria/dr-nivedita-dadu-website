@@ -14,6 +14,7 @@ Process & Techniques → Cost → FAQs + enquiry form → footer. A section with
 | --- | --- |
 | `sd-render.js` | The shared page layout. Takes a model, returns the view HTML. |
 | `bridal-build.js` | Word files → pages, for Bridal Dermatology. Run: `node bridal-build.js data --write` |
+| `bridal-register.js` | Adds the bridal pages built by `bridal-build.js` that are not on the site yet: route + sitemap, service cards (category page and /treatments/), session time. Run: `node bridal-register.js data --write`, then `card-meta.js`, `apply-meta.js`, `apply-results.js`. (The sidebar counts and the "View all N treatments" button are plain text in the views: update them by hand.) |
 | `docx-json.ps1` | Word file → JSON blocks (keeps the bold). `bridal-build.js` reads `data/bridal-json/*.json`. |
 | `bridal-images.js` | Copies the image folder into `public/images/treatments/bridal/` and writes `data/bridal-images.json`. |
 | `old-to-sd.js` | One-off: moved the older pages' content into the shared layout (Oct 2026). |

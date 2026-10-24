@@ -35,7 +35,7 @@
     "path": "/treatment/acne/",
     "view": "c-acne",
     "title": "Best Acne Treatment in Delhi | Specialist Care & Clinic Cost",
-    "description": "Best acne treatment in Delhi with Dr. Nivedita Dadu. Acne treatment cost in Delhi ranges between Rs. 4,000\u201316,000. Effective solutions for all skin types.",
+    "description": "Best acne treatment in Delhi with Dr. Nivedita Dadu. Acne treatment cost in Delhi ranges between Rs. 4,000–16,000. Effective solutions for all skin types.",
     "breadcrumbs": [
       {
         "name": "Home",
@@ -51,7 +51,7 @@
     "path": "/treatment/age-spots/",
     "view": "c-age-spots",
     "title": "Best Age Spots Treatment in Delhi | Specialist Care & Cost",
-    "description": "Age spots treatment in Delhi at Dr. Nivedita Dadu\u2019s Clinics in Rajouri Garden & Vasant Vihar, West & South Delhi. Cost depends on spot type.",
+    "description": "Age spots treatment in Delhi at Dr. Nivedita Dadu’s Clinics in Rajouri Garden & Vasant Vihar, West & South Delhi. Cost depends on spot type.",
     "breadcrumbs": [
       {
         "name": "Home",
@@ -227,7 +227,7 @@
     "path": "/treatment/full-body-hair-removal/",
     "view": "c-full-body-hair-removal",
     "title": "Full Body Laser Hair Removal Clinic Delhi |Cost & Specialist",
-    "description": "Full body laser hair removal in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost ranges from ?10,000\u2013?40,000 depending on body area.",
+    "description": "Full body laser hair removal in Delhi at Rajouri Garden & Vasant Vihar clinics in West & South Delhi. Cost ranges from ?10,000–?40,000 depending on body area.",
     "breadcrumbs": [
       {
         "name": "Home",
@@ -1340,6 +1340,306 @@
     ]
   },
   {
+    "path": "/treatments/bridal-dermatology/acne-check-peel/",
+    "view": "t-bridal-dermatology-acne-check-peel",
+    "title": "Acne Check Peel Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Acne Check Peel by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Acne Check Peel",
+        "path": "/treatments/bridal-dermatology/acne-check-peel/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/alexandrite-laser-hair-removal/",
+    "view": "t-bridal-dermatology-alexandrite-laser-hair-removal",
+    "title": "Alexandrite Laser Hair Removal Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Alexandrite Laser Hair Removal by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Alexandrite Laser Hair Removal",
+        "path": "/treatments/bridal-dermatology/alexandrite-laser-hair-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/carbon-laser-peel/",
+    "view": "t-bridal-dermatology-carbon-laser-peel",
+    "title": "Carbon Laser Peel Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Carbon Laser Peel by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Carbon Laser Peel",
+        "path": "/treatments/bridal-dermatology/carbon-laser-peel/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/dark-circles/",
+    "view": "t-bridal-dermatology-dark-circles",
+    "title": "Dark Circles Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Dark Circles by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Dark Circles",
+        "path": "/treatments/bridal-dermatology/dark-circles/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/dermal-fillers/",
+    "view": "t-bridal-dermatology-dermal-fillers",
+    "title": "Dermal Fillers Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Dermal Fillers by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Dermal Fillers",
+        "path": "/treatments/bridal-dermatology/dermal-fillers/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/dermaroller-for-acne-scars/",
+    "view": "t-bridal-dermatology-dermaroller-for-acne-scars",
+    "title": "Dermaroller for Acne Scars Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Dermaroller for Acne Scars by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Dermaroller for Acne Scars",
+        "path": "/treatments/bridal-dermatology/dermaroller-for-acne-scars/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/diode-laser-hair-removal/",
+    "view": "t-bridal-dermatology-diode-laser-hair-removal",
+    "title": "Diode Laser Hair Removal Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Diode Laser Hair Removal by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Diode Laser Hair Removal",
+        "path": "/treatments/bridal-dermatology/diode-laser-hair-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/dmc-hgp-hair-growth-promoters/",
+    "view": "t-bridal-dermatology-dmc-hgp-hair-growth-promoters",
+    "title": "DMC-HGP® Hair Growth Promoters Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "DMC-HGP® Hair Growth Promoters by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "DMC-HGP® Hair Growth Promoters",
+        "path": "/treatments/bridal-dermatology/dmc-hgp-hair-growth-promoters/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/laser-hair-removal/",
+    "view": "t-bridal-dermatology-laser-hair-removal",
+    "title": "Laser Hair Removal Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Laser Hair Removal by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "path": "/treatments/bridal-dermatology/laser-hair-removal/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/laser-toning/",
+    "view": "t-bridal-dermatology-laser-toning",
+    "title": "Laser Toning Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Laser Toning by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Laser Toning",
+        "path": "/treatments/bridal-dermatology/laser-toning/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/mesotherapy-for-hair-fall/",
+    "view": "t-bridal-dermatology-mesotherapy-for-hair-fall",
+    "title": "Mesotherapy for Hair Fall Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Mesotherapy for Hair Fall by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Mesotherapy for Hair Fall",
+        "path": "/treatments/bridal-dermatology/mesotherapy-for-hair-fall/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/mnrf-microneedling-radiofrequency/",
+    "view": "t-bridal-dermatology-mnrf-microneedling-radiofrequency",
+    "title": "MNRF (Microneedling Radiofrequency) Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "MNRF (Microneedling Radiofrequency) by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "MNRF (Microneedling Radiofrequency)",
+        "path": "/treatments/bridal-dermatology/mnrf-microneedling-radiofrequency/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/mnrf-for-stretch-marks/",
+    "view": "t-bridal-dermatology-mnrf-for-stretch-marks",
+    "title": "MNRF for Stretch Marks Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "MNRF for Stretch Marks by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "MNRF for Stretch Marks",
+        "path": "/treatments/bridal-dermatology/mnrf-for-stretch-marks/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/photofacial/",
+    "view": "t-bridal-dermatology-photofacial",
+    "title": "Photofacial Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Photofacial by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Photofacial",
+        "path": "/treatments/bridal-dermatology/photofacial/"
+      }
+    ]
+  },
+  {
+    "path": "/treatments/bridal-dermatology/soprano-ice-laser-hair-reduction/",
+    "view": "t-bridal-dermatology-soprano-ice-laser-hair-reduction",
+    "title": "Soprano ICE Laser Hair Reduction Treatment in Delhi | Bridal Dermatology Clinic",
+    "description": "Soprano ICE Laser Hair Reduction by Dr. Nivedita Dadu in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) — expert pre-bridal skin care for a flawless wedding glow.",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Bridal Dermatology",
+        "path": "/treatments/bridal-dermatology/"
+      },
+      {
+        "name": "Soprano ICE Laser Hair Reduction",
+        "path": "/treatments/bridal-dermatology/soprano-ice-laser-hair-reduction/"
+      }
+    ]
+  },
+  {
     "path": "/treatments/hair-fall/",
     "view": "t-hair-fall",
     "title": "Best Hair Fall & Hair Loss Treatment Clinic in South Delhi",
@@ -1419,7 +1719,7 @@
     "path": "/treatments/hair-fall/hair-transplant/",
     "view": "t-hair-fall-hair-transplant",
     "title": "Top Hair Transplant Clinic in Delhi | Best Cost & Results",
-    "description": "Hair transplant cost in Delhi ranges ?50,000\u2013?1,80,000. Best hair transplant at Dadu Medical Centre by Dr. Nivedita Dadu for natural and long-lasting results",
+    "description": "Hair transplant cost in Delhi ranges ?50,000–?1,80,000. Best hair transplant at Dadu Medical Centre by Dr. Nivedita Dadu for natural and long-lasting results",
     "breadcrumbs": [
       {
         "name": "Home",
@@ -1439,7 +1739,7 @@
     "path": "/treatments/hair-fall/mesotherapy-for-hairfall/",
     "view": "t-hair-fall-mesotherapy-for-hairfall",
     "title": "Mesotherapy for Hair & Cost in West & South Delhi By Clinic",
-    "description": "Mesotherapy\u00a0Cost in Delhi ranges from Rs. 4,000 - Rs. 10,000. Get advanced treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
+    "description": "Mesotherapy Cost in Delhi ranges from Rs. 4,000 - Rs. 10,000. Get advanced treatment in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi).",
     "breadcrumbs": [
       {
         "name": "Home",
@@ -2971,7 +3271,7 @@
     "path": "/treatments/anti-ageing-therapies/profhilo-treatment/",
     "view": "t-anti-ageing-therapies-profhilo-treatment",
     "title": "Profhilo Treatment in Delhi: Cost, Best Skin Booster & Doctor",
-    "description": "Innovative Profhilo\u00ae Skin Booster treatment in Delhi for clear, hydrated, and youthful skin. Clinics Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
+    "description": "Innovative Profhilo® Skin Booster treatment in Delhi for clear, hydrated, and youthful skin. Clinics Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi)",
     "breadcrumbs": [
       {
         "name": "Home",

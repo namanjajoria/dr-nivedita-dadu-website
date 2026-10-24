@@ -1,0 +1,656 @@
+[
+    {
+        "k":  "h1",
+        "runs":  [
+                     {
+                         "t":  "Soprano ICE Laser Hair Reduction",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "1. Hero \u0026 Intro ",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Soprano ICE Laser Hair Reduction",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "A lot of people put off laser hair removal because of one fear: that it\u0027s going to hurt. Older lasers did use short, intense bursts that felt sharp and carried more risk on darker skin, so the worry isn\u0027t unreasonable. Soprano ICE laser hair reduction in Delhi was designed with that problem in mind.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Instead of one hard pulse, it heats the hair follicle gradually while the handpiece keeps moving and the skin stays cooled. Most people describe the feeling as a warm tingle, nothing sharp. It also combines three laser wavelengths in one device, so the treatment can be matched to your skin tone and hair type, including darker Indian skin.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Available at Dadu Medical Centre Vasant Vihar (South Delhi) \u0026 Rajouri Garden (West Delhi), under Dr. Nivedita Dadu.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "2. How Soprano ICE Works",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Soprano ICE, made by Alma Lasers, uses a method called SHR (Super Hair Removal). Rather than one strong flash, it fires many quick, low-energy pulses that build heat in the follicle slowly. The follicle gets hot enough to be damaged, but the skin doesn\u0027t take a sudden jolt.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Two features make this comfortable. ",
+                         "b":  false
+                     },
+                     {
+                         "t":  "ICE cooling",
+                         "b":  true
+                     },
+                     {
+                         "t":  " keeps the surface of the skin cool throughout, which helps limit discomfort and surface burns. The ",
+                         "b":  false
+                     },
+                     {
+                         "t":  "In-Motion technique",
+                         "b":  true
+                     },
+                     {
+                         "t":  " means the handpiece glides continuously over the area instead of stamping spot by spot, so coverage is even and nothing gets overheated.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The device carries three wavelengths, each reaching a different depth in the skin:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "table",
+        "rows":  [
+                     [
+                         "Wavelength",
+                         "Skin types",
+                         "Best suited for"
+                     ],
+                     [
+                         "Alexandrite 755nm",
+                         "I to IV",
+                         "lighter, finer hair"
+                     ],
+                     [
+                         "Diode 810nm",
+                         "I to V",
+                         "larger areas"
+                     ],
+                     [
+                         "Nd:YAG 1064nm",
+                         "I to VI",
+                         "dark, coarse hair and darker skin"
+                     ]
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "They can be used together in a combined \"Trio\" mode. Your specialist decides the combination after looking at your skin and hair.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "3. Areas That Can Be Treated",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Legs, arms, underarms, back, chest, stomach and the bikini or Brazilian area are all common. On the face, Soprano ICE is used for the upper lip, chin, cheeks, neck and beard line. A smaller facial tip handles the precise work, like shaping eyebrows or the beard, and removing ear or nostril hair. Full body packages are available too.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "For the groin area, a disposable tip is used for hygiene, and numbing cream is applied beforehand. The disposable tip is charged separately.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "4. Benefits Section",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "A warm, tingly sensation instead of the sharp snap of older lasers",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Constant skin cooling during the treatment",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Three wavelengths, so the setting suits your skin tone and hair type",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Suitable for darker Indian skin when the right wavelength is used",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Even coverage thanks to the moving handpiece",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "No downtime, and you can carry on with your day",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "A facial tip for detailed areas like brows and beard lines",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "5. Ideal Candidates",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Anyone who wants long-term hair reduction but has been nervous about pain is a good fit. It also suits people with medium to dark skin who were told older lasers weren\u0027t safe for them, and those who want larger areas like the legs or back done in reasonable time. Men often use it for beard shaping or back and chest hair.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Things to know:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Laser targets hair pigment, so very light, grey or blonde hair generally responds less well than dark hair, even with the Alexandrite wavelength. Hormonal areas like the upper lip and chin may need more sessions.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "6. Process \u0026 Techniques",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Assessment:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Your skin type, hair colour and thickness are checked, and the wavelength or combination is chosen.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Prep:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Shave the area beforehand. For the bikini area, numbing cream is applied at the clinic.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Treatment:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " The cooled handpiece glides over the skin continuously. Small areas like the upper lip take a few minutes, while full legs or the back take around 45 to 60 minutes.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "After:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Some mild redness may show up and usually settles within a few hours. Treated hair starts shedding over the next two to three weeks.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "How many sessions?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Most body areas need 6 to 8 sessions, spaced 4 to 6 weeks apart. Hormonal areas take longer, and the upper lip can need 6 to 10. A yearly touch-up may help keep results going. Progress usually looks something like this, though it varies with skin type, hair colour, area and hormones:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Session 1:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " around 10 to 20% less hair, with some shedding in 2 to 3 weeks",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Sessions 2 to 3:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " around 30 to 50%, with finer, slower regrowth",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Sessions 4 to 5:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " around 50 to 70%, and patches of bare skin start to appear",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Sessions 6 to 8:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " around 70 to 90% across most areas",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Aftercare:",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Shave between sessions, but don\u0027t wax or thread, since the laser needs the root in place",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Keep the treated area out of direct sun for a few days",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Use SPF 30 or higher regularly",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "7. Before \u0026 After Results",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Patient results gallery to be placed here)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "8. Cost of Soprano ICE Laser Hair Reduction in Delhi",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "table",
+        "rows":  [
+                     [
+                         "Area",
+                         "Approx. cost per session*",
+                         "Usual sessions"
+                     ],
+                     [
+                         "Upper lip",
+                         "₹1,500 – ₹3,000",
+                         "6 to 10"
+                     ],
+                     [
+                         "Chin / jawline",
+                         "₹1,500 – ₹3,500",
+                         "6 to 8"
+                     ],
+                     [
+                         "Underarms",
+                         "₹2,000 – ₹4,000",
+                         "6 to 8"
+                     ],
+                     [
+                         "Beard shaping (men)",
+                         "₹2,000 – ₹5,000",
+                         "6 to 8"
+                     ],
+                     [
+                         "Bikini / Brazilian",
+                         "₹3,000 – ₹7,000",
+                         "6 to 8"
+                     ],
+                     [
+                         "Full arms",
+                         "₹4,000 – ₹8,000",
+                         "6 to 8"
+                     ],
+                     [
+                         "Back / chest (men)",
+                         "₹5,000 – ₹10,000",
+                         "6 to 8"
+                     ],
+                     [
+                         "Full legs",
+                         "₹6,000 – ₹12,000",
+                         "6 to 8"
+                     ],
+                     [
+                         "Full body package",
+                         "₹15,000 – ₹40,000",
+                         "6 to 8"
+                     ]
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "*T\u0026C apply. Prices are approximate and confirmed after a skin and hair assessment. The disposable groin tip is charged separately.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "9. FAQs",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: What makes Soprano ICE different from other lasers?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. It combines three wavelengths, keeps the handpiece moving and cools the skin the whole time. That makes it more comfortable and better suited to darker skin than many older lasers.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Does Soprano ICE hurt?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Most people feel a warm tingle, often compared to a warm-stone massage. The cooling keeps things comfortable.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How many sessions do I need?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Usually 6 to 8, four to six weeks apart. The upper lip and other hormonal areas can need a few more.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is it safe for dark Indian skin?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes. The 1064nm wavelength and constant cooling make it suitable for darker skin, with settings chosen by your specialist.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Can it shape my beard or eyebrows?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes. A small facial tip is used for beard lines and brows, and also for ear and nostril hair.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Can I shave between sessions?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes, shaving is fine. Avoid waxing and threading until your course is finished.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How long does a session take?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. A few minutes for small areas like the upper lip, and around 45 to 60 minutes for full legs or the back.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: What does Soprano ICE cost in Delhi?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Around ₹1,500 per session for small areas, up to about ₹40,000 for a full body session. The final cost is confirmed after your consultation.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "10. Closing CTA",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "If fear of pain is the only thing stopping you, it may be worth a conversation. Book a Soprano ICE consultation with Dr. Nivedita Dadu at Dadu Medical Centre, Vasant Vihar (South Delhi) or Rajouri Garden (West Delhi), and we\u0027ll match the settings to your skin and hair.",
+                         "b":  false
+                     }
+                 ]
+    }
+]

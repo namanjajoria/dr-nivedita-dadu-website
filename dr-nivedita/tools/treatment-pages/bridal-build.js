@@ -13,6 +13,28 @@ const PAGES = [
   { slug: 'lip-pigmentation', doc: 'Lip Pigmentation' },
   { slug: 'power-glow', doc: 'Power Glow' },
 ];
+// The 15 pages added on 24 Oct 2026 (Word files in "D:\Bridal Dermatology"). No image folder yet, so they use
+// the treatment's own photos from the old site (public/images/treatments/); swap in real ones later.
+// Only these are written by default; pass --all to rewrite the first 5 as well.
+const NEW_PAGES = [
+  ['acne-check-peel', 'Acne Check Peel', 'acne-check-peel-hero.webp acne-check-peel-treatment-in-delhi.webp acne-check-peel-treatment.jpeg'],
+  ['alexandrite-laser-hair-removal', 'Alexandrite Laser Hair Removal', 'alexandrite-laser.jpg'],
+  ['carbon-laser-peel', 'Carbon Laser Peel', 'carbon-peel-hero.webp carbon-peel-treatment-in-delhi.webp carbon-laser-facial-modern-clinic.webp carbon-laser-peel.jpeg carbon-laser-peel.jpg'],
+  ['dark-circles', 'Dark Circles', 'dark-circles.jpeg'],
+  ['dermal-fillers', 'Dermal Fillers', 'filler.jpeg filler.jpg'],
+  ['dermaroller-for-acne-scars', 'Dermaroller for Acne Scars', 'dermaroller.jpeg dermaroller.jpg'],
+  ['diode-laser-hair-removal', 'Diode Laser Hair Removal', 'diode-laser.jpg'],
+  ['dmc-hgp-hair-growth-promoters', 'DMC-HGP® Hair Growth Promoters', 'advanced-hgp.jpg advanced-hgp-2-0.jpg'],
+  ['laser-hair-removal', 'Laser Hair Removal', 'laser-hair-removal.jpeg laser-hair-removal-cover.jpg'],
+  ['laser-toning', 'Laser Toning', 'laser-toning.jpeg laser-toning.jpg'],
+  ['mesotherapy-for-hair-fall', 'Mesotherapy for Hair Fall', 'mesotherapy-for-hairfall.jpeg mesotherapy-for-hairfall.jpg'],
+  ['mnrf-microneedling-radiofrequency', 'MNRF (Microneedling Radiofrequency)', 'micro-needling-radiofrequency.jpg mnrf.jpg'],
+  ['mnrf-for-stretch-marks', 'MNRF for Stretch Marks', 'mnrf.jpg micro-needling-radiofrequency.jpg'],
+  ['photofacial', 'Photofacial', 'photofacials.jpeg photofacials.jpg ipl-therapy-or-photofacial.jpg'],
+  ['soprano-ice-laser-hair-reduction', 'Soprano ICE Laser Hair Reduction', 'soprano-ice-laser-hair-reduction.jpg'],
+].map(([slug, doc, photos]) => ({ slug, doc, photos: photos.split(' '), isNew: true }));
+PAGES.push(...NEW_PAGES);
+const ALL = process.argv.includes('--all');
 const COST_LEFT = ['laser-facials', 'lip-pigmentation', 'power-glow'];   // cost sections shown left-aligned
 // band keeps only the first topic; the second topic + Benefits get their own image-left section
 const SPLIT_BAND = ['beard-shaping', 'divagenesis', 'laser-facials', 'lip-pigmentation', 'power-glow'];
@@ -49,9 +71,11 @@ function leadBold(runs) {
   if (!runs.length || !runs[0].b) return null;
   return { label: runs[0].t.trim(), rest: runs.slice(1) };
 }
-const blocksHtml = blocks => {          // p / li blocks -> <p> and <ul>, keeping the Word order
+const tableHtml = rows => `<div class="sd-table-wrap"><table class="sd-table"><thead><tr>${rows[0].map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+const blocksHtml = blocks => {          // p / li / table blocks -> <p>, <ul> and tables, keeping the Word order
   let out = '', open = false;
   for (const b of blocks) {
+    if (b.k === 'table') { if (open) { out += '</ul>'; open = false; } out += tableHtml(b.rows); continue; }
     if (b.k === 'li') { if (!open) { out += '<ul>'; open = true; } out += `<li>${html(b.runs)}</li>`; }
     else { if (open) { out += '</ul>'; open = false; } out += `<p>${html(b.runs)}</p>`; }
   }
@@ -75,15 +99,48 @@ function parseDoc(file) {
 }
 
 // ---------- page model ----------
+// closing CTA: a leading question becomes the CTA title ("Button: …" lines are editor notes for the button)
+function ctaOf(cta) {
+  const ctaText = cta.blocks.map(b => plain(b.runs)).filter(t => !/^Button:/i.test(t)).join(' ');
+  const qm = ctaText.match(/^([^.?!]*\?)\s+([\s\S]+)$/);
+  return qm ? { title: qm[1], desc: qm[2] } : { title: 'Not sure which treatment is right for YOU?', desc: ctaText };
+}
+const faqOf = (faqs, doc) => faqs.blocks.map(b => {       // "**Q: question** Ans. answer"
+  const lb = leadBold(b.runs); must(lb, doc + ': FAQ without bold question');
+  const rest = lb.rest.slice(); rest[0] = { ...rest[0], t: rest[0].t.replace(/^\s*Ans\.?\s*/, '') };
+  return { q: lb.label.replace(/^Q:\s*/, ''), a: html(rest) };
+});
+
+// Dark Circles is written as a condition page. Approved mapping (24 Oct 2026): Hero -> intro,
+// What Are -> band, Causes -> image-left section, Prevention Tips -> Ideal Candidates card,
+// Treatments + Why Choose -> Process section, FAQs, Consultation CTA. Sections 9-14 (Before & After,
+// YouTube, clinic finder, awards, newsletter, footer) are notes for shared site modules, not page text.
+function modelCondition(p, h1, sections) {
+  const take = re => { const i = sections.findIndex(s => re.test(s.title)); must(i >= 0, p.doc + ': no section ' + re); return sections.splice(i, 1)[0]; };
+  const hero = take(/^Hero$/i), what = take(/^What Are/i), causes = take(/^Causes/i), prevention = take(/^Prevention/i),
+    treatments = take(/^Treatments/i), why = take(/^Why Choose/i), faqs = take(/^FAQs$/i), cta = take(/CTA$/i);
+  const left = sections.map(s => s.title);
+  must(left.every(t => /^(Before & After|YouTube|Find a Clinic|Awards|Newsletter|Footer)/i.test(t)), p.doc + ': unexpected sections ' + left);
+  const intro = hero.blocks.filter(b => !/^H1:/i.test(plain(b.runs)));
+  return {
+    ...p, name: h1, subtitle: h1, intro, info: [what, causes], benefits: null,
+    ideal: prevention.blocks, idealTitle: prevention.title,
+    processBlocks: treatments.blocks, processTitle: treatments.title, processMore: [why],
+    cost: null, faq: faqOf(faqs, p.doc), cta: ctaOf(cta), steps: [], care: [], factors: causes, tech: what,
+  };
+}
+
 function model(p) {
   const { h1, sections } = parseDoc(`${S}/bridal-json/${p.doc}.json`);
+  if (p.slug === 'dark-circles') return modelCondition(p, h1, sections);
   const take = re => { const i = sections.findIndex(s => re.test(s.title)); return i < 0 ? null : sections.splice(i, 1)[0]; };
   const intro = take(/^Hero & Intro$/i), benefits = take(/^Benefits/i), ideal = take(/^Ideal Candidates$/i),
     process = take(/^Process & Techniques$/i), results = take(/^Before & After/i), cost = take(/^Cost /i),
     faqs = take(/^FAQs$/i), cta = take(/CTA$/i);
   must(intro && benefits && ideal && process && faqs && cta, p.doc + ': a required section is missing');
-  must(sections.length === 2, p.doc + ': expected 2 info sections, got ' + sections.map(s => s.title));
-  const techIdx = sections.findIndex(s => /^(How|What Makes|Why We Pair)/i.test(s.title));
+  // the new pages may have a third topic: topic 1 -> band, topics 2 + 3 -> image-left section (approved)
+  must(sections.length === 2 || (p.isNew && sections.length === 3), p.doc + ': expected 2 info sections, got ' + sections.map(s => s.title));
+  const techIdx = p.isNew ? 0 : sections.findIndex(s => /^(How|What Makes|Why We Pair)/i.test(s.title));
   must(techIdx >= 0, p.doc + ': no "how it works" section');
   const tech = sections[techIdx], factors = sections[1 - techIdx];
 
@@ -93,11 +150,11 @@ function model(p) {
 
   // benefits: lead-in paragraph(s) + list
   const bDesc = benefits.blocks.filter(b => b.k === 'p'), bList = benefits.blocks.filter(b => b.k === 'li');
-  must(bList.length, p.doc + ': benefits list empty');
-  must(benefits.blocks.findIndex(b => b.k === 'li') >= bDesc.length, p.doc + ': benefits text after the list');
+  must(p.isNew || bList.length, p.doc + ': benefits list empty');
+  must(p.isNew || benefits.blocks.findIndex(b => b.k === 'li') >= bDesc.length, p.doc + ': benefits text after the list');
 
   // process: intro text, steps, then bold-labelled blocks (sessions, aftercare, ...)
-  const pb = process.blocks;
+  const pb = process.blocks.filter(b => b.k !== 'table');   // steps/care are only for the report; the page uses processBlocks
   const firstBlock = pb.findIndex(b => b.k === 'p' && leadBold(b.runs));
   const head = firstBlock < 0 ? pb : pb.slice(0, firstBlock);
   const tail = firstBlock < 0 ? [] : pb.slice(firstBlock);
@@ -116,31 +173,23 @@ function model(p) {
     if (lb) care.push({ label: lb.label, blocks: lb.rest.length && plain(lb.rest) ? [{ k: 'p', runs: lb.rest }] : [] });
     else care[care.length - 1].blocks.push(b);
   }
-  must(care.length >= 2, p.doc + ': expected sessions + aftercare blocks');
+  must(p.isNew || care.length >= 2, p.doc + ': expected sessions + aftercare blocks');
 
   // cost
   let costM = null;
   if (cost) {
     const paras = cost.blocks.filter(b => b.k === 'p');
     const note = paras.filter(b => /^\*/.test(plain(b.runs)));
-    costM = { title: cost.title, paras: paras.filter(b => !note.includes(b)), note, table: (cost.blocks.find(b => b.k === 'table') || {}).rows };
+    costM = { title: cost.title, paras: paras.filter(b => !note.includes(b)), note, table: (cost.blocks.find(b => b.k === 'table') || {}).rows,
+      // new pages: text and every table in Word order (some have two tables)
+      blocks: cost.blocks.filter(b => !note.includes(b)) };
   }
-
-  // FAQs: "**Q: question** Ans. answer"
-  const faq = faqs.blocks.map(b => {
-    const lb = leadBold(b.runs); must(lb, p.doc + ': FAQ without bold question');
-    const rest = lb.rest.slice(); rest[0] = { ...rest[0], t: rest[0].t.replace(/^\s*Ans\.?\s*/, '') };
-    return { q: lb.label.replace(/^Q:\s*/, ''), a: html(rest) };
-  });
-
-  // closing CTA: a leading question becomes the CTA title
-  const ctaText = cta.blocks.map(b => plain(b.runs)).join(' ');
-  const qm = ctaText.match(/^([^.?!]*\?)\s+([\s\S]+)$/);
+  const faq = faqOf(faqs, p.doc);
   return {
-    ...p, name: h1, subtitle, intro: ib, benefits: { desc: bDesc, list: bList }, ideal: ideal.blocks,
+    ...p, name: h1, subtitle, intro: ib, benefits: { desc: bDesc, list: bList, blocks: benefits.blocks }, ideal: ideal.blocks,
     info: sections.slice(), processBlocks: process.blocks,
     factors, tech, pIntro, steps, care, cost: costM, faq,
-    cta: qm ? { title: qm[1], desc: qm[2] } : { title: 'Not sure which treatment is right for YOU?', desc: ctaText },
+    cta: ctaOf(cta),
     resultsPlaceholder: results ? plain(results.blocks[0].runs) : null,
   };
 }
@@ -168,6 +217,7 @@ function form(wide) {
 const bandBlocks = blocks => {
   let out = '', open = false;
   for (const b of blocks) {
+    if (b.k === 'table') { if (open) { out += '</ul>'; open = false; } out += tableHtml(b.rows); continue; }
     if (b.k === 'li') { if (!open) { out += '<ul class="sd-band-list">'; open = true; } out += `<li>${html(b.runs)}</li>`; }
     else { if (open) { out += '</ul>'; open = false; } out += `<p class="sd-band-desc">${html(b.runs)}</p>`; }
   }
@@ -350,39 +400,86 @@ function normalize(m, imgs) {
     introHtml: blocksHtml(m.intro),
     band: { title: esc(m.info[0].title), html: bandBlocks(m.info[0].blocks) },
     split: [...m.info.slice(1).map(sec => ({ title: esc(sec.title), html: blocksHtml(sec.blocks) })),
-      { title: 'Benefits', html: blocksHtml([...m.benefits.desc, ...m.benefits.list]) }],
+      ...(m.benefits ? [{ title: 'Benefits', html: blocksHtml(m.isNew ? m.benefits.blocks : [...m.benefits.desc, ...m.benefits.list]) }] : [])],
     ideal: blocksHtml(m.ideal), cta: { title: esc(m.cta.title), desc: esc(m.cta.desc) },
-    process: blocksHtml(m.processBlocks),
-    cost: m.cost ? { title: esc(m.cost.title), html: blocksHtml(m.cost.paras), table: m.cost.table ? m.cost.table.map(r => r.map(esc)) : null,
+    idealTitle: m.idealTitle ? esc(m.idealTitle) : undefined,
+    process: blocksHtml(m.processBlocks), processTitle: m.processTitle ? esc(m.processTitle) : undefined,
+    processMore: (m.processMore || []).map(sec => ({ title: esc(sec.title), html: blocksHtml(sec.blocks) })),
+    cost: m.cost && m.isNew ? { title: esc(m.cost.title), html: blocksHtml(m.cost.blocks), table: null, notes: m.cost.note.map(n => html(n.runs)), left: false }
+      : m.cost ? { title: esc(m.cost.title), html: blocksHtml(m.cost.paras), table: m.cost.table ? m.cost.table.map(r => r.map(esc)) : null,
       notes: m.cost.note.map(n => html(n.runs)), left: COST_LEFT.includes(m.slug) } : null,
     faq: m.faq.map(f => ({ q: esc(f.q), a: f.a })),
     imgs,
   };
 }
 
+// photos from public/images/treatments -> gallery (all), band / image-left / process images (cycled)
+function imgSize(file) {
+  const b = fs.readFileSync(file);
+  if (b.toString('ascii', 0, 4) === 'RIFF') {
+    const t = b.toString('ascii', 12, 16);
+    if (t === 'VP8 ') return { w: b.readUInt16LE(26) & 0x3fff, h: b.readUInt16LE(28) & 0x3fff };
+    if (t === 'VP8L') { const v = b.readUInt32LE(21); return { w: (v & 0x3fff) + 1, h: ((v >> 14) & 0x3fff) + 1 }; }
+    if (t === 'VP8X') return { w: 1 + b.readUIntLE(24, 3), h: 1 + b.readUIntLE(27, 3) };
+  }
+  if (b[0] === 0xff && b[1] === 0xd8) {
+    for (let i = 2; i < b.length;) {
+      if (b[i] !== 0xff) { i++; continue; }
+      const mk = b[i + 1], len = b.readUInt16BE(i + 2);
+      if (mk >= 0xc0 && mk <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(mk)) return { w: b.readUInt16BE(i + 7), h: b.readUInt16BE(i + 5) };
+      i += 2 + len;
+    }
+  }
+  throw new Error('unknown image size: ' + file);
+}
+function photoSet(names) {
+  const seen = new Set();
+  const gallery = names.map(n => {
+    const f = `${SITE}/public/images/treatments/${n}`;
+    must(fs.existsSync(f), 'missing photo ' + f);
+    const sum = require('crypto').createHash('sha1').update(fs.readFileSync(f)).digest('hex');
+    if (seen.has(sum)) return null; seen.add(sum);              // .jpg and .jpeg copies of the same photo
+    const { w, h } = imgSize(f);
+    return { src: '/images/treatments/' + n, w: String(w), h: String(h) };
+  }).filter(Boolean);
+  const at = i => gallery[i % gallery.length];
+  return { gallery, band: at(1), split: at(2), tech: at(3) };
+}
+
 // ---------- run ----------
+const toWrite = new Set();
 const out = {};
 const report = [];
 for (const p of PAGES) {
   const file = `${V}/t-bridal-dermatology-${p.slug}.html`;
   const m = model(p);
-  let { imgs, more } = currentAssets(file);
-  const manifestFile = `${S}/bridal-images.json`;     // real images from "D:\Nivedita Dadu Website Images\Bridal Dermatology"
-  if (fs.existsSync(manifestFile)) { const mf = JSON.parse(fs.readFileSync(manifestFile, 'utf8')); if (mf[p.slug]) imgs = mf[p.slug]; }
+  let imgs;
+  if (p.isNew) imgs = photoSet(p.photos);
+  else {
+    imgs = currentAssets(file).imgs;
+    const manifestFile = `${S}/bridal-images.json`;     // real images from "D:\Nivedita Dadu Website Images\Bridal Dermatology"
+    if (fs.existsSync(manifestFile)) { const mf = JSON.parse(fs.readFileSync(manifestFile, 'utf8')); if (mf[p.slug]) imgs = mf[p.slug]; }
+  }
+  if (p.isNew || ALL) toWrite.add(file);
   const html_ = renderPage(normalize(m, imgs));
   must(!/\*\*/.test(html_), p.slug + ': literal ** left in output');
   out[file] = html_;
   const firstIntro = plain(m.intro[0].runs);
   report.push({ slug: p.slug, name: m.name, subtitle: m.subtitle, steps: m.steps.length, stepTitles: m.steps.map(s => s.title || '(STEP n)').join(' | '),
     care: m.care.map(c => c.label).join(' | '), factors: m.factors.title, tech: m.tech.title, cost: m.cost ? m.cost.title + (m.cost.table ? ' +table' : '') : '-',
-    faqs: m.faq.length, cta: m.cta.title, gallery: imgs.gallery.length, intro: firstIntro });
+    faqs: m.faq.length, cta: m.cta.title, gallery: imgs.gallery.length, intro: firstIntro, cover: imgs.gallery[0] });
 }
 console.log(JSON.stringify(report, null, 1));
 console.log('NOTES REMOVED:\n' + removedNotes.join('\n'));
 if (WRITE) {
   const BK = S + '/backup-bridal-layout';
   fs.mkdirSync(BK, { recursive: true });
-  for (const [f, s] of Object.entries(out)) { if (!fs.existsSync(BK + '/' + path.basename(f))) fs.copyFileSync(f, BK + '/' + path.basename(f)); fs.writeFileSync(f, s); }
+  for (const [f, s] of Object.entries(out)) {
+    if (!toWrite.has(f)) continue;
+    if (fs.existsSync(f) && !fs.existsSync(BK + '/' + path.basename(f))) fs.copyFileSync(f, BK + '/' + path.basename(f));
+    fs.writeFileSync(f, s);
+  }
   fs.writeFileSync(S + '/bridal-intros.json', JSON.stringify(report.map(r => ({ slug: r.slug, intro: r.intro })), null, 1));
-  console.log('WROTE', Object.keys(out).length, 'pages');
+  fs.writeFileSync(S + '/bridal-pages.json', JSON.stringify(report.map(r => ({ slug: r.slug, doc: PAGES.find(p => p.slug === r.slug).doc, name: r.name, intro: r.intro, cover: r.cover })), null, 1));
+  console.log('WROTE', toWrite.size, 'pages');
 }

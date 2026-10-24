@@ -1,0 +1,660 @@
+[
+    {
+        "k":  "h1",
+        "runs":  [
+                     {
+                         "t":  "Laser Hair Removal",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "1. Hero \u0026 Intro ",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Laser Hair Removal",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Waxing every few weeks, threading the upper lip, shaving before every trip. For most of us it started in our teens and never really stopped. Add the ingrown hairs, the rashes and the dark patches that years of waxing can leave, and it\u0027s easy to see why so many people start looking into laser hair removal in Delhi.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Lasers work differently. Instead of pulling hair out, it weakens the root so it grows back less, and what does grow back is usually finer and lighter. It takes a course of sessions, not one visit, but most people end up with far less hair to deal with and a lot more free time. The treatment is suitable for both men and women, and for almost any area of the body.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Available at Dadu Medical Centre Vasant Vihar (South Delhi) \u0026 Rajouri Garden (West Delhi), under Dr. Nivedita Dadu.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "2. How Laser Hair Removal Works",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The laser looks for the pigment inside the hair follicle. When it finds it, the light turns into heat and damages the follicle enough that it struggles to produce hair again.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "There\u0027s a reason it takes several sessions. Hair grows in cycles, and the laser only works on follicles that are in their active growth phase at the time. Others are resting and will come up later, so sessions are spaced out to catch each new round. With every visit, a few more follicles stop working and the hair gets noticeably thinner.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "3. Lasers We Use",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Not every laser suits every skin and hair type, which is why the clinic has more than one. Your specialist chooses after looking at your skin tone, hair colour and thickness, and the area being treated.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Soprano ICE:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " a diode laser with built-in cooling, used across all skin tones and for both coarse and fine hair",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Diode laser (810nm):",
+                         "b":  true
+                     },
+                     {
+                         "t":  " suited to medium to dark skin with coarse, dark hair",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Alexandrite laser (755nm):",
+                         "b":  true
+                     },
+                     {
+                         "t":  " better for fair to medium skin with fine to medium hair",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Titanium Soprano:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " a multi-wavelength system that can be used on all skin and hair types",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Older hair removal lasers carried a real risk of burns or pigment changes on darker skin. Today\u0027s diode and Soprano systems are considered safe for most Indian skin types, provided they\u0027re used by experienced professionals.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "4. Areas That Can Be Treated",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Almost anywhere with unwanted hair. For women, the face, upper lip, chin and sideburns are common requests, along with underarms, arms, legs, bikini line and stomach. Men often book the back, chest and stomach, and many come in for beard shaping to keep the neck and cheek lines clean.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "5. Benefits Section",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Long-term reduction in hair, often 70 to 90% after the full course",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Regrowth tends to be finer, lighter and sparser",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "No more waxing pain, rashes or ingrown hairs from repeated hair removal",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Smoother skin texture over time",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Works on most body areas for men and women",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Laser choice tailored to Indian skin types",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Frees up the time you\u0027d spend on waxing and threading appointments",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "6. Ideal Candidates",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Anyone tired of the waxing and shaving routine, whether for the face or the body. Women dealing with facial hair, men who want a less hairy back or chest, and people who get ingrown hairs or irritation from waxing all tend to benefit. It also suits brides and grooms, though it\u0027s best to start early since the course runs over several months.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Things to know:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Laser works by targeting pigment, so very light, grey or blonde hair may not respond well. Hormonal conditions can also make new hair grow over time, which is why some people need maintenance. Your doctor will check your skin, hair and medical history at the consultation before recommending a laser. ",
+                         "b":  false
+                     },
+                     {
+                         "t":  "(The live page doesn\u0027t list contraindications or the grey/blonde hair limitation: please have Dr. Nivedita Dadu confirm these points, and any other precautions such as pregnancy, recent tanning or photosensitising medicines, before publishing.)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "7. Process \u0026 Techniques",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Consultation:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Your skin tone, hair type and the areas you want treated are assessed, and the right laser is chosen.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Prep:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Shave the area before your session. Avoid waxing or threading, because the laser needs the hair root in place to work.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Treatment:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " The laser is moved over the area in passes. With cooling systems like Soprano ICE, most people feel warmth rather than pain.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "After the session:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Treated hairs start shedding within one to two weeks.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "How many sessions?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Most areas need 6 to 8 sessions, spaced about four to six weeks apart. Beard shaping usually needs 4 to 6. The reduction becomes more visible with each sitting. Because hormones can wake up dormant follicles later on, a maintenance session once or twice a year may be needed.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Between sessions:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Shaving is fine. Waxing and threading are not. ",
+                         "b":  false
+                     },
+                     {
+                         "t":  "(Session duration, downtime, sun-care advice and possible side effects such as temporary redness are not listed on the live page: please confirm these with the clinic before publishing.)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "8. Before \u0026 After Results",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Patient results gallery to be placed here)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "9. Cost of Laser Hair Removal in Delhi",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The price depends on the size of the area, how dense the hair is and your skin type. Larger or combined areas may be priced differently.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "By body area (per session)",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "table",
+        "rows":  [
+                     [
+                         "Area",
+                         "Approx. cost per session*"
+                     ],
+                     [
+                         "Upper lip",
+                         "₹1,500 – ₹3,000"
+                     ],
+                     [
+                         "Chin",
+                         "₹1,500 – ₹3,000"
+                     ],
+                     [
+                         "Underarms",
+                         "₹1,500 – ₹3,500"
+                     ],
+                     [
+                         "Full face",
+                         "₹3,000 – ₹7,000"
+                     ],
+                     [
+                         "Bikini line",
+                         "₹2,500 – ₹6,000"
+                     ],
+                     [
+                         "Arms (half / full)",
+                         "₹3,000 – ₹8,000"
+                     ],
+                     [
+                         "Stomach",
+                         "₹3,000 – ₹8,000"
+                     ],
+                     [
+                         "Legs (half / full)",
+                         "₹4,000 – ₹12,000"
+                     ],
+                     [
+                         "Chest (men)",
+                         "₹4,000 – ₹11,000"
+                     ],
+                     [
+                         "Back (men)",
+                         "₹5,000 – ₹13,000"
+                     ],
+                     [
+                         "Beard shaping (men)",
+                         "₹2,000 – ₹6,000"
+                     ]
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "By laser (per session and full course)",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "table",
+        "rows":  [
+                     [
+                         "Laser",
+                         "Per session*",
+                         "Full course*"
+                     ],
+                     [
+                         "Diode",
+                         "₹2,500 – ₹10,000",
+                         "₹15,000 – ₹80,000"
+                     ],
+                     [
+                         "Alexandrite",
+                         "₹3,000 – ₹11,000",
+                         "₹18,000 – ₹88,000"
+                     ],
+                     [
+                         "Soprano ICE",
+                         "₹3,000 – ₹12,000",
+                         "₹18,000 – ₹96,000"
+                     ],
+                     [
+                         "Titanium Soprano",
+                         "₹3,500 – ₹13,000",
+                         "₹21,000 – ₹1,04,000"
+                     ],
+                     [
+                         "Beard shaping",
+                         "₹2,000 – ₹6,000",
+                         "₹8,000 – ₹36,000"
+                     ]
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "*T\u0026C apply. Prices are approximate, and the final cost is confirmed after your consultation.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "10. FAQs",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How many sessions of laser hair removal will I need?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Usually 6 to 8, spaced four to six weeks apart. It varies with the area, hair density and skin type.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is laser hair removal permanent?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. It gives long-lasting reduction rather than a guarantee that no hair will ever return. Some people need a maintenance session once or twice a year.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Does it hurt?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Most people describe it as warmth, not pain, especially with cooling systems like Soprano ICE.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Can women remove facial hair with laser?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes. Upper lip, chin and full face treatments are common and considered safe when done correctly.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Does it work on dark Indian skin?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes. Diode and Soprano systems are designed with medium to dark skin in mind, and the specialist picks the setting for you.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: When will I see results?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Treated hair starts shedding within one to two weeks. The reduction becomes clearer with each session.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Can I wax between sessions?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. No. Only shave, because waxing and threading remove the root the laser needs to target.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: What does laser hair removal cost in Delhi?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Per session, roughly ₹1,500 for small areas like the upper lip, going up to around ₹13,000 for larger areas like the back. The exact figure is confirmed after your consultation at Dadu Medical Centre.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "11. Closing CTA",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "If you\u0027ve lost count of your waxing appointments, it might be time to stop. Book a laser hair removal consultation with Dr. Nivedita Dadu at Dadu Medical Centre, Vasant Vihar (South Delhi) or Rajouri Garden (West Delhi), and find out which laser and plan suit your skin.",
+                         "b":  false
+                     }
+                 ]
+    }
+]

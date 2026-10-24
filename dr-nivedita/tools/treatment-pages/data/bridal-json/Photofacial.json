@@ -1,0 +1,716 @@
+[
+    {
+        "k":  "h1",
+        "runs":  [
+                     {
+                         "t":  "Photofacial ",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "1. Hero \u0026 Intro ",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Photofacial Treatment",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Some skin problems arrive as a package. A few sun spots on the cheeks, redness that never quite settles, pores that look bigger every year. Most people try a different product for each one and still end up frustrated. A photofacial treatment in Delhi is one of the few options that can work on several of these in the same session.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "A photofacial uses intense pulsed light, usually called IPL. The light is drawn to brown pigment and to the tiny blood vessels behind redness, and it gently warms the deeper skin as well. Over a short course, spots fade, redness calms down and skin looks clearer and more even. You can put on makeup and go back to work the same day.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Available at Dadu Medical Centre Vasant Vihar (South Delhi) \u0026 Rajouri Garden (West Delhi), under Dr. Nivedita Dadu.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "2. How a Photofacial Works",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "IPL sends out pulses of light across a range of wavelengths. Your doctor adjusts the wavelength, energy and pulse length so the light hits the problem and leaves the surrounding skin alone.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Two things in the skin absorb this light. Melanin in brown spots soaks it up, and so does haemoglobin in the small blood vessels that cause redness. The light turns into heat, the pigment and vessels are damaged, and your body gradually clears them away. That same heat also reaches the deeper layers and encourages new collagen, which is why texture and fine lines can improve over a few months.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "3. What a Photofacial Can Treat",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Pigment concerns:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " sun spots, age spots, brown patches, freckles, general hyperpigmentation and uneven tone. Some types of melasma can be treated too, but carefully, since melasma can react unpredictably.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Redness:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " rosacea, flushing, broken capillaries and the red marks acne leaves behind.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Texture and tone:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " open pores, dull skin, mild fine lines and dark circles. It can also reduce oiliness for a while, though that effect is temporary.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Will brown spots disappear completely? For many people they fade significantly. How far they go depends on the type and depth of the pigment, and on how well you protect your skin from the sun afterwards.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "4. Benefits Section",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Works on spots, redness and texture in one treatment",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "No significant downtime, and makeup can go on straight after",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Encourages collagen for gradual firming and smoother texture",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Usually no numbing cream needed",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Settings adjusted for Indian and South Asian skin",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Results can last a year or more with sun protection",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "5. Ideal Candidates",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "People with sun damage, freckles, uneven tone or patchy pigmentation tend to see the clearest results. It\u0027s also a good fit if you deal with persistent redness, rosacea, visible capillaries or leftover acne redness. Anyone who wants clearer, brighter skin without taking time off work can consider it.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Who should not have a photofacial:",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "pregnant women",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "people on retinoids or other medicines that make skin sensitive to light",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "heavily tanned skin",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "a history of epilepsy or seizures",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "current chemotherapy or radiation therapy",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "a pacemaker, internal defibrillator or metal implants in the treatment area",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "lupus, scleroderma or sarcoidosis",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "HIV or multiple sclerosis (a clearance letter from your doctor is needed)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "numbness in the treatment area",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "moles, lesions, tattoos or port wine stains in the area being treated",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "children under 14",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "The area under the eyebrows and the jaws are not treated. Your doctor will go over your medical history at the consultation to make sure it\u0027s safe for you.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "6. Process \u0026 Techniques",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Assessment:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Dr. Nivedita Dadu looks at your skin, talks through what you\u0027d like to improve and sets realistic expectations.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Prep:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " A cool gel is spread over the treatment area, and you\u0027re given protective goggles for the bright flashes.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Treatment:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " The IPL handpiece is moved across the skin. Each pulse feels like a quick, warm snap, a bit like a rubber band flick. Most people manage fine without numbing cream.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Done:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " A full-face session takes around 30 to 45 minutes, and you can head back to your day.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "How many sessions?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " A standard course is about 5 sessions, 3 to 4 weeks apart. It varies by concern:",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "table",
+        "rows":  [
+                     [
+                         "Concern",
+                         "Usual sessions"
+                     ],
+                     [
+                         "Spots, freckles, dull tone",
+                         "3 to 5"
+                     ],
+                     [
+                         "Broken capillaries",
+                         "3 to 4"
+                     ],
+                     [
+                         "Rosacea, acne redness, pores",
+                         "4 to 5"
+                     ],
+                     [
+                         "Fine lines (collagen)",
+                         "5"
+                     ],
+                     [
+                         "Melasma",
+                         "4 to 6"
+                     ]
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Many people notice a difference after the first or second session, with results building from there. A maintenance session once or twice a year helps keep things that way.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "After the session:",
+                         "b":  true
+                     },
+                     {
+                         "t":  " Your skin may look a little pink for a few hours. Brown spots often turn darker for a few days before they flake off, which is a normal part of the process. Settings are adjusted carefully for darker skin to avoid unwanted pigment changes.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Aftercare:",
+                         "b":  true
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Wear sunscreen every day during and after the course, and reapply every few hours outdoors",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Use a hat or light clothing in the sun, and keep sun exposure low between sessions",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Skip saunas and steam rooms for 24 to 48 hours after each session",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "li",
+        "runs":  [
+                     {
+                         "t":  "Stick to the skincare routine your doctor recommends",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "7. Before \u0026 After Results",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "(Patient results gallery to be placed here)",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "8. Cost of Photofacial in Delhi",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "table",
+        "rows":  [
+                     [
+                         "Treatment",
+                         "Approx. cost*"
+                     ],
+                     [
+                         "Single full-face session",
+                         "₹4,000 – ₹8,000"
+                     ],
+                     [
+                         "Course of 5 sessions",
+                         "₹18,000 – ₹35,000"
+                     ],
+                     [
+                         "Pigmentation and sun spots (per session)",
+                         "₹5,000 – ₹9,000"
+                     ],
+                     [
+                         "Rosacea and redness (per session)",
+                         "₹5,000 – ₹9,000"
+                     ],
+                     [
+                         "Acne and oily skin (per session)",
+                         "₹4,500 – ₹8,000"
+                     ],
+                     [
+                         "Anti-ageing (per session)",
+                         "₹5,000 – ₹9,000"
+                     ],
+                     [
+                         "Neck or chest (per session)",
+                         "₹3,500 – ₹7,000"
+                     ],
+                     [
+                         "Annual maintenance session",
+                         "₹4,000 – ₹8,000"
+                     ]
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "*T\u0026C apply. Prices are indicative, and the final cost is confirmed after your consultation.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "9. FAQs",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is a photofacial painful?\n",
+                         "b":  true
+                     },
+                     {
+                         "t":  "Ans. Most people describe a warm snapping feeling with each pulse. It\u0027s usually well tolerated, and numbing cream generally isn\u0027t needed.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is there any downtime?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Not really. You may look slightly pink for a few hours, and spots can darken briefly before flaking off.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How many sessions will I need?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Usually around five, spaced 3 to 4 weeks apart. Many people see improvement by the second or third session.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Is it safe for Indian skin?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes, as long as the settings are adjusted for darker skin tones. That\u0027s an important part of the assessment.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Can a photofacial treat rosacea?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Yes. It targets the small blood vessels behind persistent redness, and improvement builds over a course of sessions.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: Will my brown spots go away completely?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. Many people see them fade a lot. Complete clearance depends on the type and depth of pigment and on sun protection.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: How long do the results last?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. A year or more with good sun protection and a suitable skincare routine. An annual maintenance session helps.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Q: What does a photofacial cost in Delhi?",
+                         "b":  true
+                     },
+                     {
+                         "t":  " \nAns. A single full-face session is around ₹4,000 to ₹8,000, and a course of five is about ₹18,000 to ₹35,000. The final price is confirmed at your consultation.",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "h2",
+        "runs":  [
+                     {
+                         "t":  "10. Closing CTA",
+                         "b":  false
+                     }
+                 ]
+    },
+    {
+        "k":  "p",
+        "runs":  [
+                     {
+                         "t":  "Spots, redness or just tired-looking skin? Book a photofacial consultation with Dr. Nivedita Dadu at Dadu Medical Centre, Vasant Vihar (South Delhi) or Rajouri Garden (West Delhi), and find out how many sessions your skin actually needs.",
+                         "b":  false
+                     }
+                 ]
+    }
+]
