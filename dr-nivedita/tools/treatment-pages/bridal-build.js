@@ -137,7 +137,7 @@ function modelCondition(p, h1, sections) {
     ideal: prevention.blocks, idealTitle: prevention.title,
     processBlocks: treatments.blocks, processTitle: treatments.title, processMore: [{ ...why, cls: 'sd-heading--one-line' }],
     // after the FAQs, as on dadumedicalcentre.com condition pages (user, 24 Oct 2026): videos, clinics, awards
-    videos: { title: 'Dark Circles Videos', allHref: '/video/', items: DARK_CIRCLE_VIDEOS }, clinics: true, awards: true, resultsAfterFaq: true,   // Before & After below the FAQs (user, 24 Oct 2026)
+    videos: { title: 'Dark Circles Videos', allHref: '/video/', items: DARK_CIRCLE_VIDEOS }, clinics: true, awards: true, resultsAfterFaq: true, faqAfterVideos: true,   // order (user, 24 Oct 2026): Before & After, videos, FAQs, clinics, awards
     cost: null, faq: faqOf(faqs, p.doc), cta: ctaOf(cta), steps: [], care: [], factors: causes, tech: what,
   };
 }
@@ -419,7 +419,7 @@ function normalize(m, imgs) {
     idealTitle: m.idealTitle ? esc(m.idealTitle) : undefined,
     process: blocksHtml(m.processBlocks), processTitle: m.processTitle ? esc(m.processTitle) : undefined,
     processMore: (m.processMore || []).map(sec => ({ title: esc(sec.title), html: blocksHtml(sec.blocks), cls: sec.cls })),
-    videos: m.videos, clinics: m.clinics, awards: m.awards, resultsAfterFaq: m.resultsAfterFaq,
+    videos: m.videos, clinics: m.clinics, awards: m.awards, resultsAfterFaq: m.resultsAfterFaq, faqAfterVideos: m.faqAfterVideos,
     // cost with no table: heading + text left-aligned (as on the first 5 pages)
     cost: m.cost && m.isNew ? { title: esc(m.cost.title), html: blocksHtml(m.cost.blocks), table: null, notes: m.cost.note.map(n => html(n.runs)),
       left: !m.cost.blocks.some(b => b.k === 'table') }

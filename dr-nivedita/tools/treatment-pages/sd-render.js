@@ -122,6 +122,20 @@ function renderPage(m) {
       </div>
     </div>` : '';
 
+  // FAQs + enquiry form (faqAfterVideos: placed after the videos slider instead)
+  const fe = `
+<section class="sd-fe${faqs ? '' : ' sd-fe--solo'}" id="contact">
+  <div class="sd-fe-wrap">${faqs}
+    <div class="sd-fe-right">
+      <div class="sd-enquiry" id="enquiry">
+        <h3 class="sd-enquiry-title">Enquire About This Treatment</h3>
+        <p class="sd-enquiry-desc">Schedule your visit for this specialized treatment.</p>
+      ${form(false)}
+      </div>
+    </div>
+  </div>
+</section>`;
+
   return `{{> inner-page-start}}
 
 <section class="sd-hero">
@@ -148,19 +162,8 @@ function renderPage(m) {
   </div>
 </section>
 
-${band}${split}${ideal}${process}${m.resultsAfterFaq ? '' : results}${cost}
-<section class="sd-fe${faqs ? '' : ' sd-fe--solo'}" id="contact">
-  <div class="sd-fe-wrap">${faqs}
-    <div class="sd-fe-right">
-      <div class="sd-enquiry" id="enquiry">
-        <h3 class="sd-enquiry-title">Enquire About This Treatment</h3>
-        <p class="sd-enquiry-desc">Schedule your visit for this specialized treatment.</p>
-      ${form(false)}
-      </div>
-    </div>
-  </div>
-</section>
-${m.resultsAfterFaq ? results : ''}${m.videos ? renderVideos(m.videos) : ''}${m.clinics ? renderClinics() : ''}${m.awards ? renderAwards() : ''}
+${band}${split}${ideal}${process}${m.resultsAfterFaq ? '' : results}${cost}${m.faqAfterVideos ? '' : fe}
+${m.resultsAfterFaq ? results : ''}${m.videos ? renderVideos(m.videos) : ''}${m.faqAfterVideos ? fe : ''}${m.clinics ? renderClinics() : ''}${m.awards ? renderAwards() : ''}
 {{> inner-page-end}}
 `;
 }
