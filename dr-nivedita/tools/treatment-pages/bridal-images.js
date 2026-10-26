@@ -16,6 +16,16 @@ const PAGES = [
   { slug: 'alexandrite-laser-hair-removal', dir: 'Alexandrite Laser Hair Removal', topic: 'How the Alexandrite Laser Works', split: 'Areas That Can Be Treated' },
   { slug: 'carbon-laser-peel', dir: 'Carbon Laser Peel Treatment', topic: 'How a Carbon Laser Peel Works', split: 'What It Helps With' },
   { slug: 'dark-circles', dir: 'Dark Circles', topic: 'What Are Dark Circles', split: 'Causes of Dark Circles', tech: 'Why Choose Dr. Nivedita Dadu' },
+  // added 26 Oct 2026
+  { slug: 'dermal-fillers', dir: 'Dermal Fillers', topic: 'How Hyaluronic Acid Fillers Work', split: 'Areas That Can Be Treated' },
+  { slug: 'dermaroller-for-acne-scars', dir: 'Dermaroller for Acne Scars', topic: 'How the Dermaroller Works', split: 'Serums Used During Treatment' },
+  { slug: 'diode-laser-hair-removal', dir: 'Diode Laser Hair Removal', topic: 'How Diode Laser Works', split: 'Areas That Can Be Treated' },
+  { slug: 'dmc-hgp-hair-growth-promoters', dir: 'DMC-HGP® Hair Growth Promoters', topic: 'How DMC-HGP® Works', split: 'What It Can Help With' },
+  { slug: 'laser-hair-removal', dir: 'Laser Hair Removal', topic: 'How Laser Hair Removal Works', split: 'Areas That Can Be Treated' },
+  { slug: 'laser-toning', dir: 'Laser Toning', topic: 'How Laser Toning Works', split: 'What Laser Toning Can Help With' },
+  { slug: 'mesotherapy-for-hair-fall', dir: 'Mesotherapy for Hair Fall', topic: 'How Mesotherapy Works', split: 'Needle or Needle-Free' },
+  { slug: 'mnrf-microneedling-radiofrequency', dir: 'MNRF (Microneedling Radiofrequency)', topic: 'How MNRF Works', split: 'What MNRF Can Help With' },
+  { slug: 'mnrf-for-stretch-marks', dir: 'MNRF for Stretch Marks', topic: 'Why Stretch Marks Are Hard to Shift', split: 'Areas That Can Be Treated' },
 ];
 function size(file) {                       // WebP header -> width/height
   const b = fs.readFileSync(file);
@@ -30,12 +40,15 @@ const kebab = s => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '
 const manifest = {};
 for (const p of PAGES) {
   const dir = `${SRC}/${p.dir}`;
-  const files = fs.readdirSync(dir);
+  // images that came as PNG were converted to 718x583 WebP into data/converted/<folder>/ (the source folder is left as it is)
+  const conv = `${__dirname}/data/converted/${p.dir}`;
+  const converted = fs.existsSync(conv) ? fs.readdirSync(conv) : [];
+  const files = [...new Set([...fs.readdirSync(dir).filter(f => !(/.png$/i.test(f) && converted.includes(f.replace(/.png$/i, '.webp')))), ...converted])];
   const want = [1, 2, 3, 4, 5].map(i => `slider-image-${i}.webp`).concat([`${p.topic}.webp`, `${p.split}.webp`, `${p.tech || 'Process & Techniques'}.webp`]);
   for (const w of want) if (!files.includes(w)) throw new Error(`${p.dir}: missing ${w}`);
   const extra = files.filter(f => !want.includes(f));
   const put = name => {
-    const from = `${dir}/${name}`, to = `${p.slug}-${kebab(name.replace(/\.webp$/, ''))}.webp`;
+    const from = converted.includes(name) ? `${conv}/${name}` : `${dir}/${name}`, to = `${p.slug}-${kebab(name.replace(/\.webp$/, ''))}.webp`;
     const d = size(from);
     if (WRITE) { fs.mkdirSync(OUT, { recursive: true }); fs.copyFileSync(from, `${OUT}/${to}`); }
     return { src: `/images/treatments/bridal/${to}`, w: String(d.w), h: String(d.h), kb: Math.round(fs.statSync(from).size / 1024) };
