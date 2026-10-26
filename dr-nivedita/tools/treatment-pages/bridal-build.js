@@ -35,6 +35,7 @@ const NEW_PAGES = [
 ].map(([slug, doc, photos]) => ({ slug, doc, photos: photos.split(' '), isNew: true }));
 // "Alexandrite or Diode?" sits in the band under the first topic (user, 24 Oct 2026)
 NEW_PAGES.find(p => p.slug === 'alexandrite-laser-hair-removal').bandTopics = 2;
+NEW_PAGES.find(p => p.slug === 'diode-laser-hair-removal').bandTopics = 2;   // "Diode vs Other Options" in the band too (26 Oct 2026)
 // Dermaroller: Benefits card above Ideal Candidates (user, 26 Oct 2026)
 NEW_PAGES.find(p => p.slug === 'dermaroller-for-acne-scars').benefitsInIdeal = true;
 PAGES.push(...NEW_PAGES);
