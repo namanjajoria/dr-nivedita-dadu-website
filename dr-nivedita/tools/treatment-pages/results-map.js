@@ -28,7 +28,7 @@ const RULES = [
   [/^tixel$/, ['acne-scars/tixel-acne-scars'], 'Tixel', c => /acne scar/i.test(c)],
   [/^derma roller$/, ['acne-scars/dermaroller', 'bridal-dermatology/dermaroller-for-acne-scars'], 'Dermaroller', c => /acne scar/i.test(c)],
   [/^microneedling$/, [], 'Microneedling', c => /acne scar/i.test(c)],
-  [/^laser hair reduction$|^eyebrow laser hair reduction$|^upper lip laser hair reduction$/, ['laser-hair-removal/soprano-ice-laser-hair-reduction', 'bridal-dermatology/soprano-ice-laser-hair-reduction'], 'Laser Hair Reduction'],
+  [/^laser hair reduction$|^eyebrow laser hair reduction$|^upper lip laser hair reduction$/, ['laser-hair-removal/soprano-ice-laser-hair-reduction', 'bridal-dermatology/soprano-ice-laser-hair-reduction', 'bridal-dermatology/laser-hair-removal'], 'Laser Hair Reduction'],
   // only the image printed "Laser Hair Removal" goes on the Bridal Laser Hair Removal page (user, 26 Oct 2026)
   [/^laser hair removal$/, ['laser-hair-removal/soprano-ice-laser-hair-reduction', 'bridal-dermatology/soprano-ice-laser-hair-reduction', 'bridal-dermatology/laser-hair-removal'], 'Laser Hair Removal'],
   [/^laser hair reduction \(alexandrite\)$/, ['laser-hair-removal/alexandrite-laser', 'bridal-dermatology/alexandrite-laser-hair-removal'], 'Alexandrite Laser'],
@@ -60,6 +60,8 @@ const CAT_LABEL = {
   'laser-hair-removal': 'Unwanted Hair', 'non-surgical-facial-enhancements': 'Non-Surgical Facial Enhancement', 'pigmentation': 'Pigmentation',
   'premium-services': 'Skin Glow', 'stretch-marks': 'Stretch Marks', 'bridal-dermatology': 'Bridal Dermatology', 'plastic-surgery': 'Plastic Surgery',
 };
+// card title used on one page instead of the rule title (same treatment, the page's own name; user, 26 Oct 2026)
+const TITLE_ON_PAGE = { 'bridal-dermatology/laser-hair-removal': 'Laser Hair Removal' };
 const map = {}; const skipped = {};
 for (const r of rows) {
   const t = norm(r.treatment);
@@ -67,7 +69,7 @@ for (const r of rows) {
   const rule = RULES.find(([re, , , cond]) => re.test(t) && (!cond || cond(r.caseText)));
   if (!rule || !rule[1].length) { (skipped[r.treatment] = skipped[r.treatment] || []).push(r.i); continue; }
   for (const page of rule[1]) {
-    (map[page] = map[page] || []).push({ file: r.file, title: rule[2], label: CAT_LABEL[page.split('/')[0]] || '', caseText: r.caseText });
+    (map[page] = map[page] || []).push({ file: r.file, title: TITLE_ON_PAGE[page] || rule[2], label: CAT_LABEL[page.split('/')[0]] || '', caseText: r.caseText });
   }
 }
 const pages = Object.keys(map).sort();

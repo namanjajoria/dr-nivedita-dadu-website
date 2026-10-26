@@ -231,6 +231,122 @@
    "caseText": "Upper Lip Laser Hair Reduction (1 Session)"
   }
  ],
+ "bridal-dermatology/laser-hair-removal": [
+  {
+   "file": "10-min.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "2-281-29.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "before-after-for-website-8.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Laser Hair Reduction"
+  },
+  {
+   "file": "before-after-lhr-2.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Laser Hair Reduction"
+  },
+  {
+   "file": "before-after-lip-lighting-img-270418.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Laser Hair Reduction"
+  },
+  {
+   "file": "eyebrow-laser-hair-removal-before-after-090818.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Eyebrow Laser Hair Reduction (1 Session)"
+  },
+  {
+   "file": "hair-growth-a-2.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "hair-growth-a-3.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "hair-growth-a-4.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "hair-growth-b-1.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "hair-growth-b-2.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "hair-growth-b-3.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "hair-growth.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive hair growth"
+  },
+  {
+   "file": "laser-hair-reduction.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Facial Hair"
+  },
+  {
+   "file": "laser-hair-removal.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Laser Hair Removal (3 Sessions)"
+  },
+  {
+   "file": "lhr-1.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive Hair growth"
+  },
+  {
+   "file": "lhr-281-29.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive Hair growth"
+  },
+  {
+   "file": "lhr.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Excessive Hair growth"
+  },
+  {
+   "file": "upper-lip-laser-hair-reduction-before-after-090818.webp",
+   "title": "Laser Hair Removal",
+   "label": "Bridal Dermatology",
+   "caseText": "Upper Lip Laser Hair Reduction (1 Session)"
+  }
+ ],
  "anti-ageing-therapies/thread-lift": [
   {
    "file": "10.webp",
@@ -1549,14 +1665,6 @@
    "title": "Diode Laser",
    "label": "Bridal Dermatology",
    "caseText": "Laser Hair Reduction with Diode Laser (4 Months)"
-  }
- ],
- "bridal-dermatology/laser-hair-removal": [
-  {
-   "file": "laser-hair-removal.webp",
-   "title": "Laser Hair Removal",
-   "label": "Bridal Dermatology",
-   "caseText": "Laser Hair Removal (3 Sessions)"
   }
  ],
  "pigmentation/mesotherapy": [
