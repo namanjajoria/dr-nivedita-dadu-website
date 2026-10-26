@@ -35,6 +35,7 @@ const NEW_PAGES = [
 ].map(([slug, doc, photos]) => ({ slug, doc, photos: photos.split(' '), isNew: true }));
 // "Alexandrite or Diode?" sits in the band under the first topic (user, 24 Oct 2026)
 NEW_PAGES.find(p => p.slug === 'alexandrite-laser-hair-removal').bandTopics = 2;
+NEW_PAGES.find(p => p.slug === 'mnrf-microneedling-radiofrequency').bandTopics = 2;   // "MNRF vs Regular Microneedling" in the band too (26 Oct 2026)
 NEW_PAGES.find(p => p.slug === 'mesotherapy-for-hair-fall').bandTopics = 2;   // "What Goes Into the Blend" in the band too (26 Oct 2026)
 NEW_PAGES.find(p => p.slug === 'laser-hair-removal').bandTopics = 2;   // "Lasers We Use" in the band too (26 Oct 2026)
 NEW_PAGES.find(p => p.slug === 'diode-laser-hair-removal').bandTopics = 2;   // "Diode vs Other Options" in the band too (26 Oct 2026)
