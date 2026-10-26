@@ -63,7 +63,11 @@ function renderPage(m) {
   const ideal = m.ideal ? `
 <section class="sd-ideal">
   <div class="sd-ideal-wrap">
-    <div class="sd-ideal-left">
+    <div class="sd-ideal-left">${(m.idealBefore || []).map(sec => `
+      <div class="sd-card">
+        <h3 class="sd-card-title">${sec.title}</h3>
+        ${sec.html}
+      </div>`).join('')}
       <div class="sd-card">
         <h3 class="sd-card-title">${m.idealTitle || "Ideal Candidates"}</h3>
         ${m.ideal}
