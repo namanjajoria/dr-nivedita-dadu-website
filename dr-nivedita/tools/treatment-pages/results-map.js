@@ -33,7 +33,7 @@ const RULES = [
   [/^laser hair reduction \(diode\)$/, ['laser-hair-removal/diode-laser', 'bridal-dermatology/diode-laser-hair-removal'], 'Diode Laser'],
   [/^laser beard shaping$/, ['laser-hair-removal/beard-shaping', 'bridal-dermatology/beard-shaping'], 'Laser Beard Shaping'],
   [/^root restore therapy$/, ['hair-fall/root-restore-therapy'], 'DMC-Root Restore Therapy'],
-  [/^advanced hgp$/, ['hair-fall/advanced-hgp', 'bridal-dermatology/dmc-hgp-hair-growth-promoters'], 'Advanced HGP'],
+  [/^advanced hgp$/, ['hair-fall/advanced-hgp'], 'Advanced HGP'],
   [/^hgp$|^hair growth promoters$/, ['hair-fall/hair-growth-promoters-therapy', 'bridal-dermatology/dmc-hgp-hair-growth-promoters'], 'HGP (Hair Growth Promoters)'],
   [/^365 oxyboost$/, ['premium-services/365-oxyboost'], '365 Oxyboost'],
   [/^collagen induction therapy$/, ['anti-ageing-therapies/collagen-induction-therapy'], 'Collagen Induction Therapy'],

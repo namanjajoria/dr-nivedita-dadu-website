@@ -1415,44 +1415,6 @@
    "caseText": "-"
   }
  ],
- "bridal-dermatology/dmc-hgp-hair-growth-promoters": [
-  {
-   "file": "ba-web-4.webp",
-   "title": "Advanced HGP",
-   "label": "Bridal Dermatology",
-   "caseText": "Hair Fall"
-  },
-  {
-   "file": "ba-web-7.webp",
-   "title": "Advanced HGP",
-   "label": "Bridal Dermatology",
-   "caseText": "-"
-  },
-  {
-   "file": "hair-growth-a-1.webp",
-   "title": "HGP (Hair Growth Promoters)",
-   "label": "Bridal Dermatology",
-   "caseText": "Hair Loss (Male Pattern Hair loss)"
-  },
-  {
-   "file": "hgp-trichotillomania-treatment.webp",
-   "title": "HGP (Hair Growth Promoters)",
-   "label": "Bridal Dermatology",
-   "caseText": "HGP (3 Sessions)"
-  },
-  {
-   "file": "hgp.webp",
-   "title": "HGP (Hair Growth Promoters)",
-   "label": "Bridal Dermatology",
-   "caseText": "HGP Trichotillomania Treatment (2 Months)"
-  },
-  {
-   "file": "hgt-treatment-for-hair-fall.webp",
-   "title": "HGP (Hair Growth Promoters)",
-   "label": "Bridal Dermatology",
-   "caseText": "HGP Treatment for Hair Fall (3 Sessions)"
-  }
- ],
  "pigmentation/chemical-peels": [
   {
    "file": "ba-web-5.webp",
@@ -1596,6 +1558,32 @@
    "file": "hgt-treatment-for-hair-fall.webp",
    "title": "HGP (Hair Growth Promoters)",
    "label": "Hairfall/Hair Loss",
+   "caseText": "HGP Treatment for Hair Fall (3 Sessions)"
+  }
+ ],
+ "bridal-dermatology/dmc-hgp-hair-growth-promoters": [
+  {
+   "file": "hair-growth-a-1.webp",
+   "title": "HGP (Hair Growth Promoters)",
+   "label": "Bridal Dermatology",
+   "caseText": "Hair Loss (Male Pattern Hair loss)"
+  },
+  {
+   "file": "hgp-trichotillomania-treatment.webp",
+   "title": "HGP (Hair Growth Promoters)",
+   "label": "Bridal Dermatology",
+   "caseText": "HGP (3 Sessions)"
+  },
+  {
+   "file": "hgp.webp",
+   "title": "HGP (Hair Growth Promoters)",
+   "label": "Bridal Dermatology",
+   "caseText": "HGP Trichotillomania Treatment (2 Months)"
+  },
+  {
+   "file": "hgt-treatment-for-hair-fall.webp",
+   "title": "HGP (Hair Growth Promoters)",
+   "label": "Bridal Dermatology",
    "caseText": "HGP Treatment for Hair Fall (3 Sessions)"
   }
  ],
