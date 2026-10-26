@@ -1479,26 +1479,6 @@
    "caseText": "Acanthosis Nigrican"
   }
  ],
- "acne-scars/dermaroller": [
-  {
-   "file": "ba-web-8-1.webp",
-   "title": "Microneedling",
-   "label": "Acne Scars",
-   "caseText": "Acne Scars"
-  },
-  {
-   "file": "ba-web-8.webp",
-   "title": "Microneedling",
-   "label": "Acne Scars",
-   "caseText": "Acne Scars"
-  },
-  {
-   "file": "before-after-acne-scar-img-030418.webp",
-   "title": "Dermaroller",
-   "label": "Acne Scars",
-   "caseText": "Acne Scar Treatment with Derma Roller (2 Sessions)"
-  }
- ],
  "premium-services/Instaglam-treatment": [
   {
    "file": "before-after-acne-check-1.webp",
@@ -1519,6 +1499,14 @@
    "title": "Tixel",
    "label": "Acne Scars",
    "caseText": "Acne Scar Treatment with Tixel (2 Sessions)"
+  }
+ ],
+ "acne-scars/dermaroller": [
+  {
+   "file": "before-after-acne-scar-img-030418.webp",
+   "title": "Dermaroller",
+   "label": "Acne Scars",
+   "caseText": "Acne Scar Treatment with Derma Roller (2 Sessions)"
   }
  ],
  "bridal-dermatology/dermaroller-for-acne-scars": [
