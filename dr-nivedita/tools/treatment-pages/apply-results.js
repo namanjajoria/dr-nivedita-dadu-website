@@ -21,7 +21,9 @@ for (const p of pages) {
   const list = (map[key] || []).map(r => {
     const src = '/images/gallery/results/' + r.file;
     if (!fs.existsSync(W + '/public' + src)) throw new Error('missing image ' + src);
-    const g = groupOf(r.file);
+    // the page's own category when the image is in it (a Bridal page opens /results/bridal-dermatology/), else its first one
+    const own = key.split('/')[0];
+    const g = (cats[r.file] || []).includes(own) ? own : groupOf(r.file);
     if (!g) throw new Error('no /results category for ' + r.file);
     return { src, href: '/results/' + g + '/', title: esc(r.title), label: esc(r.label), alt: r.caseText && r.caseText !== '-' ? r.caseText : r.title };
   });

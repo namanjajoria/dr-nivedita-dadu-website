@@ -60,8 +60,10 @@ const CAT_LABEL = {
   'laser-hair-removal': 'Unwanted Hair', 'non-surgical-facial-enhancements': 'Non-Surgical Facial Enhancement', 'pigmentation': 'Pigmentation',
   'premium-services': 'Skin Glow', 'stretch-marks': 'Stretch Marks', 'bridal-dermatology': 'Bridal Dermatology', 'plastic-surgery': 'Plastic Surgery',
 };
-// card title used on one page instead of the rule title (same treatment, the page's own name; user, 26 Oct 2026)
-const TITLE_ON_PAGE = { 'bridal-dermatology/laser-hair-removal': 'Laser Hair Removal' };
+// On the Bridal Dermatology pages a card carries the page's own name instead of the rule title
+// (e.g. "Dermal Fillers", not "Fillers"; user, 26 Oct 2026). Names from data/bridal-pages.json (bridal-build.js).
+const TITLE_ON_PAGE = Object.fromEntries(JSON.parse(fs.readFileSync(__dirname + '/data/bridal-pages.json', 'utf8'))
+  .map(p => ['bridal-dermatology/' + p.slug, p.name]));
 const map = {}; const skipped = {};
 for (const r of rows) {
   const t = norm(r.treatment);

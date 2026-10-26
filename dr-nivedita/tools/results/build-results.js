@@ -62,6 +62,21 @@ for (const r of rows) {
   for (const c of cats) byCat[c].push({ ...r, title: title(r) });
   fileCat[r.file] = cats;
 }
+// Bridal Dermatology: each image once, titled with the Bridal page it is on (the first one, in the
+// category's card order) and grouped by page, so every card name is one of the Bridal pages (user, 26 Oct 2026)
+{
+  const BR = 'bridal-dermatology';
+  const pagesBr = JSON.parse(fs.readFileSync(path.join(__dirname, '../treatment-pages/data/bridal-pages.json'), 'utf8'));
+  const before = new Set(byCat[BR].map(r => r.file));
+  const rowOf = Object.fromEntries(rows.map(r => [r.file, r]));
+  const seen = new Set(), list = [];
+  for (const p of pagesBr) for (const m of PAGE_MAP[`${BR}/${p.slug}`] || []) {
+    if (seen.has(m.file)) continue;
+    seen.add(m.file); list.push({ ...rowOf[m.file], title: p.name });
+  }
+  must(list.length === before.size && list.every(r => before.has(r.file)), 'bridal results: page images differ from the category');
+  byCat[BR] = list;
+}
 const SHOWN = CATS.filter(([c]) => byCat[c].length);
 
 // before (left half) / after (right half) of a combined 750x400 result image, info strip cropped off
