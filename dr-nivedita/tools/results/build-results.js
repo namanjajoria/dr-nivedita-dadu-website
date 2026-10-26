@@ -72,7 +72,10 @@ for (const r of rows) {
   const seen = new Set(), list = [];
   for (const p of pagesBr) for (const m of PAGE_MAP[`${BR}/${p.slug}`] || []) {
     if (seen.has(m.file)) continue;
-    seen.add(m.file); list.push({ ...rowOf[m.file], title: p.name });
+    seen.add(m.file);
+    // every Bridal page the image is on, for ?treatment=<slug> links from those pages (pages.js filters the grid)
+    const on = pagesBr.filter(q => (PAGE_MAP[`${BR}/${q.slug}`] || []).some(x => x.file === m.file)).map(q => q.slug);
+    list.push({ ...rowOf[m.file], title: p.name, treatments: on });
   }
   must(list.length === before.size && list.every(r => before.has(r.file)), 'bridal results: page images differ from the category');
   byCat[BR] = list;
@@ -121,13 +124,24 @@ ${banner('Real Results', '<li><a href="/">Home</a></li><li><span aria-current="p
 {{> inner-page-end}}
 `;
 
+// Bridal Dermatology: "Showing results for: <page>" bar, shown by pages.js when the page is opened with
+// ?treatment=<slug> from a Bridal treatment page; names = slug -> page name
+const filterBar = slug => {
+  if (slug !== 'bridal-dermatology') return '';
+  const names = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(__dirname, '../treatment-pages/data/bridal-pages.json'), 'utf8')).map(p => [p.slug, p.name]));
+  return `<div class="rcd-filter" data-rcd-filter data-names="${esc(JSON.stringify(names))}" hidden>
+      <p class="rcd-filter-text">Showing results for: <strong data-rcd-filter-name></strong> (<span data-rcd-filter-count></span>)</p>
+      <a class="rcd-filter-all" href="/results/${slug}/">View all Bridal Dermatology results</a>
+    </div>
+    `;
+};
 const catPage = (slug, name) => `{{> inner-page-start}}
 
 ${banner(esc(name), `<li><a href="/">Home</a></li><li><a href="/results/">Real Results</a></li><li><span aria-current="page">${esc(name)}</span></li>`)}
 <section class="rcd-grid-section">
   <div class="rcd-shell">
-    <div class="rcd-grid" data-rcd-grid data-lightbox-group>${byCat[slug].map(r => `
-      <article class="rcd-card">
+    ${filterBar(slug)}<div class="rcd-grid" data-rcd-grid data-lightbox-group>${byCat[slug].map(r => `
+      <article class="rcd-card"${r.treatments ? ` data-treatment="${r.treatments.join(' ')}"` : ''}>
         <a class="rcd-card-media" href="${IMG}${r.file}" data-lightbox data-caption="${esc(r.title)}">${halves(r, 'rcd')}</a>
         <h3 class="rcd-card-title">${esc(r.title)}</h3>
       </article>`).join('')}

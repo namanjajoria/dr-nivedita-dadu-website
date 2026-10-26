@@ -1900,3 +1900,11 @@ select.sd-input:valid{color:#333}
   .cd-section-title{font-size:38px}
 }
 @media (min-width:1200px){.cd-container{padding:0 40px}}
+
+/* /results/bridal-dermatology/?treatment=<slug>: "Showing results for" bar above the filtered grid */
+.rcd-filter{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 24px;margin:0 0 28px;padding:16px 22px;border:1px solid var(--border);border-radius:14px;background:var(--tint)}
+.rcd-filter[hidden]{display:none}
+.rcd-filter-text{margin:0;font-family:var(--font-body);font-size:15px;color:#444}
+.rcd-filter-text strong{font-family:var(--font-display);font-weight:400;font-size:18px;color:var(--heading)}
+.rcd-filter-all{display:inline-flex;align-items:center;padding:10px 22px;border:1px solid var(--primary);border-radius:999px;background:#fff;color:var(--primary-deep);font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.3px;transition:background-color .25s,color .25s}
+.rcd-filter-all:hover{background:var(--primary);color:#fff}

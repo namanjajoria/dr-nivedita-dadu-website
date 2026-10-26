@@ -217,8 +217,23 @@
   if (d.fonts && d.fonts.ready) d.fonts.ready.then(fit);
 
   // Results category pages: 9 cards per page with Previous / numbers / Next (as on the reference site).
+  // Opened from a Bridal treatment page (?treatment=<slug>): only that page's cards, with a "View all" link.
   d.querySelectorAll('[data-rcd-grid]').forEach(function (grid) {
     var cards = Array.prototype.slice.call(grid.children);
+    var bar = grid.parentElement.querySelector('[data-rcd-filter]');
+    var want = (location.search.match(/[?&]treatment=([a-z0-9-]+)/) || [])[1];
+    var names = {};
+    try { names = bar ? JSON.parse(bar.getAttribute('data-names')) : {}; } catch (e) {}
+    if (want && names[want]) {
+      var keep = cards.filter(function (c) { return (' ' + (c.getAttribute('data-treatment') || '') + ' ').indexOf(' ' + want + ' ') >= 0; });
+      if (keep.length) {
+        cards.forEach(function (c) { if (keep.indexOf(c) < 0) c.hidden = true; });
+        cards = keep;
+        bar.querySelector('[data-rcd-filter-name]').textContent = names[want];
+        bar.querySelector('[data-rcd-filter-count]').textContent = keep.length;
+        bar.hidden = false;
+      }
+    }
     var nav = grid.parentElement.querySelector('.rcd-pagination');
     var per = 9, pages = Math.ceil(cards.length / per), page = 0;
     if (!nav || pages < 2) return;

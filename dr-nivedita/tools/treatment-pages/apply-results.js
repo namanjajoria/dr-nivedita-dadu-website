@@ -25,7 +25,9 @@ for (const p of pages) {
     const own = key.split('/')[0];
     const g = (cats[r.file] || []).includes(own) ? own : groupOf(r.file);
     if (!g) throw new Error('no /results category for ' + r.file);
-    return { src, href: '/results/' + g + '/', title: esc(r.title), label: esc(r.label), alt: r.caseText && r.caseText !== '-' ? r.caseText : r.title };
+    // Bridal pages open their category filtered to this page's own cards (pages.js reads ?treatment=)
+    const href = '/results/' + g + '/' + (g === own && own === 'bridal-dermatology' ? '?treatment=' + key.split('/')[1] : '');
+    return { src, href, title: esc(r.title), label: esc(r.label), alt: r.caseText && r.caseText !== '-' ? r.caseText : r.title };
   });
   if (list.length) { withResults++; cards += list.length; }
   const out = s.replace(RE, renderResults(list));

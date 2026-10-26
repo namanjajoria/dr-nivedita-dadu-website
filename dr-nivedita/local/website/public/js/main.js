@@ -111,7 +111,8 @@
   d.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a || a.target === '_blank' || e.ctrlKey || e.metaKey || e.shiftKey) return;
-    if (a.origin === location.origin && a.pathname === location.pathname && !a.hash && !a.search) {
+    // (same query too: /results/x/ from /results/x/?treatment=y is a different view, so it navigates)
+    if (a.origin === location.origin && a.pathname === location.pathname && !a.hash && a.search === location.search) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
       if (location.hash) history.replaceState(null, '', location.pathname + location.search);
