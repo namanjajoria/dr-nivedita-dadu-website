@@ -27,7 +27,7 @@ const RULES = [
   [/^erbium fiber laser \(stretch marks\)$/, ['stretch-marks/erbium-fibre-laser-stretch-marks'], 'Erbium Fibre Laser'],
   [/^tixel$/, ['acne-scars/tixel-acne-scars'], 'Tixel', c => /acne scar/i.test(c)],
   [/^derma roller$/, ['acne-scars/dermaroller', 'bridal-dermatology/dermaroller-for-acne-scars'], 'Dermaroller', c => /acne scar/i.test(c)],
-  [/^microneedling$/, ['acne-scars/dermaroller', 'bridal-dermatology/dermaroller-for-acne-scars'], 'Microneedling', c => /acne scar/i.test(c)],
+  [/^microneedling$/, ['acne-scars/dermaroller'], 'Microneedling', c => /acne scar/i.test(c)],
   [/^laser hair reduction$|^laser hair removal$|^eyebrow laser hair reduction$|^upper lip laser hair reduction$/, ['laser-hair-removal/soprano-ice-laser-hair-reduction', 'bridal-dermatology/laser-hair-removal', 'bridal-dermatology/soprano-ice-laser-hair-reduction'], 'Laser Hair Reduction'],
   [/^laser hair reduction \(alexandrite\)$/, ['laser-hair-removal/alexandrite-laser', 'bridal-dermatology/alexandrite-laser-hair-removal'], 'Alexandrite Laser'],
   [/^laser hair reduction \(diode\)$/, ['laser-hair-removal/diode-laser', 'bridal-dermatology/diode-laser-hair-removal'], 'Diode Laser'],
