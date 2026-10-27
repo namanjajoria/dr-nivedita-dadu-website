@@ -981,3 +981,22 @@ select.rate-input option{color:var(--text)}
   .hero-slide-bg{transition:none}
   *{transition-duration:.01ms!important}
 }
+
+/* footer, matched to dadumedicalcentre.com (layout only; our colours and content):
+   link band content 1400px wide with 5% side padding, 180px logo, card padding 32/50,
+   phone + email with round icons (no "|" between them) */
+.footer-top>.container{max-width:1400px;padding-inline:5%}
+@media (min-width:1025px){
+  .footer-logo{width:180px;height:180px;padding:20px}
+  .news-card{padding:32px 50px}
+}
+.news-pills{gap:10px 18px;margin-bottom:20px}
+.news-pill{display:inline-flex;align-items:center;gap:10px;color:var(--heading);transition:transform .2s}
+.news-pill:hover{transform:translateY(-2px)}
+.news-pill span:last-child{font-size:16px;font-weight:600}
+.news-pill[href^="mailto"] span:last-child{font-size:14px}
+.news-pill-ico{flex:none;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff}
+.news-pill-ico .ico{width:15px;height:15px}
+@media (max-width:767px){
+  .footer-top>.container{padding-inline:var(--section-px)}
+}
