@@ -1908,3 +1908,7 @@ select.sd-input:valid{color:#333}
 .rcd-filter-text strong{font-family:var(--font-display);font-weight:400;font-size:18px;color:var(--heading)}
 .rcd-filter-all{display:inline-flex;align-items:center;padding:10px 22px;border:1px solid var(--primary);border-radius:999px;background:#fff;color:var(--primary-deep);font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.3px;transition:background-color .25s,color .25s}
 .rcd-filter-all:hover{background:var(--primary);color:#fff}
+
+/* tables inside the brand-colour band: header row in the theme's light tone (same as the cost tables),
+   so it does not blend into the coral band */
+.sd-band .sd-table th{background:var(--footer-bg);color:var(--heading);border-bottom:2px solid var(--line)}
