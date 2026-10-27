@@ -221,9 +221,10 @@
   "name": "Photofacial",
   "intro": "Some skin problems arrive as a package. A few sun spots on the cheeks, redness that never quite settles, pores that look bigger every year. Most people try a different product for each one and still end up frustrated. A photofacial treatment in Delhi is one of the few options that can work on several of these in the same session.",
   "cover": {
-   "src": "/images/treatments/photofacials.jpeg",
-   "w": "500",
-   "h": "300"
+   "src": "/images/treatments/bridal/photofacial-slider-image-1.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 48
   }
  },
  {
@@ -232,9 +233,10 @@
   "name": "Soprano ICE Laser Hair Reduction",
   "intro": "A lot of people put off laser hair removal because of one fear: that it's going to hurt. Older lasers did use short, intense bursts that felt sharp and carried more risk on darker skin, so the worry isn't unreasonable. Soprano ICE laser hair reduction in Delhi was designed with that problem in mind.",
   "cover": {
-   "src": "/images/treatments/soprano-ice-laser-hair-reduction.jpg",
-   "w": "1600",
-   "h": "400"
+   "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-slider-image-1.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 87
   }
  }
 ]

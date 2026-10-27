@@ -26,6 +26,9 @@ const PAGES = [
   { slug: 'mesotherapy-for-hair-fall', dir: 'Mesotherapy for Hair Fall', topic: 'How Mesotherapy Works', split: 'Needle or Needle-Free' },
   { slug: 'mnrf-microneedling-radiofrequency', dir: 'MNRF (Microneedling Radiofrequency)', topic: 'How MNRF Works', split: 'What MNRF Can Help With' },
   { slug: 'mnrf-for-stretch-marks', dir: 'MNRF for Stretch Marks', topic: 'Why Stretch Marks Are Hard to Shift', split: 'Areas That Can Be Treated' },
+  // added 27 Oct 2026 (all 20 Bridal pages now have their image folder)
+  { slug: 'photofacial', dir: 'Photofacial', topic: 'How a Photofacial Works', split: 'What a Photofacial Can Treat' },
+  { slug: 'soprano-ice-laser-hair-reduction', dir: 'Soprano ICE Laser Hair Reduction', topic: 'How Soprano ICE Works', split: 'Areas That Can Be Treated' },
 ];
 function size(file) {                       // WebP header -> width/height
   const b = fs.readFileSync(file);

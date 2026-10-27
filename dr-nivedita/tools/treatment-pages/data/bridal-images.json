@@ -764,7 +764,7 @@
    "src": "/images/treatments/bridal/laser-toning-how-laser-toning-works.webp",
    "w": "718",
    "h": "583",
-   "kb": 37
+   "kb": 368
   },
   "split": {
    "src": "/images/treatments/bridal/laser-toning-what-laser-toning-can-help-with.webp",
@@ -933,6 +933,110 @@
    "w": "718",
    "h": "583",
    "kb": 61
+  }
+ },
+ "photofacial": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/photofacial-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 48
+   },
+   {
+    "src": "/images/treatments/bridal/photofacial-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 55
+   },
+   {
+    "src": "/images/treatments/bridal/photofacial-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 71
+   },
+   {
+    "src": "/images/treatments/bridal/photofacial-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 65
+   },
+   {
+    "src": "/images/treatments/bridal/photofacial-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 59
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/photofacial-how-a-photofacial-works.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 375
+  },
+  "split": {
+   "src": "/images/treatments/bridal/photofacial-what-a-photofacial-can-treat.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 419
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/photofacial-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 64
+  }
+ },
+ "soprano-ice-laser-hair-reduction": {
+  "gallery": [
+   {
+    "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-slider-image-1.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 87
+   },
+   {
+    "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-slider-image-2.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 91
+   },
+   {
+    "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-slider-image-3.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 87
+   },
+   {
+    "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-slider-image-4.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 83
+   },
+   {
+    "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-slider-image-5.webp",
+    "w": "718",
+    "h": "583",
+    "kb": 82
+   }
+  ],
+  "band": {
+   "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-how-soprano-ice-works.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 69
+  },
+  "split": {
+   "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-areas-that-can-be-treated.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 367
+  },
+  "tech": {
+   "src": "/images/treatments/bridal/soprano-ice-laser-hair-reduction-process-and-techniques.webp",
+   "w": "718",
+   "h": "583",
+   "kb": 394
   }
  }
 }
