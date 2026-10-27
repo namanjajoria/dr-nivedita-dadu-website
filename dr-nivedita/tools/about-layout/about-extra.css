@@ -1,0 +1,269 @@
+
+/* ===== this site's additions (tools/about-layout/about-extra.css) =====
+   What the reference CSS chunk does not cover: values measured on the live reference pages
+   where a later override wins there, and markup this site keeps for its own reasons
+   (details/summary FAQs read by the FAQ schema, the clinic gallery slider, static card grids). */
+
+/* page banner as rendered on dadumedicalcentre.com (light peach, dark title) */
+.acx-page-banner{min-height:350px;padding:150px 72px 64px;background:var(--panel)}
+.acx-page-banner .acx-banner-title{margin:0 0 16px;font-family:var(--font-display);font-size:54px;font-weight:400;line-height:1.2;letter-spacing:1px;color:#2b2b2b}
+.acx-page-breadcrumb{font-family:var(--font-display);font-size:14px;line-height:1.5;color:#2b2b2b}
+.acx-page-breadcrumb a{color:var(--primary-deep)}
+.acx-page-breadcrumb a:hover{text-decoration:underline}
+
+/* headings that carry the live page's own levels (h1/h2) but the reference look */
+.acx-clinic-overview-copy .acx-title{margin:0 0 28px;font-family:var(--font-display);font-size:48px;font-weight:400;line-height:1.12;letter-spacing:-1.5px;color:var(--acx-ink)}
+.acx-clinic-overview-copy .acx-sub{margin:-4px 0 20px;font-family:var(--font-display);font-size:22px;font-weight:400;line-height:1.45;color:var(--primary-deep)}
+.acx-copy p{margin:0 0 16px;font-family:var(--font-body);font-size:17px;line-height:1.85;color:var(--acx-muted)}
+.acx-copy p:last-child{margin-bottom:0}
+.acx-copy strong{font-weight:700;color:var(--acx-ink)}
+
+/* clinic gallery inside the coral overview card */
+.acx-clinic-overview-visual .gallery{border-radius:24px;box-shadow:none;background:var(--mist)}
+.acx-clinic-overview-visual .gallery-swiper img{aspect-ratio:418/410}
+
+/* service tiles: the reference technology cards as a static three-up grid */
+.acx-tile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.acx-tile-grid .acx-tech-cover-card{position:relative;top:auto;display:block;width:auto;height:340px;opacity:1;filter:none;transform:none}
+.acx-tile-grid .acx-tech-cover-copy h3{margin:0 0 10px;font-family:var(--font-display);font-size:28px;font-weight:400;line-height:1.2;color:#fff}
+.acx-tile-more{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.acx-tile-more .btn-arrow{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--primary-deep)}
+
+/* top reasons: five cards on the reference 12-column grid */
+.acx-top-reasons-head .acx-lede{margin:18px auto 0;max-width:820px;font-family:var(--font-body);font-size:17px;line-height:1.75;color:var(--acx-muted)}
+.acx-top-reasons-grid--5>.acx-top-reason-card:nth-child(1),.acx-top-reasons-grid--5>.acx-top-reason-card:nth-child(2){grid-column:span 6}
+.acx-top-reasons-grid--5>.acx-top-reason-card:nth-child(3){grid-column:span 5}
+.acx-top-reasons-grid--5>.acx-top-reason-card:nth-child(4){grid-column:span 7}
+.acx-top-reasons-grid--5>.acx-top-reason-card:nth-child(5){grid-column:span 12}
+.acx-top-reason-icon .ico{width:26px;height:26px;stroke-width:1.8}
+
+/* FAQ: details/summary (read by the FAQ schema) styled as the reference FAQ cards */
+.acx-clinic-faq-list{counter-reset:acxfaq}
+.acx-clinic-faq-list details.faq-row{counter-increment:acxfaq;border:1px solid var(--clr-peach-border);border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 12px 36px color-mix(in srgb,var(--primary-deep) 6%,transparent);transition:border-color .3s,box-shadow .3s}
+.acx-clinic-faq-list details.faq-row:hover{border-color:var(--primary);box-shadow:0 18px 48px color-mix(in srgb,var(--primary) 13%,transparent)}
+.acx-clinic-faq-list details.faq-row[open]{border-color:color-mix(in srgb,var(--primary) 55%,transparent)}
+.acx-clinic-faq-list summary.faq-q{display:flex;align-items:center;gap:20px;padding:23px 28px;list-style:none;cursor:pointer}
+.acx-clinic-faq-list summary.faq-q::-webkit-details-marker{display:none}
+.acx-clinic-faq-list summary.faq-q::before{content:counter(acxfaq,decimal-leading-zero);flex:none;font:800 10px/1 var(--font-body);letter-spacing:.12em;color:var(--primary)}
+.acx-clinic-faq-list summary.faq-q::after{content:"";flex:none;width:30px;height:30px;margin-left:auto;border:1px solid var(--clr-peach-border);border-radius:50%;background:var(--mist) var(--faq-chev) center/14px no-repeat;transition:transform .3s,background-color .3s}
+.acx-clinic-faq-list details.faq-row[open] summary.faq-q::after{transform:rotate(180deg);background-color:var(--primary);border-color:var(--primary);background-image:var(--faq-chev-w)}
+.acx-clinic-faq-list summary.faq-q h3{margin:0;font:600 16px/1.4 var(--font-display);letter-spacing:.04em;text-transform:uppercase;color:var(--acx-ink)}
+.acx-clinic-faq-list .faq-a{padding:20px 78px 24px;border-top:1px solid var(--clr-peach-border)}
+.acx-clinic-faq-list .faq-a p{margin:0 0 12px;font-family:var(--font-body);font-size:15px;line-height:1.75;color:var(--acx-muted)}
+.acx-clinic-faq-list .faq-a p:last-child{margin-bottom:0}
+.acx-clinic-faq-list .faq-a strong{color:var(--acx-ink)}
+:root{
+  --faq-chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c0553f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  --faq-chev-w:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+@media (max-width:1024px){
+  .acx-page-banner{min-height:300px;padding:140px 5% 50px}
+  .acx-page-banner .acx-banner-title{font-size:42px}
+  .acx-clinic-overview-copy .acx-title{font-size:40px}
+  .acx-tile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .acx-top-reasons-grid--5>.acx-top-reason-card:nth-child(n){grid-column:auto}
+}
+@media (max-width:767px){
+  .acx-page-banner{min-height:0;padding:130px 16px 40px}
+  .acx-page-banner .acx-banner-title{font-size:32px}
+  .acx-clinic-overview-copy .acx-title{font-size:32px}
+  .acx-copy p{font-size:15px}
+  .acx-tile-grid{grid-template-columns:minmax(0,1fr)}
+  .acx-tile-grid .acx-tech-cover-card{height:260px}
+  .acx-clinic-faq-list summary.faq-q{align-items:flex-start;gap:12px;padding:20px 18px}
+  .acx-clinic-faq-list summary.faq-q h3{font-size:14px}
+  .acx-clinic-faq-list .faq-a{padding:16px 20px 20px 48px}
+  .acx-clinic-faq-list .faq-a p{font-size:14px}
+}
+
+/* "choose story" with the photo on the right; this site's arrow icon in the reference button */
+.acx-choose-story--flip .acx-choose-story-visual{justify-content:flex-end}
+.acx-choose-arrow-circle .ico{width:14px;height:14px;color:var(--primary-deep);stroke-width:2.2}
+.acx-difference-copy .acx-copy{margin-bottom:34px}
+@media (max-width:1024px){.acx-choose-story--flip .acx-choose-story-copy{order:2}}
+/* a Swiper inside a grid column must not widen the column */
+.acx-clinic-overview-grid>*,.acx-choose-story-grid>*,.acx-difference-grid>*{min-width:0}
+.acx-clinic-overview-copy .acx-copy p{max-width:680px}
+.acx-clinic-overview-copy .acx-copy+.acx-sub{margin-top:30px}
+
+/* ---- General / Cosmetic Dermatology (no reference page: About Clinic components) ---- */
+/* overview with a single photo in the coral card */
+.acx-clinic-overview-visual>img{display:block;width:100%;height:410px;border-radius:24px;object-fit:cover}
+/* opening article: heading, wide live banner photo, copy in two columns */
+.acx-mast{padding:105px 0;background:#fff}
+.acx-mast-head{max-width:980px;margin:0 0 40px}
+.acx-mast-head h2{font-size:48px;line-height:1.12}
+.acx-mast-sub{margin:14px 0 0;font-family:var(--font-display);font-size:22px;line-height:1.45;color:var(--primary-deep)}
+.acx-mast-photo img{display:block;width:100%;height:auto;border-radius:40px;box-shadow:0 30px 70px color-mix(in srgb,var(--primary-deep) 12%,transparent)}
+.acx-mast-copy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 60px;margin-top:50px}
+.acx-mast-copy>.acx-copy:only-child{grid-column:1/-1;columns:2;column-gap:60px}
+.acx-mast-copy>.acx-copy:only-child p{break-inside:avoid}
+/* concern rows that carry full paragraphs */
+.acx-concern-grid p{font-size:15px;line-height:1.7}
+.acx-concern-grid p+p{margin-top:6px}
+.acx-concern-grid .pg-step-why{font-style:italic;color:var(--primary-deep)}
+.acx-note{margin:30px 0 0;font-family:var(--font-body);font-size:14px;line-height:1.6;color:var(--acx-muted);text-align:center}
+/* cost table on the reference card look */
+.acx-cost{padding:105px 0;background:var(--mist)}
+.acx-cost-title{margin:0 0 40px;font-size:48px;line-height:1.12;text-align:center}
+.acx-cost .table-wrap{overflow-x:auto;border:1px solid var(--clr-peach-border);border-radius:34px;background:#fff;box-shadow:0 18px 50px #2c303a14}
+.acx-cost .data-table{width:100%;border-collapse:collapse;font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--acx-ink)}
+.acx-cost .data-table th{padding:20px 26px;background:var(--primary);color:#fff;font-family:var(--font-display);font-size:17px;font-weight:400;text-align:left}
+.acx-cost .data-table td{padding:16px 26px;border-top:1px solid var(--clr-peach-border);vertical-align:top;color:var(--acx-muted)}
+.acx-cost .data-table td:first-child{color:var(--acx-ink);font-weight:700}
+.acx-cost .data-table tr:nth-child(even) td{background:var(--mist)}
+.acx-cost .table-note{margin:20px 0 0;font-family:var(--font-body);font-size:14px;color:var(--acx-muted);text-align:center}
+/* condition / treatment cards on the reference top-reason card */
+.acx-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+.acx-card-grid .acx-top-reason-card{min-height:0;padding:34px 30px}
+.acx-card-grid .acx-top-reason-number{margin-bottom:24px}
+.acx-card-grid h3{margin:0 0 14px;font-size:24px;line-height:1.25}
+.acx-card-grid p{margin:0;font-family:var(--font-body);font-size:15px;line-height:1.7;color:var(--acx-muted)}
+.acx-card-grid .acx-top-reason-accent p,.acx-card-grid .acx-top-reason-accent dd,.acx-card-grid .acx-top-reason-accent dt{color:#fff}
+.acx-card-grid .pg-treat-meta{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--clr-peach-border);font-family:var(--font-body);font-size:14px;line-height:1.5}
+.acx-card-grid .acx-top-reason-accent .pg-treat-meta{border-color:#ffffff4d}
+.acx-card-grid .pg-treat-meta dt{font-weight:800;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--primary-deep)}
+.acx-card-grid .pg-treat-meta dd{margin:2px 0 10px;color:var(--acx-ink)}
+@media (max-width:1024px){
+  .acx-mast,.acx-cost{padding:72px 0}
+  .acx-mast-head h2,.acx-cost-title{font-size:38px}
+  .acx-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:767px){
+  .acx-mast-head h2,.acx-cost-title{font-size:30px}
+  .acx-mast-photo img{border-radius:24px}
+  .acx-mast-copy{grid-template-columns:minmax(0,1fr);margin-top:30px}
+  .acx-mast-copy>.acx-copy:only-child{columns:1}
+  .acx-clinic-overview-visual>img{height:300px}
+  .acx-card-grid{grid-template-columns:minmax(0,1fr)}
+  .acx-cost .data-table{font-size:14px}
+  .acx-cost .data-table th,.acx-cost .data-table td{padding:14px 16px}
+}
+.acx-card-grid>.acx-top-reason-card:nth-child(n){grid-column:auto}
+.acx-choose-story-main[data-focus="left"]{object-position:22% center}
+
+/* ---- Technologies ---- */
+.tech-shell .tech-grid{align-items:stretch}
+.tech-intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:stretch;margin-bottom:80px}
+.tech-intro-face.hotspot-stage{max-width:none;margin:0;border-radius:26px;box-shadow:0 26px 50px #5a3c2c24}
+.tech-intro-banner{overflow:hidden;border-radius:26px;box-shadow:0 26px 50px #5a3c2c24;background:var(--mist)}
+.tech-intro-banner img{display:block;width:100%;height:100%;object-fit:cover;object-position:right center}
+.tech-card-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.22,1,.36,1)}
+.tech-card:hover .tech-card-media img{transform:scale(1.04)}
+.tech-card-body h3{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 18px;font-family:var(--font-display);font-size:22px;font-weight:400;line-height:1.3;color:var(--acx-ink)}
+.tech-card-num{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:var(--panel);font-family:var(--font-body);font-size:12px;font-weight:800;color:var(--primary-deep)}
+.tech-readmore{text-decoration:none}
+.tech-readmore-arrow .ico{width:12px;height:12px}
+@media (max-width:1024px){.tech-intro{grid-template-columns:minmax(0,1fr);gap:30px;margin-bottom:60px}.tech-intro-banner img{height:auto}}
+@media (max-width:767px){.tech-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---- Dr. Nivedita Dadu ---- */
+/* hero as rendered on the reference (light peach, dark title), same as the About Clinic banner */
+.dr-nandani-page-hero{min-height:350px;padding:150px 72px 64px;background:var(--panel);display:flex;align-items:center;justify-content:center}
+.dr-nandani-page-hero-inner{margin:0 auto}
+.dr-nandani-hero-title{margin:0 0 16px;font-family:var(--font-display);font-size:54px;font-weight:400;line-height:1.2;letter-spacing:1px;color:#2b2b2b}
+.dr-nandani-hero-breadcrumb{font-family:var(--font-display);font-size:14px}
+.dr-nandani-hero-breadcrumb a,.dr-nandani-hero-breadcrumb a span{color:var(--primary-deep)}
+.dr-nandani-hero-breadcrumb span{color:#2b2b2b}
+/* intro: the live page's h1 in the reference name style; the site's consultation form in the lead card */
+.dr-nandani-kicker{margin:0;font-family:var(--font-body);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--primary-deep)}
+.dr-nandani-doctor-copy h1{margin:12px 0 10px;font-family:var(--font-display);font-size:max(34px,min(3.2vw,46px));font-weight:400;line-height:1.1;color:#111}
+.dr-nandani-lead-card{margin-top:28px}
+.dr-nandani-lead-card .consult-title{margin:0 0 18px;font-family:var(--font-display);font-size:26px;font-weight:400;color:#111}
+.dr-nandani-gallery-main img{display:block;width:100%;height:100%;object-fit:cover}
+@media (max-width:1024px){.dr-nandani-page-hero{min-height:300px;padding:140px 5% 50px}.dr-nandani-hero-title{font-size:42px}}
+@media (max-width:767px){.dr-nandani-page-hero{min-height:0;padding:130px 16px 40px}.dr-nandani-hero-title{font-size:32px}.dr-nandani-lead-card .consult-title{font-size:20px}}
+.nbd-kicker{margin:0 0 14px;font-family:var(--font-body);font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#ffffffd9}
+.nbd-profile{display:grid;grid-template-columns:300px minmax(0,1fr);gap:50px;align-items:center;margin:0 0 50px}
+.nbd-profile-photo img{display:block;width:100%;height:auto;border-radius:28px;box-shadow:0 26px 60px #00000029}
+.nbd-profile .pg-profile-facts{display:grid;gap:22px;margin:0}
+.nbd-profile .pg-profile-facts li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;align-items:start;padding:0;border:0}
+.nbd-profile .pg-profile-ico{width:44px;height:44px;padding:10px;border-radius:50%;background:#ffffff26;fill:none;stroke:#fff;stroke-width:1.6}
+.nbd-profile .pg-profile-facts span{color:#ffffffd9;font-family:var(--font-body);font-size:15px;line-height:1.6}
+.nbd-profile .pg-profile-facts strong{display:block;font-family:var(--font-display);font-size:20px;font-weight:400;color:#fff}
+.nbd-section .pg-profile-where{margin:0 0 50px}
+@media (max-width:767px){.nbd-profile{grid-template-columns:minmax(0,1fr);gap:28px}.nbd-profile-photo{max-width:300px;margin:0 auto}}
+.nwc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.nwc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.nwc-grid{grid-template-columns:minmax(0,1fr)}}
+/* treatment stories: the founder block, alternating sides; focus point of the wide live photos */
+.dnp-story--flip .dnp-founder{background:linear-gradient(90deg,var(--clr-peach,var(--primary)) 0 50%,var(--tint) 50% 100%)}
+.dnp-story--flip .dnp-founder-shell{grid-template-columns:.96fr 1.04fr}
+.dnp-story--flip .dnp-founder-copy{order:2;margin:0 0 0 -76px;padding:58px 60px 58px 78px}
+.dnp-story--flip .dnp-founder-visual{border-radius:34px 34px 34px 130px}
+.dnp-story+.dnp-story .dnp-founder{padding-top:0}
+.dnp-founder-visual img[data-pos="15"]{object-position:15% center}
+.dnp-founder-visual img[data-pos="35"]{object-position:35% center}
+.dnp-founder-visual img[data-pos="45"]{object-position:45% center}
+.dnp-founder-visual img[data-pos="50"]{object-position:50% center}
+.dnp-founder-visual img[data-pos="55"]{object-position:55% center}
+.dnp-founder-copy .acx-btn{margin-top:26px}
+.nhl-right h3+p{margin-top:14px}
+@media (max-width:900px){
+  .dnp-story--flip .dnp-founder{background:var(--tint)}
+  .dnp-story--flip .dnp-founder-copy{order:0;margin:0;padding:34px 26px}
+}
+/* the site-wide FAQ plus/minus mask must not clip the reference chevron */
+.acx-clinic-faq-list summary.faq-q::after,.acx-clinic-faq-list details.faq-row[open] summary.faq-q::after{-webkit-mask-image:none;mask-image:none}
+.acx-clinic-faq-list summary.faq-q{justify-content:flex-start}
+/* questions that already carry the live numbering ("1. ...") get no second number */
+.dnf-list summary.faq-q::before{content:none}
+.dnf-list summary.faq-q h3{flex:1}
+/* philosophy: three columns */
+.dnp-mv-shell--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.dnp-mv-shell--3:before{content:none}
+.dnp-mv-shell--3 .dnp-mv-col{flex-direction:column;gap:18px;padding:6px 32px;border-left:1px solid var(--clr-peach-border)}
+.dnp-mv-shell--3 .dnp-mv-col:first-child{padding-left:0;border-left:0}
+.dnp-mv-body p{margin:0 0 12px}
+.dnp-mv-body .check-list{margin-top:10px}
+/* patient testimonials: three reference testimonial cards */
+.rv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;text-align:left}
+.rv-grid .rv-tcard{flex-direction:column;align-items:stretch;gap:22px;padding:0}
+.rv-grid .rv-timg{flex:none;width:100%;height:300px}
+.rv-grid .rv-timg img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.rv-ttext p{margin:0;color:#fff}
+.rv-tname{margin-top:4px}
+.rv-tmeta,.rv-tnote{margin:4px 0 0;font-family:var(--font-body);font-size:13px;line-height:1.5;color:#ffffffd9}
+.rv-rating{margin:8px 0 0;font-family:var(--font-body);font-size:14px;font-weight:700;color:#fff}
+.rv-rating span{color:#ffd27a}
+.rv-actions{margin-top:44px}
+.rv-actions .acx-btn{background:#fff}
+.rv-actions .acx-btn>span:first-child{color:var(--primary-deep)}
+.rv-actions .acx-choose-arrow-circle{background:var(--primary)}
+.rv-actions .acx-choose-arrow-circle .ico{color:#fff}
+/* ratings and reviews: reference heading over the site's review cards */
+.dnr-section{padding:105px 0;background:#fff}
+.dnr-head{margin:0 auto 50px;text-align:center}
+.dnr-head .pg-title{margin:0;font-family:var(--font-display);font-size:48px;font-weight:400;line-height:1.12;color:var(--acx-ink)}
+.dnr-head .pg-lede{margin:12px 0 0;font-family:var(--font-body);font-size:17px;color:var(--acx-muted)}
+/* expertise card with the two service lists */
+.nex-top--lists{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nex-icon .ico{width:26px;height:26px;stroke-width:2}
+.nex-list-item .ico{width:12px;height:12px;stroke-width:3}
+.nex-list-item p{margin:0;color:#fff;font-family:var(--font-body);font-size:15px;line-height:1.6}
+/* premium services: the live page's video button on each card */
+.nsp-sub{margin:10px 0 30px}
+.nsp-sub h3{margin:0 0 8px;font-family:var(--font-display);font-size:28px;font-weight:400;color:var(--acx-ink)}
+.nsp-sub p{margin:0;font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--acx-muted)}
+.nsp-grid--3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nsp-play{display:inline-flex;align-items:center;gap:12px;margin-top:16px;padding:8px 20px 8px 8px;border-radius:50px;background:var(--primary);font-family:var(--font-body);font-size:13px;font-weight:800;color:#fff;transition:background .25s}
+.nsp-play:hover{background:var(--primary-deep)}
+.nsp-play-ico{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--primary-deep)}
+.nsp-play-ico .ico{width:12px;height:12px}
+@media (max-width:1024px){
+  .dnp-mv-shell--3{grid-template-columns:minmax(0,1fr)}
+  .dnp-mv-shell--3 .dnp-mv-col{padding:24px 0;border-left:0;border-top:1px solid var(--clr-peach-border)}
+  .dnp-mv-shell--3 .dnp-mv-col:first-child{border-top:0}
+  .rv-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dnr-head .pg-title{font-size:38px}
+}
+@media (max-width:767px){
+  .rv-grid,.nex-top--lists,.nsp-grid--3{grid-template-columns:minmax(0,1fr)}
+  .dnr-section{padding:72px 0}
+  .dnr-head .pg-title{font-size:30px}
+}
+/* the reference ".acx-page span{Lato}" must not reach spans inside headings */
+.acx-page :is(h1,h2,h3,h4) span{font-family:inherit}
+.rv-grid .rv-tcard{justify-content:flex-start}
+.rv-grid .rv-tbody{justify-content:flex-start}

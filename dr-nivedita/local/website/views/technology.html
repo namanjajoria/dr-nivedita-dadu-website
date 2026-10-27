@@ -1,17 +1,22 @@
 {{> inner-page-start}}
 
-<section class="page-banner">
-  <div class="container">
-    <h1 class="page-banner-title">Technologies</h1>
-    <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="/">Home</a></li><li><span aria-current="page">Technologies</span></li></ol></nav>
+<!-- Technologies in the dadumedicalcentre.com Technology layout (tech-* card grid, /css/about.css);
+     the treatment points, their videos and the photos are the live drniveditadadu.com Technologies page -->
+<div class="tech-page acx-page">
+<section class="acx-page-banner">
+  <div class="acx-page-banner-inner">
+    <h1 class="acx-banner-title">Technologies</h1>
+    <nav class="acx-page-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Technologies</span></nav>
   </div>
 </section>
 
-<!-- treatment hotspots - each opens the treatment video -->
-<section class="section bg-tint">
-  <div class="container tech-grid">
-    <div class="hotspot-stage">
-      <img src="/images/about/technology-face.jpg" alt="Treatment areas" fetchpriority="high" width="1200" height="1181" decoding="async">
+<section class="tech-grid-section">
+  <span class="tech-glow" aria-hidden="true"></span>
+  <div class="tech-shell">
+    <!-- the live page's two photos: the treatment-area face (each point opens its video) and the banner -->
+    <div class="tech-intro">
+      <div class="tech-intro-face hotspot-stage">
+        <img src="/images/about/technology-face.jpg" alt="Treatment areas" fetchpriority="high" width="1200" height="1181" decoding="async">
         <a class="hotspot hotspot--1" href="https://www.youtube.com/watch?v=e_mXpqQCEB0" target="_blank" rel="noopener" data-video-dialog="e_mXpqQCEB0" data-title="Forehead &#x27;worry lines&#x27;">+<span class="hotspot-label">Forehead 'worry lines'</span></a>
         <a class="hotspot hotspot--2" href="https://www.youtube.com/watch?v=xgJe7zGAB0E" target="_blank" rel="noopener" data-video-dialog="xgJe7zGAB0E" data-title="Sun Spots-Neck">+<span class="hotspot-label">Sun Spots-Neck</span></a>
         <a class="hotspot hotspot--3" href="https://www.youtube.com/watch?v=o3BmdrKhNdU" target="_blank" rel="noopener" data-video-dialog="o3BmdrKhNdU" data-title="Acne Scars">+<span class="hotspot-label">Acne Scars</span></a>
@@ -20,19 +25,24 @@
         <a class="hotspot hotspot--6" href="https://www.youtube.com/watch?v=ZWQE-panaIo" target="_blank" rel="noopener" data-video-dialog="ZWQE-panaIo" data-title="Laser Hair Reduction">+<span class="hotspot-label">Laser Hair Reduction</span></a>
         <a class="hotspot hotspot--7" href="https://www.youtube.com/watch?v=-u11ApJXAB4" target="_blank" rel="noopener" data-video-dialog="-u11ApJXAB4" data-title="Stretch Marks">+<span class="hotspot-label">Stretch Marks</span></a>
         <a class="hotspot hotspot--8" href="https://www.youtube.com/watch?v=-u11ApJXAB4" target="_blank" rel="noopener" data-video-dialog="-u11ApJXAB4" data-title="Scars">+<span class="hotspot-label">Scars</span></a>
+      </div>
+      <div class="tech-intro-banner"><img src="/images/about/technology-banner.jpg" alt="Technologies at Dr. Nivedita Dadu&#x27;s Dermatology Clinic" width="1366" height="400" decoding="async"></div>
     </div>
-    <ol class="tech-list">
-        <li><a class="tech-item" href="https://www.youtube.com/watch?v=e_mXpqQCEB0" target="_blank" rel="noopener" data-video-dialog="e_mXpqQCEB0" data-title="Forehead &#x27;worry lines&#x27;"><span class="ico-circle">1</span><span>Forehead 'worry lines'</span><span class="tech-play"><svg class="ico"><use href="#i-play"/></svg></span></a></li>
-        <li><a class="tech-item" href="https://www.youtube.com/watch?v=xgJe7zGAB0E" target="_blank" rel="noopener" data-video-dialog="xgJe7zGAB0E" data-title="Sun Spots-Neck"><span class="ico-circle">2</span><span>Sun Spots-Neck</span><span class="tech-play"><svg class="ico"><use href="#i-play"/></svg></span></a></li>
-        <li><a class="tech-item" href="https://www.youtube.com/watch?v=o3BmdrKhNdU" target="_blank" rel="noopener" data-video-dialog="o3BmdrKhNdU" data-title="Acne Scars"><span class="ico-circle">3</span><span>Acne Scars</span><span class="tech-play"><svg class="ico"><use href="#i-play"/></svg></span></a></li>
-        <li><a class="tech-item" href="https://www.youtube.com/watch?v=EQNziJQ45Kw" target="_blank" rel="noopener" data-video-dialog="EQNziJQ45Kw" data-title="Skin Lightening"><span class="ico-circle">4</span><span>Skin Lightening</span><span class="tech-play"><svg class="ico"><use href="#i-play"/></svg></span></a></li>
-        <li><a class="tech-item" href="https://www.youtube.com/watch?v=YGER2q34V20" target="_blank" rel="noopener" data-video-dialog="YGER2q34V20" data-title="Laser Hair Reduction"><span class="ico-circle">5</span><span>Laser Hair Reduction</span><span class="tech-play"><svg class="ico"><use href="#i-play"/></svg></span></a></li>
-        <li><a class="tech-item" href="https://www.youtube.com/watch?v=ZWQE-panaIo" target="_blank" rel="noopener" data-video-dialog="ZWQE-panaIo" data-title="Laser Hair Reduction"><span class="ico-circle">6</span><span>Laser Hair Reduction</span><span class="tech-play"><svg class="ico"><use href="#i-play"/></svg></span></a></li>
-        <li><a class="tech-item" href="https://www.youtube.com/watch?v=-u11ApJXAB4" target="_blank" rel="noopener" data-video-dialog="-u11ApJXAB4" data-title="Stretch Marks"><span class="ico-circle">7</span><span>Stretch Marks</span><span class="tech-play"><svg class="ico"><use href="#i-play"/></svg></span></a></li>
-        <li><a class="tech-item" href="https://www.youtube.com/watch?v=-u11ApJXAB4" target="_blank" rel="noopener" data-video-dialog="-u11ApJXAB4" data-title="Scars"><span class="ico-circle">8</span><span>Scars</span><span class="tech-play"><svg class="ico"><use href="#i-play"/></svg></span></a></li>
-    </ol>
+
+    <!-- one reference technology card per treatment point -->
+    <div class="tech-grid">
+      <article class="tech-card"><div class="tech-card-media"><img src="https://i.ytimg.com/vi/e_mXpqQCEB0/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"></div><div class="tech-card-body"><h3><span class="tech-card-num">1</span>Forehead 'worry lines'</h3><a class="tech-readmore" href="https://www.youtube.com/watch?v=e_mXpqQCEB0" target="_blank" rel="noopener" data-video-dialog="e_mXpqQCEB0" data-title="Forehead &#x27;worry lines&#x27;"><span>Watch Video</span><span class="tech-readmore-arrow" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-play"/></svg></span></a></div></article>
+      <article class="tech-card"><div class="tech-card-media"><img src="https://i.ytimg.com/vi/xgJe7zGAB0E/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"></div><div class="tech-card-body"><h3><span class="tech-card-num">2</span>Sun Spots-Neck</h3><a class="tech-readmore" href="https://www.youtube.com/watch?v=xgJe7zGAB0E" target="_blank" rel="noopener" data-video-dialog="xgJe7zGAB0E" data-title="Sun Spots-Neck"><span>Watch Video</span><span class="tech-readmore-arrow" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-play"/></svg></span></a></div></article>
+      <article class="tech-card"><div class="tech-card-media"><img src="https://i.ytimg.com/vi/o3BmdrKhNdU/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"></div><div class="tech-card-body"><h3><span class="tech-card-num">3</span>Acne Scars</h3><a class="tech-readmore" href="https://www.youtube.com/watch?v=o3BmdrKhNdU" target="_blank" rel="noopener" data-video-dialog="o3BmdrKhNdU" data-title="Acne Scars"><span>Watch Video</span><span class="tech-readmore-arrow" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-play"/></svg></span></a></div></article>
+      <article class="tech-card"><div class="tech-card-media"><img src="https://i.ytimg.com/vi/EQNziJQ45Kw/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"></div><div class="tech-card-body"><h3><span class="tech-card-num">4</span>Skin Lightening</h3><a class="tech-readmore" href="https://www.youtube.com/watch?v=EQNziJQ45Kw" target="_blank" rel="noopener" data-video-dialog="EQNziJQ45Kw" data-title="Skin Lightening"><span>Watch Video</span><span class="tech-readmore-arrow" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-play"/></svg></span></a></div></article>
+      <article class="tech-card"><div class="tech-card-media"><img src="https://i.ytimg.com/vi/YGER2q34V20/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"></div><div class="tech-card-body"><h3><span class="tech-card-num">5</span>Laser Hair Reduction</h3><a class="tech-readmore" href="https://www.youtube.com/watch?v=YGER2q34V20" target="_blank" rel="noopener" data-video-dialog="YGER2q34V20" data-title="Laser Hair Reduction"><span>Watch Video</span><span class="tech-readmore-arrow" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-play"/></svg></span></a></div></article>
+      <article class="tech-card"><div class="tech-card-media"><img src="https://i.ytimg.com/vi/ZWQE-panaIo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"></div><div class="tech-card-body"><h3><span class="tech-card-num">6</span>Laser Hair Reduction</h3><a class="tech-readmore" href="https://www.youtube.com/watch?v=ZWQE-panaIo" target="_blank" rel="noopener" data-video-dialog="ZWQE-panaIo" data-title="Laser Hair Reduction"><span>Watch Video</span><span class="tech-readmore-arrow" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-play"/></svg></span></a></div></article>
+      <article class="tech-card"><div class="tech-card-media"><img src="https://i.ytimg.com/vi/-u11ApJXAB4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"></div><div class="tech-card-body"><h3><span class="tech-card-num">7</span>Stretch Marks</h3><a class="tech-readmore" href="https://www.youtube.com/watch?v=-u11ApJXAB4" target="_blank" rel="noopener" data-video-dialog="-u11ApJXAB4" data-title="Stretch Marks"><span>Watch Video</span><span class="tech-readmore-arrow" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-play"/></svg></span></a></div></article>
+      <article class="tech-card"><div class="tech-card-media"><img src="https://i.ytimg.com/vi/-u11ApJXAB4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"></div><div class="tech-card-body"><h3><span class="tech-card-num">8</span>Scars</h3><a class="tech-readmore" href="https://www.youtube.com/watch?v=-u11ApJXAB4" target="_blank" rel="noopener" data-video-dialog="-u11ApJXAB4" data-title="Scars"><span>Watch Video</span><span class="tech-readmore-arrow" aria-hidden="true"><svg class="ico ico-fill"><use href="#i-play"/></svg></span></a></div></article>
+    </div>
   </div>
 </section>
+</div>
 
 <dialog class="video-dialog" aria-label="Treatment video">
   <button class="video-dialog-close" type="button" aria-label="Close video">✕</button>

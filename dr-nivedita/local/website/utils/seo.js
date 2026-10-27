@@ -41,6 +41,8 @@ function buildPageMeta(page) {
     ogImageHeight: image.height,
     ogImageAlt: image.alt,
     ...assetUrls(),
+    // extra stylesheet for one group of pages (e.g. the About pages' /css/about.css)
+    pageCssUrl: page.css ? assetUrl(page.css) : '',
   };
 }
 

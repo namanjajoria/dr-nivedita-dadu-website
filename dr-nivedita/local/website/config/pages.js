@@ -24,6 +24,7 @@ const pages = [
   {
     path: '/dr-nivedita-dadu-skin-specialist-in-delhi',
     view: 'dr-nivedita-dadu',
+    css: '/css/about.css',
     title: 'Dr Nivedita Dadu – Dermatologist & Skin Specialist in Delhi',
     description:
       'Dr Nivedita Dadu – dermatologist and skin specialist in Delhi for expert skin and hair treatments in Rajouri Garden (West Delhi) & Vasant Vihar (South Delhi)',
@@ -36,6 +37,7 @@ const pages = [
   {
     path: '/about-clinic',
     view: 'about-clinic',
+    css: '/css/about.css',
     title: 'Dr. Nivedita Dadu | Top Skin & Hair Treatment Clinic Delhi',
     description:
       'Dr. Nivedita Dadu is a top skin and hair treatment clinic in Delhi NCR offering advanced procedures and personalized care in Rajouri Garden and Vasant Vihar.',
@@ -48,6 +50,7 @@ const pages = [
   {
     path: '/general-dermatology',
     view: 'general-dermatology',
+    css: '/css/about.css',
     title: 'Top 10 Dermatologists in Rajouri Garden & West Delhi',
     description:
       'Discover top dermatologists for skin care in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi). Expert treatments by trusted dermatologists in Delhi',
@@ -59,6 +62,7 @@ const pages = [
   {
     path: '/cosmetic-dermatology',
     view: 'cosmetic-dermatology',
+    css: '/css/about.css',
     title: 'Best Cosmetic Dermatologist in West & South Delhi | Book Now',
     description:
       'Visit expert cosmetic dermatologists in Rajouri Garden (West Delhi) and Vasant Vihar (South Delhi) for advanced skin treatments. Book your appointment today.',
@@ -70,6 +74,7 @@ const pages = [
   {
     path: '/technology',
     view: 'technology',
+    css: '/css/about.css',
     title: "Technologies | Dr. Nivedita Dadu's Dermatology Clinic",
     description:
       'Dr. Nivedita Dadu specializes in dermatology in Delhi. She offers affordable skincare treatments using advanced technology and equipment.',
