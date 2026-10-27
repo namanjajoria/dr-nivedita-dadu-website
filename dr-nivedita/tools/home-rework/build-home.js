@@ -116,7 +116,7 @@ const blogs = [...blogSec.matchAll(/<a class="blog-card" href="([^"]+)">\s*<div 
   .map(m => ({ href: m[1], img: m[2], alt: m[3], w: m[4], h: m[5], date: m[6], author: m[7].trim(), title: m[8], link: m[9] }));
 must(blogs.length === 3, 'expected 3 blogs, got ' + blogs.length);
 // The 3 latest posts (same as drniveditadadu.com's homepage), each opening its own page on this site.
-// Built by tools/blog/build-posts.js, which writes latest.json (newest first).
+// latest.json (newest first) was written by the first 3-post blog tool; all posts now come from tools/blog/build-blog.js.
 const latest = JSON.parse(fs.readFileSync(__dirname + '/../blog/latest.json', 'utf8'));
 must(latest.length === 3, 'expected 3 latest posts');
 blogs.length = 0;

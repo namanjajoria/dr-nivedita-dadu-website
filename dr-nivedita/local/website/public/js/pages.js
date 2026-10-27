@@ -128,6 +128,29 @@
   // shows.
   d.querySelectorAll('[data-blog]').forEach(function (section) {
     var posts = Array.prototype.slice.call(section.querySelectorAll('[data-item]'));
+    // /blog/?q=... (the sidebar search): only the posts whose title or summary has every word
+    var query = (new URLSearchParams(location.search).get('q') || '').trim();
+    if (section.hasAttribute('data-blog-search') && query) {
+      var words = query.toLowerCase().split(/\s+/);
+      var all = posts;
+      posts = all.filter(function (p) {
+        var hay = p.getAttribute('data-search') || '';
+        return words.every(function (w) { return hay.indexOf(w) !== -1; });
+      });
+      all.forEach(function (p) { if (posts.indexOf(p) === -1) p.hidden = true; });
+      var note = section.querySelector('.blg-search-note');
+      if (note) {
+        note.textContent = posts.length
+          ? posts.length + (posts.length === 1 ? ' post' : ' posts') + ' found for “' + query + '”. '
+          : 'No blog posts found for “' + query + '”. ';
+        var back = d.createElement('a');
+        back.href = location.pathname;
+        back.textContent = 'View all posts';
+        note.appendChild(back);
+        note.hidden = false;
+      }
+      section.querySelectorAll('.blg-search input[name="q"]').forEach(function (i) { i.value = query; });
+    }
     var per = parseInt(section.getAttribute('data-per-page'), 10) || 10;
     var total = Math.ceil(posts.length / per);
     var nav = section.querySelector('.blog-pagination');
@@ -460,5 +483,35 @@
     var next = gallery.querySelector('.sd-gallery-arrow.next');
     if (prev) prev.addEventListener('click', function () { show(current - 1); });
     if (next) next.addEventListener('click', function () { show(current + 1); });
+  });
+
+  // Blog post FAQ cards (DMC faq-card-item): one answer open at a time.
+  d.querySelectorAll('[data-blg-faq]').forEach(function (list) {
+    list.addEventListener('click', function (e) {
+      var btn = e.target.closest('.blg-faq-q button');
+      if (!btn) return;
+      var item = btn.closest('.blg-faq-item');
+      var open = !item.classList.contains('is-open');
+      list.querySelectorAll('.blg-faq-item').forEach(function (it) {
+        var on = it === item && open;
+        it.classList.toggle('is-open', on);
+        it.querySelector('.blg-faq-q button').setAttribute('aria-expanded', String(on));
+        it.querySelector('.blg-faq-a').hidden = !on;
+      });
+    });
+  });
+
+  // Blog "Leave A Reply": checked and acknowledged here; saving comments needs the backend.
+  d.querySelectorAll('[data-comment-form]').forEach(function (form) {
+    var status = form.querySelector('.blg-reply-status');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var ok = form.checkValidity();
+      status.hidden = false;
+      status.classList.toggle('is-error', !ok);
+      if (!ok) { form.reportValidity(); status.textContent = 'Please fill in your name, a valid email and your message.'; return; }
+      status.textContent = 'Thank you! Your comment has been submitted and will appear once it is approved.';
+      form.reset();
+    });
   });
 })();
