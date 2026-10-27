@@ -1016,4 +1016,4 @@ select.rate-input option{color:var(--text)}
 .legal-links a{white-space:nowrap}
 .legal .copyright{margin:0}
 /* footer v3: about paragraph under the brand (reference: 13px, max 380px, 20px below) */
-.footer-brand p.footer-about{max-width:380px;margin:10px 0 0;font-size:13px;line-height:1.6}
+.footer-brand p.footer-about{max-width:380px;margin:0;font-size:13px;line-height:1.6}
