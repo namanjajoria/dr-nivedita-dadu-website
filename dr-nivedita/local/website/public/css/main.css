@@ -1017,3 +1017,11 @@ select.rate-input option{color:var(--text)}
 .legal .copyright{margin:0}
 /* footer v3: about paragraph under the brand (reference: 13px, max 380px, 20px below) */
 .footer-brand p.footer-about{max-width:380px;margin:0;font-size:13px;line-height:1.6}
+/* footer v3 on phones, as on the reference: phone and email stacked with their round icons
+   (an older rule hid every span in .news-pills), legal links on one wrapping line with "|" */
+@media (max-width:767px){
+  .news-pills{flex-direction:column;gap:12px}
+  .news-pills .news-pill span{display:inline-flex}
+  .legal-links{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:4px 6px}
+  .legal-links span{display:inline}
+}
