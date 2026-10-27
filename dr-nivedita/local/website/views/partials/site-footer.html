@@ -61,6 +61,7 @@
     </div>
   </div>
 
+  <!-- brand block + floating card, laid out as on dadumedicalcentre.com (our colours, logo and brand) -->
   <div class="footer-base">
     <div class="container footer-base-grid">
       <div class="footer-brand">
@@ -70,60 +71,38 @@
             <h2>Dr. Nivedita Dadu's Dermatology Clinic</h2>
             <p>India's Most Trusted Skin + Laser Clinic</p>
             <div class="footer-socials" aria-label="Follow Us">
-              <a class="social" href="https://www.facebook.com/daduskinclinic/" aria-label="Facebook"><svg class="ico ico-fill"><use href="#i-fb"/></svg></a>
-              <a class="social" href="https://www.instagram.com/dadumedicalcentre/" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
-              <a class="social" href="https://www.youtube.com/channel/UCEQOJDwT1HlQO0Jmo-kLRrg" aria-label="YouTube"><svg class="ico"><use href="#i-yt"/></svg></a>
+              <a class="social" href="https://www.facebook.com/daduskinclinic/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="ico ico-fill"><use href="#i-fb"/></svg></a>
+              <a class="social" href="https://www.instagram.com/dadumedicalcentre/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
+              <a class="social" href="https://www.youtube.com/channel/UCEQOJDwT1HlQO0Jmo-kLRrg" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico"><use href="#i-yt"/></svg></a>
+              <a class="social" href="https://www.linkedin.com/company/dadu-medical-centre/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="ico ico-fill"><use href="#i-in"/></svg></a>
+              <a class="social" href="https://in.pinterest.com/daduskinclinic/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><svg class="ico ico-fill"><use href="#i-pt"/></svg></a>
+              <a class="social" href="https://x.com/daduskinclinic" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg class="ico ico-fill"><use href="#i-x"/></svg></a>
+              <a class="social" href="https://soundcloud.com/daduskinclinic" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud"><svg class="ico ico-fill"><use href="#i-sc"/></svg></a>
             </div>
           </div>
         </div>
-
-        <form class="rate-card" action="/api/review" method="post" data-form="review">
-          <input type="hidden" name="_ft" value="{{formToken}}">
-          <div class="hp-field" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-          <h3>Rate us</h3>
-          <div class="rate-row">
-            <input class="rate-input" type="text" name="name" placeholder="Name*" aria-label="Name" required>
-            <input class="rate-input" type="email" name="email" placeholder="Email*" aria-label="Email" required>
-          </div>
-          <div class="rate-row">
-            <input class="rate-input" type="tel" name="phone" placeholder="Phone" aria-label="Phone">
-            <select class="rate-input" name="rating" aria-label="Rating"><option value="">Rating</option><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select>
-          </div>
-          <input class="rate-input" type="text" name="review" placeholder="Review*" aria-label="Review" required>
-          <button class="btn btn-light" type="submit">Submit Your Review <span class="btn-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></button>
-          <p class="form-status" role="status" aria-live="polite" hidden></p>
-        </form>
       </div>
 
       <div class="news-card">
-        <h2>Subscribe to our newsletter?</h2>
-        <form class="news-form" action="/api/newsletter" method="post" data-form="newsletter" data-status="newsletter-status">
+        <h2>Stay Connected With Dr. Nivedita Dadu's Dermatology Clinic</h2>
+        <p class="news-intro">Clinic Timings (By Appointment Only): Mon To Sat 9:30 AM - 7:30 PM, Sunday 10:00 AM To 7:00 PM. Subscribe For Expert Skin &amp; Hair Care Tips From Our Dermatologists.</p>
+        <form class="news-form-wrap" action="/api/newsletter" method="post" data-form="newsletter" data-status="newsletter-status">
           <input type="hidden" name="_ft" value="{{formToken}}">
           <div class="hp-field" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-          <input type="email" name="email" placeholder="Your Email Address" aria-label="Your Email Address" required>
-          <button class="news-submit" type="submit">Submit <span class="btn-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></button>
+          <div class="news-form">
+            <input type="email" name="email" placeholder="Your Email Address" aria-label="Your Email Address" required>
+            <button class="news-submit" type="submit">Submit <span class="btn-arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></button>
+          </div>
+          <label class="news-check"><input type="checkbox" name="updates" value="yes"> Subscribe for Skin Care Insights &amp; Updates</label>
         </form>
         <p class="form-status news-status" id="newsletter-status" role="status" aria-live="polite" hidden></p>
         <div class="news-pills">
           <a class="news-pill" href="tel:09810939319"><span class="news-pill-ico" aria-hidden="true"><svg class="ico"><use href="#i-phone"/></svg></span><span>09810939319</span></a>
           <a class="news-pill" href="mailto:info@drniveditadadu.com"><span class="news-pill-ico" aria-hidden="true"><svg class="ico"><use href="#i-mail"/></svg></span><span>info@drniveditadadu.com</span></a>
         </div>
-        <div class="timings">
-          <div>
-            <h3>Clinic Timings</h3>
-            <p>Monday to Saturday : <span class="nw">9:30 AM - 7:30 PM</span><br>Sunday : <span class="nw">10:00 AM to 7:00 PM</span></p>
-          </div>
-          <div>
-            <h3>Timings for Consultation</h3>
-            <p>(Dr. Nivedita Dadu)</p>
-            <p><b>Vasant Vihar:</b><br>Morning Shift: <span class="nw">12:00 PM - 2:00 PM</span> &amp;<br>Evening Shift: <span class="nw">4:00 PM - 6:00 PM</span></p>
-            <p><b>Rajouri Garden:</b><br>Morning Shift: <span class="nw">11:00 AM - 1:00 PM</span> &amp;<br>Evening Shift: <span class="nw">4:00 PM - 6:00 PM</span></p>
-          </div>
-        </div>
         <p class="news-disclaimer"><b>Disclaimer:</b> The content on this website (www.drniveditadadu.com) is solely for the purpose of educating and creating awareness about the domain i.e. Dermatology. This shall not be treated as a substitute to a professional dermatologist's advice or prescription. There is no guarantee of specific results and the results for any treatment mentioned on the website may vary, as every individual and their skin conditions are different.</p>
         <div class="legal">
-          <div class="legal-links"><a href="https://www.drniveditadadu.com/privacy-policy">Privacy Policy</a><span>|</span><a href="https://www.drniveditadadu.com/legal-disclaimer">Legal Disclaimer</a><span>|</span><a href="https://www.drniveditadadu.com/terms-conditions">Terms &amp; Conditions</a></div>
-          <p class="areas"><span class="nw">Rajouri Garden ·</span> <span class="nw">South Delhi ·</span> <span class="nw">West Delhi ·</span> <span class="nw">East Delhi ·</span> <span class="nw">Hauz Khas ·</span> <span class="nw">Saket ·</span> <span class="nw">Shahdara ·</span> <span class="nw">Rohini ·</span> <span class="nw">Gurgaon ·</span> <span class="nw">Noida ·</span> <span class="nw">Faridabad</span></p>
+          <div class="legal-links"><a href="https://www.drniveditadadu.com/terms-conditions">Terms &amp; Conditions</a><span aria-hidden="true">|</span><a href="https://www.drniveditadadu.com/legal-disclaimer">Legal Disclaimer</a><span aria-hidden="true">|</span><a href="https://www.drniveditadadu.com/privacy-policy">Privacy Policy</a></div>
           <p class="copyright">Copyright © 2014-2026 Dr. Nivedita Dadu's Dermatology Clinic. All rights reserved</p>
         </div>
       </div>
