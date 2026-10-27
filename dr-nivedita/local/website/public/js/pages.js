@@ -401,8 +401,13 @@
   });
 
   // Before & After results slider (reference settings): 4 cards per view, 30px apart, centred when there are fewer.
+  // With more than 4 cards it also loops and moves on its own every 6s, like the homepage slider.
   if (window.Swiper) d.querySelectorAll('[data-sd-results]').forEach(function (box) {
+    var many = box.querySelectorAll('.sd-results-swiper .swiper-slide').length > 4;
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     new Swiper(box.querySelector('.sd-results-swiper'), {
+      loop: many,
+      autoplay: many && !still ? { delay: 6000, disableOnInteraction: false } : false,
       slidesPerView: 1, spaceBetween: 30, watchOverflow: true, centerInsufficientSlides: true,
       breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1200: { slidesPerView: 4 } },
       navigation: { prevEl: box.querySelector('.sd-results-arrow.prev'), nextEl: box.querySelector('.sd-results-arrow.next') }
