@@ -77,7 +77,7 @@ select.rh-input:valid{color:#333;text-transform:none}
 .rh-et-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1)}
 .rh-et-card:hover .rh-et-img{transform:scale(1.1)}
 .rh-et-shade{position:absolute;inset:0;background:linear-gradient(#120b0700 32%,#120b0773 62%,#120b07e6 100%);transition:background .7s}
-.rh-et-card:hover .rh-et-shade{background:linear-gradient(#f5907c1f 0%,#f2765eb8 45%,#c0553ff2 100%)}
+.rh-et-card:hover .rh-et-shade{background:linear-gradient(color-mix(in srgb,var(--primary) 12%,transparent) 0%,color-mix(in srgb,var(--primary-hover) 72%,transparent) 45%,color-mix(in srgb,var(--primary-deep) 95%,transparent) 100%)}
 .rh-et-content{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:26px 24px 30px;color:#fff;text-align:center}
 .rh-et-accent{display:block;width:38px;height:3px;margin:0 auto 14px;border-radius:2px;background:#fff;transition:width .4s}
 .rh-et-card:hover .rh-et-accent{width:64px}
@@ -120,7 +120,7 @@ select.rh-input:valid{color:#333;text-transform:none}
 .rh-rv-tab--ghost{border:1.5px solid #ffffffd9;color:#fff}
 
 /* play button shared by video thumbnails */
-.rh-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;width:58px;height:58px;margin:auto;border-radius:50%;background:#f5907cf2;color:#fff;box-shadow:0 6px 20px #0000004d;transition:transform .25s,background .25s}
+.rh-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;width:58px;height:58px;margin:auto;border-radius:50%;background:color-mix(in srgb,var(--primary) 95%,transparent);color:#fff;box-shadow:0 6px 20px #0000004d;transition:transform .25s,background .25s}
 .rh-play .ico{width:20px;height:20px;margin-left:3px}
 a:hover>.rh-play,button:hover>.rh-play{background:var(--primary-deep);transform:scale(1.12)}
 
@@ -148,8 +148,8 @@ a:hover>.rh-play,button:hover>.rh-play{background:var(--primary-deep);transform:
 /* 5. founder: arched portrait + stats, memberships marquee; doctor videos below */
 .rh-drn-top{position:relative;overflow:hidden;padding:90px 5%;background:var(--tint)}
 .rh-drn-shape{position:absolute;border-radius:9999px;pointer-events:none}
-.rh-drn-shape--1{top:-120px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,#f5907c2e,#0000 70%)}
-.rh-drn-shape--2{bottom:-160px;left:-120px;width:380px;height:380px;background:radial-gradient(circle,#f5907c24,#0000 70%)}
+.rh-drn-shape--1{top:-120px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,color-mix(in srgb,var(--primary) 18%,transparent),#0000 70%)}
+.rh-drn-shape--2{bottom:-160px;left:-120px;width:380px;height:380px;background:radial-gradient(circle,color-mix(in srgb,var(--primary) 14%,transparent),#0000 70%)}
 .rh-drn-inner{position:relative;z-index:2;max-width:1300px;margin:0 auto}
 .rh-drn-founder{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:64px}
 .rh-portrait-wrap{position:relative;width:340px;max-width:100%;margin:0 auto}

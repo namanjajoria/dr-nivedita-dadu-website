@@ -1,0 +1,39 @@
+/* Homepage-only colour previews for the client (palettes 1, 3 and 4).
+   home-theme.js sets html[data-theme]; without it the page keeps the peach tokens from main.css.
+   Each palette: lightest -> page/footer backgrounds, soft -> panels/borders, main -> --primary, dark -> hover. */
+html[data-theme="1"]{
+  --primary:#245b57;--primary-hover:#263d42;--primary-deep:#245b57;--primary-soft:#dce9e6;
+  --primary-a15:#245b5726;--primary-a20:#245b5733;--primary-a30:#245b574d;
+  --mist:#f7f8f6;--tint:#f7f8f6;--panel:#dce9e6;--footer-bg:#f7f8f6;--border:#dce9e6;--line:#dce9e6;
+  --theme-dark:#263d42;
+}
+html[data-theme="3"]{
+  --primary:#285b91;--primary-hover:#24354b;--primary-deep:#285b91;--primary-soft:#dce7f4;
+  --primary-a15:#285b9126;--primary-a20:#285b9133;--primary-a30:#285b914d;
+  --mist:#f5f8fc;--tint:#f5f8fc;--panel:#dce7f4;--footer-bg:#f5f8fc;--border:#dce7f4;--line:#dce7f4;
+  --theme-dark:#24354b;
+}
+html[data-theme="4"]{
+  --primary:#697b55;--primary-hover:#343b32;--primary-deep:#5b6b49;--primary-soft:#e5e8da;
+  --primary-a15:#697b5526;--primary-a20:#697b5533;--primary-a30:#697b554d;
+  --mist:#fbfaf6;--tint:#fbfaf6;--panel:#e5e8da;--footer-bg:#fbfaf6;--border:#e5e8da;--line:#e5e8da;
+  --theme-dark:#343b32;
+}
+
+/* Theme switcher (preview only - remove once the client picks a palette) */
+.theme-switch{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:999;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:#fff;box-shadow:0 8px 24px #00000029;font-family:var(--font-body);font-size:13px}
+.theme-switch-label{padding:0 6px 0 10px;font-weight:700;color:#333}
+.theme-switch button{display:flex;align-items:center;gap:6px;padding:6px 12px;border:2px solid transparent;border-radius:999px;background:#f2f2f2;color:#333;font:inherit;font-weight:700;cursor:pointer}
+.theme-switch button:hover{background:#e5e5e5}
+.theme-switch button[aria-pressed="true"]{border-color:#1c1c1c;background:#fff}
+.theme-switch-dot{width:14px;height:14px;border-radius:50%}
+.theme-switch-dot--peach{background:#f5907c}
+.theme-switch-dot--1{background:#245b57}
+.theme-switch-dot--3{background:#285b91}
+.theme-switch-dot--4{background:#697b55}
+/* phones/tablets: sit above the call/WhatsApp bar (60px, <=768px), clear of the back-to-top button */
+@media (max-width:768px){
+  .theme-switch{left:12px;bottom:calc(72px + env(safe-area-inset-bottom));transform:none;gap:4px;font-size:12px}
+  .theme-switch-label,.theme-switch-word{display:none}
+  .theme-switch button{gap:5px;padding:6px 10px}
+}
