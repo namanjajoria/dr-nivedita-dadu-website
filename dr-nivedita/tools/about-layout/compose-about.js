@@ -403,7 +403,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   <div class="ift-shell">
     <div class="acx-top-reasons-head">${K('Patient Stories', 'acx-kicker-onpeach')}<h2>${h(testi)}</h2></div>
     <div class="ift-grid">${tcards.map(([, photo, tag, text, name, meta, note]) => `
-      <article class="ift-card"><div class="ift-head"><span class="ift-avatar" aria-hidden="true">${ico('i-user')}</span><div class="ift-who"><h3>${name}</h3><p class="ift-meta">${meta}</p></div><span class="ift-pill">${tag}</span></div><span class="ift-stars" role="img" aria-label="5 out of 5 stars">${star.repeat(5)}</span><div class="ift-desc">${text}</div><p class="ift-disclaimer">${note}</p></article>`).join('')}
+      <article class="ift-card"><div class="ift-head"><span class="ift-avatar">${photo.replace(' class="cf-photo"', '')}</span><div class="ift-who"><h3>${name}</h3><p class="ift-meta">${meta}</p></div><span class="ift-pill">${tag}</span></div><span class="ift-stars" role="img" aria-label="5 out of 5 stars">${star.repeat(5)}</span><div class="ift-desc">${text}</div><p class="ift-disclaimer">${note}</p></article>`).join('')}
     </div>
     <div class="rv-actions">${btn('View All', '/testimonials')}</div>
   </div>

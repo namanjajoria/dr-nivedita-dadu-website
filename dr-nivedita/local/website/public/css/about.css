@@ -1439,3 +1439,17 @@ img[data-fill="lavender"]{object-position:center 30%}
 @media (max-width:900px){.ift-head{flex-wrap:wrap}.ift-band .ift-pill{order:3}}
 
 @media (max-width:600px){.ift-head{flex-wrap:wrap}.ift-who{flex:1 1 calc(100% - 76px)}.ift-band .ift-pill{order:3;margin-left:76px}}
+
+/* v8: live patient photos in the round avatar; three cards in a row; white kicker on the coral band */
+.ift-band .acx-kicker,.acx-page .ift-band .acx-kicker{color:#fff}
+.ift-band .acx-kicker:before{background:#fff}
+.ift-avatar{overflow:hidden;border:3px solid #fff;box-shadow:0 6px 16px #0000001f}
+.ift-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.ift-band .ift-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;max-width:none}
+.ift-band .ift-grid>.ift-card:last-child:nth-child(odd){grid-column:auto;max-width:none}
+.ift-band .ift-card{padding:26px 24px}
+.ift-band .ift-head{flex-wrap:wrap}
+.ift-band .ift-who{flex:1 1 calc(100% - 76px)}
+.ift-band .ift-pill{order:3;margin-left:76px}
+@media (max-width:1024px){.ift-band .ift-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.ift-band .ift-grid{grid-template-columns:minmax(0,1fr);max-width:560px;margin:0 auto}}
