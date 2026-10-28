@@ -399,11 +399,11 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   must(tcards.length === 3, 'testimonials');
   // the reference influencer-testimonial cards; a person icon replaces the live 50px photos
   const star = '<svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg>';
-  body.push(`<section class="ift-grid-section acx-bg-mist">
+  body.push(`<section class="ift-grid-section ift-band">
   <div class="ift-shell">
-    <div class="acx-top-reasons-head">${K('Patient Stories')}<h2>${h(testi)}</h2></div>
+    <div class="acx-top-reasons-head">${K('Patient Stories', 'acx-kicker-onpeach')}<h2>${h(testi)}</h2></div>
     <div class="ift-grid">${tcards.map(([, photo, tag, text, name, meta, note]) => `
-      <article class="ift-card"><span class="ift-pill">${tag}</span><div class="ift-card-media ift-card-icon" aria-hidden="true">${ico('i-user')}</div><div class="ift-card-body"><h3>${name}</h3><p class="ift-meta">${meta}</p><span class="ift-stars" role="img" aria-label="5 out of 5 stars">${star.repeat(5)}</span><div class="ift-desc">${text}</div><p class="ift-disclaimer">${note}</p></div></article>`).join('')}
+      <article class="ift-card"><div class="ift-head"><span class="ift-avatar" aria-hidden="true">${ico('i-user')}</span><div class="ift-who"><h3>${name}</h3><p class="ift-meta">${meta}</p></div><span class="ift-pill">${tag}</span></div><span class="ift-stars" role="img" aria-label="5 out of 5 stars">${star.repeat(5)}</span><div class="ift-desc">${text}</div><p class="ift-disclaimer">${note}</p></article>`).join('')}
     </div>
     <div class="rv-actions">${btn('View All', '/testimonials')}</div>
   </div>
