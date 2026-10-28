@@ -447,3 +447,23 @@ img[data-doc]{display:block;width:100%;height:auto!important;aspect-ratio:auto!i
 img[data-doc="right"],img[data-doc="left"]{aspect-ratio:.84!important;object-fit:cover!important}
 img[data-doc="right"]{object-position:right center!important}
 img[data-doc="left"]{object-position:left center!important}
+
+/* v5 (2026-10-28): doctor photos fill their whole box with the doctor centred; patient avatars */
+.acx-expert-profile-card:has(.acx-doc-fill){grid-template-columns:minmax(0,1fr) minmax(0,1.12fr)}
+.acx-doc-fill{position:relative;min-height:620px}
+.acx-doc-fill img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+img[data-fill="lavender"]{object-position:80% 35%}
+.acx-choose-story-main[data-fill]{object-fit:cover;object-position:center 20%}
+/* patient testimonials: text card with the live small photo as a round avatar beside the name */
+.rv-tcard--avatar{height:100%;padding:34px 30px;border:1px solid #ffffff33;border-radius:28px;background:#ffffff1a;text-align:left}
+.rv-tcard--avatar .rv-tag{margin-bottom:18px}
+.rv-person{display:flex;align-items:center;gap:14px;margin-top:22px}
+.rv-avatar{flex:none;width:64px;height:64px;overflow:hidden;border:3px solid #fff;border-radius:50%;background:#fff;box-shadow:0 8px 20px #0000002e}
+.rv-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.rv-person .rv-tname{margin:0}
+.rv-person .rv-tmeta{margin:2px 0 0}
+/* closing: the profile copy opens the "Why Patients Choose Her" section */
+.acx-closing-intro{max-width:1040px;margin:0 auto 70px}
+.acx-closing-intro p{margin:0 0 16px;font-family:var(--font-body);font-size:17px;line-height:1.85;color:var(--acx-muted)}
+@media (max-width:1024px){.acx-expert-profile-card:has(.acx-doc-fill){grid-template-columns:minmax(0,1fr)}.acx-doc-fill{min-height:520px}}
+@media (max-width:767px){.acx-doc-fill{min-height:400px}.rv-tcard--avatar{padding:26px 22px}.acx-closing-intro{margin-bottom:46px}}

@@ -292,7 +292,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   <div class="acx-shell">
     <div class="acx-expert-profile-head">${K(one(profile, /<p class="pg-feature-row-kicker">([\s\S]*?)<\/p>/, 'profile kicker'))}<h2>${h(profile)}</h2></div>
     <div class="acx-expert-profile-card">
-      <div class="acx-expert-profile-visual">${'<img data-doc src="/images/about/doctor-white-coat.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1162" height="1354" decoding="async">'}</div>
+      <div class="acx-expert-profile-visual acx-doc-fill"><img data-fill="lavender" src="/images/about/doctor-lavender.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1600" height="1174" decoding="async"></div>
       <div class="acx-expert-profile-content">
         <div class="acx-copy acx-expert-copy">${pCopy}</div>
         <div class="acx-expert-detail-grid">${facts.map(([, t, d]) => `
@@ -349,7 +349,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
 
   // the live page shows this section on its doctor photo, with the clinic photo beside its contact box
   body.push(story({ kicker: 'In the Spotlight', h2: h(spot), copy: copyOf(spot), flip: true, extra: '\n      ' + btn('Schedule a Consultation'),
-    main: '<img data-doc="right" src="/images/about/doctor-lavender.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1600" height="1174" decoding="async">',
+    main: '<img data-fill="coat" src="/images/about/doctor-white-coat.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1162" height="1354" decoding="async">',
     small: '<img src="/images/about/clinic-img.webp" alt="Dr. Nivedita Dadu&#x27;s Dermatology Clinic" loading="lazy" width="1329" height="866" decoding="async">' }));
 
   // knowledge sharing + press logos
@@ -402,7 +402,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
     ${K('Patient Stories', 'acx-kicker-onpeach')}
     <h2 class="rv-heading">${h(testi)}</h2>
     <div class="rv-grid">${tcards.map(([, photo, tag, text, name, meta, note, rating]) => `
-      <div class="rv-tcard"><div class="rv-timg">${photo.replace(' class="cf-photo"', '')}</div><div class="rv-tbody"><span class="rv-tag">${tag}</span><div class="rv-ttext">${text}</div><h3 class="rv-tname">${name}</h3><p class="rv-tmeta">${meta}</p><p class="rv-tnote">${note}</p>${rating.replace('cf-rating', 'rv-rating')}</div></div>`).join('')}
+      <div class="rv-tcard rv-tcard--avatar"><div class="rv-tbody"><span class="rv-tag">${tag}</span><div class="rv-ttext">${text}</div><div class="rv-person"><span class="rv-avatar">${photo.replace(' class="cf-photo"', '')}</span><div><h3 class="rv-tname">${name}</h3><p class="rv-tmeta">${meta}</p></div></div><p class="rv-tnote">${note}</p>${rating.replace('cf-rating', 'rv-rating')}</div></div>`).join('')}
     </div>
     <div class="rv-actions">${btn('View All', '/testimonials')}</div>
   </div>
@@ -417,14 +417,9 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   const cCopies = all(closing, /<div class="pg-copy[^"]*">([\s\S]*?)<\/div>/g);
   const whyItems = all(closing, /<li>([\s\S]*?)<\/li>/g).map(t => must(t.match(/^<strong>([\s\S]*?)<\/strong>\s*([\s\S]*)$/), 'why item ' + t.slice(0, 40)));
   must(cCopies.length === 2 && whyItems.length === 4, 'closing');
-  body.push(`<section class="acx-mast acx-mast--text acx-mast--plain acx-bg-mist">
+    body.push(`<section class="acx-top-reasons acx-bg-white">
   <div class="acx-shell">
-    <div class="acx-mast-head">${K('About Dr. Nivedita Dadu')}</div>
-    <div class="acx-mast-copy"><div class="acx-copy">${cCopies[0]}</div></div>
-  </div>
-</section>`);
-  body.push(`<section class="acx-top-reasons acx-bg-white">
-  <div class="acx-shell">
+    <div class="acx-copy acx-closing-intro">${cCopies[0]}</div>
     <div class="acx-top-reasons-head">${K('Why Patients Choose Her')}<h2>${h(closing, 'h3')}</h2></div>
     <div class="acx-top-reasons-grid">${whyItems.map(([, label, text], i) => `
       <article class="acx-top-reason-card acx-span-6${i === 1 ? ' acx-top-reason-accent' : ''}"><div class="acx-top-reason-icon">${ico(['i-target', 'i-user', 'i-sparkle', 'i-award'][i])}</div><h3>${label}</h3><p>${text}</p></article>`).join('')}
