@@ -292,7 +292,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   <div class="acx-shell">
     <div class="acx-expert-profile-head">${K(one(profile, /<p class="pg-feature-row-kicker">([\s\S]*?)<\/p>/, 'profile kicker'))}<h2>${h(profile)}</h2></div>
     <div class="acx-expert-profile-card">
-      <div class="acx-expert-profile-visual acx-doc-fill"><img data-fill="lavender" src="/images/about/doctor-lavender.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1600" height="1174" decoding="async"></div>
+      <div class="acx-expert-profile-visual acx-doc-fill"><img data-fill="lavender" src="/images/about/doctor-lavender-portrait.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1000" height="1582" decoding="async"></div>
       <div class="acx-expert-profile-content">
         <div class="acx-copy acx-expert-copy">${pCopy}</div>
         <div class="acx-expert-detail-grid">${facts.map(([, t, d]) => `
@@ -397,12 +397,13 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   // patient testimonials: the reference testimonial band
   const tcards = [...testi.matchAll(/<article class="cf-card">\s*<div class="cf-body">\s*(<img [^>]*>)\s*<p class="cf-treatment">([\s\S]*?)<\/p>\s*<div class="cf-text is-open">([\s\S]*?)<\/div>\s*<\/div>\s*<div class="cf-bottom">\s*<div>\s*<h3 class="cf-name">([\s\S]*?)<\/h3>\s*<p class="cf-meta">([\s\S]*?)<\/p>\s*<p class="cf-note">([\s\S]*?)<\/p>\s*<\/div>\s*(<p class="cf-rating">[\s\S]*?<\/p>)/g)];
   must(tcards.length === 3, 'testimonials');
-  body.push(`<section class="rv-section">
-  <div class="rv-inner">
-    ${K('Patient Stories', 'acx-kicker-onpeach')}
-    <h2 class="rv-heading">${h(testi)}</h2>
-    <div class="rv-grid">${tcards.map(([, photo, tag, text, name, meta, note, rating]) => `
-      <div class="rv-tcard rv-tcard--avatar"><div class="rv-tbody"><span class="rv-tag">${tag}</span><div class="rv-ttext">${text}</div><div class="rv-person"><span class="rv-avatar">${photo.replace(' class="cf-photo"', '')}</span><div><h3 class="rv-tname">${name}</h3><p class="rv-tmeta">${meta}</p></div></div><p class="rv-tnote">${note}</p>${rating.replace('cf-rating', 'rv-rating')}</div></div>`).join('')}
+  // the reference influencer-testimonial cards; a person icon replaces the live 50px photos
+  const star = '<svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg>';
+  body.push(`<section class="ift-grid-section acx-bg-mist">
+  <div class="ift-shell">
+    <div class="acx-top-reasons-head">${K('Patient Stories')}<h2>${h(testi)}</h2></div>
+    <div class="ift-grid">${tcards.map(([, photo, tag, text, name, meta, note]) => `
+      <article class="ift-card"><span class="ift-pill">${tag}</span><div class="ift-card-media ift-card-icon" aria-hidden="true">${ico('i-user')}</div><div class="ift-card-body"><h3>${name}</h3><p class="ift-meta">${meta}</p><span class="ift-stars" role="img" aria-label="5 out of 5 stars">${star.repeat(5)}</span><div class="ift-desc">${text}</div><p class="ift-disclaimer">${note}</p></div></article>`).join('')}
     </div>
     <div class="rv-actions">${btn('View All', '/testimonials')}</div>
   </div>
@@ -410,7 +411,9 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
 
   // ratings and reviews: the site's review list (load more) under a reference head
   body.push(ratings.replace('<section class="section bg-white" data-gallery data-step="6">', '<section class="dnr-section" data-gallery data-step="6">')
-    .replace('<div class="pg-head pg-head--center">', `<div class="dnr-head">${K('Patient Reviews')}`));
+    .replace('<div class="pg-head pg-head--center">', `<div class="dnr-head">${K('Patient Reviews')}`)
+    .replace(/\s*<p class="pg-lede">5 Average Star Rating<\/p>/, '')            // review cards: patient details only
+    .replace(/\s*<p class="cf-treatment">Dr\. Nivedita Dadu<\/p>/g, ''));
 
   // closing profile, in the live order: the profile copy in a card, then the four reasons as
   // reference cards (bold label -> card title), then the closing paragraph
@@ -419,7 +422,6 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   must(cCopies.length === 2 && whyItems.length === 4, 'closing');
     body.push(`<section class="acx-top-reasons acx-bg-white">
   <div class="acx-shell">
-    <div class="acx-copy acx-closing-intro">${cCopies[0]}</div>
     <div class="acx-top-reasons-head">${K('Why Patients Choose Her')}<h2>${h(closing, 'h3')}</h2></div>
     <div class="acx-top-reasons-grid">${whyItems.map(([, label, text], i) => `
       <article class="acx-top-reason-card acx-span-6${i === 1 ? ' acx-top-reason-accent' : ''}"><div class="acx-top-reason-icon">${ico(['i-target', 'i-user', 'i-sparkle', 'i-award'][i])}</div><h3>${label}</h3><p>${text}</p></article>`).join('')}

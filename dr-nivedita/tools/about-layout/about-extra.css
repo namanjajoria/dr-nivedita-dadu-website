@@ -467,3 +467,37 @@ img[data-fill="lavender"]{object-position:80% 35%}
 .acx-closing-intro p{margin:0 0 16px;font-family:var(--font-body);font-size:17px;line-height:1.85;color:var(--acx-muted)}
 @media (max-width:1024px){.acx-expert-profile-card:has(.acx-doc-fill){grid-template-columns:minmax(0,1fr)}.acx-doc-fill{min-height:520px}}
 @media (max-width:767px){.acx-doc-fill{min-height:400px}.rv-tcard--avatar{padding:26px 22px}.acx-closing-intro{margin-bottom:46px}}
+
+/* v6 (2026-10-28): face-centred expert photo; reference influencer-testimonial cards */
+img[data-fill="lavender"]{object-position:center 30%}
+.ift-grid-section{padding:105px 0 110px}
+.ift-shell{width:min(1240px,92%);margin:0 auto}
+.ift-shell .acx-top-reasons-head{margin-bottom:50px}
+.ift-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 36px}
+.ift-grid>.ift-card:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 18px);justify-self:center}
+.ift-card{position:relative;display:flex;gap:22px;padding:26px;border:1px solid var(--primary);border-radius:18px;background:#fff;box-shadow:0 10px 26px #140f0a0f;transition:transform .3s,box-shadow .3s}
+.ift-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px #140f0a1a}
+.ift-pill{position:absolute;top:18px;right:18px;max-width:45%;overflow:hidden;text-overflow:ellipsis;padding:6px 16px;border-radius:999px;background:var(--primary);font-family:var(--font-body);font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
+.ift-card-media{flex-shrink:0;width:130px;align-self:stretch;overflow:hidden;border-radius:14px;background:#eee}
+.ift-card-icon{display:grid;place-items:center;min-height:150px;background:linear-gradient(150deg,var(--panel),var(--border));color:var(--primary-deep)}
+.ift-card-icon .ico{width:54px;height:54px;stroke-width:1.4}
+.ift-card-body{display:flex;flex:1;flex-direction:column;min-width:0}
+.ift-card-body h3{margin:0 0 4px;padding-right:130px;font-family:var(--font-display);font-size:19px;font-weight:400;color:#1a1a1a}
+.ift-meta{margin:0 0 8px;font-family:var(--font-body);font-size:12px;color:#888}
+.ift-stars{display:inline-flex;gap:2px;margin-bottom:10px;color:#f5b301}
+.ift-stars .ico{width:15px;height:15px}
+.ift-desc{margin:0 0 14px;font-family:var(--font-body);font-size:14px;line-height:1.65;color:#444}
+.ift-desc p{margin:0;font:inherit;color:inherit}
+.ift-disclaimer{margin:auto 0 0;font-family:var(--font-body);font-size:12px;color:#888}
+.ift-grid-section .rv-actions{margin-top:44px;text-align:center}
+@media (max-width:900px){
+  .ift-grid{grid-template-columns:minmax(0,1fr);max-width:560px;margin:0 auto}
+  .ift-grid>.ift-card:last-child:nth-child(odd){max-width:none}
+  .ift-grid-section{padding:64px 0 72px}
+  .ift-card{flex-direction:column}
+  .ift-card-media{width:100%;min-height:0;height:120px}
+  .ift-card-body h3{padding-right:0}
+  .ift-pill{position:static;display:inline-block;align-self:flex-start;max-width:100%;margin-bottom:4px}
+}
+/* review cards: patient details only */
+.dnr-section .cf-card--review .cf-body{padding-top:34px}
