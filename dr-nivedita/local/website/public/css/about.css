@@ -1184,3 +1184,115 @@
 .acx-page :is(h1,h2,h3,h4) span{font-family:inherit}
 .rv-grid .rv-tcard{justify-content:flex-start}
 .rv-grid .rv-tbody{justify-content:flex-start}
+
+/* =====================================================================
+   v2 (2026-10-28): all 5 About pages on the About Clinic components only
+   ===================================================================== */
+/* kicker label: the reference coral, line before the text */
+.acx-page .acx-kicker{color:color-mix(in srgb,var(--primary) 55%,var(--primary-deep));font-family:var(--font-body);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.acx-clinic-overview-copy .acx-kicker{margin-bottom:26px}
+.acx-head-center{text-align:center;margin-bottom:40px}
+.acx-head-center .acx-kicker,.acx-top-reasons-head .acx-kicker,.acx-clinic-faq-head .acx-kicker{justify-content:center}
+.acx-expert-profile-head .acx-kicker,.acx-kicker-onpeach{color:#ffffffd1}
+.acx-kicker-onpeach{justify-content:center}
+.acx-kicker-onpeach:before{background:#ffffffb3}
+/* section backgrounds alternate as on the reference */
+.acx-bg-white{background:#fff}
+.acx-bg-mist{background:var(--mist)}
+.acx-bg-peach{background:var(--tint)}
+/* top reasons: explicit spans on the 12-column grid */
+.acx-top-reasons-grid>.acx-top-reason-card.acx-span-3{grid-column:span 3}
+.acx-top-reasons-grid>.acx-top-reason-card.acx-span-4{grid-column:span 4}
+.acx-top-reasons-grid>.acx-top-reason-card.acx-span-5{grid-column:span 5}
+.acx-top-reasons-grid>.acx-top-reason-card.acx-span-6{grid-column:span 6}
+.acx-top-reasons-grid>.acx-top-reason-card.acx-span-7{grid-column:span 7}
+.acx-top-reasons-grid>.acx-top-reason-card.acx-span-12{grid-column:span 12}
+.acx-top-reason-card p{font-family:var(--font-body)}
+.acx-top-reason-card p+p{margin-top:10px}
+.acx-top-reasons--small .acx-top-reason-card h3{font-size:26px}
+.acx-top-reason-card .check-list{margin-top:12px;font-family:var(--font-body);font-size:14px;line-height:1.6;color:var(--acx-muted)}
+.acx-top-reason-card .check-list li{margin-bottom:6px}
+/* photo focus of the wide live photos inside the reference portrait frames */
+img[data-pos="18"]{object-position:18% center}
+img[data-pos="22"]{object-position:22% center}
+img[data-pos="35"]{object-position:35% center}
+img[data-pos="45"]{object-position:45% center}
+img[data-pos="55"]{object-position:55% center}
+.acx-choose-story--single .acx-choose-story-visual{min-height:0}
+.acx-choose-story--single .acx-choose-story-main{width:100%;height:560px;aspect-ratio:auto}
+.acx-difference-visual img{display:block;width:100%;height:710px;object-fit:cover}
+/* concerns list with a paragraph head, an intro block and full items */
+.acx-section-head-copy p{margin:0 0 12px;font-family:var(--font-body);font-size:16px;line-height:1.75;color:var(--acx-muted)}
+.acx-section-head-copy p:last-child{margin-bottom:0}
+.acx-section-head-copy strong,.acx-concern-intro strong,.acx-concern-grid strong{color:var(--acx-ink)}
+.acx-concern-intro{max-width:900px;margin:-25px 0 40px}
+.acx-concern-intro h3{margin:0 0 12px;font-family:var(--font-display);font-size:28px;font-weight:400;color:var(--acx-ink)}
+.acx-concern-intro p{margin:0 0 10px;font-family:var(--font-body);font-size:16px;line-height:1.75;color:var(--acx-muted)}
+.acx-concern-grid h3{font-family:var(--font-display);font-weight:400;color:var(--acx-ink)}
+.acx-concern-grid div>h3:only-child{margin:0;font-size:22px}
+.acx-video-btn{display:inline-flex;align-items:center;gap:12px;margin-top:14px;padding:7px 20px 7px 7px;border-radius:50px;background:var(--primary);font-family:var(--font-body);font-size:13px;font-weight:800;color:#fff;transition:background .25s}
+.acx-video-btn:hover{background:var(--primary-deep)}
+.acx-video-btn-ico{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--primary-deep)}
+.acx-video-btn-ico .ico{width:12px;height:12px}
+/* education / experience: two numbered lists, then the membership logos */
+.acx-cred-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:60px}
+.acx-cred-title{margin:0 0 20px;font-family:var(--font-display);font-size:40px;font-weight:400;color:var(--acx-ink)}
+.acx-concern-grid--1{grid-template-columns:minmax(0,1fr)}
+.acx-concern-grid--1 article:nth-child(n){padding:22px 0;border-right:0}
+.acx-cred-year{font-weight:800;letter-spacing:.08em;color:var(--primary-deep)!important}
+.acx-logo-row{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin:60px 0 0;padding:0;list-style:none}
+.acx-logo-row li{display:grid;place-items:center;width:120px;height:120px;padding:14px;border:1px solid var(--clr-peach-border);border-radius:24px;background:#fff;box-shadow:0 12px 30px #2c303a0f}
+.acx-logo-row img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+/* press logos */
+.acx-press{padding:105px 0 90px;background:var(--mist)}
+.acx-press .acx-top-reasons-head{margin-bottom:40px}
+/* expert profile card holding the live profile copy and facts */
+.acx-expert-copy p{margin:0 0 14px;font-size:15.5px}
+.acx-expert-copy{padding-bottom:26px;border-bottom:1px solid var(--clr-peach-border)}
+.acx-expert-detail-grid article>span{display:block;margin-bottom:8px;font-family:var(--font-display);font-size:18px;color:var(--acx-ink);letter-spacing:0;text-transform:none}
+.acx-expert-detail-grid article p{margin:0;font-family:var(--font-body);font-size:14px;line-height:1.6;color:var(--acx-muted)}
+.acx-expert-detail-grid .acx-expert-detail-wide{grid-column:1/-1}
+.acx-expert-detail-grid .pg-profile-where-link{display:inline-block;margin-top:10px;font-family:var(--font-body);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--primary-deep)}
+.acx-expert-profile-visual img{object-position:center top}
+/* specialties + services: the coral expert band with both lists in its card */
+.acx-expert-lists .acx-expert-profile-head{margin-bottom:30px}
+.acx-lists-card{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.acx-lists-col{padding:50px 55px}
+.acx-lists-col+.acx-lists-col{border-left:1px solid var(--clr-peach-border)}
+.acx-lists-col h2{margin:0 0 16px;font-family:var(--font-display);font-size:34px;font-weight:400;color:var(--acx-ink)}
+.acx-difference-item p{margin:0;font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--acx-muted)}
+.acx-difference-item p strong{color:var(--acx-ink)}
+.acx-check .ico{width:14px;height:14px;stroke-width:3}
+/* technology cards: four-up, video cards */
+.acx-tile-grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.acx-tile-grid--4 .acx-tech-cover-card{height:300px}
+.acx-video-card .acx-tech-cover-number{top:20px;left:20px}
+.acx-video-card .acx-tile-more .btn-arrow .ico{width:12px;height:12px}
+.acx-tech-areas{background:#fff}
+/* testimonials + reviews heads */
+.rv-section .acx-kicker{margin-bottom:14px}
+.dnr-head .acx-kicker{justify-content:center;margin-bottom:14px}
+/* closing: copy beside the reasons */
+.acx-closing .acx-difference-grid{align-items:start}
+.acx-closing-copy p{margin:0 0 16px;font-family:var(--font-body);font-size:16px;line-height:1.85;color:var(--acx-muted)}
+.acx-closing-end{margin-top:26px}
+@media (max-width:1024px){
+  .acx-top-reasons-grid>.acx-top-reason-card[class*="acx-span-"]{grid-column:span 6}
+  .acx-cred-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .acx-lists-card{grid-template-columns:minmax(0,1fr)}
+  .acx-lists-col+.acx-lists-col{border-left:0;border-top:1px solid var(--clr-peach-border)}
+  .acx-tile-grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .acx-choose-story--single .acx-choose-story-main{height:440px}
+  .acx-difference-visual img{height:500px}
+}
+@media (max-width:768px){
+  .acx-top-reasons-grid>.acx-top-reason-card[class*="acx-span-"]{grid-column:auto}
+  .acx-tile-grid--4{grid-template-columns:minmax(0,1fr)}
+  .acx-lists-col{padding:30px 24px}
+  .acx-lists-col h2,.acx-cred-title{font-size:28px}
+  .acx-concern-intro{margin-top:-10px}
+  .acx-choose-story--single .acx-choose-story-main{height:320px}
+  .acx-difference-visual img{height:360px}
+  .acx-logo-row li{width:96px;height:96px}
+}
+.rv-section{background:var(--primary)}
