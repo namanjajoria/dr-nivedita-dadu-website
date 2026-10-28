@@ -544,3 +544,10 @@ img[data-fill="lavender"]{object-position:center 30%}
 .ift-band .ift-desc{font-size:15px;line-height:1.7}
 .ift-band .ift-shell{width:min(1720px,94%)}
 .ift-band .ift-grid{gap:32px}
+
+/* v10: stars under the date; treatment pill top-right, opposite the name */
+.ift-band .ift-head{flex-wrap:nowrap;align-items:flex-start;margin-bottom:18px}
+.ift-band .ift-who{flex:1 1 auto}
+.ift-band .ift-pill{order:0;margin-left:auto;align-self:flex-start}
+.ift-band .ift-who .ift-stars{display:flex;margin:6px 0 0}
+@media (max-width:420px){.ift-band .ift-head{flex-wrap:wrap}.ift-band .ift-pill{order:3;margin-left:76px}}
