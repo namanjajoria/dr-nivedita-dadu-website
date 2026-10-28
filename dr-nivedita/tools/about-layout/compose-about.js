@@ -83,7 +83,7 @@ const reasons = ({ kicker, h2, lede = [], cards, bg, small }) => `<section class
       <p class="acx-lede">${p}</p>`).join('')}
     </div>
     <div class="acx-top-reasons-grid">${cards.map((c, i) => `
-      <article class="acx-top-reason-card acx-span-${must(SPANS[cards.length], 'spans for ' + cards.length)[i]}${i === 0 ? ' acx-top-reason-featured' : i === 1 ? ' acx-top-reason-accent' : ''}"><span class="acx-top-reason-number">${n2(i)}</span><div class="acx-top-reason-icon">${ico(REASON_ICONS[i % REASON_ICONS.length])}</div>${c}</article>`).join('')}
+      <article class="acx-top-reason-card acx-span-${must(SPANS[cards.length], 'spans for ' + cards.length)[i]}${i === 0 ? ' acx-top-reason-featured' : i === 1 ? ' acx-top-reason-accent' : ''}"><div class="acx-top-reason-icon">${ico(REASON_ICONS[i % REASON_ICONS.length])}</div>${c}</article>`).join('')}
     </div>
   </div>
 </section>`;
@@ -92,7 +92,7 @@ const concerns = ({ kicker, h2, lede = '', items, before = '', after = '', bg })
   <div class="acx-shell">
     <div class="acx-section-head acx-section-head-dark${lede.replace(/<[^>]+>/g, '').length > 260 ? ' acx-section-head--stack' : ''}"><div>${K(kicker)}<h2>${h2}</h2></div>${lede ? `<div class="acx-section-head-copy">${lede}</div>` : ''}</div>${before}
     <div class="acx-concern-grid">${items.map((it, i) => `
-      <article><span>${n2(i)}</span><div>${it}</div></article>`).join('')}
+      <article><div>${it}</div></article>`).join('')}
     </div>${after}
   </div>
 </section>`;
@@ -201,7 +201,7 @@ const cardGrid = ({ kicker, h2, list, note }) => `<section class="acx-top-reason
   <div class="acx-shell">
     <div class="acx-top-reasons-head">${K(kicker)}<h2>${h2}</h2></div>
     <div class="acx-card-grid">${list.map((c, i) => `
-      <article class="acx-top-reason-card${i === 1 ? ' acx-top-reason-accent' : ''}"><span class="acx-top-reason-number">${n2(i)}</span>${c}</article>`).join('')}
+      <article class="acx-top-reason-card${i === 1 ? ' acx-top-reason-accent' : ''}">${c}</article>`).join('')}
     </div>
     <p class="acx-note">${note}</p>
   </div>
@@ -227,7 +227,7 @@ function derm(view, name, kick) {
       // the anti-ageing stock photo is not on the live Cosmetic Dermatology page: text only
       mast({ kicker: kick.mast, h2: h(open), sub: one(open, /<p class="pg-open-sub">([\s\S]*?)<\/p>/, 'open sub'), copies: all(open, /<div class="pg-copy pg-open-copy">([\s\S]*?)<\/div>/g), bg: 'white' }),
       concerns({ kicker: kick.points, h2: h(tl), lede: `<p>${one(tl, /<p class="pg-treatlist-lead">([\s\S]*?)<\/p>/, 'tl lead')}</p>`, items: all(tl, /<li>([\s\S]*?)<\/li>/g).map(t => `<p>${t}</p>`) }),
-      story({ kicker: kick.tp, h2: h(panel), copy: copyOf(panel), main: img(panel, 'panel img'), mainPos: 22 }),
+      story({ kicker: kick.tp, h2: h(panel), copy: copyOf(panel), main: '<img data-doc="left" src="/images/about/doctor-beige.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="2048" height="1502" decoding="async">' }),
       mast({ kicker: kick.media, h2: h(exp), image: img(exp, 'exp img'), copies: [copyOf(exp)], bg: 'white' }));
   }
   body.push(
@@ -262,7 +262,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   <div class="acx-shell">
     <div class="acx-tech-showcase-head acx-head-center">${K('Treatment Videos')}</div>
     <div class="acx-tile-grid acx-tile-grid--4">${items.map(([, href, id, title, label], i) => `
-      <a class="acx-tech-cover-card acx-video-card acx-video-card--text" href="${href}" target="_blank" rel="noopener" data-video-dialog="${id}" data-title="${title}"><span class="acx-tech-cover-number">${n2(i)}</span><span class="acx-tech-cover-copy"><h3>${label}</h3><span class="acx-tile-more">Watch Video <span class="btn-arrow">${ico('i-play', true)}</span></span></span></a>`).join('')}
+      <a class="acx-tech-cover-card acx-video-card acx-video-card--text" href="${href}" target="_blank" rel="noopener" data-video-dialog="${id}" data-title="${title}"><span class="acx-tech-cover-copy"><h3>${label}</h3><span class="acx-tile-more">Watch Video <span class="btn-arrow">${ico('i-play', true)}</span></span></span></a>`).join('')}
     </div>
   </div>
 </section>`];
@@ -279,7 +279,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   const body = [];
   body.push(banner(one(ban, /<p class="page-banner-title">([\s\S]*?)<\/p>/, 'banner'), one(ban, /<span aria-current="page">([\s\S]*?)<\/span>/, 'crumb')));
   body.push(overview({ kicker: one(intro, /<p class="pg-kicker">([\s\S]*?)<\/p>/, 'kicker'), h1: h(intro, 'h1'), sub: one(intro, /<p class="pg-sub">([\s\S]*?)<\/p>/, 'sub'),
-    copy: copyOf(intro), visual: img(intro, 'intro img').replace(' loading="lazy"', ' fetchpriority="high"') }));
+    copy: copyOf(intro), visual: '<img data-doc src="/images/about/doctor-marble.webp" alt="Dr. Nivedita Dadu" fetchpriority="high" width="2109" height="1588" decoding="async">' }));
 
   // best dermatologist: the reference "Meet the Expert" coral profile card
   const pCopy = one(profile, /<div class="pg-profile-copy pg-copy">([\s\S]*?)<\/div>/, 'profile copy');
@@ -292,7 +292,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   <div class="acx-shell">
     <div class="acx-expert-profile-head">${K(one(profile, /<p class="pg-feature-row-kicker">([\s\S]*?)<\/p>/, 'profile kicker'))}<h2>${h(profile)}</h2></div>
     <div class="acx-expert-profile-card">
-      <div class="acx-expert-profile-visual">${img(profile, 'portrait')}</div>
+      <div class="acx-expert-profile-visual">${'<img data-doc src="/images/about/doctor-white-coat.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1162" height="1354" decoding="async">'}</div>
       <div class="acx-expert-profile-content">
         <div class="acx-copy acx-expert-copy">${pCopy}</div>
         <div class="acx-expert-detail-grid">${facts.map(([, t, d]) => `
@@ -320,7 +320,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   // five treatment stories, alternating the reference photo sections
   // the four topic stock photos are not on the live page: those stories are text only
   body.push(mast({ kicker: 'Anti-Aging Treatment', h2: h(antiAge), copies: [copyOf(antiAge)], bg: 'white' }));
-  body.push(difference({ kicker: 'Celebrity Dermatologist', h2: h(celeb), copy: copyOf(celeb, 'pg-copy pg-bleed-copy'), image: img(celeb, 'celeb img'), bg: 'mist' }));
+  body.push(mast({ kicker: 'Celebrity Dermatologist', h2: h(celeb), copies: [copyOf(celeb, 'pg-copy pg-bleed-copy')], bg: 'mist' }));  // no photo on the live page
   body.push(mast({ kicker: 'Glass-Like Skin', h2: h(glass), copies: [copyOf(glass)], bg: 'white' }));
   body.push(mast({ kicker: 'Lip Plumping', h2: h(lip), copies: [copyOf(lip)], bg: 'mist' }));
   body.push(mast({ kicker: 'Bridal and Groom Treatments', h2: h(bridal), copies: [copyOf(bridal)], bg: 'white' }));
@@ -334,7 +334,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   const tl = p => [...p.matchAll(/<li><svg[\s\S]*?<\/svg><span class="timeline-title">([\s\S]*?)<\/span><span class="timeline-year">([\s\S]*?)<\/span><span class="timeline-place">([\s\S]*?)<\/span><\/li>/g)];
   const eduP = one(edu, /(<div class="tab-panel" id="panel-education"[\s\S]*?<\/ul>)/, 'edu'), expP = one(edu, /(<div class="tab-panel" id="panel-experience"[\s\S]*?<\/ul>)/, 'exp');
   const credCol = p => `<div class="acx-cred-col"><h3 class="acx-cred-title">${one(p, /<h3 class="tab-panel-title">([\s\S]*?)<\/h3>/, 'tab title')}</h3><div class="acx-concern-grid acx-concern-grid--1">${tl(p).map(([, t, y, pl], i) => `
-        <article><span>${n2(i)}</span><div><h3>${t}</h3><p class="acx-cred-year">${y}</p><p>${pl}</p></div></article>`).join('')}</div></div>`;
+        <article><div><h3>${t}</h3><p class="acx-cred-year">${y}</p><p>${pl}</p></div></article>`).join('')}</div></div>`;
   must(tl(eduP).length === 3 && tl(expP).length === 3, 'timeline');
   body.push(`<section class="acx-concerns acx-bg-white">
   <div class="acx-shell">
@@ -349,7 +349,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
 
   // the live page shows this section on its doctor photo, with the clinic photo beside its contact box
   body.push(story({ kicker: 'In the Spotlight', h2: h(spot), copy: copyOf(spot), flip: true, extra: '\n      ' + btn('Schedule a Consultation'),
-    main: '<img src="/images/about/about-doctor-nd.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1440" height="1057" decoding="async">', mainPos: 78,
+    main: '<img data-doc="right" src="/images/about/doctor-lavender.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1600" height="1174" decoding="async">',
     small: '<img src="/images/about/clinic-img.webp" alt="Dr. Nivedita Dadu&#x27;s Dermatology Clinic" loading="lazy" width="1329" height="866" decoding="async">' }));
 
   // knowledge sharing + press logos
@@ -412,19 +412,24 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   body.push(ratings.replace('<section class="section bg-white" data-gallery data-step="6">', '<section class="dnr-section" data-gallery data-step="6">')
     .replace('<div class="pg-head pg-head--center">', `<div class="dnr-head">${K('Patient Reviews')}`));
 
-  // closing profile: copy beside the reasons list
+  // closing profile, in the live order: the profile copy in a card, then the four reasons as
+  // reference cards (bold label -> card title), then the closing paragraph
   const cCopies = all(closing, /<div class="pg-copy[^"]*">([\s\S]*?)<\/div>/g);
-  body.push(`<section class="acx-difference acx-closing acx-bg-mist">
-  <div class="acx-shell acx-difference-grid">
-    <div class="acx-copy acx-closing-copy">${cCopies[0]}</div>
-    <div class="acx-difference-copy">
-      ${K('Why Patients Choose Her')}
-      <h2>${h(closing, 'h3')}</h2>
-      <div class="acx-difference-list">${all(closing, /<li>([\s\S]*?)<\/li>/g).map(t => `
-        <div class="acx-difference-item"><span class="acx-check">${ico('i-check')}</span><div><p>${t}</p></div></div>`).join('')}
-      </div>
-      <div class="acx-copy acx-closing-end">${cCopies[1]}</div>
+  const whyItems = all(closing, /<li>([\s\S]*?)<\/li>/g).map(t => must(t.match(/^<strong>([\s\S]*?)<\/strong>\s*([\s\S]*)$/), 'why item ' + t.slice(0, 40)));
+  must(cCopies.length === 2 && whyItems.length === 4, 'closing');
+  body.push(`<section class="acx-mast acx-mast--text acx-mast--plain acx-bg-mist">
+  <div class="acx-shell">
+    <div class="acx-mast-head">${K('About Dr. Nivedita Dadu')}</div>
+    <div class="acx-mast-copy"><div class="acx-copy">${cCopies[0]}</div></div>
+  </div>
+</section>`);
+  body.push(`<section class="acx-top-reasons acx-bg-white">
+  <div class="acx-shell">
+    <div class="acx-top-reasons-head">${K('Why Patients Choose Her')}<h2>${h(closing, 'h3')}</h2></div>
+    <div class="acx-top-reasons-grid">${whyItems.map(([, label, text], i) => `
+      <article class="acx-top-reason-card acx-span-6${i === 1 ? ' acx-top-reason-accent' : ''}"><div class="acx-top-reason-icon">${ico(['i-target', 'i-user', 'i-sparkle', 'i-award'][i])}</div><h3>${label}</h3><p>${text}</p></article>`).join('')}
     </div>
+    <div class="acx-closing-end">${cCopies[1]}</div>
   </div>
 </section>`);
 

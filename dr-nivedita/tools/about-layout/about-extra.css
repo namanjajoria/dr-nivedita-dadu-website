@@ -424,3 +424,26 @@ img[data-pos="78"]{object-position:78% center}
 /* a long intro goes under its heading, not beside it */
 .acx-section-head--stack{grid-template-columns:minmax(0,1fr);gap:20px;max-width:1040px}
 .acx-section-head--stack .acx-section-head-copy{max-width:none}
+
+/* v4 (2026-10-28): no numbering on cards / lists / FAQs; doctor photos shown whole and centred */
+.acx-concern-grid article{grid-template-columns:minmax(0,1fr)}
+.acx-clinic-faq-list summary.faq-q::before{content:none}
+.acx-top-reason-card .acx-top-reason-icon{margin-top:0}
+/* doctor photos (data-doc): never cropped - the frame takes the photo's own shape */
+img[data-doc]{display:block;width:100%;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important}
+.acx-clinic-overview-visual>img[data-doc]{border-radius:24px}
+.acx-expert-profile-visual:has(img[data-doc]){display:flex;align-items:center;min-height:0;background:var(--mist)}
+.acx-expert-profile-visual:has(img[data-doc]):after{content:none}
+.acx-choose-story-visual:has(img[data-doc]){display:block;min-height:0;padding-bottom:60px}
+.acx-choose-story-main[data-doc]{border-radius:40px}
+.acx-choose-story--flip .acx-choose-story-visual:has(img[data-doc]) .acx-choose-story-small{left:-40px;bottom:0;width:42%}
+/* closing profile */
+.acx-mast--plain .acx-mast-head{margin-bottom:28px}
+.acx-closing-end{max-width:900px;margin:44px auto 0;text-align:center}
+.acx-closing-end p{margin:0;font-family:var(--font-body);font-size:17px;line-height:1.8;color:var(--acx-muted)}
+@media (max-width:1024px){.acx-choose-story-visual:has(img[data-doc]){padding-bottom:40px}.acx-choose-story--flip .acx-choose-story-visual:has(img[data-doc]) .acx-choose-story-small{left:0}}
+
+/* doctor photos with the doctor at one side: a portrait frame on that side keeps her whole and centred */
+img[data-doc="right"],img[data-doc="left"]{aspect-ratio:.84!important;object-fit:cover!important}
+img[data-doc="right"]{object-position:right center!important}
+img[data-doc="left"]{object-position:left center!important}
