@@ -184,10 +184,10 @@ const copyOf = (s, cls = 'pg-copy') => one(s, new RegExp(`<div class="${cls}">([
 
 // =====================================================================================
 // General + Cosmetic Dermatology (no page of their own on the reference: About Clinic components)
-const mast = ({ kicker, h2, sub, image, copies, bg }) => `<section class="acx-mast${bgc(bg)}">
+const mast = ({ kicker, h2, sub, image, copies, bg }) => `<section class="acx-mast${image ? '' : ' acx-mast--text'}${bgc(bg)}">
   <div class="acx-shell">
-    <div class="acx-mast-head">${K(kicker)}<h2>${h2}</h2>${sub ? `<p class="acx-mast-sub">${sub}</p>` : ''}</div>
-    <div class="acx-mast-photo">${image}</div>
+    <div class="acx-mast-head">${K(kicker)}<h2>${h2}</h2>${sub ? `<p class="acx-mast-sub">${sub}</p>` : ''}</div>${image ? `
+    <div class="acx-mast-photo">${image}</div>` : ''}
     <div class="acx-mast-copy">${copies.map(c => `<div class="acx-copy">${c}</div>`).join('')}</div>
   </div>
 </section>`;
@@ -224,7 +224,8 @@ function derm(view, name, kick) {
   } else {
     const open = by('pg-open'), tl = by('pg-treatlist'), panel = by('pg-feature pg-doctor-panel'), exp = by('pg-exp');
     body.push(
-      mast({ kicker: kick.mast, h2: h(open), sub: one(open, /<p class="pg-open-sub">([\s\S]*?)<\/p>/, 'open sub'), image: img(open, 'open img'), copies: all(open, /<div class="pg-copy pg-open-copy">([\s\S]*?)<\/div>/g), bg: 'white' }),
+      // the anti-ageing stock photo is not on the live Cosmetic Dermatology page: text only
+      mast({ kicker: kick.mast, h2: h(open), sub: one(open, /<p class="pg-open-sub">([\s\S]*?)<\/p>/, 'open sub'), copies: all(open, /<div class="pg-copy pg-open-copy">([\s\S]*?)<\/div>/g), bg: 'white' }),
       concerns({ kicker: kick.points, h2: h(tl), lede: `<p>${one(tl, /<p class="pg-treatlist-lead">([\s\S]*?)<\/p>/, 'tl lead')}</p>`, items: all(tl, /<li>([\s\S]*?)<\/li>/g).map(t => `<p>${t}</p>`) }),
       story({ kicker: kick.tp, h2: h(panel), copy: copyOf(panel), main: img(panel, 'panel img'), mainPos: 22 }),
       mast({ kicker: kick.media, h2: h(exp), image: img(exp, 'exp img'), copies: [copyOf(exp)], bg: 'white' }));
@@ -261,7 +262,7 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   <div class="acx-shell">
     <div class="acx-tech-showcase-head acx-head-center">${K('Treatment Videos')}</div>
     <div class="acx-tile-grid acx-tile-grid--4">${items.map(([, href, id, title, label], i) => `
-      <a class="acx-tech-cover-card acx-video-card" href="${href}" target="_blank" rel="noopener" data-video-dialog="${id}" data-title="${title}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async"><span class="acx-tech-cover-shade"></span><span class="acx-tech-cover-number">${n2(i)}</span><span class="acx-tech-cover-copy"><h3>${label}</h3><span class="acx-tile-more">Watch Video <span class="btn-arrow">${ico('i-play', true)}</span></span></span></a>`).join('')}
+      <a class="acx-tech-cover-card acx-video-card acx-video-card--text" href="${href}" target="_blank" rel="noopener" data-video-dialog="${id}" data-title="${title}"><span class="acx-tech-cover-number">${n2(i)}</span><span class="acx-tech-cover-copy"><h3>${label}</h3><span class="acx-tile-more">Watch Video <span class="btn-arrow">${ico('i-play', true)}</span></span></span></a>`).join('')}
     </div>
   </div>
 </section>`];
@@ -317,11 +318,12 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
     items: all(cond, /<li>([\s\S]*?)<\/li>/g).map(t => `<h3>${t}</h3>`) }));
 
   // five treatment stories, alternating the reference photo sections
-  body.push(story({ kicker: 'Anti-Aging Treatment', h2: h(antiAge), copy: copyOf(antiAge), main: img(antiAge, 'anti img'), mainPos: 55, bg: 'white' }));
+  // the four topic stock photos are not on the live page: those stories are text only
+  body.push(mast({ kicker: 'Anti-Aging Treatment', h2: h(antiAge), copies: [copyOf(antiAge)], bg: 'white' }));
   body.push(difference({ kicker: 'Celebrity Dermatologist', h2: h(celeb), copy: copyOf(celeb, 'pg-copy pg-bleed-copy'), image: img(celeb, 'celeb img'), bg: 'mist' }));
-  body.push(story({ kicker: 'Glass-Like Skin', h2: h(glass), copy: copyOf(glass), main: img(glass, 'glass img'), mainPos: 18, flip: true, bg: 'white' }));
-  body.push(difference({ kicker: 'Lip Plumping', h2: h(lip), copy: copyOf(lip), image: img(lip, 'lip img'), imgPos: 35, bg: 'mist' }));
-  body.push(story({ kicker: 'Bridal and Groom Treatments', h2: h(bridal), copy: copyOf(bridal), main: img(bridal, 'bridal img'), mainPos: 45, bg: 'white' }));
+  body.push(mast({ kicker: 'Glass-Like Skin', h2: h(glass), copies: [copyOf(glass)], bg: 'white' }));
+  body.push(mast({ kicker: 'Lip Plumping', h2: h(lip), copies: [copyOf(lip)], bg: 'mist' }));
+  body.push(mast({ kicker: 'Bridal and Groom Treatments', h2: h(bridal), copies: [copyOf(bridal)], bg: 'white' }));
 
   // 4 steps: top reasons cards
   const stepCards = [...steps.matchAll(/<article class="pg-card"><span class="pg-card-num">\d+<\/span>(<h3>[\s\S]*?<\/h3>[\s\S]*?)<\/article>/g)].map(m => m[1]);
@@ -345,7 +347,10 @@ derm('cosmetic-dermatology', 'Cosmetic Dermatology', { overview: 'Cosmetic Derma
   </div>
 </section>`);
 
-  body.push(story({ kicker: 'In the Spotlight', h2: h(spot), copy: copyOf(spot), main: img(spot, 'spot img'), flip: true, extra: '\n      ' + btn('Schedule a Consultation') }));
+  // the live page shows this section on its doctor photo, with the clinic photo beside its contact box
+  body.push(story({ kicker: 'In the Spotlight', h2: h(spot), copy: copyOf(spot), flip: true, extra: '\n      ' + btn('Schedule a Consultation'),
+    main: '<img src="/images/about/about-doctor-nd.webp" alt="Dr. Nivedita Dadu" loading="lazy" width="1440" height="1057" decoding="async">', mainPos: 78,
+    small: '<img src="/images/about/clinic-img.webp" alt="Dr. Nivedita Dadu&#x27;s Dermatology Clinic" loading="lazy" width="1329" height="866" decoding="async">' }));
 
   // knowledge sharing + press logos
   body.push(`<section class="acx-press">

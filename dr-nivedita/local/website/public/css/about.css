@@ -1296,3 +1296,29 @@ img[data-pos="55"]{object-position:55% center}
   .acx-logo-row li{width:96px;height:96px}
 }
 .rv-section{background:var(--primary)}
+
+/* v3 (2026-10-28): only live photos - text-only stories, photo-less video cards */
+img[data-pos="78"]{object-position:78% center}
+.acx-mast--text{padding:95px 0}
+.acx-mast--text .acx-mast-head{margin-bottom:0}
+.acx-mast--text .acx-mast-copy{margin-top:34px}
+.acx-video-card--text{display:flex;flex-direction:column;justify-content:flex-end;min-height:220px;background:linear-gradient(150deg,var(--primary) 0%,var(--primary-deep) 120%)}
+.acx-tile-grid--4 .acx-video-card--text{height:240px}
+.acx-video-card--text:hover{filter:brightness(1.05)}
+@media (max-width:768px){.acx-mast--text{padding:64px 0}.acx-tile-grid--4 .acx-video-card--text{height:200px}}
+/* text-only stories: heading left, copy right (the reference section-head proportions) */
+.acx-mast--text .acx-shell{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:70px;align-items:start}
+.acx-mast--text .acx-mast-head{max-width:none}
+.acx-mast--text .acx-mast-copy{display:block;margin-top:0}
+.acx-mast--text .acx-mast-copy>.acx-copy:only-child{columns:auto}
+.acx-mast--text .acx-mast-copy>.acx-copy:only-child p{break-inside:auto}
+/* static technology/service cards: the label always shows, no coverflow jump on hover */
+.acx-tile-grid .acx-tech-cover-card .acx-tech-cover-copy>span{display:inline-flex}
+.acx-tile-grid .acx-tech-cover-card:hover{transform:none;height:340px;filter:none;opacity:1}
+.acx-tile-grid--4 .acx-tech-cover-card:hover{height:300px}
+.acx-tile-grid--4 .acx-video-card--text:hover{height:240px}
+.acx-tile-grid .acx-tech-cover-card:hover .acx-tech-cover-copy h3{font-size:28px}
+.acx-video-card--text .acx-tech-cover-copy h3{font-size:24px}
+.acx-tile-grid .acx-video-card--text:hover .acx-tech-cover-copy h3{font-size:24px}
+@media (max-width:1024px){.acx-mast--text .acx-shell{grid-template-columns:minmax(0,1fr);gap:26px}}
+@media (max-width:767px){.acx-tile-grid .acx-tech-cover-card:hover{height:260px}.acx-tile-grid--4 .acx-video-card--text:hover{height:200px}}
