@@ -90,7 +90,7 @@ const reasons = ({ kicker, h2, lede = [], cards, bg, small }) => `<section class
 
 const concerns = ({ kicker, h2, lede = '', items, before = '', after = '', bg }) => `<section class="acx-concerns${bgc(bg)}">
   <div class="acx-shell">
-    <div class="acx-section-head acx-section-head-dark"><div>${K(kicker)}<h2>${h2}</h2></div>${lede ? `<div class="acx-section-head-copy">${lede}</div>` : ''}</div>${before}
+    <div class="acx-section-head acx-section-head-dark${lede.replace(/<[^>]+>/g, '').length > 260 ? ' acx-section-head--stack' : ''}"><div>${K(kicker)}<h2>${h2}</h2></div>${lede ? `<div class="acx-section-head-copy">${lede}</div>` : ''}</div>${before}
     <div class="acx-concern-grid">${items.map((it, i) => `
       <article><span>${n2(i)}</span><div>${it}</div></article>`).join('')}
     </div>${after}

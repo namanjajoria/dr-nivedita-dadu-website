@@ -1322,3 +1322,22 @@ img[data-pos="78"]{object-position:78% center}
 .acx-tile-grid .acx-video-card--text:hover .acx-tech-cover-copy h3{font-size:24px}
 @media (max-width:1024px){.acx-mast--text .acx-shell{grid-template-columns:minmax(0,1fr);gap:26px}}
 @media (max-width:767px){.acx-tile-grid .acx-tech-cover-card:hover{height:260px}.acx-tile-grid--4 .acx-video-card--text:hover{height:200px}}
+/* v3c: article sections (with or without the live photo) - centred head, copy in one reference card */
+.acx-mast .acx-mast-head{max-width:900px;margin:0 auto 40px;text-align:center}
+.acx-mast .acx-mast-head .acx-kicker{justify-content:center}
+.acx-mast--text .acx-shell{display:block}
+.acx-mast--text .acx-mast-head{margin-bottom:40px}
+.acx-mast .acx-mast-copy,.acx-mast--text .acx-mast-copy{display:block;max-width:1040px;margin:40px auto 0;padding:52px 60px;border:1px solid var(--clr-peach-border);border-radius:34px;background:#fff;box-shadow:0 18px 50px #2c303a14}
+.acx-mast--text .acx-mast-copy{margin-top:0}
+.acx-mast .acx-mast-copy>.acx-copy:only-child{columns:auto}
+.acx-mast .acx-mast-copy>.acx-copy:only-child p{break-inside:auto}
+.acx-mast .acx-mast-copy>.acx-copy+.acx-copy{margin-top:16px}
+.acx-mast .acx-mast-copy p{max-width:none}
+@media (max-width:767px){
+  .acx-mast .acx-mast-head{margin-bottom:28px}
+  .acx-mast .acx-mast-copy,.acx-mast--text .acx-mast-copy{padding:28px 22px;border-radius:24px}
+}
+
+/* a long intro goes under its heading, not beside it */
+.acx-section-head--stack{grid-template-columns:minmax(0,1fr);gap:20px;max-width:1040px}
+.acx-section-head--stack .acx-section-head-copy{max-width:none}
