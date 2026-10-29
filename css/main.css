@@ -1,0 +1,1027 @@
+/* ==========================================================================
+   DMC TRICHOLOGY DESIGN SYSTEM x DR. NIVEDITA DADU CONTENT
+   Layout, type scale, radii, spacing and components follow the live
+   dmctrichology.com markup (measured in the browser). The brand colour is the
+   coral of the Dr. Nivedita Dadu logo (#f5907c, 68% of the logo's coloured
+   pixels) - the same value drniveditadadu.com uses for its own accents.
+   ========================================================================== */
+:root{
+  /* brand - Dr. Nivedita Dadu logo coral */
+  --primary:#f5907c;
+  --primary-hover:#f2765e;    /* same hue, one step deeper, for hover */
+  --primary-deep:#c0553f;     /* same hue, for small text on white (readable) */
+  --primary-soft:#fbcdc4;     /* logo coral mixed with white, like DMC's #a8b7ca */
+  --primary-a15:#f5907c26;
+  --primary-a20:#f5907c33;
+  --primary-a30:#f5907c4d;
+
+  /* neutrals - DMC's white / mist / tint / panel ladder, re-based on the coral */
+  --white:#fff;
+  --mist:#fff9f8;
+  --tint:#fef3f1;
+  --panel:#fde9e5;
+  --footer-bg:#fef6f4;
+  --border:#fbe0da;
+  --line:#f7c9bf;
+  --input:#f2f2f2;
+  --input-hover:#ededed;
+
+  /* text - DMC values */
+  --heading:#1c1c1c;
+  --text:#333;
+  --muted:#555;
+  --soft:#666;
+  --light:#7a7a7a;
+  --star:#f09819;
+
+  --faq-plus:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 3h2v18h-2z"/><path d="M3 11h18v2H3z"/></svg>');
+  --faq-minus:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 11h18v2H3z"/></svg>');
+
+  --font-display:"Marcellus",serif;
+  --font-body:"Lato",sans-serif;
+
+  /* scale - DMC values */
+  --container:1300px;
+  --section-py:80px;
+  --section-px:5%;
+  --head-gap:60px;
+  --title:44px;
+  --r-sm:12px; --r-md:24px; --r-lg:32px; --r-xl:40px; --r-pill:999px;
+  --shadow-card:0 10px 30px #0000000d;
+  --shadow-lift:0 20px 40px #0000001a;
+  --shadow-brand:0 20px 40px var(--primary-a20);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font-display);font-size:16px;line-height:1.65;
+  color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:clip;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{margin:0;padding:0;list-style:none}
+p{margin:0;text-wrap:pretty}
+h1,h2,h3,h4,h5{margin:0;font-family:var(--font-display);font-weight:400;line-height:1.2;text-wrap:balance}
+button,input,select,textarea{font-family:var(--font-display)}
+
+/* Type split, as dmctrichology.com sets it (measured): Marcellus carries the headings, the
+   navigation and the buttons; Lato carries everything that is read as text - paragraphs, list
+   items, table cells and form fields. Both faces load in one request. */
+p,li,dd,dt,td,th,figcaption,blockquote,label,input,textarea,select{font-family:var(--font-body)}
+.header,.header *,.footer,.footer *,.topbar,.topbar *,.breadcrumb,.breadcrumb *,
+.btn,.btn *,.pill-tab,.filter-item,.blog-page{font-family:var(--font-display)}
+/* the fields and the long footer notice read as text even inside the chrome */
+.header input,.header textarea,.header select,.footer input,.footer textarea,.footer select,
+.footer .news-disclaimer,.footer .copyright{font-family:var(--font-body)}
+:focus-visible{outline:2px solid var(--primary-deep);outline-offset:3px}
+
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.ico{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ico-fill{fill:currentColor;stroke:none}
+.nw{white-space:nowrap}
+
+/* layout primitives ------------------------------------------------------- */
+.container{width:100%;max-width:calc(var(--container) + 2 * var(--section-px));margin:0 auto;padding-inline:var(--section-px)}
+.section{padding-block:var(--section-py);position:relative}
+.bg-white{background:var(--white)}
+.bg-tint{background:var(--tint)}
+/* DMC welcome, surgeons + enquiry sections run 100px, about-us-care 60px */
+.section--roomy{padding-block:100px}
+
+/* headings ---------------------------------------------------------------- */
+.section-title{font-size:var(--title);line-height:1.2;text-transform:uppercase;color:var(--text)}
+.section-lede{margin-top:14px;font-size:17px;color:var(--muted);max-width:860px;text-wrap:balance}
+.section-head{margin-bottom:var(--head-gap)}
+.section-head--center{text-align:center}
+.section-head--center .section-lede{margin-inline:auto}
+.stars{display:inline-flex;gap:2px;color:var(--star);font-size:14px}
+
+/* buttons - DMC pill with arrow disc ------------------------------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:14px;
+  min-height:54px;padding:7px 7px 7px 28px;border:1px solid transparent;border-radius:var(--r-pill);
+  font-family:var(--font-display);font-size:16px;font-weight:700;letter-spacing:.2px;
+  cursor:pointer;white-space:nowrap;
+  transition:background-color .3s,color .3s,border-color .3s,box-shadow .3s;
+}
+.btn-arrow{
+  width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:16px;
+  transition:transform .3s,background-color .3s,color .3s;
+}
+.btn:hover .btn-arrow{transform:rotate(45deg)}
+.btn-primary{background:var(--primary);color:var(--white)}
+.btn-primary .btn-arrow{background:var(--white);color:var(--primary-deep)}
+.btn-primary:hover{background:var(--primary-hover);box-shadow:0 15px 30px var(--primary-a30)}
+/* DMC "View All" outline pill: 10/15/10/25, 14px, 45px arrow disc turned -45deg */
+.btn-outline{background:var(--white);color:#000;border-color:#e5e5e5;font-size:14px;font-weight:600;gap:12px;padding:4px 4px 4px 25px}
+.btn-outline .btn-arrow{width:45px;height:45px;background:var(--primary);color:var(--white);transform:rotate(-45deg)}
+.btn-outline .btn-arrow .ico{transform:rotate(45deg)}
+.btn-outline:hover{background:var(--primary);border-color:var(--primary);color:var(--white);box-shadow:0 12px 24px var(--primary-a20)}
+.btn-outline:hover .btn-arrow{background:var(--white);color:var(--primary-deep);transform:rotate(0)}
+.btn-ghost{background:transparent;color:var(--white);border-color:var(--white);font-weight:400;font-size:14px;padding:6px 7px 6px 25px;gap:10px}
+.btn-ghost .btn-arrow{background:var(--white);color:var(--primary-deep);transform:rotate(-45deg)}
+.btn-ghost .btn-arrow .ico{transform:rotate(45deg)}
+.btn-ghost:hover{background:var(--white);color:var(--primary-deep)}
+.btn-ghost:hover .btn-arrow{background:var(--primary);color:var(--white);transform:rotate(0)}
+.btn-light{background:var(--white);color:var(--primary-deep);font-weight:400}
+.btn-light .btn-arrow{background:var(--primary);color:var(--white)}
+.btn-light:hover{box-shadow:0 14px 30px #0000003d}
+.center-action{display:flex;justify-content:center;margin-top:60px}
+
+/* shared bits ------------------------------------------------------------- */
+.ico-circle{flex:none;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:var(--white)}
+.avatars{display:flex}
+.avatars img{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid var(--white);margin-left:-10px}
+.avatars img:first-child{margin-left:0}
+
+/* forms ------------------------------------------------------------------- */
+.field-row{display:flex;gap:16px}
+.field-row>.field{flex:1;min-width:0}
+.field{margin-bottom:16px;position:relative}
+.field-input{
+  width:100%;height:50px;padding:14px 16px;background:transparent;border:1px solid #ddd;border-radius:var(--r-sm);
+  font-size:14px;color:var(--text);appearance:none;-webkit-appearance:none;
+  transition:border-color .25s,background-color .25s,box-shadow .25s;
+}
+.field-input::placeholder{color:#8c8c8c;text-transform:uppercase}
+select.field-input{height:62px;padding:14px 52px 14px 20px;text-transform:uppercase;color:#888;cursor:pointer}
+.field-input:focus{outline:none;background:var(--white);border-color:var(--primary);box-shadow:0 0 0 2px var(--primary-a20)}
+.field-chev{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--primary-deep);font-size:18px;pointer-events:none}
+.submit-btn{
+  position:relative;width:100%;height:60px;margin-top:16px;border:0;border-radius:50px;
+  background:var(--primary);color:var(--white);font-size:19px;font-weight:700;cursor:pointer;
+  transition:background-color .3s,box-shadow .3s;
+}
+.submit-btn .btn-arrow{position:absolute;right:10px;top:50%;margin-top:-20px;background:var(--white);color:var(--primary-deep)}
+.submit-btn:hover{background:var(--primary-hover);box-shadow:0 6px 24px var(--primary-a30)}
+.submit-btn:hover .btn-arrow{transform:rotate(45deg)}
+.consent{margin-top:12px;font-size:12px;line-height:1.6;color:var(--light);text-align:center}
+.consent a{color:var(--primary-deep);text-decoration:underline}
+
+/* topbar ------------------------------------------------------------------ */
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  padding:8px var(--section-px);background:var(--primary);color:var(--white);font-size:14px;letter-spacing:.5px;
+}
+.topbar-left{display:flex;align-items:center;flex-wrap:wrap}
+.topbar-sep{opacity:.5;margin:0 10px}
+.topbar-tag{font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.topbar-right{display:flex;gap:12px}
+.social{
+  width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  background:var(--white);color:var(--primary-deep);font-size:14px;transition:transform .2s;
+}
+.social:hover{transform:scale(1.15)}
+
+/* header - DMC floating pill ---------------------------------------------- */
+.header-anchor{position:relative;height:0;z-index:1000}
+.header{position:absolute;top:10px;left:0;right:0;padding:16px 4%;pointer-events:none}
+.header.is-fixed{position:fixed;top:0;transition:transform .3s ease}
+.header.is-fixed.is-hidden{transform:translateY(-130%)}
+.header-container{position:relative;
+  pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:22px;
+  max-width:var(--container);margin:0 auto;padding:12px 30px;
+  background:var(--white);border:1px solid #00000008;border-radius:100px;box-shadow:0 10px 40px #00000014;
+}
+.logo{display:flex;align-items:center;flex:none}
+.logo img{height:60px;width:auto;transition:opacity .2s}
+.logo:hover img{opacity:.85}
+
+/* gap 16: the live menu has 10 items (Blogs / Health Tips / FAQs / Press & Media are top level) */
+.navbar{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;gap:16px}
+.nav-item{position:relative;padding:8px 0;font-size:16px;line-height:1.25;color:var(--text);white-space:nowrap}
+.nav-item>a{display:inline-flex;align-items:center;gap:4px;transition:color .2s}
+.nav-item .ico{font-size:14px;transition:transform .25s,color .2s}
+.nav-item:hover>a{color:var(--primary-deep)}
+.nav-item:hover .ico{transform:rotate(180deg)}
+.dropdown-menu{
+  position:absolute;top:100%;left:0;min-width:200px;padding:8px 0;background:var(--white);
+  border-radius:8px;box-shadow:0 10px 30px #0000001a;
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,visibility .3s,transform .3s;
+}
+.nav-item:hover .dropdown-menu,.nav-item:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown-item{display:block;padding:10px 20px;font-size:14px;color:var(--text);transition:background-color .2s,color .2s}
+.dropdown-item:hover{background:#f5f5f5;color:var(--primary-deep)}
+.dropdown-menu--mega{
+  left:50%;transform:translate(-50%,10px);display:grid;grid-template-columns:repeat(3,max-content);
+  gap:0 6px;min-width:600px;padding:12px 8px;
+}
+.nav-item:hover .dropdown-menu--mega,.nav-item:focus-within .dropdown-menu--mega{transform:translate(-50%,0)}
+
+/* mega menu - treatments grouped by concern, conditions grouped by area.
+   The panel spans the header pill, so the nav item is not the positioning parent. */
+.nav-item--mega{position:static}
+.dropdown-menu--treatments,.dropdown-menu--conditions{
+  left:0;right:0;min-width:0;padding:26px 30px 24px;border-radius:26px;
+  display:grid;gap:20px 28px;max-height:min(72vh,620px);overflow-y:auto;overscroll-behavior:contain;
+}
+.dropdown-menu--treatments{grid-template-columns:repeat(6,minmax(0,1fr))}
+.dropdown-menu--conditions{grid-template-columns:repeat(4,minmax(0,1fr))}
+.mega-group--wide{grid-column:span 2}
+.mega-group--wide .mega-links{columns:2;column-gap:28px}
+.mega-links .dropdown-item{break-inside:avoid}
+.mega-group{min-width:0;white-space:normal}
+.mega-title{
+  display:flex;align-items:center;gap:6px;padding-bottom:9px;margin-bottom:8px;
+  border-bottom:1px solid var(--border);font-size:15px;line-height:1.3;color:var(--primary-deep);
+}
+.mega-title .ico{flex:none;font-size:12px;transition:transform .2s}
+.mega-title:hover .ico{transform:translateX(3px)}
+.mega-group .dropdown-item{padding:5px 0;font-size:13.5px;line-height:1.45;white-space:normal}
+.mega-group .dropdown-item:hover{background:transparent;color:var(--primary-deep)}
+.mega-all{
+  display:inline-block;margin-top:9px;font-size:12px;font-weight:700;letter-spacing:.6px;
+  text-transform:uppercase;color:var(--primary-deep);transition:opacity .2s;
+}
+.mega-all::before{content:"» "}
+.mega-all:hover{opacity:.7}
+.m-sub-title{
+  display:block;padding:14px 4px 4px 18px;font-size:11px;font-weight:700;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--primary-deep);
+}
+
+.header-right{display:flex;align-items:center;gap:10px;flex:none}
+.header-cta{min-height:52px;padding:10px 10px 10px 24px;border:0;font-size:14px;gap:16px}
+.header-cta .btn-arrow{width:32px;height:32px;font-size:13px}
+
+.mobile-toggle{
+  display:none;width:44px;height:44px;border-radius:8px;align-items:center;justify-content:center;
+  padding:0;border:0;background:transparent;color:var(--text);font-size:24px;cursor:pointer;transition:background-color .2s;
+}
+.mobile-toggle:hover{background:#0000000d}
+#nav-toggle{display:none}
+.drawer-backdrop{display:none;pointer-events:auto;position:fixed;inset:0;background:#0000004d;z-index:1001}
+.mobile-menu{
+  display:none;pointer-events:auto;position:fixed;top:0;right:0;bottom:0;z-index:1002;
+  width:min(86vw,360px);padding:14px 22px 34px;background:var(--white);overflow-y:auto;overscroll-behavior:contain;
+  box-shadow:-12px 0 40px #0000002e;
+}
+.mobile-menu-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;margin-bottom:6px;border-bottom:1px solid var(--primary-a15)}
+.mobile-menu-header img{height:42px;width:auto}
+.mobile-menu-close{
+  width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;flex:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--text);background:var(--white);border:1px solid var(--primary-a20);box-shadow:0 6px 18px #0000001a;
+}
+.mobile-menu details{border-bottom:1px solid var(--primary-a15)}
+.mobile-menu summary,.m-link{
+  display:flex;align-items:center;justify-content:space-between;min-height:62px;padding:11px 4px;
+  font-size:18px;color:var(--text);cursor:pointer;list-style:none;
+}
+.m-link{border-bottom:1px solid var(--primary-a15)}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu summary .ico{color:var(--primary-deep);transition:transform .25s}
+.mobile-menu details[open] summary .ico{transform:rotate(180deg)}
+.m-sub{background:#f9f9f9;border-radius:8px;padding:12px 0;margin-bottom:12px}
+.m-sub a{display:flex;align-items:center;min-height:40px;padding:9px 4px 9px 18px;font-size:14px;line-height:1.35;color:var(--text)}
+.m-sub a:hover{color:var(--primary-deep)}
+.mobile-menu .btn{width:100%;margin-top:22px}
+
+/* 1. hero - DMC home-hero-stage (fading slides, left copy, right form) ---- */
+.hero-stage{position:relative;isolation:isolate}
+.hero{position:relative;height:100vh;min-height:750px;overflow:hidden;background:#f8f8f8}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease-in-out}
+.hero-slide.is-active{opacity:1}
+.hero-slide-bg{position:absolute;inset:0;background-position:50%;background-size:cover;transform:scale(1);transition:transform 8s ease-out;will-change:transform}
+.hero-slide-bg--1{background-image:url("/dr-nivedita-dadu-website/images/clinic-waiting-lounge.webp")}
+.hero-slide-bg--2{background-image:url("/dr-nivedita-dadu-website/images/clinic-lounge-corridor.jpg")}
+.hero-slide-bg--3{background-image:url("/dr-nivedita-dadu-website/images/clinic-reception-desk.jpg")}
+.hero-slide.is-active .hero-slide-bg{transform:scale(1.05)}
+.hero-overlay{position:absolute;inset:-2px;z-index:1;background:#ecd0c98c}
+.hero-content{position:absolute;z-index:3;top:55%;left:5%;right:calc(min(44vw,760px) + 8%);transform:translateY(-50%)}
+.hero-eyebrow{display:inline-block;margin-bottom:16px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--primary-deep)}
+.hero-title{font-size:44px;line-height:1.2;color:var(--text);text-transform:capitalize;margin-bottom:16px}
+.hero-sub{font-size:18px;line-height:1.6;color:var(--text)}
+.hero-desc{font-size:16px;line-height:1.6;color:var(--text);margin:4px 0 32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-dots{position:absolute;z-index:3;left:5%;bottom:100px;display:flex;align-items:center;gap:12px}
+.hero-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--white);opacity:.5;cursor:pointer;transition:all .3s}
+.hero-dot.is-active{opacity:1;margin:0 8px;box-shadow:0 0 0 8px #ffffff4d}
+.hero-right{position:absolute;z-index:4;top:55%;right:5%;width:min(44vw,760px);transform:translateY(-50%)}
+.lead-card{background:var(--tint);border-radius:24px;padding:24px;box-shadow:0 10px 30px #0000000d}
+.lead-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 15px;min-height:50px;margin-bottom:24px}
+.lead-head h2{font-size:clamp(26px,2vw,2.2rem);line-height:1.2;white-space:nowrap;color:var(--text);text-transform:capitalize}
+.lead-patients{display:flex;align-items:center;gap:10px;flex:none}
+.lead-patients-copy{display:flex;flex-direction:column;gap:2px;font-size:10px;font-weight:700;line-height:1.3;color:var(--text);white-space:nowrap}
+.lead-patients-copy .stars{font-size:10px;gap:2px}
+
+/* 2. popular treatments - DMC service slider ----------------------------- */
+.svc-section{padding:var(--section-py) var(--section-px);background:var(--tint)}
+.svc-inner{max-width:1400px;margin:0 auto}
+.svc-header{position:relative;display:flex;justify-content:center;margin-bottom:var(--head-gap)}
+.svc-header .section-title{text-align:center}
+.svc-view-all{position:absolute;right:0;bottom:10px;display:flex;align-items:center;gap:8px;color:#888;font-size:14px;transition:color .2s}
+.svc-view-all .ico{font-size:14px}
+.svc-view-all:hover{color:var(--primary-deep)}
+.svc-wrapper{position:relative;padding:0 10px}
+.svc-swiper{overflow:hidden}
+.svc-swiper .swiper-slide{height:auto}
+.svc-card{display:block}
+.svc-media{height:300px;border-radius:var(--r-md);overflow:hidden;margin-bottom:20px}
+.svc-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.svc-card:hover .svc-media img{transform:scale(1.05)}
+.svc-card h3{font-size:18px;line-height:1.4;color:var(--heading);text-align:center;padding:0 10px;transition:color .2s}
+.svc-card:hover h3{color:var(--primary-deep)}
+.svc-prev,.svc-next,.results-prev,.results-next{
+  position:absolute;top:40%;transform:translateY(-50%);z-index:10;width:60px;height:60px;padding:0;
+  border:0;border-radius:50%;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+}
+.svc-prev{left:-20px}
+.svc-next{right:-20px}
+.svc-arrow{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--white);color:var(--heading);font-size:20px;box-shadow:0 4px 14px #0000001f;transition:background-color .2s,color .2s}
+.svc-prev:hover .svc-arrow,.svc-next:hover .svc-arrow{background:var(--primary);color:var(--white)}
+.svc-wrapper:not(.is-ready) .svc-prev,.svc-wrapper:not(.is-ready) .svc-next{display:none}
+.svc-swiper:not(.swiper-initialized) .swiper-wrapper{display:flex;gap:25px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.svc-swiper:not(.swiper-initialized) .swiper-slide{flex:0 0 calc((100% - 75px)/4);scroll-snap-align:start}
+.svc-swiper:not(.swiper-initialized) .svc-dup{display:none}
+
+/* 3 + 5. intro card and team card - DMC surgeon detail card -------------- */
+.team-head{margin-bottom:60px}
+.doctor-card{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:center;
+  padding:30px;border-radius:var(--r-xl);background:var(--primary);color:var(--white);box-shadow:0 20px 40px #0000000d;
+}
+.doctor-media{border-radius:25px;overflow:hidden;align-self:stretch}
+.doctor-media img{width:100%;height:100%;min-height:364px;object-fit:cover;object-position:28% 30%}
+.doctor-body{padding:20px 30px 20px 10px}
+.doctor-name{font-size:32px;line-height:1.2;color:var(--white);margin-bottom:16px}
+.doctor-credentials{font-size:15px;line-height:1.65;color:var(--white);padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #ffffff59}
+.doctor-bio{font-size:14px;line-height:1.75;color:var(--white)}
+.doctor-body .btn{margin-top:28px}
+/* intro: same card, image on the right, light surface instead of coral */
+.doctor-card--intro{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);background:var(--tint);color:var(--text);border:1px solid var(--border)}
+.doctor-card--intro .doctor-body{padding:20px 10px 20px 30px}
+.doctor-card--intro .doctor-media img{min-height:420px;object-position:50% 30%}
+.intro-kicker{display:flex;align-items:center;gap:12px;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--primary-deep);margin-bottom:12px}
+.intro-kicker::before{content:"";width:36px;height:1.5px;flex:none;background:var(--primary)}
+.intro-title{font-size:34px;line-height:1.2;color:var(--heading);margin-bottom:20px}
+.intro-copy{font-size:15px;line-height:1.8;color:var(--muted)}
+
+/* 4. as featured in - one continuously rotating row (DMC press logos) --- */
+.featured-section{position:relative;z-index:1;padding-block:56px 60px;background:var(--white);box-shadow:0 -12px 40px -24px #00000014,0 20px 65px -15px #0000001a}
+.featured-title{text-align:center}
+.separator{height:1px;max-width:760px;margin:20px auto 0;background:linear-gradient(90deg,transparent,var(--line) 30%,var(--line) 70%,transparent)}
+.press-swiper{max-width:var(--container);margin:40px auto 0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.press-swiper .swiper-wrapper{display:flex;transition-timing-function:linear}
+.press-swiper .swiper-slide{width:198px;height:55px;flex:none;display:flex;align-items:center;justify-content:center}
+.press-swiper:not(.swiper-initialized) .swiper-slide{margin-right:30px}
+.press-swiper img{max-height:55px;max-width:100%;width:auto;object-fit:contain}
+
+/* 6. contact - DMC "request a consultation" with notched image --------- */
+.enquiry-section{--enq-form-w:588px;padding:100px 0;background:var(--white);overflow:hidden}
+.enq-top{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+/* bottom padding = the 95px the image slides up + 30px breathing space, so the copy is never covered */
+.enq-info{flex:1 1 0;min-width:0;padding-bottom:125px}
+.enq-sub{margin:0 0 30px;font-size:14px;line-height:1.3;color:var(--soft)}
+.enq-contacts{display:grid;grid-template-columns:repeat(3,max-content);row-gap:18px}
+.enq-item{display:flex;align-items:center;gap:12px}
+.enq-item:not(:last-child){padding-right:24px}
+.enq-item+.enq-item{padding-left:24px;border-left:1px solid #ddd}
+.enq-icon{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--primary);color:var(--white);font-size:17px}
+.enq-label{display:block;font-size:11px;line-height:1.3;color:#777}
+.enq-value{display:block;font-size:14px;line-height:1.3;color:#000}
+.enq-consent{margin-top:24px;text-align:left}
+.enq-form{position:relative;z-index:2;align-self:flex-end;width:var(--enq-form-w);max-width:100%;padding-top:65px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.enq-input{
+  width:100%;height:47px;padding:15px 25px;background:var(--input);border:0;border-radius:30px;
+  font-size:13px;color:#000;appearance:none;-webkit-appearance:none;transition:background-color .3s,box-shadow .3s;
+}
+.enq-input::placeholder{color:var(--light)}
+.enq-input:hover{background:var(--input-hover)}
+.enq-input:focus{outline:none;background:var(--white);box-shadow:0 0 0 2px var(--primary)}
+textarea.enq-input{grid-column:1/-1;height:54px;min-height:54px;resize:none;line-height:1.5}
+.enq-submit{
+  grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:15px;height:66px;padding:15px;
+  border:0;border-radius:30px;background:var(--primary);color:var(--white);font-size:16px;font-weight:700;cursor:pointer;
+  transition:background-color .3s,box-shadow .3s;
+}
+.enq-submit-arrow{width:51px;height:51px;border-radius:50%;display:grid;place-items:center;background:var(--white);color:var(--primary-deep);font-size:23px;transform:rotate(-45deg);transition:transform .4s}
+.enq-submit:hover{background:var(--primary-hover);box-shadow:0 15px 30px var(--primary-a30)}
+.enq-submit:hover .enq-submit-arrow{transform:rotate(0) translateX(5px)}
+.enq-image{position:relative;z-index:1;margin-top:-95px}
+.enq-image img{width:100%;aspect-ratio:1630/583;object-fit:cover;border-radius:40px}
+.enq-notch{position:absolute;top:-1px;right:-1px;width:calc(var(--enq-form-w) + 21px);height:114px;background:var(--white);border-bottom-left-radius:30px}
+.enq-notch::before,.enq-notch::after{content:"";position:absolute;width:30px;height:30px;background:radial-gradient(circle at 0 100%,transparent 29.5px,var(--white) 30px)}
+.enq-notch::before{top:1px;left:-30px}
+.enq-notch::after{bottom:-30px;right:1px}
+
+/* 7. testimonials - DMC staggered review + video grid --------------------- */
+.testimonials-section{padding:0 0 100px;background:var(--white)}
+.testi-head{text-align:center;margin-bottom:80px}
+.testi-sub{display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;color:var(--soft)}
+.testi-sub .stars{font-size:16px}
+.testi-grid{display:flex;align-items:flex-start;gap:24px}
+.testi-col{flex:1 1 0;min-width:0;display:flex;flex-direction:column}
+.testi-col:nth-child(even){margin-top:60px}
+.review-card{
+  margin-bottom:24px;padding:24px;border-radius:24px;background:var(--white);border:1px solid #f0f0f0;box-shadow:var(--shadow-card);
+  transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;
+}
+.review-card:hover{transform:translateY(-8px) scale(1.02);border-color:var(--white);box-shadow:var(--shadow-lift)}
+.review-stars{display:flex;gap:4px;margin-bottom:10px;color:var(--star);font-size:18px}
+.review-tag{margin-bottom:10px;font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--primary-deep)}
+.review-text{margin-bottom:14px;font-size:14px;line-height:22px;color:#444}
+.review-note{margin-bottom:16px;font-size:11px;line-height:1.4;color:var(--light)}
+.review-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.review-name{display:block;font-size:14px;font-weight:700;line-height:1.3;color:var(--text)}
+.review-date{display:block;font-size:11px;line-height:1.3;color:var(--light)}
+.review-source{flex:none;padding:3px 9px;border:1px solid var(--border);border-radius:var(--r-pill);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--primary-deep)}
+/* DMC premium video card, shared by testimonials and latest videos */
+.vcard{position:relative;display:block;height:450px;margin-bottom:24px;border-radius:30px;overflow:hidden;background:#222;isolation:isolate;transition:transform .35s var(--ease),box-shadow .35s}
+.testi-col:nth-child(even) .vcard{height:480px}
+.vcard>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s var(--ease)}
+.vcard::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(#0000004d 0%,#0000 40%,#00000066 100%)}
+.vcard:hover{transform:translateY(-8px) scale(1.02);box-shadow:var(--shadow-lift)}
+.vcard:hover>img{transform:scale(1.05)}
+.vcard-title{position:absolute;top:24px;left:24px;right:24px;font-size:20px;line-height:1.25;text-align:center;color:var(--white)}
+.vcard-play{
+  position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;
+  display:grid;place-items:center;background:var(--white);border:2px solid #ffffffd9;box-shadow:0 14px 36px #00000038;transition:transform .3s;
+}
+.vcard-play::before{content:"";margin-left:4px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #000}
+.vcard:hover .vcard-play{transform:scale(1.1)}
+.vcard.is-playing{transform:none;box-shadow:none}
+.vcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.testi-action{display:flex;justify-content:center;margin-top:60px}
+
+/* 8. real results - DMC results slider ----------------------------------- */
+.results-section{padding:60px 0 40px;background:var(--tint);overflow:hidden}
+.results-head{margin-bottom:50px}
+.results-wrap{position:relative}
+.results-swiper{overflow:hidden;padding:20px 0 60px}
+.results-swiper .swiper-slide{height:auto}
+.results-swiper:not(.swiper-initialized) .swiper-wrapper{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+.result-card{
+  height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;border-radius:16px;
+  background:var(--primary-soft);box-shadow:0 2.61px 7.84px #4a46460d;transition:transform .3s ease;
+}
+.result-card:hover{transform:translateY(-10px)}
+.result-card h3{min-height:48px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;font-size:14px;font-weight:600;line-height:1.4;color:var(--text)}
+.result-media{width:100%;margin-bottom:20px;border-radius:12px;overflow:hidden}
+.result-media img{width:100%;aspect-ratio:750/400;object-fit:cover}
+.result-meta{font-size:15px;font-weight:500;color:var(--soft)}
+.results-prev,.results-next{top:50%;width:50px;height:50px;background:var(--white);color:var(--text);font-size:20px;box-shadow:0 10px 25px #0000001a;transition:background-color .3s,color .3s}
+.results-prev{left:-25px}
+.results-next{right:-25px}
+.results-prev:hover,.results-next:hover{background:#000;color:var(--white)}
+.results-prev.swiper-button-disabled,.results-next.swiper-button-disabled{opacity:.35;pointer-events:none}
+.results-prev.swiper-button-lock,.results-next.swiper-button-lock,.results-wrap:not(.is-ready) .results-prev,.results-wrap:not(.is-ready) .results-next{display:none}
+.disclaimer{text-align:center;font-size:14px;color:var(--light)}
+.results-section .center-action{margin-top:30px}
+
+/* 9. latest videos - DMC video cards ------------------------------------- */
+.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.video-grid .vcard{margin-bottom:0}
+
+/* 10. blogs - DMC news & wellness cards ---------------------------------- */
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.blog-card{display:flex;flex-direction:column;padding:25px;border-radius:var(--r-xl);background:var(--tint);border:1px solid #0000000d;transition:background-color .3s,border-color .3s}
+.blog-card:hover{background:var(--primary);border-color:transparent}
+.blog-media{position:relative;margin-bottom:25px}
+.blog-media img{width:100%;height:300px;border-radius:30px;object-fit:cover}
+.date-pill{position:absolute;top:20px;left:20px;padding:6px 20px;border-radius:30px;background:var(--primary);color:var(--white);font-size:13px;line-height:1.3;transition:background-color .3s,color .3s}
+.blog-card:hover .date-pill{background:var(--white);color:#000}
+.blog-author{display:flex;align-items:center;gap:10px;margin-bottom:15px;font-size:16px;color:#000;transition:color .3s}
+.blog-author .ico-circle{width:32px;height:32px;font-size:15px;transition:background-color .3s,color .3s}
+.blog-card h3{flex:1;margin-bottom:12px;font-size:24px;line-height:31px;color:#000;transition:color .3s}
+.blog-link{align-self:flex-start;font-size:14px;font-weight:700;color:#000;transition:color .3s}
+.blog-card:hover .blog-author,.blog-card:hover h3,.blog-card:hover .blog-link{color:var(--white)}
+.blog-card:hover .blog-author .ico-circle{background:var(--white);color:var(--primary-deep)}
+
+/* 11. long intro copy - DMC welcome stats row ---------------------------- */
+.intro-section{padding:var(--section-py) var(--section-px);background:var(--tint);text-align:center}
+.intro-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.intro-col p{font-size:16px;line-height:1.8;color:var(--muted)}
+
+/* 12. skin treatments - DMC FAQ-card grid + image panel ------------------ */
+.skin-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.treat-card{
+  display:flex;flex-direction:column;gap:16px;padding:28px 26px;border-radius:var(--r-lg);
+  background:var(--tint);border:1px solid var(--border);
+  transition:background-color .3s,border-color .3s,box-shadow .3s;
+}
+.treat-card .ico-circle{width:58px;height:58px;font-size:26px;transition:background-color .3s,color .3s}
+.treat-card h3{font-size:21px;line-height:1.3;color:var(--heading);transition:color .3s}
+.treat-card p{font-size:14px;line-height:1.7;color:var(--text);transition:color .3s}
+.treat-card:hover{background:var(--primary);border-color:var(--primary);box-shadow:0 15px 30px var(--primary-a20)}
+.treat-card:hover h3,.treat-card:hover p{color:var(--white)}
+.treat-card:hover .ico-circle{background:var(--white);color:var(--primary-deep)}
+.skin-note{
+  grid-column:span 2;position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;
+  min-height:300px;padding:34px;border-radius:var(--r-lg);background:var(--primary);color:var(--white);
+}
+.skin-note img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.skin-note::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#c0553ff2 0%,#f5907cd9 55%,#f5907c4d 100%)}
+.skin-note p{font-size:16px;line-height:1.75;max-width:620px;color:var(--white)}
+.skin-note .btn{align-self:flex-start}
+
+/* 13. hair care - calm tint band, white numbered cards ------------------- */
+.hair-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:end;margin-bottom:var(--head-gap)}
+.hair-head p{font-size:16px;line-height:1.8;color:var(--muted)}
+.hair-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.hair-card{
+  display:flex;flex-direction:column;gap:14px;padding:28px 24px;border-radius:var(--r-md);background:var(--white);border:1px solid var(--border);
+  box-shadow:var(--shadow-card);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;
+}
+.hair-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift);border-color:var(--line)}
+.hair-card-top{display:flex;align-items:center;justify-content:space-between}
+.hair-num{font-size:40px;line-height:1;color:var(--primary)}
+.hair-card .ico-circle{width:52px;height:52px;font-size:24px;background:var(--tint);color:var(--primary-deep);transition:background-color .35s,color .35s}
+.hair-card:hover .ico-circle{background:var(--primary);color:var(--white)}
+.hair-card h3{font-size:20px;line-height:1.3;color:var(--heading)}
+.hair-card p{font-size:14px;line-height:1.7;color:var(--muted)}
+
+/* 14. body & aesthetic - DMC orbit with calm white callouts ------------- */
+.orbit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px) minmax(0,1fr);gap:40px;align-items:center}
+.orbit-col{display:flex;flex-direction:column;gap:24px}
+.callout{
+  display:flex;gap:18px;align-items:flex-start;padding:20px;border-radius:var(--r-md);
+  background:var(--white);border:1px solid #f0f0f0;box-shadow:var(--shadow-card);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;
+}
+.callout:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:var(--border)}
+.callout-icon{flex:none;width:56px;height:56px;border-radius:14px;background:var(--tint);color:var(--primary-deep);display:grid;place-items:center;font-size:26px}
+.callout h3{font-size:19px;line-height:1.3;color:var(--heading);margin-bottom:6px}
+.callout p{font-size:13px;line-height:1.6;color:var(--muted)}
+.orbit-center{position:relative;aspect-ratio:1/1}
+.orbit-center::before{content:"";position:absolute;inset:-18px;border-radius:50%;border:1px solid var(--line)}
+.orbit-center img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.orbit-dot{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--white);box-shadow:0 0 0 1px var(--line),inset 0 0 0 6px var(--primary)}
+.orbit-dot--a{top:4%;left:62%}
+.orbit-dot--b{bottom:10%;right:6%}
+.orbit-dot--c{bottom:4%;left:22%}
+
+/* 15. why choose us - DMC "know the right treatment" image + panel cards -- */
+.why-section{padding:60px 0;background:var(--tint)}
+.why-section .section-head{margin-bottom:40px}
+.why-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+.why-card{flex:1 1 calc(50% - 12px);min-width:0;display:flex;border-radius:24px;overflow:hidden;background:var(--primary);color:var(--white)}
+.why-card-media{flex:0 0 34%}
+.why-card-media img{width:100%;height:100%;object-fit:cover}
+.why-card-body{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;padding:28px 30px}
+.why-card-body h3{margin-bottom:10px;font-size:22px;line-height:1.25;color:var(--white)}
+.why-card-body p{font-size:13px;line-height:20px;color:var(--white)}
+.why-card-body p+p{margin-top:8px}
+.why-btn{
+  align-self:flex-start;display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:9px 20px;border:1px solid var(--white);border-radius:10px;
+  background:var(--white);color:var(--primary-deep);font-size:14px;font-weight:700;line-height:20px;transition:background-color .3s,color .3s,box-shadow .3s;
+}
+.why-btn .ico{font-size:20px;transition:transform .3s}
+.why-btn:hover{background:transparent;color:var(--white);box-shadow:0 10px 22px #ffffff24}
+.why-btn:hover .ico{transform:translateX(5px)}
+
+/* 16. FAQs - DMC's own question list: hairlines, the answer opens underneath -- */
+.faq-head{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.faq-acc{border-top:1px solid #e3d8d4}
+.faq-row{border-bottom:1px solid #e3d8d4}
+.faq-q{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;padding:26px 2px;cursor:pointer;list-style:none}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q h3{font-family:var(--font-display);font-size:23px;font-weight:400;line-height:1.35;color:var(--heading);transition:color .25s}
+.faq-q::after{
+  content:"";flex:none;width:13px;height:13px;margin-top:8px;
+  background:currentColor;color:var(--primary-deep);
+  -webkit-mask:var(--faq-plus) center/contain no-repeat;mask:var(--faq-plus) center/contain no-repeat;
+}
+.faq-row[open] .faq-q::after{-webkit-mask-image:var(--faq-minus);mask-image:var(--faq-minus)}
+.faq-row[open] .faq-q h3,.faq-q:hover h3{color:var(--primary-deep)}
+.faq-a{padding:0 60px 28px 2px}
+.faq-a p{font-size:15px;line-height:1.8;color:var(--text)}
+.faq-a p+p{margin-top:10px}
+
+/* 17. footer - DMC link band + brand base + floating newsletter card ---- */
+.footer-top{background:var(--footer-bg);padding:80px 0 180px}
+.footer .container{--container:1400px}
+.footer-top-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px}
+.footer-col-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:25px;font-size:18px;text-transform:uppercase;color:var(--heading)}
+.footer-col-title .ico{display:none;color:var(--primary-deep)}
+.footer-sub{margin:24px 0 10px;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--primary-deep)}
+.footer-sub:first-child{margin-top:0}
+.footer-links li+li{margin-top:12px}
+.footer-links a,.footer-contact p{font-size:14px;color:#444}
+.footer-links a{transition:color .2s}
+.footer-links a:hover,.footer-contact a:hover{color:var(--primary-deep)}
+.footer-contact p{line-height:1.8}
+.footer-contact p+p{margin-top:14px}
+.footer-contact strong{font-weight:400;color:var(--primary-deep)}
+
+.footer-base{background:var(--primary);color:var(--white)}
+.footer-base-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:100px;align-items:start}
+.footer-brand{padding:80px 0 60px}
+.footer-brand-row{display:flex;align-items:center;gap:30px}
+.footer-logo{flex:none;width:150px;height:150px;border-radius:50%;background:var(--white);display:grid;place-items:center;padding:16px}
+.footer-logo img{width:100%;height:auto}
+.footer-brand h2{font-size:14px;letter-spacing:1.2px;text-transform:uppercase;color:var(--white);margin-bottom:12px}
+.footer-brand p{font-size:13px;line-height:1.6;color:var(--white)}
+.footer-socials{display:flex;gap:15px;margin-top:20px}
+.rate-card{margin-top:40px;padding:28px;border-radius:30px;background:#ffffff26;border:1px solid #ffffff4d}
+.rate-card h3{font-size:24px;color:var(--white);margin-bottom:18px}
+.rate-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rate-input{
+  width:100%;min-height:50px;padding:12px 22px;margin-bottom:12px;background:#ffffff33;border:1px solid #ffffff66;border-radius:30px;
+  font-size:14px;color:var(--white);appearance:none;-webkit-appearance:none;
+}
+.rate-input::placeholder{color:var(--white)}
+.rate-input:focus{outline:none;border-color:var(--white);background:#ffffff40}
+select.rate-input{color:var(--white);cursor:pointer}
+select.rate-input option{color:var(--text)}
+.rate-card .btn{width:100%;margin-top:4px}
+
+.news-card{
+  position:relative;margin-top:-160px;padding:60px 50px 34px;border-radius:var(--r-xl) var(--r-xl) 0 0;
+  background:var(--panel);border:1px solid var(--line);border-bottom:0;color:var(--text);text-align:center;box-shadow:0 20px 50px #00000026;
+}
+.news-card h2{font-size:32px;line-height:1.2;color:var(--heading);margin-bottom:20px}
+.news-form{display:flex;align-items:center;gap:8px;margin:0 0 20px;padding:0;background:var(--primary);border-radius:50px}
+.news-form input{flex:1;min-width:0;height:52px;padding:12px 25px;background:transparent;border:0;color:var(--white);font-size:14px}
+.news-form input::placeholder{color:#fff}
+.news-form input:focus{outline:none}
+.news-submit{
+  display:inline-flex;align-items:center;gap:10px;height:48px;margin-right:2px;padding:12px 12px 12px 24px;border:0;border-radius:50px;
+  background:var(--white);color:#000;font-size:14px;font-weight:600;cursor:pointer;transition:box-shadow .3s;
+}
+.news-submit .btn-arrow{width:28px;height:28px;font-size:13px;background:var(--primary);color:var(--white)}
+.news-submit:hover{box-shadow:0 10px 22px var(--primary-a20)}
+.news-submit:hover .btn-arrow{transform:rotate(45deg)}
+.news-pills{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px 18px;font-size:16px;font-weight:600;color:var(--heading)}
+.timings{margin-top:22px;padding-top:22px;border-top:1px solid #0000001a;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:18px 26px;text-align:left}
+.timings h3{font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--primary-deep);margin-bottom:6px}
+.timings p{font-size:14px;line-height:1.6;color:var(--text)}
+.timings p+p{margin-top:8px}
+.timings b{font-weight:400;color:var(--primary-deep)}
+.news-disclaimer{margin-top:20px;padding-top:20px;border-top:1px solid #0000001a;font-size:12px;line-height:1.6;color:#666;text-wrap:balance}
+.news-disclaimer b{color:var(--heading)}
+.legal{margin-top:20px;padding-top:20px;border-top:1px solid #0000000d}
+.legal-links{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--heading)}
+.legal-links a:hover{color:var(--primary-deep)}
+.legal-links span{color:#cbd5e1}
+.areas{margin-top:12px;font-size:12px;color:var(--light);text-wrap:balance}
+.copyright{margin-top:10px;font-size:13px;color:#777;text-wrap:balance}
+
+/* floating CTAs - DMC ---------------------------------------------------- */
+.float-stack{position:fixed;left:20px;bottom:20px;z-index:1100;display:flex;flex-direction:column;gap:12px}
+.float-btn{
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--primary);border:2px solid var(--white);
+  color:var(--white);font-size:28px;box-shadow:0 14px 28px var(--primary-a20);transition:transform .22s,box-shadow .22s;
+}
+.float-btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 18px 32px var(--primary-a30)}
+.to-top{
+  position:fixed;right:28px;bottom:80px;z-index:950;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
+  background:var(--primary);border:1px solid #ffffff8c;color:var(--white);font-size:22px;box-shadow:0 14px 30px var(--primary-a30);
+  transition:opacity .25s,visibility .25s,transform .25s,background-color .25s;
+}
+.to-top:hover{background:var(--primary-hover);transform:translateY(-3px)}
+.js .to-top{opacity:0;visibility:hidden}
+.js .to-top.is-visible{opacity:1;visibility:visible}
+.mobile-bar{display:none}
+
+/* site integration: skip link, hidden bot trap, footer toggles, form feedback, status pages */
+.skip-link{position:absolute;left:12px;top:-100px;z-index:3000;padding:10px 18px;border-radius:var(--r-pill);background:var(--white);color:var(--text);font-size:15px;box-shadow:var(--shadow-card)}
+.skip-link:focus{top:12px}
+.hp-field{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.footer-col-toggle{flex:1;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0;padding:0;border:0;background:none;font:inherit;letter-spacing:inherit;text-transform:inherit;text-align:left;color:inherit;cursor:default}
+.form-status{margin-top:12px;font-size:13px;line-height:1.5;text-align:center;color:var(--primary-deep)}
+.form-status.is-error{color:#b3261e}
+.enq-form .form-status{grid-column:1/-1;margin-top:0;text-align:left}
+.rate-card .form-status,.rate-card .form-status.is-error{color:var(--white)}
+.news-status{margin:-8px 0 16px}
+.status-body{min-height:100vh;display:flex;flex-direction:column;background:var(--tint)}
+.status-header{padding:16px 4%}
+.status-main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:60px var(--section-px);text-align:center}
+.status-code{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--primary-deep)}
+.status-message{max-width:560px;font-size:17px;color:var(--muted)}
+.status-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:10px}
+.status-footer{padding:24px var(--section-px);text-align:center}
+
+/* ==========================================================================
+   RESPONSIVE - DMC breakpoints: 1379 / 1279 (drawer) / 1199 / 1024 / 992 / 767 / 430 / 390
+   ========================================================================== */
+/* DMC staggers the middle callout of each orbit column on wide screens only */
+@media (min-width:1200px){
+  .orbit-col:first-child .callout:nth-child(2){margin-right:36px}
+  .orbit-col:last-child .callout:nth-child(2){margin-left:36px}
+}
+
+/* contact details: three in a row no longer fit beside the form, so Sunday sits under Mon-Sat */
+@media (max-width:1439px){
+  .enq-contacts{grid-template-columns:repeat(2,max-content)}
+  .enq-item:nth-child(3){grid-column:2}
+}
+
+/* 10 menu items: a compact nav below 1440px (the drawer takes over below 1280px) */
+@media (max-width:1439px){
+  .navbar{gap:14px}
+  .nav-item{font-size:14px}
+  .header-container{padding-inline:20px;gap:14px}
+  .header-cta{min-height:46px;padding:7px 7px 7px 18px;font-size:13px;gap:12px}
+}
+
+@media (max-width:1379px){
+  .dropdown-menu--treatments{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+@media (max-width:1199px){
+  :root{--section-py:64px;--section-px:4%;--title:clamp(34px,5vw,44px);--head-gap:50px}
+  .section--roomy{padding-block:72px}
+  .header{padding-inline:3%}
+  .header-container{padding:10px 16px;gap:14px}
+  .logo img{height:46px}
+  .navbar{gap:clamp(12px,1.4vw,18px)}
+  .nav-item{font-size:14px}
+  .header-cta{min-height:44px;padding:6px 6px 6px 16px;gap:10px}
+  /* DMC 993-1199: narrower form, wrapped form heading */
+  .hero-content{left:4%;right:calc(min(36vw,420px) + 7%)}
+  .hero-title{font-size:clamp(38px,4.2vw,50px);line-height:1.08}
+  .hero-dots{left:4%}
+  .hero-right{right:3%;width:min(36vw,420px)}
+  .lead-head{flex-direction:column;align-items:flex-start}
+  .lead-head h2{white-space:normal;font-size:clamp(1.8rem,3vw,2.2rem);line-height:1.1}
+  .svc-media{height:max(230px,min(28vw,300px))}
+  .svc-card h3{display:flex;align-items:center;justify-content:center;min-height:52px}
+  .enquiry-section{--enq-form-w:48%;padding-block:72px}
+  /* DMC shows 3 staggered columns here and hides the rest until phones */
+  .testi-col:nth-child(n+4){display:none}
+  .hair-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .orbit{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .orbit-col{display:contents}
+  .orbit-center{order:-1;grid-column:1/-1;width:min(420px,72vw);margin:0 auto 24px}
+  .why-section{padding-block:56px}
+  .why-card{flex-basis:100%}
+  .footer-top-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}
+  .footer-base-grid{gap:50px}
+}
+
+/* the 10-item nav stops fitting the pill below 1280px: switch to the drawer */
+@media (max-width:1279px){
+  .navbar{display:none}
+  .mobile-toggle{display:inline-flex}
+  .header-container{padding:8px 12px;border-radius:60px}
+  #nav-toggle:checked~.drawer-backdrop,#nav-toggle:checked~.mobile-menu{display:block}
+}
+
+@media (max-width:1024px){
+  .topbar{justify-content:center;text-align:center}
+  .topbar-tag{display:none}
+  .hair-head{grid-template-columns:1fr;gap:32px}
+  .doctor-card{gap:28px;padding:24px}
+  .doctor-card--intro{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+  .doctor-body{padding:10px 16px 10px 0}
+  .doctor-card--intro .doctor-body{padding:10px 0 10px 16px}
+  .doctor-name{font-size:28px}
+  .intro-title{font-size:30px}
+  .skin-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .skin-note{grid-column:span 1;min-height:0}
+  .intro-grid{grid-template-columns:1fr;max-width:640px;gap:36px}
+  /* contact stacks: copy, form, then the full image (no notch) */
+  .enq-top{flex-direction:column;gap:26px}
+  .enq-form{width:100%;padding-top:0}
+  .enq-image{margin-top:30px}
+  .enq-image img{border-radius:30px}
+  .enq-notch{display:none}
+  .enq-info{padding-bottom:0}
+  .enq-contacts{grid-template-columns:repeat(3,max-content)}
+  .enq-item:nth-child(3){grid-column:auto}
+  .results-section{padding:60px 0}
+  .result-card{padding:20px}
+  .results-prev{left:6px}
+  .results-next{right:6px}
+  .footer-top{padding-bottom:72px}
+  .footer-base-grid{grid-template-columns:1fr;gap:36px;padding-bottom:48px}
+  .footer-brand{padding:52px 0 0;justify-self:center}
+  .news-card{margin-top:0;width:100%;max-width:760px;margin-inline:auto;padding:42px 34px;border-radius:32px;border-bottom:1px solid var(--line)}
+}
+
+/* DMC stacks the hero below 992px: copy + dots on the image, form underneath */
+@media (max-width:992px){
+  .hero{height:auto;min-height:0;padding:204px 5% 34px;text-align:center}
+  /* copy sits directly on the photo here, so the overlay is stronger for legibility */
+  .hero-overlay{background:#f3dfdad9}
+  .hero-content{position:relative;top:auto;left:auto;right:auto;transform:none;width:min(100%,680px);margin:0 auto}
+  .hero-title{font-size:30px;line-height:1.2;margin-bottom:12px}
+  .hero-actions{justify-content:center}
+  .hero-dots{position:relative;left:auto;bottom:auto;justify-content:center;margin-top:16px;padding-bottom:20px}
+  .hero-right{position:relative;top:auto;right:auto;width:100%;max-width:680px;margin:0 auto;padding:0 5% 40px;transform:none}
+  .lead-card{margin-top:0}
+  .lead-head h2{font-size:clamp(1.7rem,5vw,2.2rem)}
+  .testi-col:nth-child(3){display:none}
+  /* three blog cards get too narrow below 992px: two per row, the third centred */
+  .blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .blog-card:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 12.5px)}
+  .why-card{flex-direction:column}
+  .why-card-media{flex:none}
+  .why-card-media img{height:220px}
+}
+
+@media (max-width:767px){
+  :root{--section-py:48px;--section-px:16px;--title:26px;--head-gap:34px}
+  .section--roomy{padding-block:52px}
+  .section-lede{font-size:16px}
+  .center-action{margin-top:34px}
+
+  .topbar{display:none}
+  .header{top:8px;padding-inline:10px}
+  .header-container{display:grid;grid-template-columns:auto 1fr auto;column-gap:8px;padding:8px 10px;border-radius:36px}
+  .logo img{height:38px}
+  .header-right{display:contents}
+  .header-cta{justify-self:center;min-height:48px;padding:8px 8px 8px 18px;font-size:14px;gap:12px}
+  .header-cta .btn-arrow{width:32px;height:32px}
+  .mobile-toggle{justify-self:end;width:42px;height:42px}
+
+  .hero-desc{font-size:15px}
+  .hero-actions .btn{width:100%}
+  .lead-card{padding:18px;border-radius:18px}
+  .lead-head{gap:12px;margin-bottom:20px}
+  .field-row{flex-direction:column;gap:0}
+  .submit-btn{height:54px}
+
+  .svc-header{flex-direction:column;align-items:center}
+  .svc-header .section-title{max-width:290px;font-size:24px;line-height:1.18}
+  .svc-view-all{position:static;margin-top:12px;font-size:13px}
+  .svc-media{border-radius:20px;height:260px}
+  .svc-card h3{min-height:42px;font-size:16px;line-height:1.3}
+  .svc-prev,.svc-next{width:44px;height:44px;top:38%}
+  .svc-prev{left:6px}
+  .svc-next{right:6px}
+  .svc-arrow{width:34px;height:34px;font-size:17px}
+  .svc-swiper:not(.swiper-initialized) .swiper-slide{flex-basis:100%}
+
+  .doctor-card,.doctor-card--intro{grid-template-columns:1fr;padding:18px;border-radius:24px;gap:20px}
+  .doctor-card--intro .doctor-media{order:-1}
+  .doctor-media{border-radius:20px}
+  .doctor-media img,.doctor-card--intro .doctor-media img{min-height:0;aspect-ratio:322/218}
+  .doctor-body,.doctor-card--intro .doctor-body{padding:4px 6px 8px}
+  .doctor-name{font-size:26px}
+  .intro-title{font-size:24px}
+  .doctor-body .btn{width:100%}
+  .team-head{margin-bottom:32px}
+
+  .featured-section{padding-block:40px 44px}
+  .separator{margin-top:14px}
+  .press-swiper{margin-top:28px}
+  .press-swiper .swiper-slide{width:159px;height:44px}
+  .press-swiper:not(.swiper-initialized) .swiper-slide{margin-right:12px}
+  .press-swiper img{max-height:44px}
+
+  .enquiry-section{padding-block:48px}
+  .enq-form{grid-template-columns:1fr}
+  .enq-image{margin-top:24px}
+  .enq-image img{aspect-ratio:358/128;border-radius:22px}
+  .enq-contacts{grid-template-columns:1fr;row-gap:14px}
+  .enq-item:not(:last-child){padding-right:0}
+  .enq-item+.enq-item{padding-left:0;border-left:0}
+
+  .testimonials-section{padding-bottom:56px}
+  .testi-head{margin-bottom:36px}
+  .testi-sub{flex-wrap:wrap}
+  .testi-grid{flex-direction:column;gap:0}
+  .testi-col,.testi-col:nth-child(n){display:flex;flex:none;width:100%;margin-top:0}
+  .testi-action .btn{width:100%}
+
+  .results-section{padding:48px 0 36px}
+  .results-head{margin-bottom:28px}
+  .result-card{padding:16px;border-radius:14px}
+  .result-card h3{min-height:auto;margin-bottom:16px}
+  .result-media{margin-bottom:14px}
+  .results-prev,.results-next{width:42px;height:42px;top:44%}
+
+  .video-grid,.blog-grid,.skin-grid,.hair-grid{grid-template-columns:1fr}
+  .blog-card{border-radius:24px;padding:18px}
+  .blog-card:last-child:nth-child(odd){width:auto;justify-self:stretch}
+  .blog-media img{height:220px;border-radius:20px}
+  .blog-card h3{font-size:22px;line-height:29px}
+  .center-action .btn{min-width:0}
+
+  .intro-col p{font-size:15px}
+  .treat-card{padding:20px;border-radius:24px}
+  .skin-note{padding:24px 20px;border-radius:24px}
+  .skin-note .btn{width:100%}
+  .hair-head{gap:14px}
+  .orbit{grid-template-columns:1fr}
+  .orbit-center{width:min(300px,86vw)}
+  .callout{padding:18px;gap:14px;border-radius:20px}
+  .why-section{padding-block:48px}
+  .why-section .section-head{margin-bottom:28px}
+  .why-grid{gap:24px}
+  .why-card{flex-basis:100%;border-radius:22px}
+  .why-card-media img{height:190px}
+  .why-card-body{padding:18px 22px 22px}
+  .why-card-body h3{font-size:21px}
+  .why-btn{align-self:stretch;justify-content:center}
+  .faq-head{flex-direction:column;align-items:stretch;gap:18px}
+  .faq-head .btn{width:100%}
+  .faq-q{gap:18px;padding:22px 0}
+  .faq-q h3{font-size:20px}
+  .faq-a{padding:0 0 24px}
+
+  .footer-top{padding:44px 0 48px}
+  .footer-top-grid{grid-template-columns:1fr;gap:0}
+  .footer-col{border-bottom:1px solid #00000014}
+  .js .footer-col-title{margin:0;padding:15px 2px;cursor:pointer;font-size:18px}
+  .js .footer-col-title .ico{display:inline-block;transition:transform .3s}
+  .js .footer-col.open .footer-col-title .ico{transform:rotate(180deg)}
+  .js .footer-col-body{display:none;padding-bottom:14px}
+  .js .footer-col.open .footer-col-body{display:block}
+  .footer-brand{padding:42px 0 0}
+  .footer-base-grid{gap:28px;padding-bottom:36px}
+  .footer-brand-row{flex-direction:column;text-align:center;gap:20px}
+  .footer-logo{width:124px;height:124px}
+  .footer-socials{justify-content:center}
+  .rate-row{grid-template-columns:1fr;gap:0}
+  .news-card{padding:30px 20px;border-radius:26px}
+  .news-card h2{font-size:26px;line-height:1.25;margin-bottom:14px}
+  .news-form{flex-direction:column;gap:10px;border-radius:24px;padding:14px}
+  .news-form input{width:100%;text-align:center}
+  .news-submit{width:100%;justify-content:center;margin-right:0}
+  .news-pills{flex-direction:column;font-size:15px}
+  .news-pills span{display:none}
+  .timings{grid-template-columns:1fr}
+  .legal-links{flex-direction:column;align-items:center;gap:8px}
+  .legal-links span{display:none}
+}
+
+/* DMC swaps the floating CTA stack for its bottom call/WhatsApp bar at 768px */
+@media (max-width:768px){
+  body{padding-bottom:calc(60px + env(safe-area-inset-bottom))}
+  .float-stack{display:none}
+  .to-top{right:16px;bottom:76px;width:48px;height:48px}
+  .mobile-bar{
+    display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:1200;
+    padding-bottom:env(safe-area-inset-bottom);background:var(--primary);box-shadow:0 -10px 28px #00000033;
+  }
+  .mobile-bar a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;color:var(--white);font-size:17px;border-top:1px solid #ffffff2e;transition:background-color .2s}
+  .mobile-bar a+a{border-left:1px solid #ffffff2e}
+  .mobile-bar a:hover{background:var(--primary-hover)}
+  .mobile-bar .ico{font-size:22px}
+}
+
+@media (max-width:430px){
+  .header-cta{padding-left:14px;font-size:13px;gap:8px}
+  .hero{padding:188px 14px 30px}
+  .hero-right{padding:0 14px 40px}
+}
+@media (max-width:390px){
+  .svc-media{height:230px}
+  .blog-media img{height:190px}
+  .date-pill{top:12px;left:12px;padding:5px 12px;font-size:12px}
+  .why-card-media img{height:170px}
+  .faq-q h3{font-size:18px}
+}
+@media (max-width:359px){
+  .header-cta .btn-label{display:none}
+  .header-cta{width:44px;padding:0}
+  .header-cta .btn-arrow{background:transparent;color:var(--white)}
+}
+/* site integration: phone adjustments */
+@media (max-width:767px){
+  .js .footer-col-toggle{cursor:pointer}
+  .status-header .header-container{grid-template-columns:auto auto;justify-content:space-between}
+  .status-actions .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-slide-bg{transition:none}
+  *{transition-duration:.01ms!important}
+}
+
+/* footer, matched to dadumedicalcentre.com (layout only; our colours and content):
+   link band content 1400px wide with 5% side padding, 180px logo, card padding 32/50,
+   phone + email with round icons (no "|" between them) */
+.footer-top>.container{max-width:1400px;padding-inline:5%}
+@media (min-width:1025px){
+  .footer-logo{width:180px;height:180px;padding:20px}
+  .news-card{padding:32px 50px}
+}
+.news-pills{gap:10px 18px;margin-bottom:20px}
+.news-pill{display:inline-flex;align-items:center;gap:10px;color:var(--heading);transition:transform .2s}
+.news-pill:hover{transform:translateY(-2px)}
+.news-pill span:last-child{font-size:16px;font-weight:600}
+.news-pill[href^="mailto"] span:last-child{font-size:14px}
+.news-pill-ico{flex:none;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff}
+.news-pill-ico .ico{width:15px;height:15px}
+@media (max-width:767px){
+  .footer-top>.container{padding-inline:var(--section-px)}
+}
+
+/* footer v2 (27 Oct 2026): bottom part laid out exactly as on dadumedicalcentre.com, our colours.
+   Left: logo + brand text + 7 social icons, vertically centred against the card. Card (all corners
+   rounded): heading, timings line, email row, subscribe tick-box, phone/email, disclaimer, legal row. */
+.footer-base-grid{align-items:center}
+.news-card{border-radius:40px;border-bottom:1px solid var(--line)}
+.news-intro{margin:0 0 35px;font-size:15px;line-height:1.6;color:#555}
+.news-form-wrap .news-form{margin-bottom:20px}
+.news-check{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 15px;font-size:13px;color:#444;cursor:pointer}
+.news-check input{width:14px;height:14px;margin:0;accent-color:var(--primary-deep);cursor:pointer}
+.news-disclaimer{margin:20px 0;padding:20px 0 0;border-top:1px solid #0000001a}
+.legal{margin-top:0;padding-top:20px;border-top:1px solid #0000000d;display:flex;flex-direction:column;align-items:center;gap:12px}
+.legal-links{gap:4px 4px}
+.legal-links a{white-space:nowrap}
+.legal .copyright{margin:0}
+/* footer v3: about paragraph under the brand (reference: 13px, max 380px, 20px below) */
+.footer-brand p.footer-about{max-width:380px;margin:0;font-size:13px;line-height:1.6}
+/* footer v3 on phones, as on the reference: phone and email stacked with their round icons
+   (an older rule hid every span in .news-pills), legal links on one wrapping line with "|" */
+@media (max-width:767px){
+  .news-pills{flex-direction:column;gap:12px}
+  .news-pills .news-pill span{display:inline-flex}
+  .legal-links{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:4px 6px}
+  .legal-links span{display:inline}
+}
