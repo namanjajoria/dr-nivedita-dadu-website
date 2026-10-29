@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.use(require('./seo'));
 router.use('/api', require('./api'));
+router.use(require('./blog'));
 router.use(require('./pages'));
 
 module.exports = router;

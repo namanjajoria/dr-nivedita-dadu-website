@@ -2,7 +2,9 @@
 
 const config = require('./config');
 const { createApp } = require('./app');
+const { writeMediaStyles } = require('./middleware/mediaStyles');
 
+writeMediaStyles();
 const app = createApp();
 
 const server = app.listen(config.port, () => {

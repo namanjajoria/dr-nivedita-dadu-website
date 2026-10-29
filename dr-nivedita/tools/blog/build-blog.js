@@ -286,6 +286,8 @@ for (const p of posts) {
   if (p.faq) faqs++;
 }
 const listing = listingPage();
+// tools/db/seed-blogs.js reads the parsed posts (and the exact rendered pages, to compare against)
+if (require.main !== module) return void (module.exports = { posts, listing });
 console.log(`${posts.length} posts, ${faqs} with FAQ accordion` + (noFaq.length ? `, FAQ kept as text in: ${noFaq.join(', ')}` : ''));
 
 if (WRITE) {

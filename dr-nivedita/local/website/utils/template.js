@@ -24,12 +24,14 @@ function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (char) => ENTITIES[char]);
 }
 
+function expandPartials(source) {
+  return source.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, partial) => loadView(`partials/${partial}`));
+}
+
 function loadView(name) {
   if (config.isProduction && sourceCache.has(name)) return sourceCache.get(name);
   const file = path.join(VIEWS_DIR, `${name}.html`);
-  const source = fs
-    .readFileSync(file, 'utf8')
-    .replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, partial) => loadView(`partials/${partial}`));
+  const source = expandPartials(fs.readFileSync(file, 'utf8'));
   if (config.isProduction) sourceCache.set(name, source);
   return source;
 }
@@ -119,4 +121,15 @@ function render(name, data) {
   return renderNodes(tree, [data], name);
 }
 
-module.exports = { render, loadView, escapeHtml };
+// Renders template source that is not a view file (a page frame built in code). `key`
+// names it in errors and caches its parsed form in production.
+function renderSource(key, source, data) {
+  let tree = config.isProduction ? treeCache.get(`source:${key}`) : undefined;
+  if (!tree) {
+    tree = parse(expandPartials(source), key);
+    if (config.isProduction) treeCache.set(`source:${key}`, tree);
+  }
+  return renderNodes(tree, [data], key);
+}
+
+module.exports = { render, renderSource, loadView, escapeHtml };

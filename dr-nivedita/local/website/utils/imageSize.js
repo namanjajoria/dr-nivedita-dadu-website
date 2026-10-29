@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const config = require('../config');
+const { localPath } = require('./media');
 
 // Width and height for <img> tags whose source comes from content data, so the browser
 // can reserve space before the image loads (the boxes themselves are sized by CSS).
@@ -61,13 +62,29 @@ function readLocal(publicPath) {
   }
 }
 
+// Sizes of every file uploaded to Storage by tools/db/upload-images.js, for when the files
+// are not on this server.
+let manifest;
+function fromManifest(publicPath) {
+  if (manifest === undefined) {
+    try {
+      manifest = require('../config/media-sizes.json');
+    } catch {
+      manifest = {};
+    }
+  }
+  const entry = manifest[publicPath];
+  return entry ? { width: entry[0], height: entry[1] } : null;
+}
+
 function imageSize(src) {
   if (typeof src !== 'string' || !src) return null;
   if (cache.has(src)) return cache.get(src);
   let size = null;
   const suffix = src.match(/-(\d{1,5})x(\d{1,5})\.(?:avif|gif|jpe?g|png|webp)(?:[?#].*)?$/i);
+  const publicPath = /^\/images\/[^?#]+$/.test(src) ? src : localPath(src);
   if (suffix) size = { width: Number(suffix[1]), height: Number(suffix[2]) };
-  else if (/^\/images\/[^?#]+$/.test(src)) size = readLocal(src);
+  else if (publicPath) size = readLocal(publicPath) || fromManifest(publicPath);
   cache.set(src, size);
   return size;
 }

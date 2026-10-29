@@ -3,6 +3,7 @@
 const config = require('../config');
 const site = require('../config/site');
 const { assetUrl } = require('./assets');
+const { mediaUrl } = require('./media');
 
 // Builds absolute URLs from the configured SITE_URL only, so canonical, Open Graph
 // and sitemap URLs can never point at file:/// paths or a different host.
@@ -23,6 +24,8 @@ function assetUrls() {
     // inner pages only (views/partials/inner-page-start.html)
     pagesCssUrl: assetUrl('/css/pages.css'),
     pagesJsUrl: assetUrl('/js/pages.js'),
+    // homepage hero backgrounds (views/index.html)
+    heroBgCssUrl: assetUrl('/css/home-hero-bg.css'),
   };
 }
 
@@ -36,7 +39,7 @@ function buildPageMeta(page) {
     canonicalUrl: absoluteUrl(page.path),
     robots: robotsDirective(),
     ogLocale: site.ogLocale,
-    ogImage: absoluteUrl(image.path),
+    ogImage: absoluteUrl(mediaUrl(image.path)),
     ogImageWidth: image.width,
     ogImageHeight: image.height,
     ogImageAlt: image.alt,

@@ -2,11 +2,12 @@
 
 const site = require('../config/site');
 const { absoluteUrl } = require('./seo');
+const { mediaUrl } = require('./media');
 
 // JSON-LD @graph built only from facts published on the site (config/site.js and
 // the visible FAQs). No ratings or reviews are emitted on purpose.
 
-const NAMED_ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", rsquo: '’', lsquo: '‘', nbsp: ' ' };
+const NAMED_ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", rsquo: 'â€™', lsquo: 'â€˜', nbsp: ' ' };
 
 function toPlainText(htmlFragment) {
   return htmlFragment
@@ -37,7 +38,7 @@ function extractFaqs(viewSource) {
     const paragraphs = [...answer.matchAll(/<p>(.*?)<\/p>/gs)].map(([, p]) => toPlainText(p));
     faqs.push({ question: toPlainText(question).replace(/^\d+\.\s*/, ''), answer: paragraphs.join(' ') });
   }
-  // Treatment pages (shared sd-* layout): <details><summary><h3>Q</h3></summary><div class="sd-faq-a">…</div></details>
+  // Treatment pages (shared sd-* layout): <details><summary><h3>Q</h3></summary><div class="sd-faq-a">â€¦</div></details>
   const sdPattern = /<details[^>]*>\s*<summary><h3>(.*?)<\/h3><\/summary>\s*<div class="sd-faq-a">(.*?)<\/div>\s*<\/details>/gs;
   for (const [, question, answer] of viewSource.matchAll(sdPattern)) {
     const paragraphs = [...answer.matchAll(/<p>(.*?)<\/p>/gs)].map(([, p]) => toPlainText(p));
@@ -47,7 +48,7 @@ function extractFaqs(viewSource) {
 }
 
 function imageObject(image) {
-  return { '@type': 'ImageObject', url: absoluteUrl(image.path), width: image.width, height: image.height };
+  return { '@type': 'ImageObject', url: absoluteUrl(mediaUrl(image.path)), width: image.width, height: image.height };
 }
 
 function buildGraph(page, faqs) {
@@ -86,7 +87,7 @@ function buildGraph(page, faqs) {
       '@id': clinicIds[index],
       name: `${site.name}, ${clinic.label}`,
       url: home,
-      image: absoluteUrl(site.shareImage.path),
+      image: absoluteUrl(mediaUrl(site.shareImage.path)),
       telephone: site.phone.e164,
       email: site.email,
       medicalSpecialty: 'https://schema.org/Dermatology',

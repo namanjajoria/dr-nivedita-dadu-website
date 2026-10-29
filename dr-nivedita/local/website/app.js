@@ -7,6 +7,7 @@ const config = require('./config');
 const routes = require('./routes');
 const { securityHeaders } = require('./middleware/security');
 const { permanentRedirects } = require('./middleware/redirects');
+const { mediaStyles } = require('./middleware/mediaStyles');
 const { notFound, errorHandler } = require('./middleware/errorHandlers');
 
 function createApp() {
@@ -26,6 +27,8 @@ function createApp() {
   }
 
   app.use(permanentRedirects);
+
+  app.use(mediaStyles);
 
   // CSS/JS URLs carry a content hash (utils/assets.js), so a long cache is safe in production.
   app.use(

@@ -17,7 +17,7 @@ function securityHeaders() {
         // data: is Swiper's bundled icon font, referenced by its stylesheet.
         fontSrc: ["'self'", 'data:', 'https://fonts.gstatic.com'],
         // Plus the storage host of images uploaded through the admin (config api.mediaOrigins).
-        imgSrc: ["'self'", 'data:', 'https://i.ytimg.com', ...(config.api.enabled ? config.api.mediaOrigins : [])],
+        imgSrc: ["'self'", 'data:', 'https://i.ytimg.com', ...(config.api.enabled || config.media.enabled ? config.api.mediaOrigins : [])],
         frameSrc: ['https://www.youtube-nocookie.com'],
         connectSrc: ["'self'"],
         formAction: ["'self'"],

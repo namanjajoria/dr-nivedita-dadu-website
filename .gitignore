@@ -12,6 +12,7 @@ node_modules/
 # Generated from admin-build/ by scripts/build-admin.js local - never edited by hand.
 dr-nivedita/local/admin/
 dr-nivedita/backups/
+/backups/
 dr-nivedita/database/exports/
 dr-nivedita/database/*.dump
 dr-nivedita/database/*.csv

@@ -13,7 +13,9 @@ function assetUrl(publicPath) {
   let version = config.isProduction ? versions.get(publicPath) : undefined;
   if (!version) {
     const contents = fs.readFileSync(path.join(config.root, 'public', publicPath));
-    version = crypto.createHash('sha1').update(contents).digest('hex').slice(0, 10);
+    // Stylesheets are served with their image URLs rewritten (middleware/mediaStyles.js),
+    // so the image location is part of what the browser and CDN cache.
+    version = crypto.createHash('sha1').update(contents).update(config.media.baseUrl).digest('hex').slice(0, 10);
     versions.set(publicPath, version);
   }
   return `${publicPath}?v=${version}`;

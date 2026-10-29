@@ -98,6 +98,14 @@ const api = {
 };
 api.enabled = Boolean(api.baseUrl);
 
+// Images live in Supabase Storage (bucket "images", folder "site", uploaded by
+// tools/db/upload-images.js). With MEDIA_BASE_URL set, every /images/... path in pages and
+// stylesheets is served from there; without it the files in public/images/ are used.
+const media = {
+  baseUrl: (env.MEDIA_BASE_URL || '').trim().replace(/\/+$/, ''),
+};
+media.enabled = Boolean(media.baseUrl);
+
 module.exports = Object.freeze({
   root: ROOT,
   env: isProduction ? 'production' : 'development',
@@ -119,4 +127,7 @@ module.exports = Object.freeze({
   },
   mail: Object.freeze(mail),
   api: Object.freeze(api),
+  media: Object.freeze(media),
+  // Last good copy of every API content read, used when the API cannot be reached.
+  contentSnapshotDir: path.resolve(ROOT, (env.CONTENT_SNAPSHOT_DIR || '.cache/content').trim()),
 });
