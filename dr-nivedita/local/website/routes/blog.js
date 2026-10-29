@@ -5,6 +5,7 @@ const pages = require('../config/pages');
 const blog = require('../content/blog');
 const { sendInnerPage } = require('../controllers/pageController');
 const { sendStatusPage } = require('../services/statusPage');
+const { imageSize } = require('../utils/imageSize');
 
 // /blog/ and /blog/<slug>/ from the `blogs` table. A slug that is not a published post
 // falls through to the site's 404 page.
@@ -25,10 +26,23 @@ async function posts(res) {
   return null;
 }
 
+// The listing's <title>, description and share image can be changed in the admin's Blog
+// Page settings; config/pages.blog.json holds the values used until then.
+function listingMeta(settings) {
+  const share = settings.seo.ogImage && imageSize(settings.seo.ogImage);
+  return {
+    ...listingPage,
+    title: settings.seo.title || listingPage.title,
+    description: settings.seo.description || listingPage.description,
+    ...(share ? { image: { path: settings.seo.ogImage, width: share.width, height: share.height, alt: settings.title } } : {}),
+    breadcrumbs: [{ name: 'Home', path: '/' }, { name: settings.breadcrumb, path: '/blog/' }],
+  };
+}
+
 router.get('/blog/', async (req, res, next) => {
   try {
-    const list = await posts(res);
-    if (list) sendInnerPage(res, listingPage, blog.listingBody(list));
+    const [list, settings] = await Promise.all([posts(res), blog.loadPageSettings()]);
+    if (list) sendInnerPage(res, listingMeta(settings), blog.listingBody(list, settings));
   } catch (error) {
     next(error);
   }
@@ -36,7 +50,7 @@ router.get('/blog/', async (req, res, next) => {
 
 router.get('/blog/:slug/', async (req, res, next) => {
   try {
-    const list = await posts(res);
+    const [list, settings] = await Promise.all([posts(res), blog.loadPageSettings()]);
     if (!list) return;
     const slug = req.params.slug.toLowerCase();
     const post = list.find((p) => p.slug.toLowerCase() === slug);
@@ -51,10 +65,10 @@ router.get('/blog/:slug/', async (req, res, next) => {
         : {}),
       breadcrumbs: [
         { name: 'Home', path: '/' },
-        { name: 'Blog', path: '/blog/' },
+        { name: settings.breadcrumb, path: '/blog/' },
         { name: post.title, path },
       ],
-    }, blog.postBody(post, list));
+    }, blog.postBody(post, list, settings));
   } catch (error) {
     next(error);
   }

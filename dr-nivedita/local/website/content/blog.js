@@ -96,6 +96,37 @@ function toPost(b) {
   };
 }
 
+// "Blog Page" settings (admin: Pages -> Blog Page; cms_sections key blog_page via
+// GET /api/blog-page). The banner image, promo box and sample category list there have no
+// place in this layout and are not used; the categories and recent posts come from the posts.
+const PAGE_DEFAULTS = Object.freeze({
+  title: 'Blog',
+  breadcrumb: 'Blog',
+  searchPlaceholder: 'Enter Key Word',
+  categoriesTitle: 'Blog Categories',
+  recentTitle: 'Recent Post',
+  seo: {},
+});
+const text = (value, fallback) => (typeof value === 'string' && value.trim() ? value.trim() : fallback);
+
+async function loadPageSettings() {
+  const data = (await getSection('blog-page')) || {};
+  const hero = data.hero || {};
+  const listing = data.listing || {};
+  return {
+    title: text(hero.title, PAGE_DEFAULTS.title),
+    breadcrumb: text(hero.breadcrumbText, PAGE_DEFAULTS.breadcrumb),
+    searchPlaceholder: text(listing.sidebarSearchPlaceholder, PAGE_DEFAULTS.searchPlaceholder),
+    categoriesTitle: text(listing.sidebarCategoriesTitle, PAGE_DEFAULTS.categoriesTitle),
+    recentTitle: text(listing.sidebarRecentPostsTitle, PAGE_DEFAULTS.recentTitle),
+    seo: {
+      title: text(data.seo?.metaTitle, ''),
+      description: text(data.seo?.metaDescription, ''),
+      ogImage: text(data.seo?.ogImage, ''),
+    },
+  };
+}
+
 // Published posts, newest first (the API's order). null when the API has nothing to give.
 async function loadPosts() {
   const data = await getSection('blogs');
@@ -114,18 +145,18 @@ const hero = (h1, crumb) => `<section class="blg-hero">
   </div>
 </section>`;
 
-const sidebar = (posts) => `<aside class="blg-side">
+const sidebar = (posts, page) => `<aside class="blg-side">
       <div class="blg-side-inner">
         <form class="blg-search" action="/blog/" method="get" role="search">
-          <input type="search" name="q" placeholder="Enter Key Word" aria-label="Search the blog">
+          <input type="search" name="q" placeholder="${esc(page.searchPlaceholder)}" aria-label="Search the blog">
           <button type="submit" aria-label="Search">${icon('i-find')}</button>
         </form>
         <div class="blg-widget">
-          <h2 class="blg-side-title">Blog Categories</h2>
+          <h2 class="blg-side-title">${esc(page.categoriesTitle)}</h2>
           <ul class="blg-cats"><li><a href="/blog/"><span>All Categories</span><span>( ${posts.length} )</span></a></li></ul>
         </div>
         <div class="blg-widget">
-          <h2 class="blg-side-title">Recent Post</h2>
+          <h2 class="blg-side-title">${esc(page.recentTitle)}</h2>
           <ul class="blg-recent">${posts.slice(0, RECENT).map((o) => `
             <li class="blg-recent-item">
               <a class="blg-recent-thumb" href="/blog/${o.slug}/" tabindex="-1" aria-hidden="true"><img src="${esc(o.photo.src)}" alt=""${dims(o.photo)} loading="lazy" decoding="async"></a>
@@ -158,7 +189,7 @@ function faqHtml(faq) {
       </section>`;
 }
 
-function postBody(p, posts) {
+function postBody(p, posts, page = PAGE_DEFAULTS) {
   return `${hero(p.title, p.title)}
 
 <section class="blg-detail">
@@ -197,13 +228,13 @@ ${p.html}
         </form>
       </div>
     </article>
-    ${sidebar(posts)}
+    ${sidebar(posts, page)}
   </div>
 </section>`;
 }
 
-function listingBody(posts) {
-  return `${hero('Blog', 'Blog')}
+function listingBody(posts, page = PAGE_DEFAULTS) {
+  return `${hero(page.title, page.breadcrumb)}
 
 <section class="blg-listing" data-blog data-blog-search data-per-page="${PER_PAGE}">
   <div class="container blg-list-grid">
@@ -223,9 +254,9 @@ function listingBody(posts) {
       </div>
       <nav class="blog-pagination" aria-label="Blog pages" hidden></nav>
     </div>
-    ${sidebar(posts)}
+    ${sidebar(posts, page)}
   </div>
 </section>`;
 }
 
-module.exports = { loadPosts, postBody, listingBody, bodyHtml };
+module.exports = { loadPosts, loadPageSettings, postBody, listingBody, bodyHtml };
