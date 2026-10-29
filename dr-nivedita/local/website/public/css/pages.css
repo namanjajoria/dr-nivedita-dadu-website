@@ -2082,3 +2082,11 @@ select.sd-input:valid{color:#333}
   .blg-card{padding:20px;border-radius:30px}
   .blg-card-media{border-radius:22px}
 }
+
+/* blog posts edited in the admin (Quill editor classes) */
+.blg-body .ql-align-center{text-align:center}
+.blg-body .ql-align-right{text-align:right}
+.blg-body .ql-align-justify{text-align:justify}
+.blg-body iframe.ql-video{display:block;max-width:100%;margin:0 auto 28.8px;border:0;border-radius:16px}
+.blg-body iframe.ql-video:not([height]){aspect-ratio:16/9;height:auto}
+.blg-body img{max-width:100%;height:auto}

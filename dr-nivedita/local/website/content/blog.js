@@ -27,6 +27,57 @@ function formatDate(value) {
   return `${String(d.getUTCDate()).padStart(2, '0')} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }
 
+// The admin's editor (Quill 1) saves lists flat: a nested item is <li class="ql-indent-N">,
+// and a change of list type starts a new <ol>/<ul>. Rebuilds the nesting, so numbering
+// continues the way the post was written.
+const LIST_RUN = /(?:<(ol|ul)>(?:(?!<\/?(?:ol|ul)\b)[\s\S])*<\/\1>\s*)+/g;
+
+function nestLists(run) {
+  const items = [];
+  for (const [, type, inner] of run.matchAll(/<(ol|ul)>([\s\S]*?)<\/\1>/g)) {
+    for (const [, attrs, body] of inner.matchAll(/<li([^>]*)>([\s\S]*?)<\/li>/g)) {
+      const indent = Number((attrs.match(/ql-indent-(\d+)/) || [])[1] || 0);
+      const rest = attrs.replace(/\s*class="ql-indent-\d+"/, '');
+      items.push({ type, indent, open: `<li${rest}>`, body });
+    }
+  }
+  let out = '';
+  const stack = []; // [{ type, indent }]
+  for (const it of items) {
+    while (stack.length && (stack.at(-1).indent > it.indent || (stack.at(-1).indent === it.indent && stack.at(-1).type !== it.type))) {
+      out += `</li></${stack.pop().type}>`;
+    }
+    if (stack.length && stack.at(-1).indent === it.indent) out += '</li>';
+    else stack.push({ type: it.type, indent: it.indent }), (out += `<${it.type}>`);
+    out += it.open + it.body;
+  }
+  while (stack.length) out += `</li></${stack.pop().type}>`;
+  return out + '\n';
+}
+
+// Quill marks every link to open in a new tab; links within the site, e-mail and phone
+// links open in place.
+function internalLinks(html) {
+  return html.replace(/<a ([^>]*?)href="(\/[^"]*|#[^"]*|mailto:[^"]*|tel:[^"]*)"([^>]*)>/g, (m, before, href, after) => {
+    const attrs = `${before}${after}`.replace(/\s*(?:target="_blank"|rel="noopener noreferrer")/g, '').trim();
+    return `<a ${attrs ? attrs + ' ' : ''}href="${href}">`;
+  });
+}
+
+// Body HTML as saved in the database (seeded, or edited in the admin) -> site markup.
+//   - tables are saved inside the editor's table block, <div class="table-responsive"
+//     contenteditable="false">; on the site they use the blog layout's blg-table wrapper
+//   - a line break inside a list item is saved as the editor's softbreak block (see
+//     scripts/build-admin.js), shown as a plain <br>
+function bodyHtml(html) {
+  let h = String(html || '')
+    .replace(/<div class="table-responsive"(?: contenteditable="false")?>/g, '<div class="blg-table">')
+    .replace(/<span class="ql-softbreak">﻿?<span contenteditable="false"><br\s*\/?><\/span>﻿?<\/span>/g, '<br>')
+    .replace(/﻿/g, '');
+  if (/ql-indent-\d/.test(h)) h = h.replace(LIST_RUN, (run) => (/ql-indent-\d/.test(run) ? nestLists(run) : run));
+  return internalLinks(h);
+}
+
 function toPost(b) {
   const size = imageSize(b.blogImage) || {};
   const faqs = (Array.isArray(b.faqs) ? b.faqs : []).filter((f) => f && f.question && f.answer);
@@ -37,7 +88,7 @@ function toPost(b) {
     date: formatDate(b.blogDate || b.createdAt),
     author: b.author || 'Dr Nivedita Dadu',
     photo: { src: b.blogImage || '', alt: b.altTag || '', width: size.width, height: size.height },
-    html: b.fullDescription || '',
+    html: bodyHtml(b.fullDescription),
     faq: faqs.length ? { title: (b.adminDescription || '').trim() || DEFAULT_FAQ_TITLE, items: faqs } : null,
     updated: b.updatedAt || b.createdAt || null,
     seoTitle: b.metaTitle || b.title || '',
@@ -177,4 +228,4 @@ function listingBody(posts) {
 </section>`;
 }
 
-module.exports = { loadPosts, postBody, listingBody };
+module.exports = { loadPosts, postBody, listingBody, bodyHtml };

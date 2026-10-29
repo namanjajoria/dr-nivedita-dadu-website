@@ -7,7 +7,8 @@
 //     post uses ("FAQs", "Frequently Asked Questions"...) goes into `admin_description`,
 //     the only blog field the website does not show otherwise
 //   - created_at keeps the live order (newest first), which is how the API sorts
-// Re-running updates rows by slug. Usage: node tools/db/seed-blogs.js [--dry]
+// Re-running updates rows by slug. Usage: node tools/db/seed-blogs.js [--dry] [--only <slug>...]
+// (--only leaves every other row, and any admin edit in it, untouched)
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '../..');
@@ -17,16 +18,18 @@ const { createClient } = require(path.join(API, 'node_modules/@supabase/supabase
 const { posts } = require(path.join(ROOT, 'tools/blog/build-blog.js'));
 
 const DRY = process.argv.includes('--dry');
+const ONLY = process.argv.includes('--only') ? process.argv.slice(process.argv.indexOf('--only') + 1) : null;
 const sb = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 const MEDIA = `${process.env.SUPABASE_URL}/storage/v1/object/public/images/site`;
 const media = (src) => (src.startsWith('/images/') ? `${MEDIA}/${src.slice('/images/'.length)}` : src);
 const MONTHS = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
 
-// "24 Oct 2026" -> midnight in India, as a UTC instant
+// "24 Oct 2026" -> noon in India. Midday keeps the same calendar day in UTC, which is what
+// the admin's date field reads and writes back (a midnight-India time would be the day before).
 function blogDate(s) {
   const m = s.match(/^(\d{1,2}) ([A-Z][a-z]{2}) (\d{4})$/);
   if (!m || !(m[2] in MONTHS)) throw new Error('unknown date ' + s);
-  return new Date(Date.UTC(+m[3], MONTHS[m[2]], +m[1]) - 330 * 60 * 1000);
+  return new Date(Date.UTC(+m[3], MONTHS[m[2]], +m[1], 6, 30));
 }
 
 async function mirrorBodyImages(html) {
@@ -59,7 +62,13 @@ async function mirrorBodyImages(html) {
       show_type: 'Inside',
       layout_type: 'Left',
       short_description: p.excerpt,
-      full_description: html,
+      // the admin's editor keeps tables only inside <div class="table-responsive"> (its
+      // "blogTable" block); content/blog.js shows that wrapper with the site's blg-table style
+      // and a list item whose paragraph is followed by loose text ("<li><p>A</p>b. text</li>")
+      // would open as two items there, so the paragraph end becomes a line break
+      full_description: html
+        .replace(/<div class="blg-table">/g, '<div class="table-responsive">')
+        .replace(/<li><p>((?:(?!<\/?(?:li|p)\b)[\s\S])*)<\/p>\s*(?=[^<\s])/g, '<li>$1<br />\n'),
       blog_image: media(p.photo.src),
       banner_image: media(p.photo.src),
       alt_tag: p.photo.alt,
@@ -80,13 +89,14 @@ async function mirrorBodyImages(html) {
   const { data: existing, error: readError } = await sb.from('blogs').select('id,slug');
   if (readError) throw readError;
   const idBySlug = new Map(existing.map((r) => [r.slug, r.id]));
-  const inserts = rows.filter((r) => !idBySlug.has(r.slug));
-  const updates = rows.filter((r) => idBySlug.has(r.slug));
+  const chosen = ONLY ? rows.filter((r) => ONLY.includes(r.slug)) : rows;
+  const inserts = chosen.filter((r) => !idBySlug.has(r.slug));
+  const updates = chosen.filter((r) => idBySlug.has(r.slug));
   for (let k = 0; k < inserts.length; k += 50) {
     const { error } = await sb.from('blogs').insert(inserts.slice(k, k + 50));
     if (error) throw error;
   }
-  for (const r of updates) {
+  for (const { created_at, ...r } of updates) { // an existing row keeps its place in the order
     const { error } = await sb.from('blogs').update({ ...r, updated_at: new Date().toISOString() }).eq('id', idBySlug.get(r.slug));
     if (error) throw error;
   }
